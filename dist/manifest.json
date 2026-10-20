@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "latest": "2026-10-20",
+  "digests": {
+    "2026-10-20": {
+      "path": "daily/2026-10-20/",
+      "content_sha256": "968f3d7d1e9172a9f0a74b52403c68c56a4956bf1826d1f5f615b8027269a96e",
+      "source_sha256": "c197e30465f0f9c462c63c56664f0cdecae8ec7bb67ab45b3d703894e0b88ba7",
+      "generated_at": "2026-10-20T08:52:45.173674+08:00"
+    },
+    "2026-10-19": {
+      "path": "daily/2026-10-19/",
+      "content_sha256": "de8b12d9d90b590dd629fcc2b4180736e22cb14e5762a91474c5d538579054a6",
+      "source_sha256": "b16acf6efb71617742e7d7c262092194bc288ae81fc9d95a3dc2b5f6241d4790",
+      "generated_at": "2026-10-19T08:56:40+08:00"
+    },
+    "2026-10-16": {
+      "path": "daily/2026-10-16/",
+      "content_sha256": "90dc16163f327576ef1a3201f9f4b9a6d19b145cac05b043ab092760cceab286",
+      "source_sha256": "391bf19ad117adb1b600c3ded5ab88db98dc7713908ee8612a9ce8f05f41e96e",
+      "generated_at": "2026-10-16T08:53:16+08:00"
+    }
+  }
+}
