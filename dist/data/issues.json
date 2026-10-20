@@ -295,7 +295,7 @@
       "window_start": "2026-10-16T08:50:00+08:00",
       "window_end": "2026-10-19T08:49:48+08:00",
       "source_sha256": "b16acf6efb71617742e7d7c262092194bc288ae81fc9d95a3dc2b5f6241d4790",
-      "raw_source_sha256": "13c19ca902ae9fa78c1697b25abb4a7eb9b3c138bde187c841911841764703c6",
+      "raw_source_sha256": "7c7da0e8ce645efe04f58443f7f5145b57701eb9d791937ebc8e7e7a147b3a29",
       "has_editorial": false,
       "focus_event_id": "openai-gpt-live-prompt-to-voice-20261016",
       "items": [
@@ -670,7 +670,7 @@
       "window_start": "2026-10-15T08:46:09+08:00",
       "window_end": "2026-10-16T08:46:09+08:00",
       "source_sha256": "391bf19ad117adb1b600c3ded5ab88db98dc7713908ee8612a9ce8f05f41e96e",
-      "raw_source_sha256": "c42efef1b8d6079eba3177f5fdd4a4b9f138c501ddf8dfd8ea7764c20032076a",
+      "raw_source_sha256": "3221dcef1c3aefbd86cb83465e486e03d074a76f9aad3a1d25871ccb31eb194c",
       "has_editorial": false,
       "focus_event_id": "openai-gpt-live-1.1-release-20261015",
       "items": [
