@@ -4,27 +4,23 @@
   "digests": {
     "2026-10-21": {
       "path": "daily/2026-10-21/",
-      "content_sha256": "4fc60a7b833bae958ec044b98f57255591384a141327754c6c22add5f946f08a",
-      "source_sha256": "516bcb846dc93a687a73e9effb8b4d1244a5b7e5ce38d0beff73908f971d59ee",
-      "generated_at": "2026-10-21T01:01:50.308040+00:00"
+      "content_sha256": "7d75c0b37ef94db8bcc9f3b3e147b0472341cd187c9f347f6252efda4758fc54",
+      "source_sha256": "516bcb846dc93a687a73e9effb8b4d1244a5b7e5ce38d0beff73908f971d59ee"
     },
     "2026-10-20": {
       "path": "daily/2026-10-20/",
-      "content_sha256": "7fe44e2277fc6119b81b7da3f459d85194c13556535df19e3498f2e9b74646dc",
-      "source_sha256": "c197e30465f0f9c462c63c56664f0cdecae8ec7bb67ab45b3d703894e0b88ba7",
-      "generated_at": "2026-10-20T08:52:45.173674+08:00"
+      "content_sha256": "e7d29ad5e10330ebeda7857d8235e8388f41be667502ae9b759ccf812871bdee",
+      "source_sha256": "c197e30465f0f9c462c63c56664f0cdecae8ec7bb67ab45b3d703894e0b88ba7"
     },
     "2026-10-19": {
       "path": "daily/2026-10-19/",
-      "content_sha256": "0c701ce06200f2cfa19ac82ffce080ecef088182331f8efa35d4223aa4829cb4",
-      "source_sha256": "b16acf6efb71617742e7d7c262092194bc288ae81fc9d95a3dc2b5f6241d4790",
-      "generated_at": "2026-10-19T08:56:40+08:00"
+      "content_sha256": "92b0d301a06177da7a83b2e413011143c34a59f8809507abd8979a9319ed13ed",
+      "source_sha256": "b16acf6efb71617742e7d7c262092194bc288ae81fc9d95a3dc2b5f6241d4790"
     },
     "2026-10-16": {
       "path": "daily/2026-10-16/",
-      "content_sha256": "17f22fd998e8d9c6241739a5984e624979cf47366f32c132201af92608927edd",
-      "source_sha256": "391bf19ad117adb1b600c3ded5ab88db98dc7713908ee8612a9ce8f05f41e96e",
-      "generated_at": "2026-10-16T08:53:16+08:00"
+      "content_sha256": "bf3933e67eb800cacce1921d02ffadca5886b5cf0a5f9661e605f632ea9aa80d",
+      "source_sha256": "391bf19ad117adb1b600c3ded5ab88db98dc7713908ee8612a9ce8f05f41e96e"
     }
   }
 }
