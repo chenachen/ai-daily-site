@@ -1,6 +1,286 @@
 {
   "issues": [
     {
+      "digest_id": "2026-10-21",
+      "generated_at": "2026-10-21T01:01:50.308040+00:00",
+      "window_start": "2026-10-20T00:53:08Z",
+      "window_end": "2026-10-21T00:53:08Z",
+      "source_sha256": "516bcb846dc93a687a73e9effb8b4d1244a5b7e5ce38d0beff73908f971d59ee",
+      "raw_source_sha256": "44273a26678bcb66377a1d12ba3dba3bf505562245f96801ac2862cf829dd721",
+      "has_editorial": true,
+      "focus_event_id": "openai-api-12hour-prompt-cache-20261020",
+      "items": [
+        {
+          "event_id": "openai-api-12hour-prompt-cache-20261020",
+          "title": "OpenAI API 新增 12 小时提示缓存，跨时段 Agent 可复用上下文",
+          "summary": "OpenAI Developers 宣布 API 已可选择 12 小时提示缓存。这不是新模型发布，也不是 Codex 订阅额度重置，而是面向持续运行 Agent 的 API 成本与上下文复用能力更新。\n\n官方文档说明，GPT-5.6 及以后模型可通过 Responses API 的 prompt_cache_options.ttl 选择 12h；稳定的系统指令、工具定义和参考资料可更长时间保持缓存计费资格。对隔几小时再次处理同一项目的助手、代码 Agent 和后台任务，这比每次重新支付完整输入成本更有针对性。\n\n需要算清写入成本：12h 缓存写入总费率为普通未缓存输入的 2.5 倍，默认 30m 为 1.25 倍；这不是在普通输入费用之外再加收同样金额。读取费率不因 TTL 改变。12 小时也不等于数据删除期限或每次请求都保证低延迟，是否省钱仍取决于相同前缀被复用的次数。",
+          "category": "news",
+          "group": "openai",
+          "groupLabel": "OpenAI",
+          "digest_id": "2026-10-21",
+          "event_at": "2026-10-21T01:56:38+08:00",
+          "checked_at": "2026-10-21T01:01:50.307843+00:00",
+          "urls": [
+            "https://x.com/OpenAIDevs/status/2112603916076781778",
+            "https://developers.openai.com/api/docs/guides/prompt-caching"
+          ],
+          "frontend_takeaway": "",
+          "limitation": "",
+          "rank": 1,
+          "focus_reason": "本期未发现已核实的主流厂商新模型发布；该 API 实质升级改变长期 Agent 的上下文复用与成本路径，影响范围高于一般补丁，写入代价同时明确。"
+        },
+        {
+          "event_id": "openai-agents-js-0-21-0",
+          "title": "OpenAI Agents JS 0.21.0 修复实时连接，并移除 Runloop 沙箱接口",
+          "summary": "这次不是新模型，而是 TypeScript Agent 应用的可靠性和迁移更新。0.21.0 修复实时 WebRTC 会话在初始配置确认前收到服务端错误时的连接处理，保留 Twilio 默认音频格式，并将 Realtime 浏览器打包工具更新到 Vite 8；流式用量统计和保存状态也保留嵌套数值明细。使用语音助手或需要精细成本统计的前端团队可优先回归这些路径。升级前须检查 Runloop 沙箱接口移除及用量字段类型收窄，不能当作完全无破坏性的补丁。",
+          "category": "news",
+          "group": "openai",
+          "groupLabel": "OpenAI",
+          "digest_id": "2026-10-21",
+          "event_at": "2026-10-21T06:07:29+08:00",
+          "checked_at": "2026-10-21T01:01:50.274053+00:00",
+          "urls": [
+            "https://github.com/openai/openai-agents-js/releases/tag/%40openai/agents%400.21.0",
+            "https://github.com/openai/openai-agents-js/releases/tag/%40openai/agents-core%400.21.0",
+            "https://github.com/openai/openai-agents-js/releases/tag/%40openai/agents-realtime%400.21.0"
+          ],
+          "frontend_takeaway": "",
+          "limitation": "Runloop provider 及对应公共 API 被移除；用量明细含嵌套数值时需收窄类型。这是 SDK 更新，不是新模型发布。",
+          "rank": 2,
+          "focus_reason": ""
+        },
+        {
+          "event_id": "vercel-ai-sdk-7-0-146-147",
+          "title": "Vercel AI SDK 7.0.146–147 补齐决策参数并修复流式工具名称",
+          "summary": "同一窗口内的两次更新合并来看，7.0.146 为实验性 decision 调用加入 maxOutputTokens 与 reasoning，并传给语言模型支持的决策；同时修复裁剪工具调用后残留推理片段、可选工具类型混入 undefined 等问题。7.0.147 进一步保证流式 UI 消息保留修复后的工具名称。对用 React/TypeScript 展示工具执行过程的应用，重点是工具状态和类型不再错位，而非模型能力提升。decision 仍是实验能力，原生提供方不支持参数时会给出警告。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-21",
+          "event_at": "2026-10-21T02:36:31+08:00",
+          "checked_at": "2026-10-21T01:01:50.274053+00:00",
+          "urls": [
+            "https://github.com/vercel/ai/releases/tag/ai%407.0.147",
+            "https://github.com/vercel/ai/releases/tag/ai%407.0.146"
+          ],
+          "frontend_takeaway": "",
+          "limitation": "decision 相关接口仍属实验性；未填写 reasoning 不会自动启用推理，不受支持的 provider 参数会产生警告。",
+          "rank": 3,
+          "focus_reason": ""
+        },
+        {
+          "event_id": "github:llm-d/llm-d:v1.0.0",
+          "title": "llm-d 1.0 发布：多租户流控、稳定路由 API 与多轮会话缓存协同",
+          "summary": "llm-d 发布首个 1.0 稳定版本，将各核心组件版本对齐，并把路由配置 API 升级为 v1。新增的优先级与公平性流控用于让交互请求和突发 Agent 作业共享集群；路由器热备、滚动更新和 DisaggregatedSet 协调预填充与解码副本。Responses API 现在支持 previous_response_id，配合会话亲和性复用多轮上下文。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-21",
+          "event_at": "2026-10-20T02:30:10Z",
+          "checked_at": "2026-10-21T00:56:04.945Z",
+          "urls": [
+            "https://github.com/llm-d/llm-d/releases/tag/v1.0.0"
+          ],
+          "frontend_takeaway": "自建模型后端的全栈团队可评估交互延迟、会话续接与后台批任务隔离；纯调用托管API的前端项目无需因此迁移基础设施。",
+          "limitation": "不是新模型或即开即用前端SDK；部署涉及推理集群运维。ROCm自建镜像弃用、LeaderWorkerSet最低版本等迁移要求需逐项核对。",
+          "rank": 4,
+          "focus_reason": ""
+        },
+        {
+          "event_id": "claude-code-2-1-305",
+          "title": "Claude Code 2.1.305 修复网关请求失败与 Workflow 恢复重复执行",
+          "summary": "2.1.305 针对实际开发流程补上多处可靠性修复：Vertex、Bedrock 或网关拒绝 ToolSearch 时会退回不含它的请求；恢复 Workflow 时，已完成的 pipeline、parallel 代理应从运行日志读取，而不再重复执行。版本还修复 worktree 默认分支与清理、云端传入 MCP 配置被同名本地设置覆盖等问题。依赖自建网关、自动化工作流的团队尤其值得回归。新增 Linux 嵌套用户命名空间开关会放宽沙箱文件保护，不能为了兼容 Chromium 就忽略其安全影响。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-21",
+          "event_at": "2026-10-21T04:46:50+08:00",
+          "checked_at": "2026-10-21T01:01:50.274053+00:00",
+          "urls": [
+            "https://github.com/anthropics/claude-code/releases/tag/v2.1.305"
+          ],
+          "frontend_takeaway": "",
+          "limitation": "新增 sandbox.allowNestedUserNamespaces 存在官方明示文件保护弱化，不建议无条件开启。",
+          "rank": 5,
+          "focus_reason": ""
+        },
+        {
+          "event_id": "tibo-40000-plan-usage-mismatch-20261020",
+          "title": "Tibo 确认约 4 万个账号存在用量限制与订阅套餐不匹配",
+          "summary": "Tibo 表示，针对部分用户周末用量消耗比预期快的反馈，已识别约 4 万个账号：实际应用的用量限制与用户选定的套餐不一致。这是本期首次公布的调查结论，不是把周末旧反馈重新当作新闻。\n\n对开发者而言，这意味着异常额度消耗不一定完全来自任务本身；但官方可读取正文没有列出受影响套餐清单、每个账号的差额或个别账号状态，不能据此认定所有用户都受影响。\n\n原帖公开嵌入接口只返回前半段；本条仅采用原始正文可核实的账号数量和套餐不匹配事实，不把第三方转述的补偿额度或到账状态写成已确认结果。",
+          "category": "news",
+          "group": "tibo",
+          "groupLabel": "Tibo",
+          "digest_id": "2026-10-21",
+          "event_at": "2026-10-21T01:10:20+08:00",
+          "checked_at": "2026-10-21T01:01:50.307843+00:00",
+          "urls": [
+            "https://x.com/thsottiaux/status/2112592264686149749"
+          ],
+          "frontend_takeaway": "",
+          "limitation": "",
+          "rank": 6,
+          "focus_reason": ""
+        },
+        {
+          "event_id": "tibo-day15-reset-20261020",
+          "title": "Tibo 宣布 Day 15 额度重置，未公布新增额度数值",
+          "summary": "Tibo 在后续原帖中宣布 Day 15 重置，并引用前一条“我们完了”的玩笑帖。真正发生在本期窗口内的新信息是重置公告，而不是此前的直播相关宣传。\n\n原帖没有给出重置后的额度数值、逐套餐范围或个人账号生效回执，因此不能进一步解释为所有用户额度永久提升，也不能承诺某个账号已经到账。对正在使用 Codex 的开发者，实际可用量仍以自己的用量页面为准。",
+          "category": "news",
+          "group": "tibo",
+          "groupLabel": "Tibo",
+          "digest_id": "2026-10-21",
+          "event_at": "2026-10-20T14:33:48+08:00",
+          "checked_at": "2026-10-21T01:01:50.307843+00:00",
+          "urls": [
+            "https://x.com/thsottiaux/status/2112432076767289678"
+          ],
+          "frontend_takeaway": "",
+          "limitation": "",
+          "rank": 7,
+          "focus_reason": ""
+        },
+        {
+          "event_id": "copilot-cli-1-0-101",
+          "title": "GitHub Copilot CLI 1.0.101 转为稳定版，强化子代理结构化输出与权限诊断",
+          "summary": "1.0.101 稳定版汇总了窗口内预览修复，支持动态工作流子代理在受支持模型上使用原生结构化输出，并提供 assistedApprovalInstructions 设置。会话恢复无需等占位环境准备完毕才显示对话，沙箱 MCP 启动减少无必要重启；权限提示新增升级原因与诊断命令。对把 CLI 接到脚本、SDK 或多代理开发流程的团队，这些变化有助于结果解析和排错。不是所有模型都支持结构化输出；无 OAuth 处理器的无头会话遇到必须重新登录的 MCP token 会跳过连接，而非自动取得授权。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-21",
+          "event_at": "2026-10-21T02:49:53+08:00",
+          "checked_at": "2026-10-21T01:01:50.274053+00:00",
+          "urls": [
+            "https://github.com/github/copilot-cli/releases/tag/v1.0.101",
+            "https://github.com/github/copilot-cli/releases/tag/v1.0.101-1"
+          ],
+          "frontend_takeaway": "",
+          "limitation": "部分结构化输出能力昨日预览已存在，新闻点明确稳定发布+本窗口启动/权限修复，避免当全新能力重复。",
+          "rank": 8,
+          "focus_reason": ""
+        },
+        {
+          "event_id": "gemini-cli-0-65-stable-0-66-preview",
+          "title": "Gemini CLI 0.65 稳定版修复会话恢复与工作区信任边界",
+          "summary": "0.65 稳定版集中处理长会话可靠性：未受信任目录采用只读工作区设置，恢复时避免重复工具响应，快速退出不再删除恢复的历史；同时修复认证重试循环、Ctrl-C 中断污染会话和目录引用过早递归读取等问题。0.66 预览版继续改善滚动保留、流式文本解码和 Git 配置继承。对经常切分支、恢复任务或处理陌生仓库的开发者更实用。稳定版与预览版功能需分清；发布说明还提醒 CLI 尚未针对 Gemini 4 优化，不能把版本更新当作新模型已全面适配。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-21",
+          "event_at": "2026-10-21T05:17:57+08:00",
+          "checked_at": "2026-10-21T01:01:50.274053+00:00",
+          "urls": [
+            "https://github.com/google-gemini/gemini-cli/releases/tag/v0.65.0",
+            "https://github.com/google-gemini/gemini-cli/releases/tag/v0.66.0-preview.0"
+          ],
+          "frontend_takeaway": "",
+          "limitation": "0.66 属预览版，与 0.65 稳定版分开说明；并非新模型发布，也不代表 Gemini 4 已全面优化。",
+          "rank": 9,
+          "focus_reason": ""
+        },
+        {
+          "event_id": "deepagents-code-0-1-87-sdk-0-7-29",
+          "title": "Deep Agents Code 0.1.87 支持无交互恢复线程，并提示缓存到期时间",
+          "summary": "0.1.87 让脚本化任务可在非交互模式恢复已有线程，并显示提示缓存到期时间，在大规模空闲会话缓存失效前做压缩；还支持在线程切换器载入旧线程、中文等非 ASCII 文件名的 @ 引用。同期 SDK 0.7.29 修复复合后端路径尾斜线处理，拒绝二进制文本编辑并让内存 grep 跳过二进制文件。适合长时间运行的代码助手及跨文件任务，但缓存压缩不等于自动节省固定比例费用，仍需测量自己的模型和工作负载。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-21",
+          "event_at": "2026-10-21T00:49:01+08:00",
+          "checked_at": "2026-10-21T01:01:50.274053+00:00",
+          "urls": [
+            "https://github.com/langchain-ai/deepagents/releases/tag/deepagents-code%3D%3D0.1.87",
+            "https://github.com/langchain-ai/deepagents/releases/tag/deepagents%3D%3D0.7.29"
+          ],
+          "frontend_takeaway": "",
+          "limitation": "客户端和 SDK 同一生态合并介绍；缓存与压缩改动不保证每个工作负载都节省费用。",
+          "rank": 10,
+          "focus_reason": ""
+        },
+        {
+          "event_id": "langfuse-4-65-66-skills-topics",
+          "title": "Langfuse 4.65–4.66 恢复 Skills MCP 访问，改进大规模会话主题分析",
+          "summary": "两版更新共同面向 AI 应用可观测性：4.65 稳定 Skills API、恢复 MCP 访问，为大量记录的 Topics 聚类增加非阻塞处理，并允许自托管 AI Gateway 使用 None 摄取模式；4.66 统一主题可见性控制，修复无所有权权限时仍可选择 Owner 角色等界面问题。做生产聊天应用的团队可用这些能力整理真实会话主题、检查技能调用和数据采集方式。不要把 None 模式等同整套产品零数据流出，仍需核对自身网关、模型与部署配置。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-21",
+          "event_at": "2026-10-21T01:31:25+08:00",
+          "checked_at": "2026-10-21T01:01:50.274053+00:00",
+          "urls": [
+            "https://github.com/langfuse/langfuse/releases/tag/v4.66.0",
+            "https://github.com/langfuse/langfuse/releases/tag/v4.65.0"
+          ],
+          "frontend_takeaway": "",
+          "limitation": "没有可独立核实的量化性能提升；None 摄入模式仅针对自托管网关，不等于全面隐私保障。",
+          "rank": 11,
+          "focus_reason": ""
+        },
+        {
+          "event_id": "zed-1-24-4-opencode-fix",
+          "title": "Zed 1.24.4 修复 OpenCode 模型加载失败，预览版补强模板高亮",
+          "summary": "Zed 1.24.4 的核心是兼容性修复：OpenCode 模型列表遇到缺少 npm 字段时不再加载失败。同期 1.25.1 预览版也包含该修复，并为 JavaScript、TypeScript 的 svg、mathml、raw 标签模板及 css 对象模板字符串加入对应语法高亮。前端开发者如果正通过 Zed 接入 OpenCode，可优先验证稳定版是否恢复模型选择；希望试用模板高亮则需进入预览通道。这不是发布新模型，也不是所有预览功能都已进入稳定版。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-21",
+          "event_at": "2026-10-20T18:34:04+08:00",
+          "checked_at": "2026-10-21T01:01:50.274053+00:00",
+          "urls": [
+            "https://github.com/zed-industries/zed/releases/tag/v1.24.4",
+            "https://github.com/zed-industries/zed/releases/tag/v1.25.1-pre"
+          ],
+          "frontend_takeaway": "",
+          "limitation": "1.24.4稳定仅OpenCode修复，语法高亮属于1.25.1-pre。",
+          "rank": 12,
+          "focus_reason": ""
+        },
+        {
+          "event_id": "github-tool-thesysdev-openui",
+          "title": "每日工具选荐：OpenUI，把模型流式输出变成受控前端组件",
+          "summary": "OpenUI 提供流式优先的 Generative UI 语言与渲染层，可先定义允许的组件和类型，再把模型输出逐步渲染成图表、表格、表单等界面；官方提供 React、Vue、Svelte、Angular 运行时，React 另带聊天壳和组件库。适合把纯文本助手改成可操作产品界面的前端团队。今日直接读取 GitHub TypeScript Trending 可见该项目，仓库近期仍有发布维护；这属于工具选荐，不把10月15日版本写成今天新发。生成结果仍需业务校验，模型调用成本另计，官方token节省测试不是对所有场景的保证。",
+          "category": "github",
+          "group": "other",
+          "groupLabel": "其他",
+          "digest_id": "2026-10-21",
+          "event_at": null,
+          "checked_at": "2026-10-21T01:01:50.274053+00:00",
+          "urls": [
+            "https://github.com/thesysdev/openui",
+            "https://github.com/trending/typescript?since=daily",
+            "https://raw.githubusercontent.com/thesysdev/openui/main/README.md",
+            "https://github.com/thesysdev/openui/releases/tag/%40openuidev/react-ui%400.18.1"
+          ],
+          "frontend_takeaway": "适合聊天式数据探索、客服业务表单、内部助手等需要受控组件而非任意 HTML 的场景。",
+          "limitation": "工具选荐不是当天发布；生成内容仍需业务校验，模型调用成本另计，未实际运行测试。",
+          "rank": 13,
+          "focus_reason": ""
+        },
+        {
+          "event_id": "freebie-official-directory-2026-10-21",
+          "title": "免费资源：新增核实 Qoder 与 Kilo，列清免费模型和额度条件",
+          "summary": "本期逐项回查官方页面，更新 14 家可展示的免费资源。新增 Qoder International 的 Qwen3.8-Flash 免费使用与每天 100 积分手动领取规则，以及 Kilo 的 kilo-auto/free 动态免费路由；两者都不能理解为平台所有模型免费。\n\nWorkBuddy 仅保留已核实的 DeepSeek-V4.1-Flash-1017 限时活动至 10 月 31 日；OpenRouter 与 OpenCode 保留精确免费型号清单。完整型号、入口、额度、重置周期、有效期及账号条件见本站免费资源目录。",
+          "category": "freebie",
+          "group": "other",
+          "groupLabel": "其他",
+          "digest_id": "2026-10-21",
+          "event_at": null,
+          "checked_at": "2026-10-21T01:01:50.274053+00:00",
+          "urls": [
+            "https://docs.qoder.com/events/flashoffer",
+            "https://docs.qoder.com/events/100credits",
+            "https://kilo.ai/docs/getting-started/using-kilo-for-free",
+            "https://openrouter.ai/models?max_price=0",
+            "https://opencode.ai/v2/docs/console/models/"
+          ],
+          "frontend_takeaway": "网页聊天、编程客户端和 API 分开选择；长期免费、限时免费与一次性试用分开列示。",
+          "limitation": "本栏目不计新新闻；未实际调用、领取或测试。免费路由的可用模型、限流和数据使用条款可能变化，未明确的额度不作保证。",
+          "rank": 14,
+          "focus_reason": ""
+        }
+      ]
+    },
+    {
       "digest_id": "2026-10-20",
       "generated_at": "2026-10-20T08:52:45.173674+08:00",
       "window_start": "2026-10-19T08:47:44+08:00",
@@ -1024,7 +1304,7 @@
       "sources": [
         "https://docs.z.ai/guides/overview/pricing"
       ],
-      "checked_at": "2026-10-20T02:29:30Z"
+      "checked_at": "2026-10-21T00:57:11.214107Z"
     },
     {
       "provider": "Groq",
@@ -1042,27 +1322,27 @@
             "whisper-large-v3",
             "whisper-large-v3-turbo"
           ],
-          "quota": "20 RPM, 2000 RPD, 7200 audio seconds/hour, 28800/day"
+          "quota": "20 RPM、2,000 RPD；每小时 7,200 秒音频、每日 28,800 秒"
         },
         {
           "names": [
             "canopylabs/orpheus-arabic-saudi",
             "canopylabs/orpheus-v1-english"
           ],
-          "quota": "10 RPM, 100 RPD, 1200 TPM, 3600 TPD"
+          "quota": "10 RPM、100 RPD、1,200 TPM、3,600 TPD"
         },
         {
           "names": [
             "meta-llama/llama-prompt-guard-2-22m",
             "meta-llama/llama-prompt-guard-2-86m"
           ],
-          "quota": "30 RPM, 14400 RPD, 15000 TPM, 500000 TPD"
+          "quota": "30 RPM、14,400 RPD、15,000 TPM、500,000 TPD"
         },
         {
           "names": [
             "openai/gpt-oss-safeguard-20b"
           ],
-          "quota": "3 RPM, 1000 RPD, 2000 TPM, 200000 TPD"
+          "quota": "3 RPM、1,000 RPD、2,000 TPM、200,000 TPD"
         }
       ],
       "quota": "下列三款文本模型各为 30 RPM、1,000 RPD、8,000 TPM、200,000 TPD；组织级额度，账户后台可能有例外。",
@@ -1070,7 +1350,7 @@
       "sources": [
         "https://console.groq.com/docs/rate-limits"
       ],
-      "checked_at": "2026-10-20T02:29:30Z"
+      "checked_at": "2026-10-21T00:57:11.214107Z"
     },
     {
       "provider": "Google Gemini Developer API",
@@ -1092,14 +1372,14 @@
         "gemini-robotics-er-2-streaming-preview"
       ],
       "other_models": [],
-      "quota": "列出的型号在价格页标注免费输入／输出；实际模型及项目限额看 AI Studio，没有统一固定额度。并非完整历史型号清单。",
+      "quota": "列出型号的输入／输出在官方价格表标为免费；项目级限额以 AI Studio 为准，RPD 在美国太平洋时间午夜重置，不是统一固定额度。",
       "conditions": "需符合条件的 Google 账户及支持地区，中国大陆不在支持地区列表。免费层内容可用于改进产品；API 免费不同于应用免费。Gemini 4 Argon 明确没有免费 API 层。",
       "sources": [
         "https://ai.google.dev/gemini-api/docs/pricing",
         "https://ai.google.dev/gemini-api/docs/rate-limits",
         "https://ai.google.dev/gemini-api/docs/available-regions"
       ],
-      "checked_at": "2026-10-20T02:29:30Z"
+      "checked_at": "2026-10-21T00:57:11.214107Z"
     },
     {
       "provider": "SiliconFlow 中国站",
@@ -1127,7 +1407,7 @@
       "sources": [
         "https://www.siliconflow.cn/pricing"
       ],
-      "checked_at": "2026-10-20T02:29:30Z"
+      "checked_at": "2026-10-21T00:57:11.214107Z"
     },
     {
       "provider": "Cloudflare Workers AI",
@@ -1141,12 +1421,12 @@
       ],
       "other_models": [],
       "quota": "每日共用 10,000 Neurons，UTC 00:00 重置；免费计划用完后请求失败。Neurons 不是 token。",
-      "conditions": "需要 Cloudflare 账户。列出的免费层型号有官方依据；Kimi K2.6/K2.7 Code、GLM5.2/5.3/5.3 Flash、DeepSeek V4 Flash0731/Pro0813 需付费计划或预付 AI Gateway 额度，不能当作零成本注册福利。",
+      "conditions": "需要 Cloudflare 账户。Kimi K2.6/K2.7 Code、GLM5.2/5.3/5.3 Flash、DeepSeek V4 Flash0731/V4.1 Flash1017/Pro0813 需付费计划或预付 AI Gateway 额度，不属于零成本注册福利。列出的三款免费层示例有官方价格表依据。",
       "sources": [
         "https://developers.cloudflare.com/workers-ai/platform/pricing/",
         "https://developers.cloudflare.com/changelog/post/2026-07-28-models-require-workers-paid/"
       ],
-      "checked_at": "2026-10-20T02:29:30Z"
+      "checked_at": "2026-10-21T00:57:11.214107Z"
     },
     {
       "provider": "Cerebras",
@@ -1163,7 +1443,7 @@
       "sources": [
         "https://www.cerebras.ai/pricing"
       ],
-      "checked_at": "2026-10-20T02:29:30Z"
+      "checked_at": "2026-10-21T00:57:11.214107Z"
     },
     {
       "provider": "阿里云百炼",
@@ -1181,7 +1461,7 @@
       "sources": [
         "https://help.aliyun.com/zh/model-studio/new-free-quota"
       ],
-      "checked_at": "2026-10-20T02:29:30Z"
+      "checked_at": "2026-10-21T00:57:11.214107Z"
     },
     {
       "provider": "GitHub Copilot Free",
@@ -1196,7 +1476,7 @@
         "https://github.com/features/copilot/plans",
         "https://docs.github.com/en/copilot/reference/ai-models/supported-models#supported-ai-models-per-copilot-plan"
       ],
-      "checked_at": "2026-10-20T02:33:23Z"
+      "checked_at": "2026-10-21T00:57:11.214107Z"
     },
     {
       "provider": "WorkBuddy International",
@@ -1207,15 +1487,15 @@
         "DeepSeek-V4.1-Flash-1017"
       ],
       "other_models": [],
-      "quota": "基础计划每月 100 credits；活动每日活跃奖励 30 credits，新用户欢迎奖励 250 credits。以上基础积分与 DeepSeek 限时活动分开；价格页的全模型路由活动不等于每个模型均已核实免费。",
-      "conditions": "仅确认国际版。官方帖子未说明该 DeepSeek 活动的每日上限、余额门槛、付款或注册资格。",
+      "quota": "本项仅核实 DeepSeek-V4.1-Flash-1017 限时免费；官方活动帖未列请求上限、重置周期或基础积分扣减细则。当前价格页动态渲染，未重新确认此前基础积分及新人奖励数字，故不在本期承诺。",
+      "conditions": "仅确认国际版官方活动。账户、余额、绑卡及地区条件未在活动帖明确；客户端实际提示优先。",
       "expiry": "官方 2026-10-17 帖子确认免费至 2026-10-31，未写准确截止时刻或时区。",
       "sources": [
         "https://www.workbuddy.ai/pricing/",
         "https://x.com/WorkBuddy_AI/status/2111404103402430558",
         "https://x.com/deepseek_ai/status/2111375640717033777"
       ],
-      "checked_at": "2026-10-20T02:33:23Z"
+      "checked_at": "2026-10-21T00:57:11.214107Z"
     },
     {
       "provider": "讯飞星火",
@@ -1232,7 +1512,7 @@
         "https://startups.xfyun.cn/gemini",
         "https://www.xfyun.cn/doc/spark/Web.html"
       ],
-      "checked_at": "2026-10-20T02:29:30Z"
+      "checked_at": "2026-10-21T00:57:11.214107Z"
     },
     {
       "provider": "OpenRouter",
@@ -1271,7 +1551,7 @@
         "https://openrouter.ai/docs/guides/routing/model-variants/free",
         "https://openrouter.ai/pricing"
       ],
-      "checked_at": "2026-10-20T02:33:23Z"
+      "checked_at": "2026-10-21T00:57:11.214107Z"
     },
     {
       "provider": "OpenCode Console (formerly Zen)",
@@ -1301,7 +1581,42 @@
       "sources": [
         "https://opencode.ai/v2/docs/console/models/"
       ],
-      "checked_at": "2026-10-20T02:33:23Z"
+      "checked_at": "2026-10-21T00:57:11.214107Z"
+    },
+    {
+      "provider": "Qoder International",
+      "kind": "free_coding_app_plus_limited_promotion",
+      "kindLabel": "免费应用 + 限时活动",
+      "status": "official_promotion_verified",
+      "models": [
+        "Qwen3.8-Flash"
+      ],
+      "other_models": [],
+      "quota": "Qwen3.8-Flash 为 0.0×，调用不消耗 Credits，零余额及 Free 用户也可用；未公布固定请求上限。另可在桌面 App 每日手动领取 100 Credits，每轮北京时间 10:00 重置，领取后 30 天有效。",
+      "conditions": "国际版个人账户，含 Free/Pro Trial/付费个人；不含 Teams/Enterprise。选定 Qwen3.8-Flash 自动生效，无需领奖；每日积分须桌面手动领取，不能补领，且不提升套餐权限。支持 IDE、CLI、JetBrains、网页等官方列明产品，不是独立通用 API 免费。未要求付费订阅；其他绑卡/地区限制未列明。",
+      "expiry": "模型免费已从原 9 月 30 日截止延长，结束日待官方提前公布；每日积分活动结束日也待公布。不是今日新活动。",
+      "sources": [
+        "https://docs.qoder.com/events/flashoffer",
+        "https://docs.qoder.com/events/100credits"
+      ],
+      "checked_at": "2026-10-21T00:57:11.214107Z"
+    },
+    {
+      "provider": "Kilo Auto Free",
+      "kind": "recurring_free_coding_app",
+      "kindLabel": "免费编程应用",
+      "status": "official_free_router_verified",
+      "models": [
+        "kilo-auto/free（免费路由器，底层型号动态变化）"
+      ],
+      "other_models": [],
+      "quota": "官方确认 Auto Free 路由到当前可用免费模型；没有统一固定请求额度或重置时刻，上游可限流。未公布固定结束日。",
+      "conditions": "通过 Kilo 账户在 IDE/CLI 选择 Auto Free。后台小模型默认可能收费，须另选免费模型；自动补全默认可能扣积分，BYOK 也不保证免费。确切底层型号须查当时模型选择器，不将全部目录当作免费。付款/地区资格未统一列明。",
+      "privacy": "路由可能使用记录提示词和输出、用于改进服务的供应商；NVIDIA 免费端点仅供试用，不输入个人或机密信息。",
+      "sources": [
+        "https://kilo.ai/docs/getting-started/using-kilo-for-free"
+      ],
+      "checked_at": "2026-10-21T00:57:11.214107Z"
     }
   ]
 }
