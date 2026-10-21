@@ -1,0 +1,695 @@
+/* Production controls and reading sizes.
+   Load after base.css and the selected v2 theme. Keep the three art directions intact. */
+body {
+  font-size: 14px;
+  --control-ink: #d9edfb;
+  --control-muted: #96b6cc;
+  --control-bg: #0b1b2b;
+  --control-line: #52758d80;
+  --control-accent: #a3eaff;
+  --control-active-ink: #061521;
+  --control-radius: 4px;
+}
+body.style-b {
+  --control-ink: #4b365f;
+  --control-muted: #746180;
+  --control-bg: #ffffff80;
+  --control-line: #ffffffdb;
+  --control-accent: #382451;
+  --control-active-ink: #fff;
+  --control-radius: 22px;
+}
+body.style-c {
+  --control-ink: #171915;
+  --control-muted: #494b43;
+  --control-bg: #f4f2e7;
+  --control-line: #171915;
+  --control-accent: #171915;
+  --control-active-ink: #f5ed00;
+  --control-radius: 0;
+}
+
+/* Exact 14 px contract wins over all theme and mobile font-size rules.
+   Display headlines and decorative hero artwork deliberately remain untouched. */
+.lede,
+.excerpt,
+.fulltext,
+.fulltext p,
+.hero-details,
+.hero-details p,
+.offer-body,
+.offer-body .models,
+.offer-body p,
+.offer-body li {
+  font-size: 14px !important;
+  line-height: 1.9;
+}
+.switcher,
+.switcher .back,
+.switcher .preview,
+.theme-chooser,
+.theme-chooser button,
+.theme-chooser button span,
+.formal-nav,
+.formal-nav a,
+.archive-nav,
+.archive-nav label,
+.archive-nav select,
+.archive-nav a,
+.archive-links,
+.archive-links summary,
+.archive-links a,
+.scope-control,
+.scope-control label,
+.scope-control select,
+.scope-control button,
+#search-status,
+#clear,
+.brandbar .logo .small,
+.date,
+.date span,
+.kicker,
+.kicker > span,
+.kicker time,
+.hero-copy > time,
+.read-lead,
+.read-lead button,
+.sectionbar h2 small,
+.search input,
+.filters button,
+.news-top,
+.news-top .num,
+.news-top .tag,
+.news-top time,
+.news-details > summary,
+.sources,
+.sources a,
+.offer-heading > span,
+.offer-heading h2 small,
+.offer > summary span,
+footer,
+footer p,
+footer a,
+.empty {
+  font-size: 14px !important;
+}
+button,
+input,
+select {
+  font-family: inherit;
+}
+select,
+button,
+input,
+summary {
+  max-width: 100%;
+}
+select:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 5px;
+}
+.lede,
+.excerpt,
+.fulltext,
+.hero-details,
+.offer-body,
+.news h3,
+.sources a,
+footer {
+  overflow-wrap: anywhere;
+}
+
+/* Formal navigation and reader-owned appearance preferences. */
+.switcher {
+  flex-wrap: wrap;
+  gap: 14px 22px;
+  line-height: 1.5;
+  letter-spacing: .02em;
+}
+.formal-nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+  min-width: 0;
+}
+.formal-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 5px 0;
+  white-space: nowrap;
+  text-underline-offset: 5px;
+}
+.formal-nav a:hover,
+.formal-nav a[aria-current="page"] {
+  text-decoration: underline;
+}
+.theme-chooser,
+.switcher .links.theme-chooser {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 5px;
+  max-width: 100%;
+  border: 1px solid var(--control-line);
+  border-radius: var(--control-radius);
+  background: var(--control-bg);
+}
+.theme-chooser button,
+.switcher .theme-chooser button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 40px;
+  padding: 8px 13px;
+  border: 1px solid transparent;
+  border-radius: var(--control-radius);
+  background: transparent;
+  color: var(--control-muted);
+  font-weight: 650;
+  line-height: 1.4;
+  letter-spacing: 0;
+  white-space: normal;
+  text-align: center;
+  transition: color .2s, background .2s, border-color .2s;
+}
+.theme-chooser button:hover {
+  color: var(--control-ink);
+  border-color: var(--control-line);
+}
+.theme-chooser button[aria-pressed="true"],
+.theme-chooser button.active,
+.theme-chooser button[aria-current="true"] {
+  background: var(--control-accent);
+  color: var(--control-active-ink);
+  border-color: var(--control-accent);
+}
+.style-a .theme-chooser button[aria-pressed="true"],
+.style-a .theme-chooser button.active {
+  background: #71dfff1f;
+  color: #b4f0ff;
+  border-color: #71dfff66;
+  box-shadow: inset 0 0 18px #71dfff0a;
+}
+.style-b .theme-chooser {
+  box-shadow: 0 4px 22px #7460a90a;
+  backdrop-filter: blur(18px);
+}
+.style-b .theme-chooser button[aria-pressed="true"],
+.style-b .theme-chooser button.active {
+  box-shadow: 0 3px 10px #35244d25;
+}
+.style-c .switcher .theme-chooser {
+  --control-bg: #20221e;
+  --control-ink: #f4f2e7;
+  --control-muted: #d5d6ca;
+  --control-line: #62665a;
+  --control-accent: var(--acid, #f5ed00);
+  --control-active-ink: #171915;
+  border: 0;
+  padding: 0;
+  background: transparent;
+}
+.style-c .theme-chooser button {
+  border-color: #62665a;
+}
+
+/* Keep brand and issue information readable even on a narrow phone. */
+.brandbar {
+  gap: 20px;
+  min-height: 110px;
+  height: auto;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+.logo {
+  min-width: 0;
+}
+.brandbar .logo .small {
+  line-height: 1.5;
+  letter-spacing: .1em;
+}
+.date {
+  flex: 0 1 auto;
+  min-width: 0;
+  max-width: 380px;
+  line-height: 1.6;
+  letter-spacing: .02em;
+  overflow-wrap: anywhere;
+}
+.date span {
+  line-height: 1.6;
+  letter-spacing: 0;
+}
+.kicker {
+  flex-wrap: wrap;
+  max-width: 100%;
+  line-height: 1.6;
+}
+.kicker time {
+  white-space: normal;
+  letter-spacing: 0;
+  overflow-wrap: anywhere;
+}
+.read-lead {
+  min-height: 44px;
+}
+
+/* Current issue selection and complete, keyboard-accessible archive list. */
+.archive-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px 22px;
+  padding: 20px 0;
+  color: var(--control-ink);
+  line-height: 1.6;
+}
+.archive-nav label,
+.scope-control label {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  min-width: 0;
+  max-width: 100%;
+}
+.archive-nav select,
+.scope-control select {
+  min-height: 42px;
+  min-width: 0;
+  max-width: 100%;
+  padding: 9px 34px 9px 13px;
+  border: 1px solid var(--control-line);
+  border-radius: var(--control-radius);
+  background-color: var(--control-bg);
+  color: var(--control-ink);
+  line-height: 1.5;
+}
+.archive-nav select {
+  width: min(100%, 245px);
+}
+.archive-nav select option,
+.scope-control select option {
+  background: var(--control-bg);
+  color: var(--control-ink);
+}
+.archive-nav > a,
+.archive-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 6px 9px;
+  border-radius: var(--control-radius);
+  text-underline-offset: 4px;
+}
+.archive-nav a:hover,
+.archive-links a:hover {
+  text-decoration: underline;
+}
+.archive-links {
+  flex: 1 1 100%;
+  min-width: 0;
+  max-width: 100%;
+  color: var(--control-muted);
+  line-height: 1.7;
+}
+.archive-links summary {
+  cursor: pointer;
+  width: fit-content;
+  max-width: 100%;
+  padding: 8px 0;
+  color: var(--control-ink);
+}
+.archive-links[open] summary {
+  margin-bottom: 8px;
+}
+.archive-links > div,
+.archive-links .archive-list,
+.archive-links ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.archive-links a[aria-current="page"] {
+  background: var(--control-accent);
+  color: var(--control-active-ink);
+}
+.style-c .archive-nav {
+  padding: 20px 4.5%;
+  border-bottom: var(--line);
+  background: var(--paper);
+}
+.style-c .archive-nav select,
+.style-c .scope-control select,
+.style-c #clear {
+  border-width: 2px;
+  box-shadow: 3px 3px 0 var(--ink);
+}
+
+/* Search can span all stored issues without overcrowding category filters. */
+.sectionbar {
+  align-items: center;
+}
+.sectionbar > * {
+  min-width: 0;
+  max-width: 100%;
+}
+.sectionbar h2 {
+  flex-wrap: wrap;
+  row-gap: 8px;
+}
+.search {
+  flex: 1 1 240px;
+  max-width: 380px;
+  min-width: 0;
+}
+.search input {
+  min-width: 0;
+  width: 100%;
+  min-height: 42px;
+  line-height: 1.5;
+}
+.filters {
+  flex-wrap: wrap;
+  max-width: 100%;
+  row-gap: 6px;
+}
+.filters button {
+  min-height: 40px;
+  line-height: 1.5;
+}
+.scope-control {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 12px;
+  flex-basis: 100%;
+  grid-column: 1 / -1;
+  min-width: 0;
+  max-width: 100%;
+  color: var(--control-muted);
+  line-height: 1.6;
+}
+#clear {
+  min-height: 42px;
+  padding: 9px 15px;
+  border: 1px solid var(--control-line);
+  border-radius: var(--control-radius);
+  background: var(--control-bg);
+  color: var(--control-ink);
+  line-height: 1.5;
+}
+#clear:hover {
+  border-color: var(--control-muted);
+}
+#search-status {
+  flex: 1 1 100%;
+  grid-column: 1 / -1;
+  margin: 0;
+  color: var(--control-muted);
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+#search-status:empty {
+  display: none;
+}
+
+/* Timestamps and sources are information, not decorative microtype. */
+.news-top,
+.style-b .news-top,
+.style-b .news:nth-child(1) .news-top {
+  flex-wrap: wrap;
+  gap: 9px;
+  line-height: 1.6;
+  min-width: 0;
+}
+.news-top .num {
+  flex-shrink: 0;
+  min-width: 29px;
+  height: auto;
+  min-height: 28px;
+  line-height: 1.4;
+}
+.news-top .tag {
+  max-width: 100%;
+  line-height: 1.4;
+  letter-spacing: 0;
+  overflow-wrap: anywhere;
+}
+.news-top time,
+.style-b .news-top time,
+.style-c .news:nth-child(n+3) .news-top time {
+  flex: 1 1 100%;
+  min-width: 0;
+  max-width: 100%;
+  margin-left: 0;
+  line-height: 1.65;
+  letter-spacing: 0;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+.news-details > summary {
+  gap: 12px;
+  min-height: 36px;
+  line-height: 1.6;
+}
+.sources {
+  gap: 10px 16px;
+  line-height: 1.7;
+}
+.sources a {
+  min-width: 0;
+  max-width: 100%;
+  line-height: 1.7;
+}
+.offer > summary {
+  flex-wrap: wrap;
+}
+.offer > summary span {
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+.offer-heading {
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.offer-heading > span {
+  letter-spacing: .04em;
+  line-height: 1.6;
+}
+.offer-body .models {
+  word-break: break-word;
+}
+footer {
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 12px 24px;
+  letter-spacing: .02em;
+  line-height: 1.8;
+}
+footer > * {
+  min-width: 0;
+  max-width: 100%;
+}
+
+@media (max-width: 1050px) {
+  .switcher {
+    justify-content: space-between;
+  }
+  .theme-chooser,
+  .switcher .links.theme-chooser {
+    margin-left: auto;
+  }
+  .style-b .brandbar .logo {
+    flex-wrap: wrap;
+    gap: 8px 12px;
+  }
+  .style-b .brandbar .logo .small {
+    flex: 1 1 100%;
+    margin-left: 48px;
+  }
+  .style-c .news:nth-child(n+3) {
+    grid-template-columns: minmax(145px, .6fr) minmax(190px, 1.2fr) minmax(160px, 1fr);
+  }
+}
+@media (max-width: 760px) {
+  .switcher {
+    gap: 10px 14px;
+  }
+  .formal-nav {
+    flex: 1 1 100%;
+    justify-content: center;
+    gap: 5px 22px;
+  }
+  .theme-chooser,
+  .switcher .links.theme-chooser {
+    order: 3;
+    width: 100%;
+    margin-left: 0;
+    border-radius: var(--control-radius);
+  }
+  .theme-chooser button,
+  .switcher .theme-chooser button {
+    flex: 1 1 0;
+    min-width: 0;
+    padding: 9px 5px;
+  }
+  .brandbar {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 18px;
+    min-height: 0;
+  }
+  .brandbar .date {
+    flex: 1 1 100%;
+    max-width: none;
+    text-align: left;
+  }
+  .style-c .brandbar .date {
+    padding-left: 0;
+    border-left: 0;
+  }
+  .style-b .brandbar .logo .small {
+    display: inline;
+    flex-basis: auto;
+    margin-left: 0;
+  }
+  .archive-nav {
+    align-items: flex-start;
+    gap: 10px 14px;
+  }
+  .archive-nav label {
+    flex: 1 1 100%;
+  }
+  .archive-nav select {
+    flex: 1 1 160px;
+    width: auto;
+  }
+  .style-c .archive-nav {
+    padding: 18px 6%;
+  }
+  .search,
+  .sectionbar .search {
+    flex: 1 1 100%;
+    width: 100%;
+    max-width: none;
+    margin-left: 0;
+  }
+  .scope-control {
+    gap: 10px;
+  }
+  .scope-control label {
+    flex: 1 1 180px;
+  }
+  .scope-control select {
+    flex: 1 1 auto;
+  }
+  .style-b .filters {
+    border-radius: 20px;
+  }
+  .style-c .filters button {
+    border-right: var(--line);
+  }
+  .style-c .news:nth-child(n+3) .news-top {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .offer-heading > span {
+    display: block;
+  }
+  footer {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+@media (max-width: 400px) {
+  .theme-chooser button,
+  .switcher .theme-chooser button {
+    padding: 9px 3px;
+  }
+  .formal-nav {
+    gap: 4px 17px;
+  }
+  .brandbar .logo .small {
+    letter-spacing: .04em;
+  }
+  .style-b .brandbar .logo .small {
+    flex-basis: 100%;
+    margin-left: 48px;
+  }
+  .filters button {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .theme-chooser button {
+    transition: none;
+  }
+}
+
+/* Production offer markup has no inline marker: this is the single disclosure sign. */
+.offer > summary {
+  position: relative;
+  padding-right: 32px;
+  list-style: none;
+}
+.offer > summary::-webkit-details-marker {
+  display: none;
+}
+.offer > summary::after {
+  content: "+";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 24px;
+  color: inherit;
+  font: 500 24px/1.2 ui-monospace, SFMono-Regular, Consolas, monospace;
+  text-align: center;
+}
+.offer[open] > summary::after {
+  content: "−";
+  display: block;
+}
+.style-c .offer > summary {
+  padding-right: 48px;
+}
+.style-c .offer > summary::after {
+  top: 20px;
+  right: 15px;
+}
+.style-b .offer > summary strong {
+  font-size: 14px;
+}
+.archive-links:not(details) {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 8px;
+}
+.archive-nav h2 {
+  font-size: 23px;
+  line-height: 1.5;
+}
+.style-c .archive-nav h2 {
+  font-size: 30px;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+.resource-note {
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 22px;
+  overflow-wrap: anywhere;
+}

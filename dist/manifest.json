@@ -4,22 +4,22 @@
   "digests": {
     "2026-10-21": {
       "path": "daily/2026-10-21/",
-      "content_sha256": "7d75c0b37ef94db8bcc9f3b3e147b0472341cd187c9f347f6252efda4758fc54",
+      "content_sha256": "e10971a6ca96316e747b193777683dab1b6277ab0e7654abe87fafd14b6b82dc",
       "source_sha256": "516bcb846dc93a687a73e9effb8b4d1244a5b7e5ce38d0beff73908f971d59ee"
     },
     "2026-10-20": {
       "path": "daily/2026-10-20/",
-      "content_sha256": "e7d29ad5e10330ebeda7857d8235e8388f41be667502ae9b759ccf812871bdee",
+      "content_sha256": "9571688e3e56cb2a0d1445525357e5ad815566240205b90200a9bfcaae2ed9be",
       "source_sha256": "c197e30465f0f9c462c63c56664f0cdecae8ec7bb67ab45b3d703894e0b88ba7"
     },
     "2026-10-19": {
       "path": "daily/2026-10-19/",
-      "content_sha256": "92b0d301a06177da7a83b2e413011143c34a59f8809507abd8979a9319ed13ed",
+      "content_sha256": "0e9acb9883dcb798386e06960e4860f7b727180d524dfa9bf545f45e9590fa09",
       "source_sha256": "b16acf6efb71617742e7d7c262092194bc288ae81fc9d95a3dc2b5f6241d4790"
     },
     "2026-10-16": {
       "path": "daily/2026-10-16/",
-      "content_sha256": "bf3933e67eb800cacce1921d02ffadca5886b5cf0a5f9661e605f632ea9aa80d",
+      "content_sha256": "6dbd430eb34dd09942af9a0f290b007ac995927b1f75c208337b11141303bfd5",
       "source_sha256": "391bf19ad117adb1b600c3ded5ab88db98dc7713908ee8612a9ce8f05f41e96e"
     }
   }

@@ -1,0 +1,1 @@
+(function(){var selected='b';try{var saved=localStorage.getItem('ai-daily-theme');if(['a','b','c'].includes(saved))selected=saved}catch(e){}document.documentElement.dataset.theme=selected;var link=document.getElementById('theme-css');if(link){link.setAttribute('href',link.dataset.prefix+'assets/theme-'+selected+'.css')}window.__dailyTheme=selected})();
