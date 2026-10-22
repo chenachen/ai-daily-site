@@ -1,6 +1,262 @@
 {
   "issues": [
     {
+      "digest_id": "2026-10-22",
+      "source_sha256": "a24141eff97cb2b985f11330f753c06c9da2c372492c21c876e6048e4174c6a2",
+      "raw_source_sha256": "65784fae6fb0b3a72e5e8e1e46365df029fffd9f0160f9146262f56870bf876d",
+      "has_editorial": true,
+      "focus_event_id": "recursive-flint-initial-release-20261021",
+      "items": [
+        {
+          "event_id": "recursive-flint-initial-release-20261021",
+          "title": "Recursive 开放 Flint 编程模型权重：40B 总参数、2.5B 激活参数",
+          "summary": "Flint 是 Recursive 从头训练的文本编程模型，可用于理解代码库、修复问题、实现功能和编写测试。官方开放 BF16 权重、分词器、聊天模板及 SGLang 部署组件，量化版本另行提供；模型卡配置的上下文为 262,144 token，由输入和生成内容共享。官方博客称模型最高支持 512K，并建议在 256K 内使用。\n\nRecursive 同时发布针对 Apple Silicon 优化的 rec 推理引擎。BF16 权重下载约 80GB，官方提供单张 B300 或 H200 的部署示例。",
+          "category": "news",
+          "group": "models",
+          "groupLabel": "模型与 API",
+          "digest_id": "2026-10-22",
+          "event_at": "2026-10-21T22:24:03+08:00",
+          "urls": [
+            "https://huggingface.co/RecursiveSI/flint/commit/2a247be0c0aec895ccb0ac7ca92229ec6df37288",
+            "https://huggingface.co/RecursiveSI/flint",
+            "https://recursive.com/updates/introducing-recursive-flint"
+          ],
+          "limitation": "",
+          "rank": 1
+        },
+        {
+          "event_id": "anthropic-api-2026-10-21-sdk-major",
+          "title": "Anthropic SDK 升级 API 版本，移除采样参数并调整消息类型",
+          "summary": "Anthropic 发布 TypeScript SDK 1.0.0、Python SDK 2.0.0 等主版本，默认请求头切换至 API 2026-10-21。该 API 对包含 temperature、top_p 或 top_k 的请求返回 400；assistant 消息不能直接包含 document，user 文本不能携带非空 citations。SDK 按消息角色拆分类型，许可由 MIT 改为 Apache 2.0。同日 TypeScript 1.1.0 和 Python 2.1.0 又增加用户档案的限制状态、处置动作及筛选字段。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-22",
+          "event_at": "2026-10-21T15:52:38Z",
+          "urls": [
+            "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v1.0.0",
+            "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.0.0",
+            "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v1.1.0",
+            "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.1.0",
+            "https://platform.claude.com/docs/en/api/migration-2026-10-21"
+          ],
+          "limitation": "",
+          "rank": 2
+        },
+        {
+          "event_id": "openai-node-7-40-41-python-3-36",
+          "title": "OpenAI Node/Python SDK 支持 Vertex AI Responses API",
+          "summary": "Node SDK 7.41.0 和 Python SDK 3.36.0 增加通过 Vertex AI 使用 Responses API 的支持。同批版本新增 30 分钟缓存写入 token 用量、上下文压缩触发 ID，以及自定义语音同意管理；Node 7.40.0 同时调整大体积 WebSocket 消息处理和连接恢复行为。",
+          "category": "news",
+          "group": "openai",
+          "groupLabel": "OpenAI",
+          "digest_id": "2026-10-22",
+          "event_at": "2026-10-21T15:30:50Z",
+          "urls": [
+            "https://github.com/openai/openai-node/releases/tag/v7.41.0",
+            "https://github.com/openai/openai-node/releases/tag/v7.40.0",
+            "https://github.com/openai/openai-python/releases/tag/v3.36.0"
+          ],
+          "limitation": "",
+          "rank": 3
+        },
+        {
+          "event_id": "tibo-day16-persistent-codex-work-cache-20261021",
+          "title": "Tibo Day 16：登录 Codex 和 Work 后，旧会话缓存持续保留",
+          "summary": "Tibo 在 Day 16 更新中宣布，Codex 和 Work 为已登录用户持续保留缓存。他表示，用户返回旧对话、或暂停数小时后恢复，不再因这段间隔损失缓存命中。该帖同时引用了 OpenAI API 的 12 小时提示缓存公告。",
+          "category": "news",
+          "group": "tibo",
+          "groupLabel": "Tibo",
+          "digest_id": "2026-10-22",
+          "event_at": "2026-10-21T09:10:02+08:00",
+          "urls": [
+            "https://x.com/thsottiaux/status/2112712984644784534"
+          ],
+          "limitation": "",
+          "rank": 4
+        },
+        {
+          "event_id": "openai-php-critical-vulnerabilities-disclosure-20261021",
+          "title": "OpenAI 披露 GPT-5.6 Sol 参与发现 PHP 严重漏洞，并开放版本检查 Skill",
+          "summary": "OpenAI 表示，Calif 在 Patch the Planet 项目中使用 GPT-5.6 Sol 识别出 PHP 严重漏洞，Wiz 也独立发现并报告相关漏洞。此前两个月，PHP 维护者主导修复和发版，研究人员及云服务、安全服务商参与测试、缓解措施和披露协调。\n\nOpenAI 随公告提供 PHP 版本检查 Codex Skill，用于识别可能受影响的 PHP 版本；同时公布一套面向广泛使用开源组件的漏洞协同响应框架，涵盖验证和上游修复、通知受影响组织、协调政府及服务商、准备下游更新和发布部署指引。 检查工具提供服务器访问和 URL 两种 Skill，通过 HTTP 响应头或本机 php -v 读取版本；PHP 版本隐藏或无法识别时返回 UNKNOWN，检查本身不独立验证补丁。",
+          "category": "news",
+          "group": "openai",
+          "groupLabel": "OpenAI",
+          "digest_id": "2026-10-22",
+          "event_at": "2026-10-21T22:04:23+08:00",
+          "urls": [
+            "https://x.com/OpenAI/status/2112907856018309586",
+            "https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities/",
+            "https://github.com/openai/php2shell-checker"
+          ],
+          "limitation": "",
+          "rank": 5
+        },
+        {
+          "event_id": "ibm-granite-speech-turboctc-plus-update-20261021",
+          "title": "IBM 更新 Granite Speech：Turbo CTC 扩展至七语种转写，Plus 改进说话人识别",
+          "summary": "Granite Speech 5.0 470M Turbo CTC 从英语转写扩展至英语、日语、西班牙语、德语、法语、意大利语和葡萄牙语，并加入原生标点、大小写及混响环境训练。IBM 报告其 Open ASR Leaderboard 吞吐达到 19,870 倍实时速度，高于最初约 12,600 倍的结果。\n\nGranite Speech 4.1 2B Plus 同日更新权重和配置，改进说话人归属、时间戳、关键词偏置与长语音表现。上述模型采用 Apache 2.0 许可。IBM 同篇文章还介绍了已于 10 月 20 日发布的 Granite Speech 5.0 2B；本次新增消息为两款既有模型的实质更新。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-22",
+          "event_at": "2026-10-21T22:58:18+08:00",
+          "urls": [
+            "https://huggingface.co/blog/ibm-granite/granite-speech-5",
+            "https://huggingface.co/ibm-granite/granite-speech-5.0-470m-turboctc/commit/121ff64ce163f4b3ec35f2e5a98c440ac93f7690",
+            "https://huggingface.co/ibm-granite/granite-speech-4.1-2b-plus/commit/e69efe37f97b6283c61f5a8dadda2b3eb67765d6"
+          ],
+          "limitation": "",
+          "rank": 6
+        },
+        {
+          "event_id": "claude-code-2-1-306-307",
+          "title": "Claude Code 2.1.307 新增 API 迁移指令及安全事件遥测",
+          "summary": "Claude Code 2.1.307 增加 /claude-api api-version，用于把 Claude API 代码迁移至 2026-10-21 版本；新增 claude_code.safety_event，记录工具调用被权限规则、自动模式、安全检查、hook 或沙箱拦截、询问或退回的情况。HTTP MCP 连接中途断开时，仅重试只读或幂等工具，修复写操作重复发送的问题；同时修复读取大量 PDF、图片后反复自动压缩的错误，以及云会话重启后清空对话重新出现的问题。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-22",
+          "event_at": "2026-10-21T22:17:02Z",
+          "urls": [
+            "https://github.com/anthropics/claude-code/releases/tag/v2.1.307",
+            "https://github.com/anthropics/claude-code/releases/tag/v2.1.306"
+          ],
+          "limitation": "",
+          "rank": 7
+        },
+        {
+          "event_id": "mastra-core-1-79-0-mcp-events",
+          "title": "Mastra 1.79.0 引入实验 MCP Events 与原生沙箱文件接口",
+          "summary": "Mastra 1.79.0 实验支持 MCP Events 草案 SEP-3415，服务端可发布事件流，客户端通过轮询、长连接或签名 webhook 接收，Studio 提供事件类型、发生记录及测试发送视图。WorkspaceSandbox 新增可选原生 filesystem 接口，支持直接读写和列目录。Agent Controller 会话改为按 sessionId 寻址，同一 resourceId 可对应多个会话；该版本还调整查询契约和服务端路由，包含破坏性 API 变化。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-22",
+          "event_at": "2026-10-21T12:28:33Z",
+          "urls": [
+            "https://github.com/mastra-ai/mastra/releases/tag/%40mastra/core%401.79.0"
+          ],
+          "limitation": "",
+          "rank": 8
+        },
+        {
+          "event_id": "pydantic-ai-2-59-web-fetch-security",
+          "title": "Pydantic AI 2.59 修复 HTML 转换高危问题，接入 Daytona 与 ElevenLabs",
+          "summary": "Pydantic AI 2.59.0 修复 web_fetch_tool 转换攻击者控制的大量 HTML 元素时拖慢同进程其他工作的高危问题；1.x 维护线也发布 1.107.9 修复。新版本加入 DaytonaSandbox，Coder、Shell、FileSystem 等能力可在 Daytona 沙箱运行；新增 ElevenLabsRealtimeModel 支持实时语音到语音，并补充提供商无关的限流、服务不可用、服务端错误与上下文超限分类。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-22",
+          "event_at": "2026-10-21T04:36:13Z",
+          "urls": [
+            "https://github.com/pydantic/pydantic-ai/releases/tag/v2.59.0",
+            "https://github.com/pydantic/pydantic-ai/releases/tag/v1.107.9"
+          ],
+          "limitation": "",
+          "rank": 9
+        },
+        {
+          "event_id": "vercel-ai-sdk-7-0-148-cache-prewarm",
+          "title": "AI SDK OpenAI Provider 支持 12 小时缓存写入及预热",
+          "summary": "AI SDK 7.0.148 同批发布的 @ai-sdk/openai 4.0.99 增加 12 小时提示缓存写入及缓存预热支持，并把提供商校验 schema 延迟到首次使用时构建。@ai-sdk/provider-utils 5.0.65 阻止下载 URL 使用 .internal 主机名，统一编码带凭据后续请求路径中的提供商返回标识；Bash 工具新增按命令设置毫秒 timeout。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-22",
+          "event_at": "2026-10-21T02:22:24Z",
+          "urls": [
+            "https://github.com/vercel/ai/releases/tag/%40ai-sdk/openai%404.0.99",
+            "https://github.com/vercel/ai/releases/tag/%40ai-sdk/provider-utils%405.0.65",
+            "https://github.com/vercel/ai/releases/tag/%40ai-sdk/tool-bash%401.0.2",
+            "https://github.com/vercel/ai/releases/tag/ai%407.0.148"
+          ],
+          "limitation": "",
+          "rank": 10
+        },
+        {
+          "event_id": "copilot-cli-1-0-102",
+          "title": "Copilot CLI 1.0.102 继承子代理审批，修复长时间沙箱命令",
+          "summary": "Copilot CLI 1.0.102 稳定版让子代理继承自定义工具和 MCP 工具审批，减少重复权限询问。-p 与管道输入遵循组织管理的 Auto 模型选择；沙箱网络继承 NO_PROXY 和 ALL_PROXY，长时间沙箱命令超过十秒仍可继续。提供商过载造成的回复中断会退避重试，并显示其错误信息及请求 ID。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-22",
+          "event_at": "2026-10-21T18:05:00Z",
+          "urls": [
+            "https://github.com/github/copilot-cli/releases/tag/v1.0.102"
+          ],
+          "limitation": "",
+          "rank": 11
+        },
+        {
+          "event_id": "zed-1-26-1-preview-wasm-debugger",
+          "title": "Zed 1.26.1 预览版支持 WebAssembly 源码调试",
+          "summary": "Zed 1.26.1-pre 在 JavaScript 调试器中加入 DWARF 支持，可调试 WebAssembly 源码，调试悬停视图支持可展开且可键盘操作的变量树。Agent 模型和配置选择器改进模糊搜索，并修复带子代理线程恢复时卡住、OpenAI 兼容提供商重复显示思考文本等问题。ACP 默认配置只用于新对话，重新打开旧对话保留原会话设置。该版本为预览版。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-22",
+          "event_at": "2026-10-21T20:55:47Z",
+          "urls": [
+            "https://github.com/zed-industries/zed/releases/tag/v1.26.1-pre"
+          ],
+          "limitation": "",
+          "rank": 12
+        },
+        {
+          "event_id": "langfuse-4-67-skills-api-key-search",
+          "title": "Langfuse 4.67 简化技能安装，增加组织 API Key 筛选",
+          "summary": "Langfuse 4.67.0 简化 Skills 的 CLI 安装及导入配置，组织 API Key 页面加入名称搜索和网关 Key 筛选。会话搜索现包含 trace 名称；MCP 在技能未设置 production 版本时回退到最新版，并修复 Slack 集成中链接按钮和私有频道可见性问题。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-22",
+          "event_at": "2026-10-21T11:31:17Z",
+          "urls": [
+            "https://github.com/langfuse/langfuse/releases/tag/v4.67.0"
+          ],
+          "limitation": "",
+          "rank": 13
+        },
+        {
+          "event_id": "github-tool-pingdotgg-t3code",
+          "title": "每日工具：T3 Code，用桌面、网页和手机统一操作编程代理",
+          "summary": "T3 Code 是本机编程代理的统一控制界面，可连接已安装并登录的 Codex、Claude Code、Cursor、Grok Build、OpenCode 与 Google Antigravity。它提供 Electron 桌面应用、本地网页界面、iOS 和 Android 客户端，支持从手机或另一台设备访问运行中的代理，并提供项目设置、Git 源码管理集成和 MCP 接入。项目采用 MIT 许可证；使用代理仍需要相应账号或订阅，项目也明确处于早期阶段。",
+          "category": "github",
+          "group": "other",
+          "groupLabel": "其他",
+          "digest_id": "2026-10-22",
+          "event_at": null,
+          "urls": [
+            "https://github.com/pingdotgg/t3code",
+            "https://github.com/trending/typescript?since=daily",
+            "https://github.com/pingdotgg/t3code/releases/tag/v0.1.2-nightly.20261021.3499"
+          ],
+          "limitation": "",
+          "rank": 14
+        },
+        {
+          "event_id": "freebie-official-directory-2026-10-22",
+          "title": "免费福利：16 个渠道的免费模型、额度和使用条件",
+          "summary": "免费目录列出16个渠道：OpenRouter与OpenCode新增Flint，补充Cursor Free具体型号和TRAE中国版每月500积分；长期免费、限时活动及一次性试用分别标注。",
+          "category": "freebie",
+          "group": "other",
+          "groupLabel": "其他",
+          "digest_id": "2026-10-22",
+          "event_at": null,
+          "urls": [
+            "https://openrouter.ai/models?max_price=0",
+            "https://opencode.ai/docs/zen/",
+            "https://cursor.com/docs/models-and-pricing",
+            "https://www.trae.cn/pricing"
+          ],
+          "limitation": "",
+          "rank": 15
+        }
+      ]
+    },
+    {
       "digest_id": "2026-10-21",
       "source_sha256": "516bcb846dc93a687a73e9effb8b4d1244a5b7e5ce38d0beff73908f971d59ee",
       "raw_source_sha256": "44273a26678bcb66377a1d12ba3dba3bf505562245f96801ac2862cf829dd721",
@@ -1216,14 +1472,15 @@
       "kindLabel": "一次性试用，需付款方式",
       "status": "official_verified",
       "models": [
-        "GPT OSS 120B",
-        "Qwen 3.8 27B"
+        "gpt-oss-120b",
+        "qwen-3.8-27b"
       ],
       "other_models": [],
       "quota": "一次性 5 美元促销额度，激活后 30 天到期。",
       "conditions": "需有效付款方式；不会自动转付费或扣款。额度用完或过期后 API 与 playground 暂停，除非另行购买 PayGo。不是生产服务档。",
       "sources": [
-        "https://www.cerebras.ai/pricing"
+        "https://www.cerebras.ai/pricing",
+        "https://inference-docs.cerebras.ai/models/overview"
       ]
     },
     {
@@ -1297,6 +1554,7 @@
       "kindLabel": "周期性免费 API",
       "status": "official_catalog_verified_no_runtime_test",
       "models": [
+        "recursive/flint-v1.0:free",
         "minimax/minimax-m3.1-flash:free",
         "xingchen-agi/xing4.0-29b-a4b:free",
         "nvidia/nemotron-3.5-super-vl:free",
@@ -1317,7 +1575,7 @@
         "openrouter/free"
       ],
       "other_models": [],
-      "quota": "20 RPM；全部免费模型共用每日 50 次请求（UTC 日）。累计购入至少 10 美元额度后可提高到每日 1,000 次，仍为 20 RPM；不是订阅，也不是基础免费层的必要条件。文档另有手续费／取整后 9 credits 的高档资格说明，以账户 key 计数器为准。负余额可能阻止免费请求。",
+      "quota": "20 RPM；全部免费模型共用每日 50 次请求。累计购买至少 10 美元额度后提高为每日 1,000 次，仍为 20 RPM。失败请求也计入日额度；负余额会阻止免费请求。",
       "conditions": "只能使用所列精确 :free ID；openrouter/free 仅路由到免费模型。fallback 列表加入付费模型会产生费用。",
       "expiry": "poolside/laguna-s-2.1:free 与 poolside/laguna-xs-2.1:free 目录到期日为 2026-10-31；dots-studio/dots-3-note-preview:free 为 2026-12-31。其他型号未列结束日期。",
       "caution": "本目录列出 :free 模型 ID 与 openrouter/free 免费路由器。",
@@ -1340,7 +1598,7 @@
         "deepseek-v4.1-flash-free",
         "minimax-m3.1-flash-free",
         "beam-free",
-        "ll-alpha-free",
+        "flint-40b-free",
         "longcat-2.5-preview-free",
         "exo-free",
         "mimo-v2.6-flash-free",
@@ -1353,7 +1611,7 @@
       "other_models": [],
       "quota": "所列型号官方标为限时免费，未承诺准确结束日或请求额度。选择时加 opencode/ 前缀。Jev 是结构化决策模型，不是聊天生成模型。",
       "conditions": "Beam Free 不支持中国大陆及港澳。控制台的一般使用流程包含账户、账单与充值，具体要求以所选免费模型页面为准。后台标题生成可能使用低价付费模型。",
-      "privacy": "部分免费模型收集改进／训练数据；NVIDIA 接口仅供试用，不得输入个人或机密信息。DeepSeek、GLM、MiniMax、LongCat 免费供应商声明 ZDR／不训练。",
+      "privacy": "Big Pickle、Flint 40B、Exo、MiMo 等免费模型的数据可用于改进模型；Flint 40B 保留数据 30 天。NVIDIA 接口仅供试用，条款禁止输入个人或机密信息。DeepSeek、GLM、MiniMax、LongCat 免费供应商声明零保留且不训练。",
       "sources": [
         "https://opencode.ai/v2/docs/console/models/"
       ]
@@ -1389,6 +1647,47 @@
       "privacy": "路由可能使用记录提示词和输出、用于改进服务的供应商；NVIDIA 免费端点仅供试用，不输入个人或机密信息。",
       "sources": [
         "https://kilo.ai/docs/getting-started/using-kilo-for-free"
+      ]
+    },
+    {
+      "provider": "Cursor Free",
+      "kind": "recurring_free_coding_app",
+      "kindLabel": "免费编程应用",
+      "status": "official_verified",
+      "models": [
+        "Grok 4.7",
+        "Grok 4.6",
+        "Grok 4.5",
+        "Composer 2.5"
+      ],
+      "other_models": [],
+      "quota": "免费方案提供有限 Agent 与 Chat 用量；官方未给出统一请求数或免费层重置周期。",
+      "conditions": "需要 Cursor 账户，通过编辑器使用；Free 不含 Claude、GPT、Gemini 等第三方模型。地区及绑卡条件未在所引页面明确。",
+      "expiry": "长期免费方案，未列结束日期。",
+      "sources": [
+        "https://cursor.com/docs/models-and-pricing",
+        "https://prod.cursor.com/help/models-and-usage/available-models",
+        "https://cursor.com/pricing"
+      ]
+    },
+    {
+      "provider": "TRAE 中国版 Free",
+      "kind": "recurring_free_coding_app",
+      "kindLabel": "免费编程应用",
+      "status": "official_verified",
+      "models": [
+        "GLM 5.3",
+        "Seed-2.1-Turbo",
+        "Seed-Code",
+        "DeepSeek-V4.1-Flash",
+        "DeepSeek-V4-Pro"
+      ],
+      "other_models": [],
+      "quota": "每月 500 积分，各模型调用共用额度；支持同时执行 2 个云端任务。GLM 5.3 无折扣，Seed-2.1-Turbo 与 Seed-Code 按 5 折消耗；两款 DeepSeek 为闲时 5 折。",
+      "conditions": "适用于 TRAE 中国版个人免费计划和客户端／云端任务，不是通用 API 免费额度。模型仍消耗积分；月度重置时刻、闲时时段、实名及绑卡条件未在价格页明确。",
+      "expiry": "长期免费方案，未列结束日期。",
+      "sources": [
+        "https://www.trae.cn/pricing"
       ]
     }
   ]
