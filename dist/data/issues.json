@@ -1,6 +1,239 @@
 {
   "issues": [
     {
+      "digest_id": "2026-10-23",
+      "source_sha256": "02f94d7e983ea30908d01c3ac705df81127c72aa2938d387efb7aa39f7220f52",
+      "raw_source_sha256": "e2530de16ed30eb8dd2ade530beaf3dfb1de2a9b8691762e3223013f10006c7e",
+      "has_editorial": true,
+      "focus_event_id": "openai-decisions-api-ga-20261022",
+      "items": [
+        {
+          "event_id": "openai-decisions-api-ga-20261022",
+          "title": "OpenAI Decisions API 正式开放：每请求最多 400 个问题，新增 JSON 输入与缓存",
+          "summary": "Decisions API 使用 GPT-6 Luna 对文本、图片和结构化数据作出有限选项内的判断，返回 predicate 概率、choice 选项或 score 评分，可用于内容分类、请求分流和 agent 下一步动作选择。 与公测相比，单次请求问题上限由 200 提高到 400，增加原生 JSON 输入、单个问题指令内的图片和共享上下文缓存。GPT-Live 原生集成允许语音应用在用户说话时触发判断。 非缓存输入每百万 token 0.10 美元，缓存读取每百万 token 0.01 美元，不收输出 token 费用；30 分钟和 12 小时缓存写入单独计费。支持美国和欧盟区域处理，符合资格的客户可使用零数据保留。",
+          "category": "news",
+          "group": "openai",
+          "groupLabel": "OpenAI",
+          "digest_id": "2026-10-23",
+          "event_at": "2026-10-22T20:51:09.045Z",
+          "urls": [
+            "https://community.openai.com/t/1408934",
+            "https://openai.com/index/decisions-api/",
+            "https://developers.openai.com/api/docs/guides/decisions"
+          ],
+          "limitation": "",
+          "rank": 1
+        },
+        {
+          "event_id": "vercel-ai-7-0-149-150-stream-speech",
+          "title": "AI SDK 7.0.150 加入流式语音，7.0.149 新增 interrupted 结束原因",
+          "summary": "流式语音接口可接收文本增量并返回音频流；同期版本还修复重复工具审批，并为没有完成信号的输出增加 interrupted 状态。 7.0.149 于 10 月 23 日 02:54（北京时间）发布；7.0.150 于 10 月 23 日 05:20（北京时间）继续加入实验性流式语音接口。 experimental_streamSpeech 接受字符串、数组、可迭代对象或文本增量流，可逐段指定 voice 与 providerOptions；返回单消费者 audioStream/fullStream，以及用量、警告和 providerMetadata 等结果。它要求语音模型实现实验性的 StreamingSpeechModelV4 扩展。 7.0.149 对同一工具调用只处理第一条审批响应，并修复 toolChoice: none 下仍执行工具的问题。新增 interrupted 结束原因会保留部分输出并停止后续工具执行、代理继续运行及自动 UI 跟进；供应商的中断检测和发出该状态将另行加入。 发布说明明确：虽然属于补丁升级，FinishReason 类型新增值可能使穷尽 switch 或 Record 映射出现类型错误。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-23",
+          "event_at": "2026-10-22T18:54:17Z",
+          "urls": [
+            "https://github.com/vercel/ai/releases/tag/ai%407.0.150",
+            "https://github.com/vercel/ai/releases/tag/ai%407.0.149"
+          ],
+          "limitation": "",
+          "rank": 2
+        },
+        {
+          "event_id": "claude-code-2-1-309-sandbox-permission",
+          "title": "Claude Code 2.1.309 修复沙箱启动脚本、MCP 配置及子代理权限问题",
+          "summary": "新版修复 shell 启动文件在沙箱外执行、符号链接路径写入限制失效，以及分屏代理未继承工具禁用规则等问题。 macOS 和 Linux 的沙箱 Bash 命令现在修复了每次运行前在沙箱外执行 shell 启动文件的问题；macOS 的 denyWrite 匹配也修复了符号链接指向真实路径时的限制缺失。 修复沙箱命令与自动接受的编辑可以修改 --mcp-config 指定文件的问题，分屏队友现在继承主代理命令行中的工具拒绝规则和 --tools 配置。 行为变更包括 ultrareview 要求工作区信任；sed -i 按普通 Bash 命令执行，不再模拟为文件编辑预览，也不再由 /rewind 恢复。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-23",
+          "event_at": "2026-10-22T22:18:57Z",
+          "urls": [
+            "https://github.com/anthropics/claude-code/releases/tag/v2.1.309"
+          ],
+          "limitation": "",
+          "rank": 3
+        },
+        {
+          "event_id": "langchain-core-1-3-0-tool-call-delta",
+          "title": "LangChain Core 1.3.0 将工具参数流改为增量切片",
+          "summary": "工具和服务端工具参数改用 tool-call-delta 传输新增片段，而不是重复发送完整参数快照；多个前端客户端有最低兼容版本要求。 变更覆盖 OpenAI 兼容转换器、OpenAI 与 xAI Responses、Anthropic 及 Bedrock Converse；Google 与 Ollama 仍每次发送完整快照。工具 id/name/index 放在 content-block-start，延迟收到的 id/name 会在 content-block-finish 提供。 读取原始流事件的应用需要处理 tool-call-delta；最终组装的消息、.toolCalls 与 await stream 行为不变。最低兼容客户端为 @langchain/langgraph-sdk 1.12.6，以及 React/Vue/Svelte/Angular 客户端 1.2.6；Python 客户端要求 langchain-core 1.6.13。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-23",
+          "event_at": "2026-10-22T17:57:19Z",
+          "urls": [
+            "https://github.com/langchain-ai/langchainjs/releases/tag/%40langchain/core%401.3.0"
+          ],
+          "limitation": "",
+          "rank": 4
+        },
+        {
+          "event_id": "assistant-ui-20261022-composer-origins-run-outcomes",
+          "title": "assistant-ui 更新输入来源事件、会话恢复和 Cloud 运行结果分类",
+          "summary": "Vue、React Native 和 Lexical 输入组件可上报文本变更来源，assistant-cloud 0.2.8 将限流、校验失败、停止及持久化失败分别记录。 输入区的 textChange 事件携带变更后的文本和 origin，可区分用户清空草稿、发送、发送回退、重置和历史输入恢复；setText 支持显式传入 origin。Vue 与 React Native 同时暴露取消归档能力，适配器不支持恢复时会禁用相关控件。 assistant-cloud 0.2.8 将 HTTP 失败分为 rate_limited、validation_failed 和 server_error，并保留状态码；首个 token 前停止记为 aborted，无输出结束记为 incomplete，回答完成但线程历史未保存记为 persistence_error。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-23",
+          "event_at": "2026-10-22T20:42:48Z",
+          "urls": [
+            "https://github.com/assistant-ui/assistant-ui/releases/tag/%40assistant-ui/vue%400.0.6",
+            "https://github.com/assistant-ui/assistant-ui/releases/tag/assistant-cloud%400.2.8",
+            "https://github.com/assistant-ui/assistant-ui/releases/tag/%40assistant-ui/react-native%400.1.50"
+          ],
+          "limitation": "",
+          "rank": 5
+        },
+        {
+          "event_id": "tibo-day17-reset-announcement-20261022",
+          "title": "Tibo Day 17 宣布 Codex 重置安排，并提醒提前申请 Daybreak Blue",
+          "summary": "Tibo 在 Day 17 公告中宣布重置安排，随后回复给出预计落地时间：“Lands tomorrow before 10am PST.” 原帖发布于北京时间 10 月 22 日 14:55，当时美国太平洋当地仍为 10 月 21 日。 同一公告还提醒用户提前取得 Daybreak Blue 访问权限，称申请约需 15 分钟，避免在安全事件发生时才办理。",
+          "category": "news",
+          "group": "tibo",
+          "groupLabel": "Tibo",
+          "digest_id": "2026-10-23",
+          "event_at": "2026-10-22T06:55:22Z",
+          "urls": [
+            "https://x.com/thsottiaux/status/2113162277688070445",
+            "https://x.com/thsottiaux/status/2113162413008884099"
+          ],
+          "limitation": "",
+          "rank": 6
+        },
+        {
+          "event_id": "copilot-cli-1-0-103-acp-sandbox",
+          "title": "Copilot CLI 1.0.103 修复 ACP 沙箱设置，跨 worktree 复用 MCP 工具缓存",
+          "summary": "ACP 会话及恢复过程现在遵循保存的沙箱设置和启动参数，断线重连保留云端回答全文，同仓库 worktree 可复用本地 MCP 工具快照。 这些变更先于 10 月 22 日 11:40（北京时间）进入 1.0.103-0 预览版；1.0.103 稳定版于 10 月 23 日 00:21（北京时间）发布。 新版修复 ACP 会话忽略 --sandbox/--no-sandbox 和已保存设置的问题，并让 Windows 的 npm.cmd 等开发工具入口获得与 npm 相同的沙箱授权。 本地 MCP 工具快照可在一个仓库注册的多个 Git worktree 间复用；远程启动参数改用更清晰的托管与连接选项，旧的 --remote/--no-remote 启动参数退出使用。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-23",
+          "event_at": "2026-10-22T03:40:00Z",
+          "urls": [
+            "https://github.com/github/copilot-cli/releases/tag/v1.0.103-0",
+            "https://github.com/github/copilot-cli/releases/tag/v1.0.103"
+          ],
+          "limitation": "",
+          "rank": 7
+        },
+        {
+          "event_id": "deepagents-0-7-30-async-notify-webhook",
+          "title": "DeepAgents 0.7.30 支持异步子代理排队跟进和完成通知",
+          "summary": "异步子代理可在不打断当前工作的情况下接收排队跟进，AsyncSubAgent 新增 notify_parent 与 webhook 配置。 新版异步任务查询会反映服务端取消状态，无法读取线程时重试，并从子代理结果中排除推理内容。LocalShellBackend 的输出限制改按 UTF-8 字节执行。 同窗口的 DeepAgents Code 0.2.0 将 Python 要求提高到 >=3.14、<3.15，并修复 Git 输出的 UTF-8 解码；0.1.88 还修复异步子代理 webhook 配置透传。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-23",
+          "event_at": "2026-10-22T02:27:00Z",
+          "urls": [
+            "https://github.com/langchain-ai/deepagents/releases/tag/deepagents%3D%3D0.7.30",
+            "https://github.com/langchain-ai/deepagents/releases/tag/deepagents-code%3D%3D0.2.0",
+            "https://github.com/langchain-ai/deepagents/releases/tag/deepagents-code%3D%3D0.1.88"
+          ],
+          "limitation": "",
+          "rank": 8
+        },
+        {
+          "event_id": "deepagents-talon-0-1-0-openshell",
+          "title": "DeepAgents Talon 0.1.0 接入 OpenShell，加入 Slack/Discord 独立任务",
+          "summary": "Talon 加入 NVIDIA OpenShell 沙箱、推理 effort 控制以及 Slack/Discord 独立分支任务；本版本要求 Python 3.14。 新增 openshell 安装选项，允许配置后台子代理容量与检查点存储；Slack 和 Discord 支持独立 breakout 任务，Discord 群组提及也在线程中回复。 定时任务可固定使用特定 Skills，Skill 文件变化后重新加载；任务跨频道线程共享，但每次运行从新线程开始。发布说明列出的 Python 版本范围为 >=3.14、<3.15。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-23",
+          "event_at": "2026-10-22T20:28:29Z",
+          "urls": [
+            "https://github.com/langchain-ai/deepagents/releases/tag/deepagents-talon%3D%3D0.1.0"
+          ],
+          "limitation": "",
+          "rank": 9
+        },
+        {
+          "event_id": "langfuse-4-68-mcp-connections-topics",
+          "title": "Langfuse 4.68 增加 MCP 模型连接查询与 Topics 可视化",
+          "summary": "MCP 新增 listLlmConnections 工具，Topics 提供 Treemap、Grid 与聚类地图视图；Agent 可加载 Langfuse 托管的 Skills。 Topics 增加合并历史回填和进度展示的首次运行流程，结果可通过矩形树图、网格和聚类地图查看。Blob 导出可选带上评分元数据与来源字段。 AI Gateway 增加自托管全局开关；成员可创建自己的网关 API key，所有者和管理员可为服务账号签发 key，用户离开组织时其网关 key 会撤销。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-23",
+          "event_at": "2026-10-22T14:30:27Z",
+          "urls": [
+            "https://github.com/langfuse/langfuse/releases/tag/v4.68.0"
+          ],
+          "limitation": "",
+          "rank": 10
+        },
+        {
+          "event_id": "opencode-1-19-4-bun-security",
+          "title": "OpenCode 1.19.4 升级 Bun 1.4.4，纳入网络协议安全修复",
+          "summary": "OpenCode 将内置 Bun 更新到 1.4.4，覆盖 Brotli、TLS、HTTP、WebSocket 和 fetch 的安全修复。 此次版本的核心变更是内置运行时升级；官方发布说明列出 HTTP/1.1、HTTP/2、HTTP/3 等相关修复，并将根证书更新到 NSS 3.131.1。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-23",
+          "event_at": "2026-10-22T13:03:41Z",
+          "urls": [
+            "https://github.com/anomalyco/opencode/releases/tag/v1.19.4"
+          ],
+          "limitation": "",
+          "rank": 11
+        },
+        {
+          "event_id": "gemini-cli-nightly-20261022-ide-sandbox",
+          "title": "Gemini CLI 夜间版让 IDE companion 通过标准输入输出连接容器沙箱",
+          "summary": "0.67.0 的 10 月 22 日夜间构建增加容器沙箱内的 IDE companion 桥接，并修复只读文件与硬链接的写入处理。 此构建属于 nightly 预发布版，通过 exec 的标准输入输出连接容器中的 IDE companion。修复还包括工作目录为 home 时代理重复加载，以及从打开文件上下文中排除 IDE 设置和 GEMINI.md。 核心写文件逻辑修复了只读文件与硬链接处理；对不可信命令标志的检查范围限定为外部输出，并记忆已批准的标志。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-23",
+          "event_at": "2026-10-22T01:23:52Z",
+          "urls": [
+            "https://github.com/google-gemini/gemini-cli/releases/tag/v0.67.0-nightly.20261022.g09d81bf11"
+          ],
+          "limitation": "",
+          "rank": 12
+        },
+        {
+          "event_id": "github-tool-stablyai-orca",
+          "title": "每日工具：Orca，在独立 worktree 中并行管理编程代理",
+          "summary": "Orca 是 MIT 开源的多代理工作台，可并排运行 Codex、Claude Code、OpenCode 等 CLI 代理，并提供浏览器设计模式、代码差异批注和手机端跟进。 每个代理可以使用独立 Git worktree；内置 Chromium 的 Design Mode 可将选中 UI 元素的 HTML、CSS 和局部截图送入代理提示，代码 diff 可逐行批注后返回代理。 桌面支持 macOS、Windows 和 Linux，可使用 SSH 远程 worktree；手机伴侣应用支持查看任务完成通知和发送后续指令。模型与代理沿用用户自己的订阅或配置。",
+          "category": "github",
+          "group": "other",
+          "groupLabel": "其他",
+          "digest_id": "2026-10-23",
+          "event_at": null,
+          "urls": [
+            "https://github.com/stablyai/orca",
+            "https://github.com/stablyai/orca/releases/tag/v1.4.237",
+            "https://github.com/trending/typescript?since=daily"
+          ],
+          "limitation": "",
+          "rank": 19
+        },
+        {
+          "event_id": "freebie-official-directory-2026-10-23",
+          "title": "免费资源：Qoder 开放 Sonus 活动积分，Gemini 两款 TTS 提供免费 API 层",
+          "summary": "Qoder 1024 活动向获批的 Free 用户提供 1,024 SOTA Credits 欢迎包，指定用于 Sonus；Gemini 3.8 Flash TTS 与 Flash-Lite TTS 的标准 API 输入和输出列为免费。目录另列 OpenRouter、OpenCode、Groq、Z.ai、WorkBuddy、TRAE 等渠道的具体型号、额度和期限。",
+          "category": "freebie",
+          "group": "other",
+          "groupLabel": "其他",
+          "digest_id": "2026-10-23",
+          "event_at": null,
+          "urls": [
+            "https://docs.qoder.com/events/communityboost",
+            "https://ai.google.dev/gemini-api/docs/pricing",
+            "https://openrouter.ai/collections/free-models",
+            "https://opencode.ai/v2/docs/console/models/"
+          ],
+          "limitation": "",
+          "rank": 20
+        }
+      ]
+    },
+    {
       "digest_id": "2026-10-22",
       "source_sha256": "a24141eff97cb2b985f11330f753c06c9da2c372492c21c876e6048e4174c6a2",
       "raw_source_sha256": "65784fae6fb0b3a72e5e8e1e46365df029fffd9f0160f9146262f56870bf876d",
@@ -1410,7 +1643,9 @@
         "gemini-3.5-transcribe",
         "gemini-embedding-2",
         "gemini-robotics-er-2-preview",
-        "gemini-robotics-er-2-streaming-preview"
+        "gemini-robotics-er-2-streaming-preview",
+        "gemini-3.8-flash-tts",
+        "gemini-3.8-flash-lite-tts"
       ],
       "other_models": [],
       "quota": "列出型号的输入／输出在官方价格表标为免费；项目级限额以 AI Studio 为准，RPD 在美国太平洋时间午夜重置，不是统一固定额度。",
@@ -1555,7 +1790,6 @@
       "status": "official_catalog_verified_no_runtime_test",
       "models": [
         "recursive/flint-v1.0:free",
-        "minimax/minimax-m3.1-flash:free",
         "xingchen-agi/xing4.0-29b-a4b:free",
         "nvidia/nemotron-3.5-super-vl:free",
         "dots-studio/dots-3-note-preview:free",
@@ -1596,7 +1830,6 @@
         "big-pickle",
         "glm-5.3-flash-free",
         "deepseek-v4.1-flash-free",
-        "minimax-m3.1-flash-free",
         "beam-free",
         "flint-40b-free",
         "longcat-2.5-preview-free",
@@ -1611,7 +1844,7 @@
       "other_models": [],
       "quota": "所列型号官方标为限时免费，未承诺准确结束日或请求额度。选择时加 opencode/ 前缀。Jev 是结构化决策模型，不是聊天生成模型。",
       "conditions": "Beam Free 不支持中国大陆及港澳。控制台的一般使用流程包含账户、账单与充值，具体要求以所选免费模型页面为准。后台标题生成可能使用低价付费模型。",
-      "privacy": "Big Pickle、Flint 40B、Exo、MiMo 等免费模型的数据可用于改进模型；Flint 40B 保留数据 30 天。NVIDIA 接口仅供试用，条款禁止输入个人或机密信息。DeepSeek、GLM、MiniMax、LongCat 免费供应商声明零保留且不训练。",
+      "privacy": "Big Pickle、Flint 40B、Exo、MiMo 等免费模型的数据可用于改进模型；Flint 40B 保留数据 30 天。NVIDIA 接口仅供试用，条款禁止输入个人或机密信息。DeepSeek、GLM、LongCat 免费供应商声明零保留且不训练。",
       "sources": [
         "https://opencode.ai/v2/docs/console/models/"
       ]
@@ -1688,6 +1921,39 @@
       "expiry": "长期免费方案，未列结束日期。",
       "sources": [
         "https://www.trae.cn/pricing"
+      ]
+    },
+    {
+      "provider": "Qoder 1024 Community Boost",
+      "kind": "limited_time_free_coding_app",
+      "kindLabel": "官方免费计划，详见条件",
+      "status": "official_promotion_verified",
+      "models": [
+        "Sonus（Qoder 模型名称，官方未披露底层版本）"
+      ],
+      "other_models": [],
+      "quota": "审核通过的 Free 用户可手动领取一次 1,024 SOTA Credits 欢迎包。社区累计助力达 2 万／5 万／10 万点后，分别解锁 2,048／3,072／4,096 SOTA Credits，解锁后 12 小时内发放；每账户每档限领一次。每天可助力一次，北京时间 00:00 重置。",
+      "conditions": "面向个人账户：Free 需提交一次申请并获批，Pro 及以上自动有资格，Lite 不支持 Sonus。使用 Qoder、Qoder IDE、JetBrains 插件或 CLI 手动领取；仅用于 Sonus，不是通用 API 额度。额度用尽后有权限账户按普通规则消耗其他积分；不能与闲时折扣叠加。地区及绑卡要求未列明。",
+      "expiry": "申请、审核及领取于 2026 年 10 月 30 日 23:59（北京时间）结束。欢迎包至 10 月 31 日 23:59 有效；解锁包需发放后 3 天内且不晚于活动结束前领取，领取后 24 小时有效。",
+      "sources": [
+        "https://docs.qoder.com/events/communityboost"
+      ]
+    },
+    {
+      "provider": "Mistral Moderation 2",
+      "kind": "recurring_free_api",
+      "kindLabel": "周期性免费 API",
+      "status": "official_verified",
+      "models": [
+        "mistral-moderation-2603"
+      ],
+      "other_models": [],
+      "quota": "内容审核 API 价格为免费；具体账户速率与用量上限以 Studio 为准，公开模型页未列统一重置周期。",
+      "conditions": "需 Mistral Studio 账户及 API key。128k 上下文，用于内容审核与越狱检测，不是对话生成模型；账户、地区及绑卡条件未在该模型页列明。",
+      "expiry": "官方价格页未列结束日期。",
+      "sources": [
+        "https://docs.mistral.ai/inference/pricing",
+        "https://docs.mistral.ai/models/mistral-moderation-26-03"
       ]
     }
   ]

@@ -1,30 +1,35 @@
 {
   "schema_version": 1,
-  "latest": "2026-10-22",
+  "latest": "2026-10-23",
   "digests": {
+    "2026-10-23": {
+      "path": "daily/2026-10-23/",
+      "content_sha256": "7883a8962c0825177d1e382a1fe44a849a861de928633cfc835a3ad046c3d002",
+      "source_sha256": "02f94d7e983ea30908d01c3ac705df81127c72aa2938d387efb7aa39f7220f52"
+    },
     "2026-10-22": {
       "path": "daily/2026-10-22/",
-      "content_sha256": "42a9ac48bfec3738a53a6dc01e627719aff51e7fa9fa79b2dda33c7a2aa46fa1",
+      "content_sha256": "54f7eaaee5c3b45c55cd31af1e2ef771bb768b56fb35c34d269447e52f8bc534",
       "source_sha256": "a24141eff97cb2b985f11330f753c06c9da2c372492c21c876e6048e4174c6a2"
     },
     "2026-10-21": {
       "path": "daily/2026-10-21/",
-      "content_sha256": "2063e53930d73031c830f9f0391f805e0e2b71cd4ad78ce82362218806e6f536",
+      "content_sha256": "efefae65ced5abd93c01252a384ec69abfc9ab9313b6eb80b713b9bb470b0c41",
       "source_sha256": "516bcb846dc93a687a73e9effb8b4d1244a5b7e5ce38d0beff73908f971d59ee"
     },
     "2026-10-20": {
       "path": "daily/2026-10-20/",
-      "content_sha256": "223414f87c9cf1f595b905abd557fe6f96d86ddfa6d58272c830df3eb2bb22a8",
+      "content_sha256": "85d8389539fff36c3bf47bfa0c3b5cdb1293e3e459a0c57b6abc55986359be1e",
       "source_sha256": "c197e30465f0f9c462c63c56664f0cdecae8ec7bb67ab45b3d703894e0b88ba7"
     },
     "2026-10-19": {
       "path": "daily/2026-10-19/",
-      "content_sha256": "976c8b915953cfbc429f597e3a521c6cb63eb152ceac8c2d0106ef79e225dc1b",
+      "content_sha256": "2595afee0984034036d960869a7028a40e2d29d034225a30a537720a258f515b",
       "source_sha256": "b16acf6efb71617742e7d7c262092194bc288ae81fc9d95a3dc2b5f6241d4790"
     },
     "2026-10-16": {
       "path": "daily/2026-10-16/",
-      "content_sha256": "1266e9ecd3596b3de1ae3bcee6261be0717a8f24962573f379b88c606cdd4880",
+      "content_sha256": "a902eb70babcda0e1d46128600d152d08ee05b000511c3495235f6423be84625",
       "source_sha256": "391bf19ad117adb1b600c3ded5ab88db98dc7713908ee8612a9ce8f05f41e96e"
     }
   }
