@@ -1,6 +1,204 @@
 {
   "issues": [
     {
+      "digest_id": "2026-10-26",
+      "source_sha256": "7bde911214f0ffbde325bf0fd9c7756d68589e6886ce264b6fdb2becdaed0034",
+      "raw_source_sha256": "dc45eea5bdf04365f98838b590d88dc40e19ece22490a82de2019903d2258d49",
+      "has_editorial": true,
+      "focus_event_id": "kimi-k3-1-pro-launch-20261023",
+      "items": [
+        {
+          "event_id": "kimi-k3-1-pro-launch-20261023",
+          "title": "Kimi 发布 K3.1 Pro，提供百万上下文与多模态 API",
+          "summary": "Kimi 发布 K3.1 系列首个模型 K3.1 Pro，支持约 100 万 token 上下文、图片与视频输入、工具调用及严格 JSON Schema 输出，并提供 Highspeed 版本。模型已在 Kimi API 和 Kimi Code 提供；API 使用前须完成至少 1 美元充值，图像输入支持 Base64 或已上传文件，不支持直接传入公开图片 URL。完整模型权重计划于 11 月 4 日发布。",
+          "category": "news",
+          "group": "models",
+          "groupLabel": "模型与 API",
+          "digest_id": "2026-10-26",
+          "event_at": "2026-10-23T20:12:59.921Z",
+          "urls": [
+            "https://forum.moonshot.ai/t/kimi-k3-1-pro-has-launched-start-exploring-now/629",
+            "https://platform.kimi.ai/docs/guide/kimi-k3-1-pro-quickstart",
+            "https://www.kimi.com/code/docs/en/kimi-code/whats-new.html"
+          ],
+          "limitation": "",
+          "rank": 1
+        },
+        {
+          "event_id": "openai-agents-api-scheduled-automations-20261023",
+          "title": "OpenAI Agents API 新增定时自动化，支持周期任务和一次性执行",
+          "summary": "Agents API 新增定时自动化：应用可使用 cron 表达式配置周期任务，或指定时间执行一次；任务可向现有会话发送消息，也可新建会话。启用 automations 工具后，智能体可在当前会话中创建、查看、更新、暂停、恢复和删除自己的任务，但不能借助该工具管理其他会话的任务。执行记录包含任务状态及对应会话。",
+          "category": "news",
+          "group": "openai",
+          "groupLabel": "OpenAI",
+          "digest_id": "2026-10-26",
+          "event_at": "2026-10-23T21:24:34.558Z",
+          "urls": [
+            "https://community.openai.com/t/introducing-scheduled-automations-to-the-agents-api/1409223",
+            "https://developers.openai.com/api/docs/guides/agents-api/sessions/automations"
+          ],
+          "limitation": "",
+          "rank": 4
+        },
+        {
+          "event_id": "tibo-day19-codex-cli-cache-dots-20261023",
+          "title": "Tibo Day 19：Codex CLI 增加提示词预设，切换推理强度不再使缓存失效",
+          "summary": "Tibo 公布 Day 19 更新：Codex CLI 增加可复用提示词预设、行内模型与权限设置、企业 MCP 登录；修复恢复长会话时的失败，并新增 Windows 企业代理认证。Codex 与 Work 在对话中途切换推理强度不再使缓存失效，dots 的通话连接速度也得到提升。",
+          "category": "news",
+          "group": "tibo",
+          "groupLabel": "Tibo",
+          "digest_id": "2026-10-26",
+          "event_at": "2026-10-23T23:12:31.000Z",
+          "urls": [
+            "https://x.com/thsottiaux/status/2113770573994299544",
+            "https://x.com/thsottiaux/status/2113770862860222611"
+          ],
+          "limitation": "",
+          "rank": 5
+        },
+        {
+          "event_id": "claude-code-2-1-310",
+          "title": "Claude Code 2.1.310 扩展 Monitor 支持并修复计划审核误批准",
+          "summary": "Claude Code 2.1.310 将 Monitor 工具及插件监控扩展至 Bedrock、Vertex、Foundry，以及关闭遥测或非必要流量的环境。版本修复了 VS Code 计划审核中按 Enter 发送反馈却批准计划的问题、部分兼容网关的请求失败，以及密集 Base64/SVG 对话压缩后仍超长的问题；企业自定义角色可分别控制 Cloud sessions 和 Remote Control 权限。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-26",
+          "event_at": "2026-10-23T23:39:00Z",
+          "urls": [
+            "https://github.com/anthropics/claude-code/releases/tag/v2.1.310"
+          ],
+          "limitation": "",
+          "rank": 6
+        },
+        {
+          "event_id": "ai-sdk-7-0-153",
+          "title": "AI SDK 7.0.153 修复 Responses API 多段 JSON 结构化输出",
+          "summary": "AI SDK 7.0.153 修复非流式 Responses API 在多个 assistant 消息包含 JSON 时的结构化输出解析失败。Provider 可单独提供用于解析的结构化文本，OpenAI 与 Azure Responses 模型由此可选择最后一段 final_answer，同时保留全部生成内容、注释、对话历史和 token 用量。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-26",
+          "event_at": "2026-10-24T17:57:31Z",
+          "urls": [
+            "https://github.com/vercel/ai/releases/tag/ai%407.0.153"
+          ],
+          "limitation": "",
+          "rank": 7
+        },
+        {
+          "event_id": "vercel-connect-managed-stripe-keys-20261023",
+          "title": "Vercel Connect 新增受限 Stripe API 密钥托管",
+          "summary": "Vercel Connect 可为不同智能体或任务创建独立的受限 Stripe API 密钥，按选定权限生成并托管密钥，运行时通过 getToken 获取。密钥可在不重新部署的情况下轮换，旧密钥最多继续有效 24 小时；已有 MCP 和自带密钥方式保持不变。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-26",
+          "event_at": "2026-10-23T17:00:00Z",
+          "urls": [
+            "https://vercel.com/changelog/vercel-connect-adds-managed-stripe-api-keys"
+          ],
+          "limitation": "",
+          "rank": 8
+        },
+        {
+          "event_id": "gemini-cli-nightly-20261024",
+          "title": "Gemini CLI 夜间版新增模型发现命令并修复取消后的续跑",
+          "summary": "Gemini CLI 10 月 24 日夜间版新增 models 命令和 --list-models 参数，用于发现可用模型；修复请求取消后仍继续处理流式响应或自动推进的问题。相对文件路径改为按当前 IDE 工作区根目录解析，并修正从 Claude 迁移 hook 时的超时单位转换。该版本属于 nightly 预发布。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-26",
+          "event_at": "2026-10-24T01:15:53Z",
+          "urls": [
+            "https://github.com/google-gemini/gemini-cli/releases/tag/v0.67.0-nightly.20261024.gcd1b45c2d"
+          ],
+          "limitation": "",
+          "rank": 9
+        },
+        {
+          "event_id": "tibo-day20-reset-completed-20261025",
+          "title": "Tibo Day 20：Codex 额度重置完成",
+          "summary": "Tibo 在 Day 20 宣布额度重置，并在同一线程给出美西午夜前完成的安排。北京时间 10 月 25 日 14:06，他随后确认重置已完成传播。",
+          "category": "news",
+          "group": "tibo",
+          "groupLabel": "Tibo",
+          "digest_id": "2026-10-26",
+          "event_at": "2026-10-25T06:06:16.000Z",
+          "urls": [
+            "https://x.com/thsottiaux/status/2114200152701575656",
+            "https://x.com/thsottiaux/status/2114237083652882932"
+          ],
+          "limitation": "",
+          "rank": 10
+        },
+        {
+          "event_id": "vercel-mcp-feedback-20261023",
+          "title": "Vercel CLI 与 MCP 新增结构化反馈入口",
+          "summary": "Vercel CLI 新增 vercel feedback 命令，可直接提交错误、使用问题及功能请求，并通过重复的 --field 参数附带任务、预期行为和实际结果等结构化上下文。Vercel MCP 同日新增 submit_feedback 工具；MCP 入口要求登录，仅在用户要求发送反馈时使用。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-26",
+          "event_at": "2026-10-23T02:00:00Z",
+          "urls": [
+            "https://vercel.com/changelog/send-feedback-from-vercel-cli",
+            "https://vercel.com/changelog/send-feedback-from-vercel-mcp"
+          ],
+          "limitation": "",
+          "rank": 11
+        },
+        {
+          "event_id": "vercel-cli-spend-management-20261023",
+          "title": "Vercel CLI 新增预算、支出和告警管理",
+          "summary": "Vercel CLI 新增 vercel budgets，可查询团队支出、设置或移除按需预算，以及读取并筛选预算告警。单独设置预算不会停止使用；启用 --pause 后，支出达到预算 100% 时会暂停团队全部项目的生产部署。管理操作要求 Owner 或 Billing 角色，Pro 团队及 Flexible Commitment 企业套餐无需额外付费。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-26",
+          "event_at": "2026-10-23T21:44:00Z",
+          "urls": [
+            "https://vercel.com/changelog/vercel-cli-adds-spend-management"
+          ],
+          "limitation": "",
+          "rank": 12
+        },
+        {
+          "event_id": "resource:free-models:2026-10-26",
+          "title": "免费福利栏目｜Qoder Qwen3.8-Flash 限时零积分，Z.ai 三款 Flash API 免费",
+          "summary": "Qoder International 的个人用户可在客户端、CLI 或网页选择 Qwen3.8-Flash，活动期间不消耗积分，免费账户及零余额账户也适用，结束日期尚未公布；Teams 与 Enterprise 不参加。Z.ai 的 glm-4.7-flash、glm-4.5-flash 和 glm-4.6v-flash 输入与输出免费，账户限流以控制台为准。另列 OpenRouter、OpenCode、Gemini、Groq 等渠道的具体免费型号、额度及条件。",
+          "category": "freebie",
+          "group": "other",
+          "groupLabel": "其他",
+          "digest_id": "2026-10-26",
+          "event_at": null,
+          "urls": [
+            "https://docs.qoder.com/events/flashoffer",
+            "https://docs.z.ai/guides/overview/pricing"
+          ],
+          "limitation": "",
+          "rank": 40
+        },
+        {
+          "event_id": "github:posthog/posthog",
+          "title": "每日工具栏目｜PostHog 将 AI 调用追踪关联到用户会话和前端异常",
+          "summary": "PostHog 的 AI Observability 记录模型调用的提示词、响应、Token、成本、延迟与工具调用，并组合成 traces；追踪可关联触发用户、会话回放及异常。开发者可在网页、MCP 客户端或 API 查询，使用 SDK 采集，也能接入 Helicone、Langfuse 等已有追踪。仓库同时包含产品分析、功能开关、实验与错误追踪。",
+          "category": "github",
+          "group": "other",
+          "groupLabel": "其他",
+          "digest_id": "2026-10-26",
+          "event_at": null,
+          "urls": [
+            "https://github.com/PostHog/posthog",
+            "https://posthog.com/docs/ai-observability",
+            "https://github.com/trending?spoken_language_code=en"
+          ],
+          "limitation": "",
+          "rank": 41
+        }
+      ]
+    },
+    {
       "digest_id": "2026-10-23",
       "source_sha256": "02f94d7e983ea30908d01c3ac705df81127c72aa2938d387efb7aa39f7220f52",
       "raw_source_sha256": "e2530de16ed30eb8dd2ade530beaf3dfb1de2a9b8691762e3223013f10006c7e",
@@ -1620,7 +1818,7 @@
           "quota": "3 RPM、1,000 RPD、2,000 TPM、200,000 TPD"
         }
       ],
-      "quota": "下列三款文本模型各为 30 RPM、1,000 RPD、8,000 TPM、200,000 TPD；组织级额度，账户后台可能有例外。",
+      "quota": "下列三款文本模型各为 30 RPM、1,000 RPD、8,000 TPM、200,000 TPD；组织级额度，账户后台可能有例外。 日额度具体重置时点未在表中列明。",
       "conditions": "需要 Groq 账户及 API key；账户开通条件以注册页面为准。",
       "sources": [
         "https://console.groq.com/docs/rate-limits"
@@ -1633,23 +1831,11 @@
       "status": "official_verified",
       "models": [
         "gemini-3.8-flash",
-        "gemini-3.6-flash",
-        "gemini-3.5-flash-lite",
-        "gemini-3.8-live",
-        "gemini-3.8-live-extended-thinking",
-        "gemini-3.1-flash-live-preview",
-        "gemini-3.5-live-translate-preview",
-        "gemini-3.5-transcribe-live",
-        "gemini-3.5-transcribe",
-        "gemini-embedding-2",
-        "gemini-robotics-er-2-preview",
-        "gemini-robotics-er-2-streaming-preview",
-        "gemini-3.8-flash-tts",
-        "gemini-3.8-flash-lite-tts"
+        "gemini-3.5-flash-lite"
       ],
       "other_models": [],
-      "quota": "列出型号的输入／输出在官方价格表标为免费；项目级限额以 AI Studio 为准，RPD 在美国太平洋时间午夜重置，不是统一固定额度。",
-      "conditions": "需符合条件的 Google 账户及支持地区，中国大陆不在支持地区列表。免费层内容可用于改进产品；API 免费不同于应用免费。Gemini 4 Argon 明确没有免费 API 层。",
+      "quota": "所列型号 Standard 层输入与输出免费；项目限额以 AI Studio 为准，RPD 在美国太平洋时间午夜重置。",
+      "conditions": "需符合免费层资格的 Google 账户、项目和支持地区；中国大陆不在支持地区列表。免费层内容可用于改进产品。API 免费层不等于 Gemini 网页应用套餐；Gemini 4 Argon 没有免费 API 层。",
       "sources": [
         "https://ai.google.dev/gemini-api/docs/pricing",
         "https://ai.google.dev/gemini-api/docs/rate-limits",
@@ -1689,16 +1875,13 @@
       "kindLabel": "周期性免费 API",
       "status": "official_verified",
       "models": [
-        "@cf/zai-org/glm-4.7-flash",
-        "@cf/google/gemma-4-26b-a4b-it",
-        "@cf/nvidia/nemotron-3-120b-a12b"
+        "@cf/zai-org/glm-4.7-flash"
       ],
       "other_models": [],
-      "quota": "每日共用 10,000 Neurons，UTC 00:00 重置；免费计划用完后请求失败。Neurons 不是 token。",
+      "quota": "每日共用 10,000 Neurons，北京时间 08:00 重置；免费计划用完后请求失败。Neurons 不是 token。",
       "conditions": "需要 Cloudflare 账户。Kimi K2.6/K2.7 Code、GLM5.2/5.3/5.3 Flash、DeepSeek V4 Flash0731/V4.1 Flash1017/Pro0813 需付费计划或预付 AI Gateway 额度。",
       "sources": [
-        "https://developers.cloudflare.com/workers-ai/platform/pricing/",
-        "https://developers.cloudflare.com/changelog/post/2026-07-28-models-require-workers-paid/"
+        "https://developers.cloudflare.com/workers-ai/platform/pricing/"
       ]
     },
     {
@@ -1724,13 +1907,12 @@
       "kindLabel": "新用户试用，注意超额计费",
       "status": "offer_verified_model_quota_partial",
       "models": [
-        "qwen-max",
-        "qwen-max-2026-05-17",
-        "qwen3.8-max"
+        "qwen-max"
       ],
       "other_models": [],
-      "quota": "通常每型号 100 万 token，输入与输出共用；参与型号的准确额度需查控制台。有效期 90 天，起点为服务开通、模型发布、审核通过三者中最晚时间；版本分别计算。",
-      "conditions": "仅北京地域；未实名也可能使用免费额度。实名账户用完默认转付费，需设置“用完即停”；未实名强制停止。同一身份不能反复注册领取。",
+      "quota": "首次开通后 qwen-max 获得 100 万 Token，输入和输出共用；主账号和 RAM 子账号共享，同一实名主体不重复领取。",
+      "conditions": "仅华北 2（北京）地域实时推理 API。首次开通无需购买或实名认证；已认证用户用完后自动按量付费，未认证用户用完停止。Batch、调优、部署和存储费用不抵扣。",
+      "expiry": "一次性额度有效期 90 天，从服务开通、模型发布或申请通过较晚者起算；不重置。",
       "sources": [
         "https://help.aliyun.com/zh/model-studio/new-free-quota"
       ]
@@ -1742,45 +1924,11 @@
       "status": "free_plan_verified_auto_only",
       "models": [],
       "other_models": [],
-      "quota": "每月 2,000 次行内补全；聊天与 Agent 额度以账户显示为准。",
-      "conditions": "Free 与 Student 计划通过 Auto 自动选择模型。",
+      "quota": "每月 2,000 次代码补全；Free 通过 Auto 使用模型，聊天额度及重置日期以账户页面为准。",
+      "conditions": "需要 GitHub 账户，通过支持的 IDE 或 GitHub Copilot 界面使用；不是通用模型 API 免费额度，地区及绑卡条件未在本页列明。",
       "sources": [
         "https://github.com/features/copilot/plans",
         "https://docs.github.com/en/copilot/reference/ai-models/supported-models#supported-ai-models-per-copilot-plan"
-      ]
-    },
-    {
-      "provider": "WorkBuddy International",
-      "kind": "free_coding_app_plus_limited_promotion",
-      "kindLabel": "免费应用 + 限时活动",
-      "status": "official_promotion_verified",
-      "models": [
-        "DeepSeek-V4.1-Flash-1017"
-      ],
-      "other_models": [],
-      "quota": "DeepSeek-V4.1-Flash-1017 限时免费；活动公告未列请求上限、重置周期或基础积分扣减细则。",
-      "conditions": "适用于国际版；账户与地区条件以客户端显示为准。",
-      "expiry": "活动免费至 2026-10-31；公告未列准确截止时刻或时区。",
-      "sources": [
-        "https://www.workbuddy.ai/pricing/",
-        "https://x.com/WorkBuddy_AI/status/2111404103402430558",
-        "https://x.com/deepseek_ai/status/2111375640717033777"
-      ]
-    },
-    {
-      "provider": "讯飞星火",
-      "kind": "free_api_candidate",
-      "kindLabel": "官方免费计划，详见条件",
-      "status": "official_free_claim_verified_quota_unverified",
-      "models": [
-        "Spark Lite"
-      ],
-      "other_models": [],
-      "quota": "官方生态页标为完全免费，API 文档提供 lite 接口。",
-      "conditions": "需要开放平台应用与有效 API 凭据。",
-      "sources": [
-        "https://startups.xfyun.cn/gemini",
-        "https://www.xfyun.cn/doc/spark/Web.html"
       ]
     },
     {
@@ -1809,8 +1957,8 @@
         "openrouter/free"
       ],
       "other_models": [],
-      "quota": "20 RPM；全部免费模型共用每日 50 次请求。累计购买至少 10 美元额度后提高为每日 1,000 次，仍为 20 RPM。失败请求也计入日额度；负余额会阻止免费请求。",
-      "conditions": "只能使用所列精确 :free ID；openrouter/free 仅路由到免费模型。fallback 列表加入付费模型会产生费用。",
+      "quota": "免费模型共用 20 RPM、每日 50 次请求；累计购买至少 10 美元额度后为每日 1,000 次，仍为 20 RPM。日额度在北京时间 08:00 重置。",
+      "conditions": "需要 OpenRouter 账户；API 使用 API key，也可在 Chat Playground 使用。精确 :free ID 与付费版本独立；openrouter/free 只路由至免费模型。付费 fallback 按对应价格计费。地区和上游可用性以服务条款及模型端点为准。",
       "expiry": "poolside/laguna-s-2.1:free 与 poolside/laguna-xs-2.1:free 目录到期日为 2026-10-31；dots-studio/dots-3-note-preview:free 为 2026-12-31。其他型号未列结束日期。",
       "caution": "本目录列出 :free 模型 ID 与 openrouter/free 免费路由器。",
       "sources": [
@@ -1818,13 +1966,14 @@
         "https://openrouter.ai/collections/free-models",
         "https://openrouter.ai/docs/api_reference/limits",
         "https://openrouter.ai/docs/guides/routing/model-variants/free",
-        "https://openrouter.ai/pricing"
+        "https://openrouter.ai/pricing",
+        "https://openrouter.ai/blog/tutorials/how-to-get-the-lowest-cost-llm-inference-on-openrouter/"
       ]
     },
     {
       "provider": "OpenCode Console (formerly Zen)",
-      "kind": "limited_time_free_api_and_coding",
-      "kindLabel": "限时免费 API / 编程",
+      "kind": "limited_time_free_coding_and_decision_api",
+      "kindLabel": "官方免费计划，详见条件",
       "status": "official_verified",
       "models": [
         "big-pickle",
@@ -1832,19 +1981,16 @@
         "deepseek-v4.1-flash-free",
         "beam-free",
         "flint-40b-free",
-        "longcat-2.5-preview-free",
-        "exo-free",
         "mimo-v2.6-flash-free",
-        "mimo-v2.5-free",
         "nemotron-3-ultra-free",
         "nemotron-3.5-lightning-free",
         "nemotron-3.5-super-vl-free",
         "jev-1.13-free"
       ],
       "other_models": [],
-      "quota": "所列型号官方标为限时免费，未承诺准确结束日或请求额度。选择时加 opencode/ 前缀。Jev 是结构化决策模型，不是聊天生成模型。",
-      "conditions": "Beam Free 不支持中国大陆及港澳。控制台的一般使用流程包含账户、账单与充值，具体要求以所选免费模型页面为准。后台标题生成可能使用低价付费模型。",
-      "privacy": "Big Pickle、Flint 40B、Exo、MiMo 等免费模型的数据可用于改进模型；Flint 40B 保留数据 30 天。NVIDIA 接口仅供试用，条款禁止输入个人或机密信息。DeepSeek、GLM、LongCat 免费供应商声明零保留且不训练。",
+      "quota": "所列型号限时免费，未列统一请求额度、重置周期或结束日期。免费聊天模型须在 OpenCode 使用；Jev 1.13 Free 是结构化决策 API，不生成聊天文本。",
+      "conditions": "在 OpenCode 的模型选择器选择免费聊天型号；其他客户端使用付费模型或 Go。Beam Free 不支持中国大陆及港澳等地区。控制台通用流程包含账户、账单及充值，免费型号的具体绑卡要求未单独列明。会话标题生成可使用低价付费模型。",
+      "privacy": "Big Pickle、Flint 40B、MiMo 免费期间数据可用于改进模型，Flint 保留 30 天。NVIDIA 免费端点仅供试用，禁止提交个人或机密数据。GLM 和 DeepSeek 免费供应商声明零保留、不训练。",
       "sources": [
         "https://opencode.ai/v2/docs/console/models/"
       ]
@@ -1860,7 +2006,7 @@
       "other_models": [],
       "quota": "Qwen3.8-Flash 为 0.0×，调用不消耗 Credits，零余额及 Free 用户也可用；未公布固定请求上限。另可在桌面 App 每日手动领取 100 Credits，每轮北京时间 10:00 重置，领取后 30 天有效。",
       "conditions": "国际版个人账户，含 Free/Pro Trial/付费个人；不含 Teams/Enterprise。选定 Qwen3.8-Flash 自动生效，无需领奖；每日积分须桌面手动领取，不能补领，且不提升套餐权限。支持 IDE、CLI、JetBrains、网页等官方列明产品，不是独立通用 API 免费。未要求付费订阅；其他绑卡/地区限制未列明。",
-      "expiry": "模型免费已从原 9 月 30 日截止延长，结束日待官方提前公布；每日积分活动结束日也待公布。不是今日新活动。",
+      "expiry": "模型免费已从原 9 月 30 日截止延长，结束日待官方提前公布；每日积分活动结束日也待公布。",
       "sources": [
         "https://docs.qoder.com/events/flashoffer",
         "https://docs.qoder.com/events/100credits"
@@ -1872,11 +2018,12 @@
       "kindLabel": "免费编程应用",
       "status": "official_free_router_verified",
       "models": [
-        "kilo-auto/free（免费路由器，底层型号动态变化）"
+        "kilo-auto/free（动态路由，固定底层模型未承诺）"
       ],
       "other_models": [],
-      "quota": "官方确认 Auto Free 路由到当前可用免费模型；没有统一固定请求额度或重置时刻，上游可限流。未公布固定结束日。",
-      "conditions": "通过 Kilo 账户在 IDE/CLI 选择 Auto Free。后台小模型默认可能收费，须另选免费模型；自动补全默认可能扣积分，BYOK 也不保证免费。确切底层型号须查当时模型选择器，不将全部目录当作免费。付款/地区资格未统一列明。",
+      "quota": "Auto Free 路由到可用免费模型；上游可能限流，未列统一额度或重置周期。",
+      "conditions": "Kilo IDE 插件、CLI 和云任务可选择免费模型，需要账户；自动补全和后台小模型默认可消耗积分。NVIDIA 免费端点仅供试用，可能记录输入输出，条款禁止提交个人或机密数据。",
+      "expiry": "可用免费模型随供应商变化，未列结束日期。",
       "privacy": "路由可能使用记录提示词和输出、用于改进服务的供应商；NVIDIA 免费端点仅供试用，不输入个人或机密信息。",
       "sources": [
         "https://kilo.ai/docs/getting-started/using-kilo-for-free"
@@ -1888,18 +2035,13 @@
       "kindLabel": "免费编程应用",
       "status": "official_verified",
       "models": [
-        "Grok 4.7",
-        "Grok 4.6",
-        "Grok 4.5",
-        "Composer 2.5"
+        "官方未为 Free 公布固定模型版本"
       ],
       "other_models": [],
-      "quota": "免费方案提供有限 Agent 与 Chat 用量；官方未给出统一请求数或免费层重置周期。",
-      "conditions": "需要 Cursor 账户，通过编辑器使用；Free 不含 Claude、GPT、Gemini 等第三方模型。地区及绑卡条件未在所引页面明确。",
+      "quota": "Free 套餐每月 0 美元，包含有限 Agent 与 Chat 使用；未列固定请求数、Token 数或重置周期。",
+      "conditions": "通过 Cursor 客户端使用，需要账户。Free 不包含第三方模型付费访问或 Grok API；具体地区与绑卡条件未在价格表列明。",
       "expiry": "长期免费方案，未列结束日期。",
       "sources": [
-        "https://cursor.com/docs/models-and-pricing",
-        "https://prod.cursor.com/help/models-and-usage/available-models",
         "https://cursor.com/pricing"
       ]
     },
@@ -1933,7 +2075,7 @@
       ],
       "other_models": [],
       "quota": "审核通过的 Free 用户可手动领取一次 1,024 SOTA Credits 欢迎包。社区累计助力达 2 万／5 万／10 万点后，分别解锁 2,048／3,072／4,096 SOTA Credits，解锁后 12 小时内发放；每账户每档限领一次。每天可助力一次，北京时间 00:00 重置。",
-      "conditions": "面向个人账户：Free 需提交一次申请并获批，Pro 及以上自动有资格，Lite 不支持 Sonus。使用 Qoder、Qoder IDE、JetBrains 插件或 CLI 手动领取；仅用于 Sonus，不是通用 API 额度。额度用尽后有权限账户按普通规则消耗其他积分；不能与闲时折扣叠加。地区及绑卡要求未列明。",
+      "conditions": "个人 Pro 及以上自动获得资格；Free 须一次申请并获批，Lite 不支持 Sonus。通过活动页参与，奖励在支持的 Qoder 客户端领取，仅用于 Sonus；底层模型版本、地区与绑卡条件未披露。",
       "expiry": "申请、审核及领取于 2026 年 10 月 30 日 23:59（北京时间）结束。欢迎包至 10 月 31 日 23:59 有效；解锁包需发放后 3 天内且不晚于活动结束前领取，领取后 24 小时有效。",
       "sources": [
         "https://docs.qoder.com/events/communityboost"
