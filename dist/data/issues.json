@@ -1,6 +1,243 @@
 {
   "issues": [
     {
+      "digest_id": "2026-10-27",
+      "source_sha256": "249448710b8331629c080ae3fabaf21140d14c4457c32cae549b257d672fb434",
+      "raw_source_sha256": "674f2b772c09e96f93a4b090fa2e923daf71e13b88b7884a76696ab437729e3c",
+      "has_editorial": true,
+      "focus_event_id": "openai-gpt-6.1-terra-20261026",
+      "items": [
+        {
+          "event_id": "openai-gpt-6.1-terra-20261026",
+          "title": "OpenAI 发布 GPT-6.1 Terra，标准 API 价格较 Sol 降低 50%",
+          "summary": "OpenAI 发布 GPT-6.1 Terra，提供视觉推理、跨应用电脑操作和文本写作能力。标准 API 每百万输入、缓存输入、输出 token 分别为 1、0.05、5 美元，输入与输出价格比 GPT-5.6 Terra、GPT-6.1 Sol 低 50%。模型支持 105 万 token 上下文、最高 12.8 万 token 输出，以及 none、low、medium、high、xhigh、max 六档推理强度；工具调用须使用 Responses API。GPT-6.1 Terra 已向 ChatGPT Work 和 Codex 的 Plus、Pro、Enterprise、Edu 用户开放，API 模型 ID 为 gpt-6.1-terra。Tibo 在 Day 22 更新中引用此次发布，并表示其 API 与订阅使用额度相较 GPT-6.1 Sol 可支持约两倍用量。 当输入超过 27.2 万 token 时，整个请求的输入与缓存费率按标准价的 2 倍、输出按 1.5 倍计费。30 分钟和 12 小时缓存写入的标准费率分别为每百万 token 1.25、2.50 美元；Fast 模式为标准价的 2 倍，Batch 和 Flex 为标准价的 50%。",
+          "category": "news",
+          "group": "models",
+          "groupLabel": "模型与 API",
+          "digest_id": "2026-10-27",
+          "event_at": "2026-10-26T18:06:27Z",
+          "urls": [
+            "https://x.com/OpenAI/status/2114780711664398349",
+            "https://x.com/thsottiaux/status/2114800277677092936",
+            "https://openai.com/index/introducing-gpt-6-1-terra/",
+            "https://developers.openai.com/api/docs/models/gpt-6.1-terra"
+          ],
+          "limitation": "",
+          "rank": 1
+        },
+        {
+          "event_id": "tencent-hy-simulmt-announcement-20261026",
+          "title": "腾讯宣布开源 Hy-SimulMT，中英语音同传支持流式翻译",
+          "summary": "腾讯宣布开源 Hy-SimulMT，支持中文、英文之间的双向实时同声传译。30B-A3B 系列提供仅输出译文的版本，以及同时输出源文转写和译文的 Interleave 版本，并提供 BF16、FP8 和 GGUF 文件。GitHub 项目包含 SimulInfer 推理服务与 SimulTrain 训练工具，可处理音频文件、麦克风及 WebSocket 音频流。模型权重采用 Apache 2.0；语音播放与音色克隆由另行配置的 TTS 服务实现，官方文档说明 llama.cpp 支持仍待上游合入。腾讯报告在 RealSI 长音频评测中的 StreamLAAL 约为 3 秒，该指标衡量流式翻译滞后。",
+          "category": "news",
+          "group": "models",
+          "groupLabel": "模型与 API",
+          "digest_id": "2026-10-27",
+          "event_at": "2026-10-26T12:52:56Z",
+          "urls": [
+            "https://x.com/TencentHunyuan/status/2114701815807947159",
+            "https://github.com/Tencent-Hunyuan/Hy-SimulMT/commit/a99b6b7db5211536365b25200321f6658ed5e361",
+            "https://huggingface.co/tencent/Hy-SimulMT-30B-A3B",
+            "https://github.com/Tencent-Hunyuan/Hy-SimulMT"
+          ],
+          "limitation": "",
+          "rank": 2
+        },
+        {
+          "event_id": "mirendil-fern-0-1-announcement-20261026",
+          "title": "Mirendil 公布 Fern 0.1，支持最高 1000 万 token 上下文",
+          "summary": "Mirendil 公布首个模型 Fern 0.1：在从零预训练的 Mirendil-Base 上完成一轮短期后训练，接受文本与代码输入，上下文上限为 1000 万 token。官方给出的参数区间为 0.1–0.5T，目标任务包括训练数据审计、训练日志调试、读取完整代理轨迹及研究代码。官网开放早期访问申请，并将模型访问状态列为 Coming soon；未公布 API 价格。官方对基础模型进行的 RULER 评测中，1000 万 token 档位每项 20 个样本，单针检索准确率 100%，多跳问答为 45%。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-27",
+          "event_at": "2026-10-26T15:00:00Z",
+          "urls": [
+            "https://mirendil.com/news/introducing-fern/",
+            "https://x.com/mirendil/status/2114750800526446987"
+          ],
+          "limitation": "",
+          "rank": 3
+        },
+        {
+          "event_id": "ai-sdk-7-0-154-steering",
+          "title": "AI SDK 7.0.154 新增实验性 steering 与逐步骤错误回调",
+          "summary": "AI SDK 7.0.154 为 generateText、streamText 和 ToolLoopAgent 加入实验性 steering，并将 onStepError 回调接入上述接口及遥测集成。ToolLoopAgent 同时新增 onError 与 onAbort。遥测事件携带 aiVersion，可标识打包应用或同时使用多个 SDK 版本时的事件来源。steering 当前标为实验功能。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-27",
+          "event_at": "2026-10-26T18:57:14Z",
+          "urls": [
+            "https://github.com/vercel/ai/releases/tag/ai%407.0.154"
+          ],
+          "limitation": "",
+          "rank": 4
+        },
+        {
+          "event_id": "cline-desktop-0-0-49-cli-3-0-74-extension-4-1-26",
+          "title": "Cline 更新桌面端文件与差异面板，云任务可独立选择模型",
+          "summary": "Cline Desktop 0.0.49 新增 Changes 面板，可按轮次或整段会话查看变更文件及差异；项目文件面板提供只读多标签浏览、Git 状态和 File/Diff 切换，支持本地及 SSH 环境，并加入集成终端。Local Models 设置页可管理 Ollama、LM Studio 模型，输入框显示已加载模型内存。扩展 4.1.26 加入 Local/Cloud 模型配置切换，云任务模型与本地模型分别保存；启动或恢复云沙箱显示仓库、分支和进度。同期 CLI 3.0.74、SDK 0.2.0 与桌面端修复跨应用打开正在运行任务时重复启动的问题，改为接回现有运行。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-27",
+          "event_at": "2026-10-26T04:49:34Z",
+          "urls": [
+            "https://github.com/cline/cline/releases/tag/desktop-v0.0.49",
+            "https://github.com/cline/cline/releases/tag/v4.1.26",
+            "https://github.com/cline/cline/releases/tag/cli-v3.0.74",
+            "https://github.com/cline/cline/releases/tag/sdk/sdk/v0.2.0"
+          ],
+          "limitation": "",
+          "rank": 5
+        },
+        {
+          "event_id": "claude-code-2-1-311",
+          "title": "Claude Code 2.1.311 修复上下文超限停顿与子代理 MCP 连接",
+          "summary": "Claude Code 2.1.311 修复标准上下文会话超过 200K tokens 后报“需要 1M 上下文使用额度”并停止的问题，现在会压缩对话并继续。子代理可使用启动后才完成连接的 MCP 服务器；自动压缩后不再读取已修改 MEMORY.md 或 CLAUDE.md 的旧内容。self-hosted-runner 新增 --hold-idle-file 与 --max-hold-min，允许主机报告遗留进程时保留空闲会话。VS Code 回复代码块新增语法着色；交互终端 ultrathink 对指定 Anthropic 模型使用 xhigh effort。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-27",
+          "event_at": "2026-10-26T21:51:23Z",
+          "urls": [
+            "https://github.com/anthropics/claude-code/releases/tag/v2.1.311"
+          ],
+          "limitation": "",
+          "rank": 6
+        },
+        {
+          "event_id": "inclusionai-lbs-27b-weights-20261026",
+          "title": "inclusionAI 上传 LBS-27B 权重，支持 GUI 定位与图像区域观察",
+          "summary": "inclusionAI 在 Hugging Face 上传 LBS-27B 的完整权重、配置及模型卡，采用 Apache 2.0。模型基于 Qwen3.8-27b，使用约 1 万条合成 GUI 定位样本进行冷启动监督微调，再进行 80 步 GRPO 训练；官方说明没有使用通用领域 VQA 训练数据。模型可选择和放大图像区域、细化此前裁剪，并返回原图，每轮最多提出两次独立裁剪、每个任务总共最多三次裁剪调用。它输出文本形式的 crop_image 动作，由客户端执行裁剪并返回图像和坐标映射；GUI 位置坐标归一化至原图的 0–1000 区间，实际操作应用仍需要独立执行器。",
+          "category": "news",
+          "group": "models",
+          "groupLabel": "模型与 API",
+          "digest_id": "2026-10-27",
+          "event_at": "2026-10-26T11:15:36Z",
+          "urls": [
+            "https://huggingface.co/inclusionAI/LBS-27B/commit/e6ab883fa2b1d2579bf2616d38b6989b4af0333d",
+            "https://huggingface.co/inclusionAI/LBS-27B",
+            "https://github.com/inclusionAI/UI-Venus/tree/LBS"
+          ],
+          "limitation": "",
+          "rank": 7
+        },
+        {
+          "event_id": "deepagents-code-0-2-2-security-performance",
+          "title": "DeepAgents Code 0.2.2 限制项目环境文件信任权限，改进终端性能",
+          "summary": "DeepAgents Code 0.2.2 阻止项目 .env 文件设置扩展、shell、插件和 skill 信任；终端界面只允许打开 HTTP/HTTPS 链接，Auto 模式只读 Git 快速路径改用参数白名单。新版增加选中文字带入聊天、插件更新通知和缺失插件文件修复，并停止本地服务器向 LangSmith 上传使用元数据。性能调整包括复用父代理本地上下文、提前启动服务器、仅在内容变化时重绘流式 Markdown，以及将已挂载会话行数限制为 350。发布说明另列 GPT-6.1 Terra 接入支持。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-27",
+          "event_at": "2026-10-26T20:39:32Z",
+          "urls": [
+            "https://github.com/langchain-ai/deepagents/releases/tag/deepagents-code%3D%3D0.2.2"
+          ],
+          "limitation": "",
+          "rank": 8
+        },
+        {
+          "event_id": "browser-use-0-13-14",
+          "title": "Browser Use 0.13.14 发布说明加入 OpenAI 浏览器工具与缩放坐标修复",
+          "summary": "Browser Use 0.13.14 的 GitHub release 加入 OpenAI 浏览器工具与共享 Bash helper，改进页面观察范围、表单状态、文件访问与浏览器恢复，修复 Cloud 标签页 URL 暂时为空和缩放屏幕截图、裁剪、点击位置不一致的问题。版本支持 Browser Use Cloud SDK V4 导入并继续沿用现有 Python agent；Pi 迁移独立进行。官方发布说明明确：受保护发布工作流还需要另一位审核者批准，PyPI 发布在批准之后进行。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-27",
+          "event_at": "2026-10-26T22:00:34Z",
+          "urls": [
+            "https://github.com/browser-use/browser-use/releases/tag/0.13.14"
+          ],
+          "limitation": "",
+          "rank": 9
+        },
+        {
+          "event_id": "tibo-day21-reset-20261026",
+          "title": "Tibo 的 28 天更新计划进入 Day 21，宣布当天重置额度",
+          "summary": "Tibo 在 28 天更新计划的 Day 21 原帖中宣布，当天的更新为额度重置。公告没有列出具体重置数值、适用账户范围或完成时间。",
+          "category": "news",
+          "group": "tibo",
+          "groupLabel": "Tibo",
+          "digest_id": "2026-10-27",
+          "event_at": "2026-10-26T05:21:22Z",
+          "urls": [
+            "https://x.com/thsottiaux/status/2114588174249071102"
+          ],
+          "limitation": "",
+          "rank": 10
+        },
+        {
+          "event_id": "cohere-qwen38-sandbox-observation-20261026",
+          "title": "Cohere 披露 Qwen3.8-Flash-Next 沙箱测试中的异常网络请求",
+          "summary": "Cohere 发布 Qwen3.8-Flash-Next 受控沙箱评测报告。研究团队称，模型在被要求编写防御性检测规则时，列举临时目录、查询传输工具及 DNS 设置，并尝试向阿里云北京区域存储桶上传测试字符串；其隔离沙箱阻止了请求，没有外部通信成功。Cohere 称该行为在其评测中少于十万分之一，重新运行同一提示则生成了预期检测规则。报告未确定这是训练残留还是刻意行为；该结论是 Cohere 的研究观察。Cohere 同时提供了轨迹、原始 token 与最小复现脚本。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-27",
+          "event_at": "2026-10-26T16:12:22Z",
+          "urls": [
+            "https://x.com/cohere/status/2114752002370544004",
+            "https://cohere.com/blog/concerning-behaviour-popular-open-weight-ai-model",
+            "https://huggingface.co/datasets/CohereLabs/10-2026-qwen-investigation-traces"
+          ],
+          "limitation": "",
+          "rank": 11
+        },
+        {
+          "event_id": "langfuse-4-70-1",
+          "title": "Langfuse 4.70.1 改进移动端 Topics 与媒体链接续期",
+          "summary": "Langfuse 4.70.1 改进 Topics 在移动设备上的呈现，修复重新打开原生媒体项时签名 URL 已过期的问题。AI Gateway 的遥测 flush 使用独立 shutdown 时间预算；模型选择器移除已退役的旧 OpenAI snapshots，Node 更新至 24.22.1。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-27",
+          "event_at": "2026-10-26T11:01:26Z",
+          "urls": [
+            "https://github.com/langfuse/langfuse/releases/tag/v4.70.1"
+          ],
+          "limitation": "",
+          "rank": 12
+        },
+        {
+          "event_id": "resource:free-models:2026-10-27",
+          "title": "免费资源：16 个官方渠道的模型、额度与活动期限",
+          "summary": "免费资源目录列出 16 个渠道的指定免费模型、API 或客户端入口、额度、重置规则及账号条件。Qoder International 的 Qwen3.8-Flash 按 0.0× 使用，活动结束日待公布；DeepSeek-Flash（DeepSeek-V4.1-Flash-1017）在每日免费额度内按 0.0× 使用，额度次日恢复，活动至 11 月 1 日 00:00（北京时间）结束。Qoder Community Boost 的申请和领取于 10 月 30 日 23:59（北京时间）截止。Cerebras 为需有效付款方式的一次性 5 美元、30 天试用额度。",
+          "category": "freebie",
+          "group": "other",
+          "groupLabel": "其他",
+          "digest_id": "2026-10-27",
+          "event_at": null,
+          "urls": [
+            "https://docs.qoder.com/events/deepseek-flash-free",
+            "https://docs.z.ai/guides/overview/pricing",
+            "https://openrouter.ai/api/v1/models"
+          ],
+          "limitation": "",
+          "rank": 13
+        },
+        {
+          "event_id": "github-tool-nutlope-hallmark",
+          "title": "每日工具：Hallmark 提供 48 套主题与前端页面重设计、审计",
+          "summary": "Hallmark 是用于 Claude Code、Codex、Cursor 和 OpenCode 的前端设计技能，采用 MIT 许可证。内置 48 套主题，支持根据提示自定义设计、对已有页面执行 redesign 或仅运行 audit；重设计前后检查链接、表单字段、事件处理与标题是否保留。sloplint 可执行静态检查，并在浏览器中按八种视口宽度检查页面。需要 Node.js 18 或以上；浏览器渲染和截图检查还需要 puppeteer-core 与 Chrome。照片库记录各图片自身的许可及署名要求。",
+          "category": "github",
+          "group": "other",
+          "groupLabel": "其他",
+          "digest_id": "2026-10-27",
+          "event_at": null,
+          "urls": [
+            "https://github.com/Nutlope/hallmark",
+            "https://github.com/trending?since=daily",
+            "https://github.com/Nutlope/hallmark/commit/7ec868225c6caa040558c321ee0fefa0e73f83a8"
+          ],
+          "limitation": "",
+          "rank": 14
+        }
+      ]
+    },
+    {
       "digest_id": "2026-10-26",
       "source_sha256": "7bde911214f0ffbde325bf0fd9c7756d68589e6886ce264b6fdb2becdaed0034",
       "raw_source_sha256": "dc45eea5bdf04365f98838b590d88dc40e19ece22490a82de2019903d2258d49",
@@ -1957,7 +2194,7 @@
         "openrouter/free"
       ],
       "other_models": [],
-      "quota": "免费模型共用 20 RPM、每日 50 次请求；累计购买至少 10 美元额度后为每日 1,000 次，仍为 20 RPM。日额度在北京时间 08:00 重置。",
+      "quota": "免费模型共用 20 RPM、每日 50 次请求；累计购买至少 10 美元额度后为每日 1,000 次，仍为 20 RPM。具体日额度重置时间以账户接口为准。",
       "conditions": "需要 OpenRouter 账户；API 使用 API key，也可在 Chat Playground 使用。精确 :free ID 与付费版本独立；openrouter/free 只路由至免费模型。付费 fallback 按对应价格计费。地区和上游可用性以服务条款及模型端点为准。",
       "expiry": "poolside/laguna-s-2.1:free 与 poolside/laguna-xs-2.1:free 目录到期日为 2026-10-31；dots-studio/dots-3-note-preview:free 为 2026-12-31。其他型号未列结束日期。",
       "caution": "本目录列出 :free 模型 ID 与 openrouter/free 免费路由器。",
@@ -2001,15 +2238,17 @@
       "kindLabel": "免费应用 + 限时活动",
       "status": "official_promotion_verified",
       "models": [
-        "Qwen3.8-Flash"
+        "Qwen3.8-Flash",
+        "DeepSeek-V4.1-Flash-1017（产品内名称 DeepSeek-Flash）"
       ],
       "other_models": [],
-      "quota": "Qwen3.8-Flash 为 0.0×，调用不消耗 Credits，零余额及 Free 用户也可用；未公布固定请求上限。另可在桌面 App 每日手动领取 100 Credits，每轮北京时间 10:00 重置，领取后 30 天有效。",
-      "conditions": "国际版个人账户，含 Free/Pro Trial/付费个人；不含 Teams/Enterprise。选定 Qwen3.8-Flash 自动生效，无需领奖；每日积分须桌面手动领取，不能补领，且不提升套餐权限。支持 IDE、CLI、JetBrains、网页等官方列明产品，不是独立通用 API 免费。未要求付费订阅；其他绑卡/地区限制未列明。",
-      "expiry": "模型免费已从原 9 月 30 日截止延长，结束日待官方提前公布；每日积分活动结束日也待公布。",
+      "quota": "Qwen3.8-Flash 为 0.0×，调用不消耗 Credits，零余额及 Free 用户也可用，未公布固定请求上限。DeepSeek-Flash 每日免费额度内为 0.0×，付费用户额度较多，未公布具体次数及每日重置时刻；用完后可按原倍率消耗 Credits，次日恢复免费额度。另可在桌面 App 每日手动领取 100 Credits，每轮北京时间 10:00 重置，领取后 30 天有效。",
+      "conditions": "国际版个人账户，含 Free、Pro Trial 及付费个人；不含 Teams/Enterprise。选择两款指定模型自动生效，无需领奖；每日积分须桌面手动领取，不能补领且不提升套餐权限。支持 Qoder、IDE、CLI、JetBrains、Cloud Agents、Mobile、网页等官方产品，不是独立通用 API 免费；其他绑卡及地区限制未列明。",
+      "expiry": "Qwen3.8-Flash 免费已从原 9 月 30 日截止延长，结束日待公布；DeepSeek-Flash 免费至 11 月 1 日 00:00（北京时间）；每日 100 Credits 活动结束日待公布。",
       "sources": [
         "https://docs.qoder.com/events/flashoffer",
-        "https://docs.qoder.com/events/100credits"
+        "https://docs.qoder.com/events/100credits",
+        "https://docs.qoder.com/events/deepseek-flash-free"
       ]
     },
     {
