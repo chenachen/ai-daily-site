@@ -1,6 +1,264 @@
 {
   "issues": [
     {
+      "digest_id": "2026-10-28",
+      "source_sha256": "9ed0c438a6cd00bb4d5c52e94a0be75421a544b8e28677ceaef226202a5d0e68",
+      "raw_source_sha256": "c5ac2541b47f2c646fa8e88c32cbb9cceb0d5541e267aedc7824e9c739544fb4",
+      "has_editorial": true,
+      "focus_event_id": "google-genie-4-preview",
+      "items": [
+        {
+          "event_id": "google-genie-4-preview",
+          "title": "Google 发布 Genie 4 世界模型研究预览，加入原生音频与实时场景编辑",
+          "summary": "Genie 4 能实时生成可探索的动态环境，并同步生成环境音、音乐和角色对话；用户可通过键盘移动视角，用自然语言改变天气、镜头、人物与物体。Gemini 模型参与场景规划与多步事件控制。目前仅向可信测试者开放研究预览，Google AI Ultra 的 Project Genie 以及 Gemini API、AI Studio 早期合作伙伴后续接入。长时间运行、多次复杂编辑时，视觉细节和物体一致性仍可能漂移；生成音视频加入 SynthID 水印。",
+          "category": "news",
+          "group": "models",
+          "groupLabel": "模型与 API",
+          "digest_id": "2026-10-28",
+          "event_at": "2026-10-27T16:10:55Z",
+          "urls": [
+            "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
+            "https://x.com/GoogleDeepMind/status/2115114028338962672"
+          ],
+          "limitation": "",
+          "rank": 1
+        },
+        {
+          "event_id": "microsoft-mai-image-2-7-preview",
+          "title": "微软 MAI Image 2.7 开放图像编辑预览，文生图仍待上线",
+          "summary": "MAI Image 2.7 支持重设场景风格与光照、编辑图中文字和符号、修复增强已有素材，以及调整物体和环境关系。图像编辑预览可在 Arena、Artificial Analysis 和 MAI Playground 体验；本次先开放编辑功能，文生图仍标为 coming soon。微软此次公告未公布 2.7 的 API 价格或生产 API 上线安排。",
+          "category": "news",
+          "group": "models",
+          "groupLabel": "模型与 API",
+          "digest_id": "2026-10-28",
+          "event_at": "2026-10-27T15:12:20Z",
+          "urls": [
+            "https://x.com/mustafasuleyman/status/2115099284224008200",
+            "https://microsoft.ai/news/mai-image-2-7-debut/"
+          ],
+          "limitation": "",
+          "rank": 2
+        },
+        {
+          "event_id": "liquid-ai-lfm3-family-launch",
+          "title": "Liquid AI 发布 LFM3 开放权重家族，六款小模型覆盖文本、视觉与语音",
+          "summary": "LFM3 首批推出六款约 20 亿参数模型，共用 LFM3-1.7B-Base 底座，覆盖文本、视觉、音频、全模态，以及视觉和全模态决策模型。文本模型提供 256K 上下文，4-bit 权重约 1 GB；视觉模型支持视频输入，音频模型覆盖 18 种语言，全模态模型整合图像、音频与语言。基础与后训练权重已在 Hugging Face 开放，也可使用 Liquid API 与 Playground。LFM 许可允许年收入低于 1000 万美元的企业免费商用，超过门槛需另行授权。",
+          "category": "news",
+          "group": "models",
+          "groupLabel": "模型与 API",
+          "digest_id": "2026-10-28",
+          "event_at": "2026-10-27T17:07:45Z",
+          "urls": [
+            "https://x.com/liquidai/status/2115128329003303107",
+            "https://www.liquid.ai/blog/lfm3"
+          ],
+          "limitation": "",
+          "rank": 3
+        },
+        {
+          "event_id": "microsoft-mai-image-2-6-foundry-ga",
+          "title": "微软 MAI Image 2.6 与 Flash 从预览转为 Foundry 正式可用",
+          "summary": "微软宣布 MAI-Image-2.6 和 MAI-Image-2.6-Flash 已在 Microsoft Foundry 正式可用。本次是两款已有图像模型从预览进入 GA 的服务状态变化。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-28",
+          "event_at": "2026-10-27T15:42:56Z",
+          "urls": [
+            "https://x.com/MicrosoftAI/status/2115106982730342888"
+          ],
+          "limitation": "",
+          "rank": 4
+        },
+        {
+          "event_id": "replit-cloud-agents-existing-repos-launch",
+          "title": "Replit Cloud Agents 向 Pro 与 Enterprise 开放现有仓库协作，提交附带测试视频",
+          "summary": "Replit Cloud Agents 可在现有公司代码库中按自然语言修改应用，生成 GitHub Pull Request 或 GitLab Merge Request，并在隔离云沙箱中用浏览器测试、附上截图与视频。管理员可统一设置仓库、运行时与依赖，新任务从主分支更新后的共享环境开始。功能现已向所有 Pro 与 Enterprise 客户开放，Slack 集成对所有客户可用；将审查意见沉淀为团队技能的工作区记忆仍处于 early access，技能变更需工程师批准，Microsoft Teams 集成尚未上线。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-28",
+          "event_at": "2026-10-27T15:53:35Z",
+          "urls": [
+            "https://x.com/Replit/status/2115109663993966737",
+            "https://replit.com/blog/anyone-can-bring-ideas-to-company-codebase"
+          ],
+          "limitation": "",
+          "rank": 5
+        },
+        {
+          "event_id": "opencode-2-2-0",
+          "title": "OpenCode 2.2.0 开放实验性桌面插件，调整 AI 包 API 并移除 GitHub Action",
+          "summary": "桌面端加入可创建、安装和共享的实验性 GUI 插件，插件与 SDK 新增实验性图像生成及决策生成 API。插件可按键更新会话指令，在下一步追加小型更新而不是改写系统提示词；支持按提供方、模型设置提示缓存 TTL。@opencode/ai 包根改为 Promise API，Effect API 移至 /effect，原 /promise 入口删除；OpenCode GitHub Action 被移除且不再发布。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-28",
+          "event_at": "2026-10-27T09:04:44Z",
+          "urls": [
+            "https://github.com/anomalyco/opencode/releases/tag/v2.2.0"
+          ],
+          "limitation": "",
+          "rank": 6
+        },
+        {
+          "event_id": "claude-code-2-1-312",
+          "title": "Claude Code 2.1.312 修复大型规则文件覆盖、组织策略加载及过期提交审查",
+          "summary": "修复只读取开头就覆盖大型 CLAUDE.md、规则文件或引用文件的问题，Write 现在要求先完整读取或原位编辑；修复从 VS Code 登录后未继续获取组织策略和托管设置的问题。Code Review 在 GitHub 推送事件延迟到达时改为审查 PR 当前提交。云端例行任务的模型选择器新增推理强度，VS Code 的额度提示显示具体重置钟点。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-28",
+          "event_at": "2026-10-27T20:24:20Z",
+          "urls": [
+            "https://github.com/anthropics/claude-code/releases/tag/v2.1.312"
+          ],
+          "limitation": "",
+          "rank": 7
+        },
+        {
+          "event_id": "codex-cli-0-165-0",
+          "title": "Codex CLI 0.165.0 新增 Vertex AI 提供方与会话仓库筛选",
+          "summary": "新增内置 Google Cloud Vertex AI 提供方，可用 model_provider=\"gcp\" 配置；会话选择器增加仓库筛选，代理指挥中心支持目录分组。支持的模型可在对话中更改推理强度，App Server API 新增实验性附加线程分叉。新配置默认启用 memory v2，并支持导入外部代理记忆；修复中断后排队消息意外重启工作等问题。",
+          "category": "news",
+          "group": "openai",
+          "groupLabel": "OpenAI",
+          "digest_id": "2026-10-28",
+          "event_at": "2026-10-27T20:09:38Z",
+          "urls": [
+            "https://github.com/openai/codex/releases/tag/rust-v0.165.0"
+          ],
+          "limitation": "",
+          "rank": 8
+        },
+        {
+          "event_id": "ai-sdk-7-0-155",
+          "title": "AI SDK 7.0.155 移除类型系统已保证的运行时输入校验",
+          "summary": "streamText、generateText、generateObject 与 streamObject 不再对消息执行 ModelMessage schema 校验，移除了随消息历史线性增长、此前每个 streamText 步骤都会承担的校验工作。调用设置、steering 消息和工具调用方配置等由 TypeScript 类型已保证的检查也被移除；整数范围、非空集合、未知键及 decide JSON 中的非有限数字或循环引用等值约束仍保留校验。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-28",
+          "event_at": "2026-10-27T19:33:32Z",
+          "urls": [
+            "https://github.com/vercel/ai/releases/tag/ai%407.0.155"
+          ],
+          "limitation": "",
+          "rank": 9
+        },
+        {
+          "event_id": "gemini-cli-0-66-stable",
+          "title": "Gemini CLI 0.66.0 稳定版修复终端渲染、更新检测和 MCP OAuth 网络配置",
+          "summary": "0.66.0 转为稳定版，改进同步输出与 spinner 渲染，修复滚动工具容器边框、终端闪烁和刷新时滚动历史丢失。更新流程会验证当前实际运行的二进制，避免 PATH 遮蔽造成更新成功的误报；MCP OAuth 流程增加主动开启的私有网络端点支持，并保留 shell 与 Git 环境中的用户级 ~/.gitconfig。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-28",
+          "event_at": "2026-10-27T20:26:28Z",
+          "urls": [
+            "https://github.com/google-gemini/gemini-cli/releases/tag/v0.66.0"
+          ],
+          "limitation": "",
+          "rank": 10
+        },
+        {
+          "event_id": "langchain-js-1-5-20",
+          "title": "LangChain JS 1.5.20 修复工具排空后代理仍继续运行",
+          "summary": "当工具抛出 GraphDrained（例如内部图通过 RunControl.requestDrain() 排空）时，ToolNode 现在向外重新抛出该错误并停止代理运行，不再把它转成允许代理继续执行的错误 ToolMessage。同批 @langchain/openai 1.7.1 更新模型配置，加入 GPT-6.1 Terra，并移除 gpt-5.2-chat-latest 与 gpt-5.3-chat-latest 的模型配置。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-28",
+          "event_at": "2026-10-27T01:37:58Z",
+          "urls": [
+            "https://github.com/langchain-ai/langchainjs/releases/tag/langchain%401.5.20",
+            "https://github.com/langchain-ai/langchainjs/releases/tag/%40langchain/openai%401.7.1"
+          ],
+          "limitation": "",
+          "rank": 11
+        },
+        {
+          "event_id": "langfuse-4-71-0",
+          "title": "Langfuse 4.71.0 扩展 AI Gateway 追踪，修复组织邀请与队列校验",
+          "summary": "AI Gateway 在生成记录中增加模型、密钥所有者、字节量及上游错误信息；Topics 支持显示未分配项目，追踪列表改为随滚动加载，运行历史按日分组并解释失败原因。修复组织邀请关联项目校验、注释队列添加条目的校验，以及 LiteLLM 路由调用中实际模型的记录；Docker 镜像加入 Node 24.22.1 安全修复。同日 v3.225.15 回移了邀请、队列及 webhook 密钥保护相关修复。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-28",
+          "event_at": "2026-10-27T15:03:06Z",
+          "urls": [
+            "https://github.com/langfuse/langfuse/releases/tag/v4.71.0",
+            "https://github.com/langfuse/langfuse/releases/tag/v3.225.15"
+          ],
+          "limitation": "",
+          "rank": 12
+        },
+        {
+          "event_id": "pydantic-ai-2-62-0",
+          "title": "Pydantic AI 2.62 支持会话中调整推理强度与可控后台子代理",
+          "summary": "支持通过 OpenAI configuration_update、Anthropic 每消息 output_config 和 OpenRouter 配置更新在对话中改变推理强度，并记录 ModelSettingsDeltaPart。SubAgents 可在 task_control 开启后把委派任务置于后台、追加指导、回答和取消；新增 BatchModelRequests 能力、按请求压缩和 Anthropic 原生消息压缩接口。该版也更改了压缩摘要存储、MCP 工具默认前缀及 GraphBuilder 广播分支执行顺序，官方明确提示后者可能影响升级前暂停的持久工作流重放。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-28",
+          "event_at": "2026-10-27T02:38:43Z",
+          "urls": [
+            "https://github.com/pydantic/pydantic-ai/releases/tag/v2.62.0"
+          ],
+          "limitation": "",
+          "rank": 13
+        },
+        {
+          "event_id": "github-copilot-sdk-server-to-server-auth-preview",
+          "title": "GitHub Copilot SDK 开放组织级服务器间认证公共预览",
+          "summary": "安装在组织中的 GitHub App 可通过短期 installation access token 代表组织调用 Copilot SDK，不再依赖登录用户的凭据。应用需要只读 Copilot Requests 组织权限；用量归属并计费给安装所属组织，沿用组织的模型政策、预算和支出控制。组织管理员可在 AI 用量 CSV 中用 app_client_id 识别应用用量，并通过暂停或卸载应用撤销访问。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-28",
+          "event_at": "2026-10-27T21:36:55Z",
+          "urls": [
+            "https://github.blog/changelog/2026-10-27-github-copilot-supports-server-to-server-authentication/"
+          ],
+          "limitation": "",
+          "rank": 14
+        },
+        {
+          "event_id": "resource:free-models:2026-10-28",
+          "title": "免费资源：16 个官方渠道的模型与额度，Qoder 第四轮积分分三天领取",
+          "summary": "本期资源目录覆盖16个官方渠道。Qoder 1024 Community Boost 第四轮门槛为社区累计20万点，规则列出10月28、29、30日每天北京时间00:00开放4,096 SOTA Credits；每包须当日领取使用，当日23:59失效，不能跨日累积。OpenRouter目录更新为17个具体免费ID，免费请求按UTC日统计；Gemini免费API目录补充两款3.8 TTS型号。各渠道的完整模型、额度、入口及账户条件见下方免费资源目录。",
+          "category": "freebie",
+          "group": "other",
+          "groupLabel": "其他",
+          "digest_id": "2026-10-28",
+          "event_at": null,
+          "urls": [
+            "https://docs.qoder.com/events/communityboost"
+          ],
+          "limitation": "",
+          "rank": 90
+        },
+        {
+          "event_id": "github-tool-pbakaus-impeccable",
+          "title": "每日工具：Impeccable 提供前端设计命令、浏览器迭代与确定性检测",
+          "summary": "Impeccable 为 AI 编程代理提供设计 Skill、24 个命令和 62 条确定性前端检测规则，覆盖界面审计、无障碍、响应式、排版、布局与性能。支持在浏览器中迭代元素，初始化流程把产品背景保存为 PRODUCT.md；CLI 和浏览器扩展运行确定性规则时不需要 LLM 或 API Key。可通过 npx impeccable install 安装，并支持 Claude Code、Cursor、Codex CLI 等工具。",
+          "category": "github",
+          "group": "other",
+          "groupLabel": "其他",
+          "digest_id": "2026-10-28",
+          "event_at": null,
+          "urls": [
+            "https://github.com/pbakaus/impeccable",
+            "https://raw.githubusercontent.com/pbakaus/impeccable/main/README.md",
+            "https://github.com/pbakaus/impeccable/releases/tag/skill-v4.8.0",
+            "https://github.com/trending?since=daily"
+          ],
+          "limitation": "",
+          "rank": 91
+        }
+      ]
+    },
+    {
       "digest_id": "2026-10-27",
       "source_sha256": "249448710b8331629c080ae3fabaf21140d14c4457c32cae549b257d672fb434",
       "raw_source_sha256": "674f2b772c09e96f93a4b090fa2e923daf71e13b88b7884a76696ab437729e3c",
@@ -2068,7 +2326,9 @@
       "status": "official_verified",
       "models": [
         "gemini-3.8-flash",
-        "gemini-3.5-flash-lite"
+        "gemini-3.5-flash-lite",
+        "gemini-3.8-flash-tts",
+        "gemini-3.8-flash-lite-tts"
       ],
       "other_models": [],
       "quota": "所列型号 Standard 层输入与输出免费；项目限额以 AI Studio 为准，RPD 在美国太平洋时间午夜重置。",
@@ -2190,11 +2450,10 @@
         "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
         "google/gemma-4-26b-a4b-it:free",
         "google/gemma-4-31b-it:free",
-        "nvidia/nemotron-3-super-120b-a12b:free",
         "openrouter/free"
       ],
       "other_models": [],
-      "quota": "免费模型共用 20 RPM、每日 50 次请求；累计购买至少 10 美元额度后为每日 1,000 次，仍为 20 RPM。具体日额度重置时间以账户接口为准。",
+      "quota": "免费模型共用 20 RPM、每日 50 次请求；累计购买至少 10 美元额度后为每日 1,000 次，仍为 20 RPM。官方按协调世界时的日历日统计，即北京时间每日 08:00 开始新一天。",
       "conditions": "需要 OpenRouter 账户；API 使用 API key，也可在 Chat Playground 使用。精确 :free ID 与付费版本独立；openrouter/free 只路由至免费模型。付费 fallback 按对应价格计费。地区和上游可用性以服务条款及模型端点为准。",
       "expiry": "poolside/laguna-s-2.1:free 与 poolside/laguna-xs-2.1:free 目录到期日为 2026-10-31；dots-studio/dots-3-note-preview:free 为 2026-12-31。其他型号未列结束日期。",
       "caution": "本目录列出 :free 模型 ID 与 openrouter/free 免费路由器。",
@@ -2313,9 +2572,9 @@
         "Sonus（Qoder 模型名称，官方未披露底层版本）"
       ],
       "other_models": [],
-      "quota": "审核通过的 Free 用户可手动领取一次 1,024 SOTA Credits 欢迎包。社区累计助力达 2 万／5 万／10 万点后，分别解锁 2,048／3,072／4,096 SOTA Credits，解锁后 12 小时内发放；每账户每档限领一次。每天可助力一次，北京时间 00:00 重置。",
+      "quota": "审核通过的 Free 用户可手动领取一次 1,024 SOTA Credits 欢迎包。社区累计助力达 2 万／5 万／10 万点后，分别解锁 2,048／3,072／4,096 SOTA Credits，解锁后 12 小时内发放，每账户每档限领一次。第 4 轮门槛为累计 20 万点，总计 12,288 SOTA Credits，分为 10 月 28、29、30 日三包，每日北京时间 00:00 开放 4,096，每账户每日限领一次。每日可助力一次，北京时间 00:00 重置。",
       "conditions": "个人 Pro 及以上自动获得资格；Free 须一次申请并获批，Lite 不支持 Sonus。通过活动页参与，奖励在支持的 Qoder 客户端领取，仅用于 Sonus；底层模型版本、地区与绑卡条件未披露。",
-      "expiry": "申请、审核及领取于 2026 年 10 月 30 日 23:59（北京时间）结束。欢迎包至 10 月 31 日 23:59 有效；解锁包需发放后 3 天内且不晚于活动结束前领取，领取后 24 小时有效。",
+      "expiry": "申请、审核及领取于 2026 年 10 月 30 日 23:59（北京时间）结束。欢迎包至 10 月 31 日 23:59 有效；第 1 至 3 轮奖励需发放后 3 天内且不晚于活动结束前领取，领取后 24 小时有效。第 4 轮每天的 4,096 积分须当日领取并使用，当日 23:59 失效，不跨日累积，漏领不补。",
       "sources": [
         "https://docs.qoder.com/events/communityboost"
       ]
