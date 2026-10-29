@@ -1,6 +1,252 @@
 {
   "issues": [
     {
+      "digest_id": "2026-10-29",
+      "source_sha256": "d3092d093e958104ca80b2c758ad03b1d9b372da493adcfcf73b19e8b4d023f3",
+      "raw_source_sha256": "f6fa5247e55f9a9fb6bcc7430e6f743982e469809063203d8d020e417118a3ec",
+      "has_editorial": true,
+      "focus_event_id": "google-gemini-4-carbon-launch-20261028",
+      "items": [
+        {
+          "event_id": "google-gemini-4-carbon-launch-20261028",
+          "title": "Google 发布 Gemini 4 Carbon，先向部分网络安全防御机构开放",
+          "summary": "Google 发布 Gemini 4 Carbon，在 Gemini 4 Argon 的基础上更新编码、长程 agent、多模态和网络安全能力。官方介绍的任务包括跨大型代码库查找根因、修复底层系统漏洞，以及全栈 Web 开发。\n\n本周先向部分网络安全防御机构开放，随后通过 Fairwind 计划逐步扩大至其他可信合作伙伴；开发者、企业和消费者产品入口尚待后续开放。\n\n公布的入门期价格与 Argon 相同：每百万输入 token 2 美元、输出 10 美元，缓存输入为输入价格的 5%。入门期后价格分别为 4 美元和 20 美元；公告未给出入门期结束日期。",
+          "category": "news",
+          "group": "models",
+          "groupLabel": "模型与 API",
+          "digest_id": "2026-10-29",
+          "event_at": "2026-10-28T17:00:00Z",
+          "urls": [
+            "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/"
+          ],
+          "limitation": "",
+          "rank": 1
+        },
+        {
+          "event_id": "nvidia-nemotron-3-5-transcribe-launch-20261028",
+          "title": "NVIDIA 发布 Nemotron 3.5 Transcribe，单模型支持 40 种语言转录、说话人标注和翻译",
+          "summary": "NVIDIA 发布 Nemotron 3.5 Transcribe，将语音编码器、Nemotron 3 说话人分离模型与 Nemotron 3.5 Lightning 30B-A3B 语言模型结合，约有 43 亿激活参数。单模型支持逐字转录、书面形式转录、上下文词汇、说话人标注、语音翻译和语种识别，覆盖 40 种语言，处理最长一小时录音；可按需返回带说话人归属的逐词时间戳。\n\n开发者通过自然语言提示选择每次请求的转录风格，也可提供产品术语和格式约定。模型权重已在 Hugging Face 发布，采用 OpenMDW-1.1 许可，同时提供 NeMo Speech 微调工具。",
+          "category": "news",
+          "group": "models",
+          "groupLabel": "模型与 API",
+          "digest_id": "2026-10-29",
+          "event_at": "2026-10-28T15:00:46Z",
+          "urls": [
+            "https://blogs.nvidia.com/blog/local-ai-rtx-spark-laptops-updates-models-agents-games/",
+            "https://research.nvidia.com/labs/nemotron/NVIDIA-Nemotron-3.5-Transcribe/",
+            "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B"
+          ],
+          "limitation": "",
+          "rank": 2
+        },
+        {
+          "event_id": "pydantic/pydantic-ai:v2.63.0",
+          "title": "Pydantic AI 2.63 支持 AG-UI 1.0，并加入循环检测与共享预算",
+          "summary": "Pydantic AI 2.63.0 支持 ag-ui-protocol 1.0；UI 适配器新增 manage_message_history，避免服务端保存的历史再次发送给模型。新增 DetectLoops 中断重复操作循环，PostgresSpendStore 让 Harness 的 SpendLimits 预算可通过 PostgreSQL 共享；评测增加单次任务超时 task_timeout。CodeMode 默认启用动态工具目录，新增工具改为追加而非重写缓存提示词。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-29",
+          "event_at": "2026-10-28T00:55:47Z",
+          "urls": [
+            "https://github.com/pydantic/pydantic-ai/releases/tag/v2.63.0"
+          ],
+          "limitation": "",
+          "rank": 3
+        },
+        {
+          "event_id": "langchain-ai/langchainjs:langchain-1.6.0",
+          "title": "LangChain JS 1.6 新增 OpenAI Decisions 测试版与决策中间件",
+          "summary": "LangChain JS 1.6.0 与 @langchain/openai 1.8.0 新增测试版 OpenAIDecisions runnable，提供带类型的 predicate、choice、score 问题，并加入模型路由和工具风险判断的 agent 中间件。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-29",
+          "event_at": "2026-10-28T00:55:04Z",
+          "urls": [
+            "https://github.com/langchain-ai/langchainjs/releases/tag/langchain%401.6.0"
+          ],
+          "limitation": "",
+          "rank": 4
+        },
+        {
+          "event_id": "mastra-ai/mastra:-mastra/core-1.80.0",
+          "title": "Mastra 1.80 加入按用户隔离的 OAuth 连接和聊天内连接提示",
+          "summary": "Mastra 的 @mastra/connect 支持通过 tools({ resourceId }) 和 userConnectRoutes() 使用终端用户各自的 OAuth 连接，并强制隔离用户连接。缺少集成时，request_connection 工具返回包含提供商列表和连接状态的 connect-prompt，供聊天界面渲染连接卡片。新增 spans 聚合接口与 ClickHouse、Postgres、DuckDB 存储支持；提供商错误分类可持久化并随服务端流发送。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-29",
+          "event_at": "2026-10-28T15:23:57Z",
+          "urls": [
+            "https://github.com/mastra-ai/mastra/releases/tag/%40mastra/core%401.80.0"
+          ],
+          "limitation": "",
+          "rank": 5
+        },
+        {
+          "event_id": "assistant-ui/assistant-ui:setup-agent-0.0.7",
+          "title": "assistant-ui setup-agent 0.0.7 修复配置写入与模型密钥兑换边界",
+          "summary": "setup-agent 0.0.7 在写入配置时拒绝符号链接以及解析后位于项目外部的路径；模型密钥兑换绑定发起请求的 CLI，并拒绝针对已被替代的 setup 或计划修订作出的决策。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-29",
+          "event_at": "2026-10-28T00:55:31Z",
+          "urls": [
+            "https://github.com/assistant-ui/assistant-ui/releases/tag/setup-agent%400.0.7"
+          ],
+          "limitation": "",
+          "rank": 6
+        },
+        {
+          "event_id": "zed-industries/zed:v1.26.2",
+          "title": "Zed 1.26.2 稳定版更新 ACP 设置，1.27 预览版调整 AI 提交与检查点",
+          "summary": "Zed 1.26.2 让 ACP 配置默认值仅应用于新对话，重新打开已有会话时保留原设置；JavaScript 调试器新增 DWARF 支持，用于调试 WebAssembly 源码，并支持在悬浮窗口展开变量树。同日发布的 1.27.0 预览版让 AI 提交信息参考仓库最近三条提交的风格，按需加载工具调用差异和消息 Markdown，并移除 agent 检查点及 Restore Checkpoint 按钮。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-29",
+          "event_at": "2026-10-28T15:16:13Z",
+          "urls": [
+            "https://github.com/zed-industries/zed/releases/tag/v1.26.2",
+            "https://github.com/zed-industries/zed/releases/tag/v1.27.0-pre"
+          ],
+          "limitation": "",
+          "rank": 7
+        },
+        {
+          "event_id": "qwenlm/qwen-code:v0.26.3",
+          "title": "Qwen Code 0.26.3 保留生成式 UI 状态并加入持久化 Workflow 模式",
+          "summary": "Qwen Code 0.26.3 的生成式 UI 卡片可在历史导航、会话切换和分屏变化间保留输入、控件和运行状态，并仅向支持 MCP Apps 的客户端提供。持久化会话 Workflow 模式可通过 CLI、SDK 或 ACP 启用；工具结果会在自动压缩前根据剩余上下文空间缩减。/autofix-pr start 遇到 PR 分支存在未推送提交或未提交改动时停止启动。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-29",
+          "event_at": "2026-10-28T14:36:14Z",
+          "urls": [
+            "https://github.com/QwenLM/qwen-code/releases/tag/v0.26.3"
+          ],
+          "limitation": "",
+          "rank": 8
+        },
+        {
+          "event_id": "google-gemini/gemini-cli:v0.67.0-nightly.20261028.gfa5c17365",
+          "title": "Gemini CLI 0.67 夜间版修复终端显示与确认操作历史",
+          "summary": "Gemini CLI 0.67 的 10 月 28 日夜间构建修复 confirm_action 流程重复记录历史及遥测的问题，并在生成差异上下文前统一 CRLF 换行。该构建还修复将模糊宽度字符显示为宽字符的终端兼容问题，以及 Android Termux 下受信任系统路径的 ripgrep 解析。该版本属于 nightly 构建。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-29",
+          "event_at": "2026-10-28T01:22:20Z",
+          "urls": [
+            "https://github.com/google-gemini/gemini-cli/releases/tag/v0.67.0-nightly.20261028.gfa5c17365"
+          ],
+          "limitation": "",
+          "rank": 9
+        },
+        {
+          "event_id": "openai-chatgpt-subscription-api-credits-20261028",
+          "title": "OpenAI 为合资格 Pro 与 Business 订阅开放 API 赠送额度",
+          "summary": "OpenAI 开放与 ChatGPT 订阅关联的 API 额度权益：Pro 100、200、500 档每个完整月账期分别获 100、200、500 美元；Business 按每个付费 Standard 席位 20 美元、Premium 席位 100 美元汇总，每工作区每月上限 500 美元。已付费至少 7 天的合资格订阅可在账单页激活，并关联同邮箱且拥有者身份符合要求的一个 API 组织。首期按剩余账期折算；后续续费自动发放，当期未用额度不结转。年付 Business 一次发放全年额度，上限 6,000 美元。额度用于所关联组织的 API 服务，不覆盖通过 API key 使用 Codex，也不增加 ChatGPT 或登录态 Codex 的用量。 资格还取决于已开放的账户批次及国家或地区；在赠送额度有效期间，使用该额度无需另加 API 付款方式。",
+          "category": "news",
+          "group": "openai",
+          "groupLabel": "OpenAI",
+          "digest_id": "2026-10-29",
+          "event_at": "2026-10-28T23:17:13.000Z",
+          "urls": [
+            "https://x.com/OpenAIDevs/status/2115583698074755078",
+            "https://help.openai.com/en/articles/20001626-api-credits-benefit-for-eligible-chatgpt-subscriptions"
+          ],
+          "limitation": "",
+          "rank": 10
+        },
+        {
+          "event_id": "openai-dots-texting-us-pro-preview-20261028",
+          "title": "ChatGPT dots 开放 iMessage 与 RCS 短信预览，首批面向美国 Pro 用户",
+          "summary": "ChatGPT 开始向美国 Pro 用户推出 dots 短信功能预览，可通过 iMessage 或 RCS 发送任务、照片及语音留言，dot 也会主动发送相关进展。短信与 ChatGPT 中的 dot 共用记忆及插件；仅用户本人和自己的 dot 能互相发消息，不会因此访问其他短信对话。功能采用第三方服务商 Linq，可从 dot 个人资料的 Texting 入口设置；目前限量开放，不支持 Business 或 Enterprise 工作区。",
+          "category": "news",
+          "group": "openai",
+          "groupLabel": "OpenAI",
+          "digest_id": "2026-10-29",
+          "event_at": "2026-10-28T17:30:17.000Z",
+          "urls": [
+            "https://x.com/ChatGPT/status/2115496387613786374",
+            "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+            "https://help.openai.com/en/articles/20001530-getting-started-with-your-dot"
+          ],
+          "limitation": "",
+          "rank": 11
+        },
+        {
+          "event_id": "tibo-day23-reset-completed-20261028",
+          "title": "Tibo Day 23：作者确认本轮额度重置完成",
+          "summary": "Tibo 在 Day 23 先宣布当天进行额度重置，随后引用同一线程的落地时间预告，确认本轮重置已完成。他同时预告次日会有好消息，未披露具体内容或本轮额度数值。",
+          "category": "news",
+          "group": "tibo",
+          "groupLabel": "Tibo",
+          "digest_id": "2026-10-29",
+          "event_at": "2026-10-28T06:29:38.000Z",
+          "urls": [
+            "https://x.com/thsottiaux/status/2115330127886463244",
+            "https://x.com/thsottiaux/status/2115273064481218829",
+            "https://x.com/thsottiaux/status/2115273253711409208"
+          ],
+          "limitation": "",
+          "rank": 12
+        },
+        {
+          "event_id": "tibo-chat-work-integration-not-rolling-out-20261028",
+          "title": "Tibo 澄清 Chat 与 Work 能力整合尚未推出，计划年内推进",
+          "summary": "Tibo 表示团队正在开发 Chat 与 Work 的能力整合，但目前尚未开始推出。计划是在今年某个时间点结合两者的能力，团队会谨慎推进，并在之后分享更多信息。该帖未公布正式上线日期或合并后的用量规则。",
+          "category": "news",
+          "group": "tibo",
+          "groupLabel": "Tibo",
+          "digest_id": "2026-10-29",
+          "event_at": "2026-10-28T23:35:52.000Z",
+          "urls": [
+            "https://x.com/thsottiaux/status/2115588390414581916"
+          ],
+          "limitation": "",
+          "rank": 13
+        },
+        {
+          "event_id": "freebie-roundup-2026-10-29",
+          "title": "免费福利：WorkBuddy 国际站每月 100 积分，OpenRouter 保留 17 个免费入口",
+          "summary": "WorkBuddy 国际站 Free 套餐每月提供 100 积分，新用户首次登录另获 250 积分、14 天有效。个人 Free 用户在 WorkBuddy 或 CodeBuddy 客户端完成当日有效对话或任务，可获 30 积分日活奖励，每日最多一次，通常次日自动到账；网页任务不计入，活动结束时间、日活积分有效期和具体免费模型版本未公布。Pro 的日活奖励为 50 积分；7 天 Pro 试用须绑定信用卡并开启自动续期。\n\nOpenRouter 当前列有 16 个 :free 模型及 openrouter/free 路由器，输入和输出价格均为零。免费请求共用 20 次／分钟、50 次／日；累计购入至少 10 美元额度后每日上限为 1,000 次，每日北京时间 08:00 重置。Poolside Laguna S 2.1 与 XS 2.1 的免费目录到期日为 10 月 31 日，免费转付费模型的 fallback 按对应价格计费。精确模型 ID、其他渠道额度和期限见免费资源目录。",
+          "category": "freebie",
+          "group": "other",
+          "groupLabel": "其他",
+          "digest_id": "2026-10-29",
+          "event_at": null,
+          "urls": [
+            "https://www-sg.tencentcloud.com/zh/document/product/1316/84378",
+            "https://openrouter.ai/api/v1/models"
+          ],
+          "limitation": "",
+          "rank": 90
+        },
+        {
+          "event_id": "github:heygen-com/hyperframes",
+          "title": "每日工具：HyperFrames，用 HTML 和 CSS 生成视频",
+          "summary": "HyperFrames 是 Apache 2.0 开源视频框架，将 HTML、CSS、媒体和可定位时间的动画渲染为确定性的 MP4。它提供浏览器实时预览和本地 CLI，并提供给 Claude Code、Codex、Cursor 等编码助手使用的 skills 和插件，覆盖素材、动画、预览与渲染；本地运行要求 Node.js 22+ 和 FFmpeg。",
+          "category": "github",
+          "group": "other",
+          "groupLabel": "其他",
+          "digest_id": "2026-10-29",
+          "event_at": null,
+          "urls": [
+            "https://github.com/heygen-com/hyperframes",
+            "https://raw.githubusercontent.com/heygen-com/hyperframes/main/README.md",
+            "https://github.com/trending/typescript?since=daily",
+            "https://github.com/heygen-com/hyperframes/releases"
+          ],
+          "limitation": "",
+          "rank": 91
+        }
+      ]
+    },
+    {
       "digest_id": "2026-10-28",
       "source_sha256": "9ed0c438a6cd00bb4d5c52e94a0be75421a544b8e28677ceaef226202a5d0e68",
       "raw_source_sha256": "c5ac2541b47f2c646fa8e88c32cbb9cceb0d5541e267aedc7824e9c739544fb4",
@@ -2453,7 +2699,7 @@
         "openrouter/free"
       ],
       "other_models": [],
-      "quota": "免费模型共用 20 RPM、每日 50 次请求；累计购买至少 10 美元额度后为每日 1,000 次，仍为 20 RPM。官方按协调世界时的日历日统计，即北京时间每日 08:00 开始新一天。",
+      "quota": "免费模型共用 20 RPM、每日 50 次请求；累计购买至少 10 美元额度后为每日 1,000 次，仍为 20 RPM。官方账户接口按 UTC 日统计，即北京时间每日 08:00 开始新一天。",
       "conditions": "需要 OpenRouter 账户；API 使用 API key，也可在 Chat Playground 使用。精确 :free ID 与付费版本独立；openrouter/free 只路由至免费模型。付费 fallback 按对应价格计费。地区和上游可用性以服务条款及模型端点为准。",
       "expiry": "poolside/laguna-s-2.1:free 与 poolside/laguna-xs-2.1:free 目录到期日为 2026-10-31；dots-studio/dots-3-note-preview:free 为 2026-12-31。其他型号未列结束日期。",
       "caution": "本目录列出 :free 模型 ID 与 openrouter/free 免费路由器。",
@@ -2572,7 +2818,7 @@
         "Sonus（Qoder 模型名称，官方未披露底层版本）"
       ],
       "other_models": [],
-      "quota": "审核通过的 Free 用户可手动领取一次 1,024 SOTA Credits 欢迎包。社区累计助力达 2 万／5 万／10 万点后，分别解锁 2,048／3,072／4,096 SOTA Credits，解锁后 12 小时内发放，每账户每档限领一次。第 4 轮门槛为累计 20 万点，总计 12,288 SOTA Credits，分为 10 月 28、29、30 日三包，每日北京时间 00:00 开放 4,096，每账户每日限领一次。每日可助力一次，北京时间 00:00 重置。",
+      "quota": "审核通过的 Free 用户可手动领取一次 1,024 SOTA Credits 欢迎包。社区累计助力达 2 万／5 万／10 万点后，分别解锁 2,048／3,072／4,096 SOTA Credits，解锁后 12 小时内发放，每账户每档限领一次。第 4 轮门槛为累计 20 万点，总计 12,288 SOTA Credits，解锁后按规则分为 10 月 28、29、30 日三包，每日北京时间 00:00 开放 4,096，每账户每日限领一次。每日可助力一次，北京时间 00:00 重置。",
       "conditions": "个人 Pro 及以上自动获得资格；Free 须一次申请并获批，Lite 不支持 Sonus。通过活动页参与，奖励在支持的 Qoder 客户端领取，仅用于 Sonus；底层模型版本、地区与绑卡条件未披露。",
       "expiry": "申请、审核及领取于 2026 年 10 月 30 日 23:59（北京时间）结束。欢迎包至 10 月 31 日 23:59 有效；第 1 至 3 轮奖励需发放后 3 天内且不晚于活动结束前领取，领取后 24 小时有效。第 4 轮每天的 4,096 积分须当日领取并使用，当日 23:59 失效，不跨日累积，漏领不补。",
       "sources": [
@@ -2594,6 +2840,39 @@
       "sources": [
         "https://docs.mistral.ai/inference/pricing",
         "https://docs.mistral.ai/models/mistral-moderation-26-03"
+      ]
+    },
+    {
+      "provider": "WorkBuddy 国际站",
+      "kind": "recurring_free_coding_app",
+      "kindLabel": "免费编程应用",
+      "status": "official_plan_verified_model_unspecified",
+      "models": [
+        "免费套餐具体模型版本未在计费页公布"
+      ],
+      "other_models": [],
+      "quota": "Free 每月 100 积分；新用户首次登录另获 250 积分，14 天有效。个人 Free／Pro 在客户端当日完成至少一次有效 AI 对话或任务，分别获 30／50 积分，每日最多一次，通常次日自动发放。月度重置时刻、活动日时区和日活积分有效期未明确。",
+      "conditions": "需要本人有效个人账户，Team 不参加日活奖励。通过 WorkBuddy 或 CodeBuddy 客户端使用；网页任务不计日活。国际站条款不能套用中国站；模型、地区和 Free 绑卡条件未公布。另有一次 7 天 Pro 试用：须从未购买 Pro 或领过试用，绑定信用卡并开启自动续期，赠 500 积分／7 天。",
+      "expiry": "日活活动结束时间另行通知；Free 是月度方案。",
+      "sources": [
+        "https://www-sg.tencentcloud.com/zh/document/product/1316/84378"
+      ]
+    },
+    {
+      "provider": "OpenAI ChatGPT 付费订阅 API 额度",
+      "kind": "paid_subscription_api_credit_benefit",
+      "kindLabel": "官方免费计划，详见条件",
+      "status": "official_verified",
+      "models": [
+        "API 组织可用型号依权限与模型限制；不是指定模型无限免费"
+      ],
+      "other_models": [],
+      "quota": "Pro 100／200／500 每月分别附带 100／200／500 美元 API 额度；Business 按付费 Standard 每席 20 美元、Premium 每席 100 美元合并，每工作区月度上限 500 美元。首期按剩余付费周期比例；年付 Business 一次发全年额度，上限 6,000 美元。",
+      "conditions": "付费满 7 天且进入支持地区和开放批次；Plus、免费试用不适用。ChatGPT 与 API 同邮箱，激活人须为订阅／工作区和 API 组织的 owner，且有账单权限；一对一绑定，需手动激活。无需额外 API 付款方式。支持计入所绑定组织的普通 API、Playground、工具与存储收费，不覆盖 API key 调用 Codex，也不增加 ChatGPT 或已登录 Codex 额度；用完后若有购买余额会继续扣除，否则请求失败。",
+      "expiry": "月度额度随当前订阅账期结束过期，不滚存；年付 Business 随年度账期过期。首次激活后，资格及活动持续时续期自动发放；未公布统一活动结束日。",
+      "sources": [
+        "https://help.openai.com/en/articles/20001626-api-credits-benefit-for-eligible-chatgpt-subscriptions",
+        "https://developers.openai.com/api/docs/guides/chatgpt-api-credits"
       ]
     }
   ]
