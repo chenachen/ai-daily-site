@@ -1,6 +1,247 @@
 {
   "issues": [
     {
+      "digest_id": "2026-10-30",
+      "source_sha256": "88055e901c1113292ccc0e12d1b1dc44316853945d7aaf64b9386c4126907a06",
+      "raw_source_sha256": "a878a5f787b84a1cd488a3032c3e929de74b07565c33929887b6bc7b9244d1f1",
+      "has_editorial": true,
+      "focus_event_id": "anomalyco/opencode:v2.2.2",
+      "items": [
+        {
+          "event_id": "anomalyco/opencode:v2.2.2",
+          "title": "OpenCode 2.2.1–2.2.2 加入目标持续执行、定时提示和图像生成",
+          "summary": "2.2.1 新增 /goal，让会话持续执行直到审核器确认目标达成，并提供暂停、恢复和清除控制；定时提示需开启实验性 schedules。2.2.2 在连接支持图像模型的提供方后默认启用实验性图像生成工具，并统一时间线引用、终端引用与浏览器批注的编辑流程。直接导入 @opencode/ai 的代码存在部分提供方入口移除与路径改名的兼容性变更；CLI、桌面端和 HTTP API 不受该入口变动影响。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-30",
+          "event_at": "2026-10-29T18:43:03Z",
+          "urls": [
+            "https://github.com/anomalyco/opencode/releases/tag/v2.2.2",
+            "https://github.com/anomalyco/opencode/releases/tag/v2.2.1"
+          ],
+          "limitation": "",
+          "rank": 1
+        },
+        {
+          "event_id": "google-gemini-inline-file-editing-20261029",
+          "title": "Gemini 支持在聊天中生成、预览和直接编辑文件",
+          "summary": "Gemini 应用新增聊天内文件生成、预览和编辑功能，可展开至全屏直接输入修改，选中文本后提问，或让 Gemini 调整文件内容。PDF 预览与编辑支持网页端和移动端；Google Docs、Google Sheets、幻灯片、Markdown、TXT 和代码文件支持网页端。功能已向 Gemini 应用支持地区的所有用户、所有支持语言开放。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-30",
+          "event_at": "2026-10-29T16:15:00Z",
+          "urls": [
+            "https://blog.google/innovation-and-ai/products/gemini-app/edit-files-directly/"
+          ],
+          "limitation": "",
+          "rank": 2
+        },
+        {
+          "event_id": "qwenlm/qwen-code:v0.26.4",
+          "title": "Qwen Code 0.26.4 将生成式 UI 卡片呈现为交互视图",
+          "summary": "Generated UI 卡片可作为交互视图呈现，跟随宿主主题，并在用户需要调整数值时提供交互界面。WebShell 支持嵌入宿主选择工作区目录、显示模型耗时，断网时暂停请求并自动恢复；主会话可使用独立 worktree。此次还修复 Responses 清理时推理内容与函数调用的相邻关系。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-30",
+          "event_at": "2026-10-29T14:29:11Z",
+          "urls": [
+            "https://github.com/QwenLM/qwen-code/releases/tag/v0.26.4"
+          ],
+          "limitation": "",
+          "rank": 3
+        },
+        {
+          "event_id": "googleapis/js-genai:v2.32.0",
+          "title": "Google GenAI TypeScript SDK 2.32.0 增加交互续接和视频理解支持",
+          "summary": "Interactions 接口新增 continuation_token、requires_continuation 状态、automatic_continuation 创建参数及 continuation_ids 字段；Gemini Developer API 接入视频理解支持，并增加视频放大任务参数。SDK 同时对齐 Interactions 请求的 User-Agent 与 x-goog-api-client 请求头。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-30",
+          "event_at": "2026-10-29T06:21:29Z",
+          "urls": [
+            "https://github.com/googleapis/js-genai/releases/tag/v2.32.0"
+          ],
+          "limitation": "",
+          "rank": 4
+        },
+        {
+          "event_id": "openai/codex:rust-v0.166.0",
+          "title": "Codex CLI 0.166.0 新增网络诊断命令并改进断线重连",
+          "summary": "新增 codex doctor --network-only，用于配置、连通性与 WebSocket 诊断；TUI 改进重连恢复及离线退出处理。对话记录支持按词、行、页进行键盘选择和搜索；codex queue --resume 可在排队消息后恢复未加载线程。恢复或分叉线程会保留已确认的权限设置和推理 token 计数，避免过早压缩。",
+          "category": "news",
+          "group": "openai",
+          "groupLabel": "OpenAI",
+          "digest_id": "2026-10-30",
+          "event_at": "2026-10-29T19:47:53Z",
+          "urls": [
+            "https://github.com/openai/codex/releases/tag/rust-v0.166.0"
+          ],
+          "limitation": "",
+          "rank": 5
+        },
+        {
+          "event_id": "tibo-day25-double-limits",
+          "title": "Tibo Day25：Pro与Business Premium双倍额度即日起生效，Pro200取消原定降额",
+          "summary": "Tibo宣布，Pro 100、200、500档及Business Premium双倍使用额度即日起生效。Pro200原定的额度下调取消，Work和Codex的现有可用额度保持不变。",
+          "category": "news",
+          "group": "tibo",
+          "groupLabel": "Tibo",
+          "digest_id": "2026-10-30",
+          "event_at": "2026-10-29T16:56:07Z",
+          "urls": [
+            "https://x.com/thsottiaux/status/2115850175868727621"
+          ],
+          "limitation": "",
+          "rank": 6
+        },
+        {
+          "event_id": "vercel/ai:ai-7.0.157",
+          "title": "Vercel AI SDK 7.0.157 将流事件类型和工具过滤接口转为稳定",
+          "summary": "LanguageModelStreamPart 和 filterActiveTools 转为稳定导出；原 Experimental_LanguageModelStreamPart 与 experimental_filterActiveTools 标记为弃用。此版本还修复遥测追踪中的 Node.js 运行时检测引发的 Next.js Edge Runtime 警告。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-30",
+          "event_at": "2026-10-29T17:10:34Z",
+          "urls": [
+            "https://github.com/vercel/ai/releases/tag/ai%407.0.157"
+          ],
+          "limitation": "",
+          "rank": 7
+        },
+        {
+          "event_id": "agno-agi/agno:v3.1.12",
+          "title": "Agno 3.1.12 将 Claude 和 Codex 原生审批接入 AgentOS",
+          "summary": "Claude 和 Codex 的原生权限请求可进入 AgentOS 聊天与审批界面：配置数据库的智能体会保存暂停状态，审批后继续原生执行而非重新提交提示词。未显式配置审批的 CodexAgent 默认采用 on-request，hitl_timeout 默认 900 秒。Routine(enabled=False) 支持创建默认关闭的例行任务；图表支持在标题旁展示预格式化的总计或最新数值。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-30",
+          "event_at": "2026-10-29T14:00:55Z",
+          "urls": [
+            "https://github.com/agno-agi/agno/releases/tag/v3.1.12"
+          ],
+          "limitation": "",
+          "rank": 8
+        },
+        {
+          "event_id": "langfuse/langfuse:v4.72.0",
+          "title": "Langfuse 4.72.0 增加 AI Gateway 分析页与 PagerDuty 通知",
+          "summary": "AI Gateway 设置新增分析页，可将网关 span 归属到对应 API key 和服务。告警、项目通知和提示词变更支持发送至 PagerDuty，路由 key 配置在自动化中；评估新增 trace 级过滤条件。版本还修复通用 gen_ai 用量映射对缓存写入 TTL 分项的重复计数。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-30",
+          "event_at": "2026-10-29T16:14:48Z",
+          "urls": [
+            "https://github.com/langfuse/langfuse/releases/tag/v4.72.0"
+          ],
+          "limitation": "",
+          "rank": 9
+        },
+        {
+          "event_id": "langchain-ai/langchainjs:-langchain/core-1.3.2",
+          "title": "LangChain JS Core 1.3.2 增加智能体通知消息元数据接口",
+          "summary": "新增 addNotificationMetadata、getNotificationMetadata 及 NotificationMetadata 类型，用于标记智能体运行框架添加的消息。同期 Python Core 1.7.2 提供对应的 add_notification_metadata、get_notification_metadata，并修复 merge_content 修改首条消息内容的问题；随后发布 1.7.3。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-30",
+          "event_at": "2026-10-29T17:52:51Z",
+          "urls": [
+            "https://github.com/langchain-ai/langchainjs/releases/tag/%40langchain/core%401.3.2",
+            "https://github.com/langchain-ai/langchain/releases/tag/langchain-core%3D%3D1.7.3",
+            "https://github.com/langchain-ai/langchain/releases/tag/langchain-core%3D%3D1.7.2"
+          ],
+          "limitation": "",
+          "rank": 10
+        },
+        {
+          "event_id": "crewaiinc/crewai:1.15.33",
+          "title": "CrewAI 1.15.33 新增组织技能搜索与 ZIP 部署入口",
+          "summary": "新增 crewai skill search 列出组织技能；crewai run --inputs 可将输入传给 Python flow，deploy create --zip 支持 ZIP 部署并显示对应提交。版本还修复 LiteLLM 工具调用和结构化输出的 token 用量报告、恢复检查点回调与旧版本导入兼容性。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-30",
+          "event_at": "2026-10-29T07:36:24Z",
+          "urls": [
+            "https://github.com/crewAIInc/crewAI/releases/tag/1.15.33"
+          ],
+          "limitation": "",
+          "rank": 11
+        },
+        {
+          "event_id": "openai-app-simplicity-performance-sprint",
+          "title": "OpenAI启动应用简洁性与性能集中改进",
+          "summary": "Andrew Ambrosino表示，当天已启动一轮针对应用简洁性和性能的集中改进工作，并由他监督。Tibo随后引用该帖，邀请用户向Andrew反馈。",
+          "category": "news",
+          "group": "openai",
+          "groupLabel": "OpenAI",
+          "digest_id": "2026-10-30",
+          "event_at": "2026-10-29T17:18:20Z",
+          "urls": [
+            "https://x.com/ajambrosino/status/2115855769665147254"
+          ],
+          "limitation": "",
+          "rank": 12
+        },
+        {
+          "event_id": "google-gemini-notebook-textbooks-20261029",
+          "title": "Gemini Notebook 新增数百本免费教材来源",
+          "summary": "Gemini Notebook 新增来自美国和印度教材提供商的数百本教材，包括 OpenStax、Open Textbook Library 和 S Chand Publishing。用户可在“添加来源”中选择“教材”导入；回答以教材内容为依据，附行内引用与原始来源链接，也可生成学习指南、练习题和闪卡。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-10-30",
+          "event_at": "2026-10-29T16:00:00Z",
+          "urls": [
+            "https://blog.google/innovation-and-ai/products/gemini-notebook/new-access-textbooks/"
+          ],
+          "limitation": "",
+          "rank": 13
+        },
+        {
+          "event_id": "github:jetbrains/thinkrail",
+          "title": "每日工具：ThinkRail 0.3.0 将 pi 编程代理、Git 工作区与界面预览整合进 IDE",
+          "summary": "ThinkRail 是 JetBrains 的 Apache-2.0 开源代理 IDE，以 pi 为引擎，为项目建立独立 Git worktree，并提供 Monaco 编辑器、终端、文件与 diff 审阅、MCP 和持久化 SPEC.md。0.3.0 加入聊天内文件及界面修改前后预览、GitHub PR 审阅操作、简体中文等界面语言，以及项目克隆与跨重启保留的后台任务历史。提供 macOS、Windows、Linux 桌面包和浏览器 CLI，模型调用使用 JetBrains AI 登录或用户自己的供应商凭据。",
+          "category": "github",
+          "group": "other",
+          "groupLabel": "其他",
+          "digest_id": "2026-10-30",
+          "event_at": "2026-10-29T18:26:41Z",
+          "urls": [
+            "https://github.com/JetBrains/thinkrail/releases/tag/v0.3.0",
+            "https://github.com/JetBrains/thinkrail",
+            "https://github.com/trending/typescript?since=weekly"
+          ],
+          "limitation": "",
+          "rank": 14
+        },
+        {
+          "event_id": "freebie-roundup-2026-10-30",
+          "title": "免费福利：Qoder 1024 活动今日截止，Laya 的 Boundless 免费调用持续至 10 月 31 日",
+          "summary": "Qoder 1024 Community Boost 于北京时间 10 月 30 日 23:59 结束。第 4 轮须社区累计助力达到 20 万点才解锁；符合资格的账户可按规则领取当日 4,096 SOTA Credits，仅用于 Sonus，当日 23:59 失效。Vercel AI Gateway 的 convaiinnovations/laya-free 通过 Boundless 免费至 10 月 31 日，返回结构化决策与概率；公告未明确截止时区，活动结束后该免费 ID 停止服务。Kiro Free 提供每月 50 Credits，支持 Claude Sonnet 4.5 等指定模型，按账期重置且不滚存。",
+          "category": "freebie",
+          "group": "other",
+          "groupLabel": "其他",
+          "digest_id": "2026-10-30",
+          "event_at": null,
+          "urls": [
+            "https://docs.qoder.com/events/communityboost",
+            "https://vercel.com/changelog/laya-decision-model-now-available-on-ai-gateway-free-through-october-31",
+            "https://kiro.dev/pricing/"
+          ],
+          "limitation": "",
+          "rank": 15
+        }
+      ]
+    },
+    {
       "digest_id": "2026-10-29",
       "source_sha256": "d3092d093e958104ca80b2c758ad03b1d9b372da493adcfcf73b19e8b4d023f3",
       "raw_source_sha256": "f6fa5247e55f9a9fb6bcc7430e6f743982e469809063203d8d020e417118a3ec",
@@ -2699,7 +2940,7 @@
         "openrouter/free"
       ],
       "other_models": [],
-      "quota": "免费模型共用 20 RPM、每日 50 次请求；累计购买至少 10 美元额度后为每日 1,000 次，仍为 20 RPM。官方账户接口按 UTC 日统计，即北京时间每日 08:00 开始新一天。",
+      "quota": ":free 模型共用 20 RPM、每日 50 次请求；累计购买 10 美元额度后为每日 1,000 次（官方说明实际门槛为 9 美元，以计入充值手续费），仍为 20 RPM；失败尝试也计入每日上限。每日按 UTC 统计，即北京时间 08:00 开始新一天。",
       "conditions": "需要 OpenRouter 账户；API 使用 API key，也可在 Chat Playground 使用。精确 :free ID 与付费版本独立；openrouter/free 只路由至免费模型。付费 fallback 按对应价格计费。地区和上游可用性以服务条款及模型端点为准。",
       "expiry": "poolside/laguna-s-2.1:free 与 poolside/laguna-xs-2.1:free 目录到期日为 2026-10-31；dots-studio/dots-3-note-preview:free 为 2026-12-31。其他型号未列结束日期。",
       "caution": "本目录列出 :free 模型 ID 与 openrouter/free 免费路由器。",
@@ -2873,6 +3114,48 @@
       "sources": [
         "https://help.openai.com/en/articles/20001626-api-credits-benefit-for-eligible-chatgpt-subscriptions",
         "https://developers.openai.com/api/docs/guides/chatgpt-api-credits"
+      ]
+    },
+    {
+      "provider": "Kiro Free",
+      "kind": "recurring_free_coding_app",
+      "kindLabel": "免费编程应用",
+      "status": "official_verified",
+      "models": [
+        "Claude Sonnet 4.5",
+        "Claude Sonnet 4.0",
+        "DeepSeek 3.2",
+        "MiniMax M2.5",
+        "MiniMax M2.1",
+        "GLM-5",
+        "Qwen3 Coder Next",
+        "Auto（动态路由）"
+      ],
+      "other_models": [],
+      "quota": "每月 50 Credits，各模型按不同倍率消耗；下个账期开始重置，不滚存。Free 不可购买额外积分。",
+      "conditions": "使用社交登录或 AWS Builder ID 账户；用于 Kiro IDE、CLI、Web、Crew 及支持的 ACP 集成，不是通用 API 免费额度。模型表中 DeepSeek 3.2、GLM-5 仅列美国服务区域，其余所列模型支持美国及欧盟区域。免费方案绑卡要求未在价格页列明。",
+      "expiry": "长期 Free 套餐，未列结束日期。",
+      "sources": [
+        "https://kiro.dev/pricing/",
+        "https://kiro.dev/docs/models/",
+        "https://kiro.dev/docs/billing/"
+      ]
+    },
+    {
+      "provider": "Vercel AI Gateway / Boundless Laya",
+      "kind": "limited_time_free_decision_api",
+      "kindLabel": "官方免费计划，详见条件",
+      "status": "official_verified",
+      "models": [
+        "convaiinnovations/laya-free",
+        "convaiinnovations/laya（仅 Boundless 路由）"
+      ],
+      "other_models": [],
+      "quota": "通过 Boundless 调用指定 Laya 决策模型价格为零；公告未列固定请求额度或重置周期。",
+      "conditions": "通过 AI Gateway API key 或自带供应商 key，使用 AI SDK evaluation API、原生 HTTP、TypeSafe 兼容 API 或 AI CLI。标准 ID 须限定 Boundless；-free ID 自动路由至 Boundless。模型返回是非、选择或评分问题的结构化答案及概率，不是通用聊天模型。账户地区与绑卡要求未在活动公告列明。",
+      "expiry": "免费至 2026 年 10 月 31 日；官方未明确截止时区。活动结束后 -free ID 停止服务，标准 ID 开始计费。",
+      "sources": [
+        "https://vercel.com/changelog/laya-decision-model-now-available-on-ai-gateway-free-through-october-31"
       ]
     }
   ]
