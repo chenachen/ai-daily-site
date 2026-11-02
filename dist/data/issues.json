@@ -1,6 +1,255 @@
 {
   "issues": [
     {
+      "digest_id": "2026-11-02",
+      "source_sha256": "9d97f7cf080d834e6e725f2622fa642406d9aa795b18d5def8f2a95da45de857",
+      "raw_source_sha256": "1650cf8ed76e75da45b5d4afd7bc675a99a2d84636690ab17c4ad56405c81417",
+      "has_editorial": true,
+      "focus_event_id": "vercel-ai-sdk-7-0-158-159-mcp-sandbox",
+      "items": [
+        {
+          "event_id": "vercel-ai-sdk-7-0-158-159-mcp-sandbox",
+          "title": "Vercel AI SDK 将 MCP 渲染与提示 API 转为稳定，并扩展沙箱文件操作",
+          "summary": "AI SDK 7.0.158 为 Experimental_SandboxSession 增加 stat、listDirectory、deleteFile，并统一相对路径解析规则，just-bash 和 Vercel Sandbox 适配器同步实现。React 4.0.162 将 MCPAppRenderer、StdioMCPTransport、MCPClient.listPrompts 和 getPrompt 升为稳定 API，旧 experimental 名称保留为兼容别名。另修复数组开头负号导致的部分 JSON 修复问题；7.0.159 更新 Gateway 依赖。 MCP events 仍为实验性接口。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-02",
+          "event_at": "2026-10-30T15:39:40Z",
+          "urls": [
+            "https://github.com/vercel/ai/releases/tag/ai%407.0.158",
+            "https://github.com/vercel/ai/releases/tag/%40ai-sdk/react%404.0.162",
+            "https://github.com/vercel/ai/releases/tag/ai%407.0.159"
+          ],
+          "limitation": "MCP events 仍为实验性接口。",
+          "rank": 1
+        },
+        {
+          "event_id": "opencode-2-2-3-5-claude-artifacts",
+          "title": "OpenCode 2.2.3–2.2.5 接入 Claude Agent，增加实验性产物和持久终端",
+          "summary": "2.2.3 新增 Claude Agent：安装 Claude Code 并执行 claude auth login 后，可在 /connect 选择该提供方；同时优化桌面端长会话渲染。2.2.4 加入可选 artifacts 创建、读取、更新和删除接口及本地静态文件提供方，让实验性定时任务在 opencode serve 下运行，并协调多个服务进程避免同一定时任务重复触发；桌面终端迁移为跨窗口共享且可恢复滚动历史的持久 PTY。2.2.5 的 compaction.buffer 支持百分比，修复大于 10 MiB 的 MCP stdio 消息被断开等问题。 Artifacts 和 schedules 需要主动启用；TUI 插件要求 OpenTUI 0.8.0 或更高版本。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-02",
+          "event_at": "2026-10-30T09:55:45Z",
+          "urls": [
+            "https://github.com/anomalyco/opencode/releases/tag/v2.2.3",
+            "https://github.com/anomalyco/opencode/releases/tag/v2.2.4",
+            "https://github.com/anomalyco/opencode/releases/tag/v2.2.5"
+          ],
+          "limitation": "Artifacts 和 schedules 需要主动启用；TUI 插件要求 OpenTUI 0.8.0 或更高版本。",
+          "rank": 2
+        },
+        {
+          "event_id": "playwright-mcp-0-0-84-isolated-contexts",
+          "title": "Playwright MCP 0.0.84 增加多账号隔离上下文和跨导航请求记录",
+          "summary": "browser_tabs 的 new 操作新增 isolatedContext：相同名称共用上下文，不同名称相互隔离，Cookie 和存储工具针对当前标签页的上下文执行。browser_network_requests 的 all:true 可读取先前导航保留的最多 200 条请求；browser_find 增加 maxResults；元素操作接受 JavaScript、Python、Java 和 C# 定位器。另可按指定参数名在工具响应中遮盖 URL 查询与片段参数，并修复模态对话框、ARIA 快照和 Cookie 边界处理。 URL 参数遮盖是便捷功能，官方不将其定义为安全防护。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-02",
+          "event_at": "2026-10-31T15:20:06Z",
+          "urls": [
+            "https://github.com/microsoft/playwright-mcp/releases/tag/v0.0.84"
+          ],
+          "limitation": "URL 参数遮盖是便捷功能，官方不将其定义为安全防护。",
+          "rank": 3
+        },
+        {
+          "event_id": "claude-code-2-1-314-316",
+          "title": "Claude Code 更新工作目录写入边界、空闲压缩和子代理推理设置",
+          "summary": "Claude Code 2.1.314 新增 permissions.blockWritesOutsideWorkingDirectories，让 Write、Edit、NotebookEdit 在所有权限模式下拒绝工作目录外路径。VS Code 和 Claude Desktop Code 标签页新增空闲压缩：超过 200K token 的空闲对话会生成摘要，提示缓存过期后下一条消息使用摘要。2.1.316 新增 CLAUDE_CODE_SUBAGENT_EFFORT，可为未显式指定等级的子代理设置默认推理等级；同时新增团队共享月预算和分层策略，修复 restricted 会话外部文件上传及子代理被唤醒时模型切换等问题。 官方同时宣布 Opus 4.8 fast mode 自 10 月 30 日弃用，并将在 11 月 30 日移除；移除后的相关请求会报错，不会自动回退到标准模式。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-02",
+          "event_at": "2026-10-30T01:06:26Z",
+          "urls": [
+            "https://github.com/anthropics/claude-code/releases/tag/v2.1.314",
+            "https://github.com/anthropics/claude-code/releases/tag/v2.1.316"
+          ],
+          "limitation": "",
+          "rank": 4
+        },
+        {
+          "event_id": "apple-intelligence-china-beta-announcement-20261031",
+          "title": "Apple 智能中国版首批功能将于 11 月 4 日开放测试，Siri 接入千问",
+          "summary": "Apple 宣布首批 Apple 智能功能将于 11 月 4 日随最新 iOS 开发者 Beta 版在中国开放测试，并于 12 月随 iOS 27.3 正式推出。首批功能包括实时翻译、写作工具改写与摘要、视觉智能、照片消除、智绘表情、自然语言照片搜索、邮件与通知摘要。Apple 与阿里巴巴合作，在 Siri、写作工具和视觉智能中加入千问的文本与图像理解能力。用户可登录千问账户或使用“通过 Apple 登录”。本次不包含 Siri AI 及 WWDC 2026 宣布的其他下一代 Apple 智能功能，其他平台支持将在获得必要审批后推出。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-02",
+          "event_at": "2026-10-30T20:59:25Z",
+          "urls": [
+            "https://www.apple.com.cn/newsroom/2026/10/apple-intelligence-features-are-coming-to-users-in-china/"
+          ],
+          "limitation": "",
+          "rank": 5
+        },
+        {
+          "event_id": "pydantic-ai-2-64-0-fallback-artifact-scanning",
+          "title": "Pydantic AI 2.64.0 增加模型回退能力、产物扫描和 BoxdSandbox",
+          "summary": "2.64.0 新增 ModelFallback 能力、逐次请求准备钩子和 RetryModelRequest；first_event_timeout 可处理始终没有开始输出的流，sticky 可在后续对话保留已接管的回退模型。ArtifactScanner 为 Memory 和 Skills 提供产物安全扫描，BoxdSandbox 将 Coder、Shell、FileSystem 等能力放到 boxd 机器中运行。版本还新增实时语音词级时间戳，并将服务端 response、item、conversation、container ID 限制为只发回创建它们的端点。 Coder 工具的严格 schema 默认关闭，可通过 Coder(strict=True) 启用；json-repair 调整为可选依赖。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-02",
+          "event_at": "2026-10-30T23:27:24Z",
+          "urls": [
+            "https://github.com/pydantic/pydantic-ai/releases/tag/v2.64.0"
+          ],
+          "limitation": "Coder 工具的严格 schema 默认关闭，可通过 Coder(strict=True) 启用；json-repair 调整为可选依赖。",
+          "rank": 6
+        },
+        {
+          "event_id": "claude-agent-sdk-typescript-0-3-314-316",
+          "title": "Claude Agent TypeScript SDK 新增预热接口和读写边界设置",
+          "summary": "TypeScript SDK 0.3.314 在 @anthropic-ai/claude-agent-sdk/core 增加 prewarm()，向 Settings 类型加入 permissions.blockWritesOutsideWorkingDirectories，并增加 sandbox_required_unavailable 启动失败原因。0.3.316 新增 permissions.blockReadsExemptPaths：由 --settings 或宿主设置提供的路径可获目录外读取豁免，但不会成为工作目录。两个版本分别同步 Claude Code 2.1.314 和 2.1.316。 prewarm() 标注为 alpha。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-02",
+          "event_at": "2026-10-30T01:05:35Z",
+          "urls": [
+            "https://github.com/anthropics/claude-agent-sdk-typescript/releases/tag/v0.3.314",
+            "https://github.com/anthropics/claude-agent-sdk-typescript/releases/tag/v0.3.316"
+          ],
+          "limitation": "prewarm() 标注为 alpha。",
+          "rank": 7
+        },
+        {
+          "event_id": "tibo-day26-mobile-account-switching",
+          "title": "Tibo Day26：ChatGPT 移动端上线多账户切换，桌面端将跟进",
+          "summary": "Tibo 在 Day26 确认 ChatGPT 移动端支持多账户切换，桌面端仍处于预告阶段。iOS 与 Android 用户可在设置中的 Switch account 切换账户，同时保持最多两个账户登录；每次只有一个账户处于活动状态。不同账户的聊天、记忆、文件、设置和订阅各自独立，订阅不会合并或共享。移动端功能正在逐步推出。",
+          "category": "news",
+          "group": "tibo",
+          "groupLabel": "Tibo",
+          "digest_id": "2026-11-02",
+          "event_at": "2026-10-31T05:42:26.000Z",
+          "urls": [
+            "https://x.com/thsottiaux/status/2116405414921384099",
+            "https://help.openai.com/en/articles/20001068-using-multiple-chatgpt-accounts-on-web-and-mobile"
+          ],
+          "limitation": "",
+          "rank": 8
+        },
+        {
+          "event_id": "tibo-day28-banked-resets-2-of-2",
+          "title": "Tibo Day28：两次 banked 重置已确认至 2/2",
+          "summary": "Tibo 在 Day26 预告随后两天将提供 banked 重置。北京时间 11 月 1 日 08:43，他发布“Banked 1/2”；11 月 2 日 07:27，再发布“Day 28/ Banked 2/2”，将这轮两次 banked 重置确认到 2/2。原帖没有公布适用套餐、额度数值或有效期。",
+          "category": "news",
+          "group": "tibo",
+          "groupLabel": "Tibo",
+          "digest_id": "2026-11-02",
+          "event_at": "2026-11-01T23:27:20.000Z",
+          "urls": [
+            "https://x.com/thsottiaux/status/2117035794678546764",
+            "https://x.com/thsottiaux/status/2116692529970311254",
+            "https://x.com/thsottiaux/status/2116405414921384099"
+          ],
+          "limitation": "",
+          "rank": 9
+        },
+        {
+          "event_id": "openai-side-chats-persistence-preview",
+          "title": "OpenAI 预告将支持持久保存 side chats",
+          "summary": "Andrew Ambrosino 引用关于 side chats 是否应持久保存的投票，表示该功能将很快推出；Tibo 随后在回复中确认正在推进。帖子未给出具体上线时间或可用平台。",
+          "category": "news",
+          "group": "openai",
+          "groupLabel": "OpenAI",
+          "digest_id": "2026-11-02",
+          "event_at": "2026-10-30T02:48:13.000Z",
+          "urls": [
+            "https://x.com/ajambrosino/status/2115999183434080298",
+            "https://x.com/thsottiaux/status/2116072117540417651"
+          ],
+          "limitation": "",
+          "rank": 10
+        },
+        {
+          "event_id": "copilot-cli-1-0-106-1-2",
+          "title": "GitHub Copilot CLI 修复会话恢复、MCP 启动和网页字符编码",
+          "summary": "1.0.106-1 修复 web_fetch 忽略 Content-Type 或 meta 字符编码的问题，并在会话恢复后保留工具结果的引用来源；apply_patch 保留未修改行原有的 LF/CRLF。1.0.106-2 让 /resume 将已在后台运行的会话带到前台，避免重复显示；无响应 HTTP MCP 服务只等待一次连接超时，修改 MCP 配置时保留符号链接并更新目标文件。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-02",
+          "event_at": "2026-10-31T20:24:04Z",
+          "urls": [
+            "https://github.com/github/copilot-cli/releases/tag/v1.0.106-1",
+            "https://github.com/github/copilot-cli/releases/tag/v1.0.106-2"
+          ],
+          "limitation": "",
+          "rank": 11
+        },
+        {
+          "event_id": "gemini-cli-nightly-20261030-31-extension-validation",
+          "title": "Gemini CLI nightly 新增扩展校验命令和限流倒计时",
+          "summary": "Gemini CLI 10 月 30 日 nightly 增加扩展 validation 命令及评估测试，在加载指示器中显示 429 限流冷却和倒计时，并修复 Windows 路径判断与提示模板中的美元符号损坏。10 月 31 日 nightly 加入每扩展安装锁，避免并发安装冲突；修复短暂回退、取消和撤销后丢失所选模型，以及 SSE 流结束时缓冲事件未刷出。 这是 nightly 预发布，不是稳定版。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-02",
+          "event_at": "2026-10-30T01:22:17Z",
+          "urls": [
+            "https://github.com/google-gemini/gemini-cli/releases/tag/v0.67.0-nightly.20261030.gb633c0703",
+            "https://github.com/google-gemini/gemini-cli/releases/tag/v0.67.0-nightly.20261031.g6814e00d6"
+          ],
+          "limitation": "这是 nightly 预发布，不是稳定版。",
+          "rank": 12
+        },
+        {
+          "event_id": "crewai-1-15-34-output-retry-fixes",
+          "title": "CrewAI 1.15.34 修复空回答重试、结构化输出和重复工具调用",
+          "summary": "CrewAI 1.15.34 的新增修复包括：空 LLM 回答重试一次后给出类型化错误；使用工具的代理结束时请求结构化输出；对不符合输出模型的 JSON 重新处理而非直接失败。版本还对重复工具调用给出警告并在停止时保留已有工作，遵循 context_window_size 并提示回退窗口，保留 LiteLLM 流式处理的原始提供方异常，并移除创建向导中已下线的 Gemini 模型。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-02",
+          "event_at": "2026-11-01T21:21:56Z",
+          "urls": [
+            "https://github.com/crewAIInc/crewAI/releases/tag/1.15.34"
+          ],
+          "limitation": "",
+          "rank": 13
+        },
+        {
+          "event_id": "github:deepseek-ai/dsh-superagent-prototype",
+          "title": "每日 GitHub 工具：DeepSeek 团队开放 dsh-superagent 研究原型",
+          "summary": "dsh-superagent 打包为 DeepSeek Harness bundle，面向单个 GitHub 仓库，监听 GitHub，并可选接入飞书。获授权的请求会建立工作项，在独立 Agent 会话与目录中执行，再于原会话返回结果或提出 PR；Web 面板展示需要人工处理的事项。仓库采用 MIT 许可。README 将其定义为仅供参考的研究原型，并明确它不是正式 DeepSeek 产品、尚非生产就绪软件；部分设计文章所述能力仍属于未来方向，尚未在原型实现。",
+          "category": "github",
+          "group": "other",
+          "groupLabel": "其他",
+          "digest_id": "2026-11-02",
+          "event_at": null,
+          "urls": [
+            "https://github.com/deepseek-ai/dsh-superagent-prototype",
+            "https://github.com/deepseek-ai/dsh-superagent-prototype/commit/6337fc823ce20251c8de8085948165c81aaa701e"
+          ],
+          "limitation": "",
+          "rank": 14
+        },
+        {
+          "event_id": "freebie-roundup-2026-11-02",
+          "title": "免费资源：Ling 3.1 Flash 1019 限时零价，Devin 付费套餐 SWE-2 活动持续至 11 月底",
+          "summary": "Vercel AI Gateway 当前为 inclusionai/ling-3.1-flash-1019 提供零价 API 调用，官方说明 11 月 3 日开始按公布价格收费，未给出切换时区；模型支持 1M token 上下文，可通过 AI Gateway、AI SDK 和 Playground 使用。Devin Pro 及更高自助付费套餐可在 Desktop 与 CLI 免费使用 SWE-2 Medium、High、Max 至 11 月 30 日，不含 Free 套餐、Cloud 会话及实时语音通话中的独立 agent 模型；Pro 为每月 20 美元。两项活动均未公布固定请求次数。独立资源目录列明 20 个渠道的模型、额度、周期和账户条件，已移除到期的 Laya、Qoder 1024、Qoder DeepSeek-Flash 与两款 Poolside 免费活动。",
+          "category": "freebie",
+          "group": "other",
+          "groupLabel": "其他",
+          "digest_id": "2026-11-02",
+          "event_at": null,
+          "urls": [
+            "https://vercel.com/changelog/ling-3-1-flash-1019-now-available-on-ai-gateway-for-free",
+            "https://docs.devin.ai/desktop/models",
+            "https://devin.ai/pricing"
+          ],
+          "limitation": "",
+          "rank": 15
+        }
+      ]
+    },
+    {
       "digest_id": "2026-10-30",
       "source_sha256": "88055e901c1113292ccc0e12d1b1dc44316853945d7aaf64b9386c4126907a06",
       "raw_source_sha256": "a878a5f787b84a1cd488a3032c3e929de74b07565c33929887b6bc7b9244d1f1",
@@ -2895,7 +3144,7 @@
       ],
       "other_models": [],
       "quota": "首次开通后 qwen-max 获得 100 万 Token，输入和输出共用；主账号和 RAM 子账号共享，同一实名主体不重复领取。",
-      "conditions": "仅华北 2（北京）地域实时推理 API。首次开通无需购买或实名认证；已认证用户用完后自动按量付费，未认证用户用完停止。Batch、调优、部署和存储费用不抵扣。",
+      "conditions": "仅华北 2（北京）地域实时推理 API。开通前须实名认证，未完成实名认证不发放免费额度。额度用完或到期后自动按量计费；可开启“免费额度用完即停”。Batch、调优、部署和存储费用不抵扣；Token Plan/Coding Plan 专属 API Key 不消耗此免费额度。",
       "expiry": "一次性额度有效期 90 天，从服务开通、模型发布或申请通过较晚者起算；不重置。",
       "sources": [
         "https://help.aliyun.com/zh/model-studio/new-free-quota"
@@ -2928,9 +3177,7 @@
         "liquid/lfm-2.5-2.6b:free",
         "nvidia/nemotron-3.5-lightning:free",
         "thinkingmachines/inkling-small:free",
-        "poolside/laguna-s-2.1:free",
         "thinkingmachines/inkling:free",
-        "poolside/laguna-xs-2.1:free",
         "cohere/north-mini-code:free",
         "nvidia/nemotron-3.5-content-safety:free",
         "nvidia/nemotron-3-ultra-550b-a55b:free",
@@ -2940,9 +3187,9 @@
         "openrouter/free"
       ],
       "other_models": [],
-      "quota": ":free 模型共用 20 RPM、每日 50 次请求；累计购买 10 美元额度后为每日 1,000 次（官方说明实际门槛为 9 美元，以计入充值手续费），仍为 20 RPM；失败尝试也计入每日上限。每日按 UTC 统计，即北京时间 08:00 开始新一天。",
+      "quota": "所列免费模型输入与输出价格为零，共用 20 RPM；累计购买不足 10 美元额度时为每日 50 次，达到门槛后为每日 1,000 次。官方说明高档实际从 9 美元起生效，以吸收充值手续费及舍入。每日按 UTC 统计，即北京时间 08:00 开始新一天；账户 free_model_daily_requests 字段提供当日上限与剩余次数。",
       "conditions": "需要 OpenRouter 账户；API 使用 API key，也可在 Chat Playground 使用。精确 :free ID 与付费版本独立；openrouter/free 只路由至免费模型。付费 fallback 按对应价格计费。地区和上游可用性以服务条款及模型端点为准。",
-      "expiry": "poolside/laguna-s-2.1:free 与 poolside/laguna-xs-2.1:free 目录到期日为 2026-10-31；dots-studio/dots-3-note-preview:free 为 2026-12-31。其他型号未列结束日期。",
+      "expiry": "dots-studio/dots-3-note-preview:free 到期日为 2026-12-31；其余列出型号未列结束日期。",
       "caution": "本目录列出 :free 模型 ID 与 openrouter/free 免费路由器。",
       "sources": [
         "https://openrouter.ai/api/v1/models",
@@ -2984,17 +3231,15 @@
       "kindLabel": "免费应用 + 限时活动",
       "status": "official_promotion_verified",
       "models": [
-        "Qwen3.8-Flash",
-        "DeepSeek-V4.1-Flash-1017（产品内名称 DeepSeek-Flash）"
+        "Qwen3.8-Flash"
       ],
       "other_models": [],
-      "quota": "Qwen3.8-Flash 为 0.0×，调用不消耗 Credits，零余额及 Free 用户也可用，未公布固定请求上限。DeepSeek-Flash 每日免费额度内为 0.0×，付费用户额度较多，未公布具体次数及每日重置时刻；用完后可按原倍率消耗 Credits，次日恢复免费额度。另可在桌面 App 每日手动领取 100 Credits，每轮北京时间 10:00 重置，领取后 30 天有效。",
-      "conditions": "国际版个人账户，含 Free、Pro Trial 及付费个人；不含 Teams/Enterprise。选择两款指定模型自动生效，无需领奖；每日积分须桌面手动领取，不能补领且不提升套餐权限。支持 Qoder、IDE、CLI、JetBrains、Cloud Agents、Mobile、网页等官方产品，不是独立通用 API 免费；其他绑卡及地区限制未列明。",
-      "expiry": "Qwen3.8-Flash 免费已从原 9 月 30 日截止延长，结束日待公布；DeepSeek-Flash 免费至 11 月 1 日 00:00（北京时间）；每日 100 Credits 活动结束日待公布。",
+      "quota": "Qwen3.8-Flash 在每日免费次数内为 0.0×，Free 和零余额个人账户可用；付费用户每日免费次数更多，未公布具体次数及重置时刻。用完后可按原倍率消耗 Credits，次日恢复免费次数。桌面 App 可每日手动领取 100 Credits，每轮北京时间 10:00 重置，领取后 30 天有效。",
+      "conditions": "国际版个人账户，含 Free、Pro Trial 及付费个人，不含 Teams/Enterprise。指定模型免费次数自动生效；每日积分须桌面手动领取，漏领不补。通过 Qoder 官方客户端及相关产品使用，不是通用 API 免费额度；其他模型调用仍按其价格计费。",
+      "expiry": "Qwen3.8-Flash 免费期已延长，结束日待公布；每日 100 Credits 活动结束日待公布。",
       "sources": [
         "https://docs.qoder.com/events/flashoffer",
-        "https://docs.qoder.com/events/100credits",
-        "https://docs.qoder.com/events/deepseek-flash-free"
+        "https://docs.qoder.com/events/100credits"
       ]
     },
     {
@@ -3048,22 +3293,6 @@
       "expiry": "长期免费方案，未列结束日期。",
       "sources": [
         "https://www.trae.cn/pricing"
-      ]
-    },
-    {
-      "provider": "Qoder 1024 Community Boost",
-      "kind": "limited_time_free_coding_app",
-      "kindLabel": "官方免费计划，详见条件",
-      "status": "official_promotion_verified",
-      "models": [
-        "Sonus（Qoder 模型名称，官方未披露底层版本）"
-      ],
-      "other_models": [],
-      "quota": "审核通过的 Free 用户可手动领取一次 1,024 SOTA Credits 欢迎包。社区累计助力达 2 万／5 万／10 万点后，分别解锁 2,048／3,072／4,096 SOTA Credits，解锁后 12 小时内发放，每账户每档限领一次。第 4 轮门槛为累计 20 万点，总计 12,288 SOTA Credits，解锁后按规则分为 10 月 28、29、30 日三包，每日北京时间 00:00 开放 4,096，每账户每日限领一次。每日可助力一次，北京时间 00:00 重置。",
-      "conditions": "个人 Pro 及以上自动获得资格；Free 须一次申请并获批，Lite 不支持 Sonus。通过活动页参与，奖励在支持的 Qoder 客户端领取，仅用于 Sonus；底层模型版本、地区与绑卡条件未披露。",
-      "expiry": "申请、审核及领取于 2026 年 10 月 30 日 23:59（北京时间）结束。欢迎包至 10 月 31 日 23:59 有效；第 1 至 3 轮奖励需发放后 3 天内且不晚于活动结束前领取，领取后 24 小时有效。第 4 轮每天的 4,096 积分须当日领取并使用，当日 23:59 失效，不跨日累积，漏领不补。",
-      "sources": [
-        "https://docs.qoder.com/events/communityboost"
       ]
     },
     {
@@ -3142,20 +3371,38 @@
       ]
     },
     {
-      "provider": "Vercel AI Gateway / Boundless Laya",
-      "kind": "limited_time_free_decision_api",
+      "provider": "Vercel AI Gateway / Ling 3.1 Flash 1019",
+      "kind": "limited_time_free_api",
       "kindLabel": "官方免费计划，详见条件",
       "status": "official_verified",
       "models": [
-        "convaiinnovations/laya-free",
-        "convaiinnovations/laya（仅 Boundless 路由）"
+        "inclusionai/ling-3.1-flash-1019"
       ],
       "other_models": [],
-      "quota": "通过 Boundless 调用指定 Laya 决策模型价格为零；公告未列固定请求额度或重置周期。",
-      "conditions": "通过 AI Gateway API key 或自带供应商 key，使用 AI SDK evaluation API、原生 HTTP、TypeSafe 兼容 API 或 AI CLI。标准 ID 须限定 Boundless；-free ID 自动路由至 Boundless。模型返回是非、选择或评分问题的结构化答案及概率，不是通用聊天模型。账户地区与绑卡要求未在活动公告列明。",
-      "expiry": "免费至 2026 年 10 月 31 日；官方未明确截止时区。活动结束后 -free ID 停止服务，标准 ID 开始计费。",
+      "quota": "指定模型 API 请求价格为零，仍显示在用量面板。公告未列统一请求额度或重置周期。",
+      "conditions": "通过 AI Gateway、AI SDK、模型 Playground 或已配置 AI Gateway 的编程助手使用，需 Vercel 账户及对应访问配置。支持 1M token 上下文；地区及绑卡要求未在公告明确。",
+      "expiry": "官方说明 2026 年 11 月 3 日开始按公布价格收费，未明确切换时区。",
       "sources": [
-        "https://vercel.com/changelog/laya-decision-model-now-available-on-ai-gateway-free-through-october-31"
+        "https://vercel.com/changelog/ling-3-1-flash-1019-now-available-on-ai-gateway-for-free"
+      ]
+    },
+    {
+      "provider": "Devin SWE-2 付费套餐限时免费使用",
+      "kind": "limited_time_free_coding_app",
+      "kindLabel": "官方免费计划，详见条件",
+      "status": "official_verified",
+      "models": [
+        "SWE-2 Medium",
+        "SWE-2 High",
+        "SWE-2 Max"
+      ],
+      "other_models": [],
+      "quota": "Pro 及更高自助付费套餐在 Devin Desktop 和 Devin CLI 中限时免费使用 SWE-2；未列本活动固定请求数或 Token 上限。",
+      "conditions": "需付费自助套餐，Pro 每月 20 美元；不适用于 Free 套餐、Devin Cloud 会话或实时语音通话中的独立 agent 模型。需账户及付费套餐，地区条件未在活动说明列出。",
+      "expiry": "免费至 2026 年 11 月 30 日，未明确截止时区；之后按每百万 token 输入 3 美元、输出 15 美元、缓存输入 0.30 美元计费。",
+      "sources": [
+        "https://docs.devin.ai/desktop/models",
+        "https://devin.ai/pricing"
       ]
     }
   ]
