@@ -1,6 +1,210 @@
 {
   "issues": [
     {
+      "digest_id": "2026-11-04",
+      "source_sha256": "8a78ae96dcac531ff50b80e319be740e51b863659b7202a6a6768a71cefd9d5a",
+      "raw_source_sha256": "8d2981b646d083f6dff60ac504248105c019121bac0413e0ff7a7d99d0503a49",
+      "has_editorial": true,
+      "focus_event_id": "openai-agents-native-preview-js-python",
+      "items": [
+        {
+          "event_id": "openai-agents-native-preview-js-python",
+          "title": "OpenAI Agents SDK 预览版将 Codex harness 嵌入 JavaScript，并扩展 Python 会话控制",
+          "summary": "JavaScript/TypeScript v0.22.0-alpha.1 引入嵌入式 Codex harness，提供 Linux x64、Apple Silicon 和 Windows x64 预编译入门包，要求 Node.js 24。Python v0.24.0-alpha.6 增加 Turn 控制、提示排队与 steering、LocalStorage 会话重开、结构化输出和工具请求恢复；支持标准 CPython 3.10–3.14，Linux 需 glibc 2.39 及以上，预览包通过 GitHub Releases 分发。",
+          "category": "news",
+          "group": "openai",
+          "groupLabel": "OpenAI",
+          "digest_id": "2026-11-04",
+          "event_at": "2026-11-03T16:44:27Z",
+          "urls": [
+            "https://github.com/openai/openai-agents-js/releases/tag/v0.22.0-alpha.1",
+            "https://github.com/openai/openai-agents-python/releases/tag/v0.24.0-alpha.6"
+          ],
+          "limitation": "",
+          "rank": 1
+        },
+        {
+          "event_id": "copilotkit-1-84-a2ui-1-0",
+          "title": "CopilotKit 1.84 要求 A2UI 1.0 消息并修复自定义组件树序列化",
+          "summary": "CopilotKit 1.84.0 更新生成式 UI 提示与评测，要求 canonical A2UI 1.0 消息及能力键，预发布版消息格式需迁移；修复 Vue 侧栏插槽转发、React Native 聊天中断显示及恢复中断时复用前端结果。1.84.1 继续修复组合自定义组件树的目录序列化，使 agent SDK 能识别组件结构。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-04",
+          "event_at": "2026-11-03T20:14:51Z",
+          "urls": [
+            "https://github.com/CopilotKit/CopilotKit/releases/tag/v1.84.1",
+            "https://github.com/CopilotKit/CopilotKit/releases/tag/v1.84.0"
+          ],
+          "limitation": "",
+          "rank": 2
+        },
+        {
+          "event_id": "hindsight-1-2-memory-models",
+          "title": "Hindsight 1.2.0 接入专用记忆模型，新增召回裁剪与去重",
+          "summary": "Hindsight 1.2.0 支持 hs-decide-1-flash、hs-rerank-1 和 hs-embed-1，将本地默认重排模型改为支持八种语言的 hs-rerank-1。决策模型可承担记忆合并、反思和知识页面更新中的判断；召回新增 prune 与 dedup，可按请求或记忆库删除无关与重复结果。工具调用统一经响应 schema 处理，知识页面可显示证据图片。决策模型需显式配置启用，召回裁剪与去重默认关闭。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-04",
+          "event_at": "2026-11-03T11:38:19Z",
+          "urls": [
+            "https://github.com/vectorize-io/hindsight/releases/tag/v1.2.0",
+            "https://hindsight.vectorize.io/blog/2026/11/03/version-1-2-0"
+          ],
+          "limitation": "",
+          "rank": 3
+        },
+        {
+          "event_id": "vercel-ai-sdk-7-0-162-durable-telemetry",
+          "title": "Vercel AI SDK 7.0.162 将持久工作流记录为单一遥测操作",
+          "summary": "AI SDK 7.0.162 与 workflow 2.0.94 支持将持久 WorkflowAgent 的提示、最终输出、步骤和工具归入单一遥测操作，在完成或挂起时按原时间戳上报。OpenTelemetry 需要显式复用同一 IdGenerator 连接采样与父追踪上下文；工具审批续接同时恢复服务端定义的 metadata、动态状态和标题。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-04",
+          "event_at": "2026-11-03T01:24:25Z",
+          "urls": [
+            "https://github.com/vercel/ai/releases/tag/ai%407.0.162",
+            "https://github.com/vercel/ai/releases/tag/%40ai-sdk/workflow%402.0.94"
+          ],
+          "limitation": "",
+          "rank": 4
+        },
+        {
+          "event_id": "pydantic-ai-2-65-websocket-conversation-store",
+          "title": "Pydantic AI 2.65 增加 Responses WebSocket 与会话日志存储",
+          "summary": "Pydantic AI 2.65.0 增加 OpenAI Responses WebSocket 传输、ConversationStore 消息日志及 revision 冲突检测；为 OpenAI Responses API 的 GPT-5.6 及后续模型支持 12 小时提示缓存保留和多模态用户答复。BrowserUse 的模型调用纳入主运行的用量限制，Temporal 默认停止重试无法恢复的模型错误，并修复取消运行时浏览器进程清理。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-04",
+          "event_at": "2026-11-03T01:25:27Z",
+          "urls": [
+            "https://github.com/pydantic/pydantic-ai/releases/tag/v2.65.0"
+          ],
+          "limitation": "",
+          "rank": 5
+        },
+        {
+          "event_id": "claude-code-2-1-317-318-sdk-hooks-cloud",
+          "title": "Claude Code 更新云会话、配置恢复及 SDK hook 失败处理",
+          "summary": "Claude Code 2.1.317–318 增加无仓库云会话、模组子任务 effort 设置和登录有效期提示，修复恢复会话丢失记录、并发配置写入及权限提示误触。配套 TypeScript Agent SDK 0.3.317–318 增加 hook 的 onFailure:block、登录到期字段及配置无效启动原因；hook 抛错或返回无效结果时可阻止动作继续。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-04",
+          "event_at": "2026-11-04T00:01:03Z",
+          "urls": [
+            "https://github.com/anthropics/claude-code/releases/tag/v2.1.318",
+            "https://github.com/anthropics/claude-code/releases/tag/v2.1.317",
+            "https://github.com/anthropics/claude-agent-sdk-typescript/releases/tag/v0.3.318",
+            "https://github.com/anthropics/claude-agent-sdk-typescript/releases/tag/v0.3.317"
+          ],
+          "limitation": "",
+          "rank": 6
+        },
+        {
+          "event_id": "openai-node-7-48-live-responses",
+          "title": "OpenAI Node SDK 7.48 扩展 Live Responses 委派工具与选项",
+          "summary": "OpenAI 发布 Node SDK 7.48.0，扩展 Live Responses 的委派工具与工具选择类型。由于新增类型变体，使用穷尽式 switch 的 TypeScript 代码可能需要增加分支。",
+          "category": "news",
+          "group": "openai",
+          "groupLabel": "OpenAI",
+          "digest_id": "2026-11-04",
+          "event_at": "2026-11-03T18:06:52Z",
+          "urls": [
+            "https://github.com/openai/openai-node/releases/tag/v7.48.0"
+          ],
+          "limitation": "",
+          "rank": 7
+        },
+        {
+          "event_id": "langfuse-4-73-74-gateway-ratelimits-skills",
+          "title": "Langfuse 4.73–4.74 扩展 AI Gateway 限流、分析和技能自动化",
+          "summary": "Langfuse 4.73–4.74 增加按用户和 API key 筛选 AI Gateway 分析、/resolve 接口的组织级请求与字节速率限制、专用组织成员角色及 key 最近使用时间。技能支持版本自动化并通过 MCP 暴露内置技能，管理员 API 可在组织之间迁移项目；支持人员的访问读取会记录审计日志。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-04",
+          "event_at": "2026-11-03T13:49:10Z",
+          "urls": [
+            "https://github.com/langfuse/langfuse/releases/tag/v4.74.0",
+            "https://github.com/langfuse/langfuse/releases/tag/v4.73.0"
+          ],
+          "limitation": "",
+          "rank": 8
+        },
+        {
+          "event_id": "copilot-cli-1-0-106-5-7-code-settings-security",
+          "title": "Copilot CLI 1.0.106-5 至 -7 预览版增加设置面板与 VS Code 会话入口",
+          "summary": "预览版更新。Copilot CLI 1.0.106-5 至 -7 增加 /code 打开当前会话到 VS Code、统一设置面板和全局资源搜索，内置 browser-use 插件更新至 0.1.0。更新还隔离面向用户的 MCP 内容、修复多个终端转义字符显示问题、限制长时间 SQL 查询，并改进嵌套子代理 MCP 工具继承。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-04",
+          "event_at": "2026-11-03T23:34:55Z",
+          "urls": [
+            "https://github.com/github/copilot-cli/releases/tag/v1.0.106-7",
+            "https://github.com/github/copilot-cli/releases/tag/v1.0.106-6",
+            "https://github.com/github/copilot-cli/releases/tag/v1.0.106-5"
+          ],
+          "limitation": "",
+          "rank": 9
+        },
+        {
+          "event_id": "langchain-js-1-6-1-core-1-3-4-approval-traces",
+          "title": "LangChain JS 修复混合审批工具调用并增加追踪载荷省略器",
+          "summary": "LangChain 1.6.1 修复同一次中断中部分工具被拒绝后，其他已批准、已编辑或自动批准调用被丢弃的问题。Core 1.3.4 导出 omitPayload 追踪处理器，并在输入或输出追踪策略抛错时仍结束运行记录、丢弃失败载荷及记录错误。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-04",
+          "event_at": "2026-11-03T06:22:00Z",
+          "urls": [
+            "https://github.com/langchain-ai/langchainjs/releases/tag/langchain%401.6.1",
+            "https://github.com/langchain-ai/langchainjs/releases/tag/%40langchain/core%401.3.4"
+          ],
+          "limitation": "",
+          "rank": 10
+        },
+        {
+          "event_id": "github-tool-vercel-labs-agent-desktop",
+          "title": "每日工具：Agent Desktop 1.1.0 支持跨平台桌面操作并改进元素定位",
+          "summary": "Vercel Labs 的 Agent Desktop 提供面向 AI agent 的桌面操作 CLI 和 C 库，通过操作系统可访问性树读取窗口、生成带元素引用的 JSON 快照，并执行点击、输入、滚动、快捷键与截图。支持 macOS、Windows 和 Linux。1.1.0 新增按固定间隔输入文本，改进 macOS 元素重新定位以及 Linux、Windows 的元素引用解析，修复 Windows 退出崩溃与覆盖层坐标问题；macOS 可操作 Dock、菜单栏状态项和系统面板。项目采用 Apache-2.0 许可证，本身不捆绑模型。",
+          "category": "github",
+          "group": "other",
+          "groupLabel": "其他",
+          "digest_id": "2026-11-04",
+          "event_at": "2026-11-03T04:13:45Z",
+          "urls": [
+            "https://github.com/vercel-labs/agent-desktop/releases/tag/v1.1.0",
+            "https://github.com/vercel-labs/agent-desktop",
+            "https://github.com/trending"
+          ],
+          "limitation": "",
+          "rank": 11
+        },
+        {
+          "event_id": "freebie-roundup-2026-11-04",
+          "title": "免费资源：StepAudio 3 五个音频 API 限时免费至 11 月 8 日",
+          "summary": "StepAudio 3 的实时语音、TTS、生成、音乐和 ASR 五个 API 限时免费至北京时间 11 月 8 日结束前，11 月 9 日起计费。所列 StepAudio 3 系列 API 限时免费；活动未公布统一调用总额或每日重置额度，具体端点限流以平台为准。中国站开放平台账户及 API key，个人账户须实名认证；官方流程包含本人姓名、身份证及支付宝人脸验证。公开活动页未列绑卡要求或境外资格。此项为API服务，不是网页聊天套餐。",
+          "category": "freebie",
+          "group": "other",
+          "groupLabel": "其他",
+          "digest_id": "2026-11-04",
+          "event_at": null,
+          "urls": [
+            "https://platform.stepfun.com/docs/zh/guides/pricing/details",
+            "https://platform.stepfun.com/docs/zh/guides/pricing/rate-limits",
+            "https://platform.stepfun.com/docs/zh/quickstart/real-name-verification"
+          ],
+          "limitation": "",
+          "rank": 12
+        }
+      ]
+    },
+    {
       "digest_id": "2026-11-03",
       "source_sha256": "211308dda881487e1285ed8e33554332b78ee69ed99afc7d6cbc4bbf09ec33a5",
       "raw_source_sha256": "a5e8931a694db0f6f11a8bd4029a9d438428b67f14823aa7be9043fdc588a8db",
@@ -3633,6 +3837,30 @@
       "expiry": "申请截止 2026 年 11 月 30 日，获批优惠覆盖 Cursor 合约剩余期，最长 12 个月；未明确截止时区。",
       "sources": [
         "https://kilo.ai/cursor-exodus"
+      ]
+    },
+    {
+      "provider": "StepFun StepAudio 3",
+      "kind": "limited_time_free_api",
+      "kindLabel": "官方免费计划，详见条件",
+      "status": "official_verified",
+      "models": [
+        "stepaudio-3-realtime",
+        "stepaudio-3-tts",
+        "stepaudio-3-gen",
+        "stepaudio-3-music",
+        "stepaudio-3-asr-max"
+      ],
+      "other_models": [],
+      "quota": "所列 StepAudio 3 系列 API 限时免费；活动未公布统一调用总额或每日重置额度，具体端点限流以平台为准。",
+      "conditions": "中国站开放平台账户及 API key，个人账户须实名认证；官方流程包含本人姓名、身份证及支付宝人脸验证。公开活动页未列绑卡要求或境外资格。此项为API服务，不是网页聊天套餐。",
+      "expiry": "北京时间 11 月 8 日结束前免费，11 月 9 日 00:00 起按官网价格计费。",
+      "privacy": "",
+      "caution": "",
+      "sources": [
+        "https://platform.stepfun.com/docs/zh/guides/pricing/details",
+        "https://platform.stepfun.com/docs/zh/guides/pricing/rate-limits",
+        "https://platform.stepfun.com/docs/zh/quickstart/real-name-verification"
       ]
     }
   ]
