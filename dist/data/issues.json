@@ -1,6 +1,173 @@
 {
   "issues": [
     {
+      "digest_id": "2026-11-06",
+      "source_sha256": "88abe8b450f5f3a481f5d9d2579743515f84f4b5f46b4f950e40c57c1a9b0f0a",
+      "raw_source_sha256": "2f1c6de35077037669a614f9014b940e2150df88364be78137b518a0e550f49c",
+      "has_editorial": true,
+      "focus_event_id": "google-gemini-omni-1-2-flash",
+      "items": [
+        {
+          "event_id": "google-gemini-omni-1-2-flash",
+          "title": "Google 发布 Gemini Omni 1.2 Flash：15 秒视频，720p 每秒 0.07 美元",
+          "summary": "Google 发布 Gemini Omni 1.2 Flash，原生视频长度扩展至 3 至 15 秒，可按 1 秒步长选择时长。720p 生成价格为每秒 0.07 美元，较 Omni 1.1 降低 30%。模型改进多轮编辑、参考一致性、多角色语音与场景连贯性。\n\nGemini API 和 Google Cloud 已正式可用，支持 Provisioned Throughput，并使用 SynthID 标记生成内容。音频参考功能需加入允许名单。",
+          "category": "news",
+          "group": "models",
+          "groupLabel": "模型与 API",
+          "digest_id": "2026-11-06",
+          "event_at": "2026-11-05T17:00:00Z",
+          "urls": [
+            "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
+            "https://x.com/GoogleAIStudio/status/2118390015382454491",
+            "https://cloud.google.com/blog/products/ai-machine-learning/gemini-omni-1-2-flash-generally-available"
+          ],
+          "limitation": "",
+          "rank": 1
+        },
+        {
+          "event_id": "openai-gpt-6-cyber-release",
+          "title": "OpenAI 发布 GPT-6 Cyber，向获批 Daybreak Red 客户开放",
+          "summary": "OpenAI 发布网络安全专用模型 GPT-6 Cyber，初期向部分获批 Daybreak Red 客户开放 API 和 Codex，随后逐步扩大。\n\n官方模型页列出 1,050,000 tokens 上下文和 128,000 tokens 最大输出；标准短上下文每百万 tokens 输入 20 美元、缓存输入 2 美元、输出 100 美元。访问须满足审批和组织安全设置。",
+          "category": "news",
+          "group": "models",
+          "groupLabel": "模型与 API",
+          "digest_id": "2026-11-06",
+          "event_at": "2026-11-05T17:09:13Z",
+          "urls": [
+            "https://x.com/OpenAI/status/2118390190246879554",
+            "https://openai.com/index/introducing-gpt-6-cyber/",
+            "https://developers.openai.com/api/docs/models/gpt-6-cyber"
+          ],
+          "limitation": "",
+          "rank": 2
+        },
+        {
+          "event_id": "cursor-build-live-apps",
+          "title": "Cursor Build Live Apps 上线：云代理生成并托管 Web 应用",
+          "summary": "Cursor 的 Build Live Apps 由云代理创建 Web 应用，并配置 Postgres 数据库、Cursor SSO 登录和托管。支持新建项目及已有 Origin、GitHub 仓库；发布前执行安全检查，由用户明确执行发布。\n\n应用可向团队或指定人员共享，个人账户可公开分享；团队公开分享默认关闭，可由管理员开启。功能要求付费方案并启用 cloud agents，仅在云代理中提供。GitLab 支持仍在计划中，官方尚未公布独立托管额度。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-06",
+          "event_at": "2026-11-05T21:41:10Z",
+          "urls": [
+            "https://x.com/cursor_ai/status/2118458629091426304",
+            "https://cursor.com/changelog/build-live-apps",
+            "https://cursor.com/docs/cloud-agent/apps"
+          ],
+          "limitation": "",
+          "rank": 3
+        },
+        {
+          "event_id": "mistral-studio-managed-agents-apps-preview",
+          "title": "Mistral Studio 推出 Managed Agents 与 Apps CLI 公测",
+          "summary": "Mistral Studio 的 Python Agents SDK 支持同一套代码在进程内运行、自托管 agents serve 或使用 Mistral 托管的 agents deploy。Managed Agents 提供持久后台执行、崩溃恢复、人工审批和默认 trace。\n\nApps CLI 提供 init、dev、deploy 及 capability add，用于构建、运行和部署应用。Managed Agents、Apps CLI 和 workflow builder 处于 public preview；HTTP API connectors 为 private preview。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-06",
+          "event_at": "2026-11-05T15:49:54Z",
+          "urls": [
+            "https://x.com/MistralAI/status/2118370229466153299",
+            "https://mistral.ai/news/build-with-studio/",
+            "https://docs.mistral.ai/resources/release-notes"
+          ],
+          "limitation": "",
+          "rank": 4
+        },
+        {
+          "event_id": "qwen-code-0-26-8-subscription-mods",
+          "title": "Qwen Code 0.26.8 增加订阅登录与 Mods 无头任务入口",
+          "summary": "Qwen Code 0.26.8 为 CLI、VS Code 和 Desktop 增加 Qwen Plus/Pro 订阅接入。Mods 可向 headless 任务提交 prompt；GitHub PR、Issue 和 channel 事件提供直接链接，并修复项目 hooks 的审批流程。\n\n通过 npm 安装需要 Node.js 22 或以上版本，项目采用 Apache-2.0 许可证。发布说明未列出统一订阅价格。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-06",
+          "event_at": "2026-11-05T16:23:57Z",
+          "urls": [
+            "https://github.com/QwenLM/qwen-code/releases/tag/v0.26.8"
+          ],
+          "limitation": "",
+          "rank": 5
+        },
+        {
+          "event_id": "vercel-ai-sdk-7-0-163",
+          "title": "AI SDK 7.0.163 更新遥测隐私、实时传输与 UI steering",
+          "summary": "AI SDK 7.0.163 让 recordInputs/recordOutputs 关闭记录时过滤嵌套内容及 raw span；支持供应商自有 realtime transport，Groq 可直接使用 HTTP(S) 音频 URL 转写。steering 消息可流向 UI 并在转换时保留。\n\n本版 stream-part 新增 ping；audio.byteLength 与 mediaType 可能为 undefined，uploadedVideos 直传模式下 videos 也可为空。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-06",
+          "event_at": "2026-11-05T01:12:23Z",
+          "urls": [
+            "https://github.com/vercel/ai/releases/tag/ai%407.0.163"
+          ],
+          "limitation": "",
+          "rank": 6
+        },
+        {
+          "event_id": "langfuse-4-76-0-gateway-topics",
+          "title": "Langfuse 4.76.0 增加自托管 AI Gateway 与 Topics 接口",
+          "summary": "Langfuse 4.76.0 增加自托管 docker compose AI Gateway，提供 Topics summaries、assignments 和 rules 的 API、MCP 与 agent 访问，并加入会话时间顺序列表及访问审计功能。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-06",
+          "event_at": "2026-11-05T18:08:03Z",
+          "urls": [
+            "https://github.com/langfuse/langfuse/releases/tag/v4.76.0"
+          ],
+          "limitation": "",
+          "rank": 7
+        },
+        {
+          "event_id": "tibo-chatgpt-api-weekly-images-4-billion",
+          "title": "Tibo：ChatGPT 与 API 每周生成图像超过 40 亿张",
+          "summary": "Tibo 表示，ChatGPT 与 API 当前每周生成超过 40 亿张图像，八周前这一数字为超过 30 亿张。该统计合并 ChatGPT 与 API 两个渠道。",
+          "category": "news",
+          "group": "tibo",
+          "groupLabel": "Tibo",
+          "digest_id": "2026-11-06",
+          "event_at": "2026-11-05T22:24:51Z",
+          "urls": [
+            "https://x.com/thsottiaux/status/2118469621011677521"
+          ],
+          "limitation": "",
+          "rank": 8
+        },
+        {
+          "event_id": "github-tool-max-sixty-worktrunk",
+          "title": "工具选荐｜Worktrunk：管理并行编码代理的 Git worktree",
+          "summary": "Worktrunk 是 Git worktree 命令行工具，可为 Claude Code、Codex 等并行任务创建和切换独立分支目录，查看 CI/PR 状态，使用 hooks 安装依赖，并复用 node_modules 等构建缓存。提供 squash、rebase、merge 和目录清理操作。\n\n项目采用 MIT 或 Apache-2.0 双许可证，模型服务费用另计。Windows 使用 git-wt 命令；写时复制缓存依赖 APFS、btrfs 或 XFS 等文件系统。",
+          "category": "github",
+          "group": "other",
+          "groupLabel": "其他",
+          "digest_id": "2026-11-06",
+          "event_at": null,
+          "urls": [
+            "https://github.com/max-sixty/worktrunk"
+          ],
+          "limitation": "",
+          "rank": 9
+        },
+        {
+          "event_id": "freebie-roundup-2026-11-06",
+          "title": "免费福利｜SWE-2 Flash 限免、Hy4 体验与五天试用",
+          "summary": "Devin Desktop 与 CLI 的 SWE-2 Flash 免费期至北京时间 12 月 5 日 02:00。Free 方案可选择 Medium，High/Max 需付费方案。\n\n腾讯 Hy4 在 WorkBuddy、CodeBuddy 内的免费体验持续至 11 月 15 日，官方提供一定额度，具体数量未公布。ZCode 新用户连接账户后的前五天可获 GLM-5.3 每日 300 万 tokens、GLM-5.3-Flash 每日 500 万 tokens。更多渠道及适用条件见免费资源栏目。",
+          "category": "freebie",
+          "group": "other",
+          "groupLabel": "其他",
+          "digest_id": "2026-11-06",
+          "event_at": null,
+          "urls": [
+            "https://docs.devin.ai/desktop/models"
+          ],
+          "limitation": "",
+          "rank": 10
+        }
+      ]
+    },
+    {
       "digest_id": "2026-11-05",
       "source_sha256": "63bad345264f83cdc4c2c7d9bf75b0121f633405da8e26c0f3d51914a9e7ecdf",
       "raw_source_sha256": "a8f011d3a61dbbd22e1aaef77dacba6b49cf7f82241a98de15e4a4d0f714dc8d",
@@ -3600,6 +3767,7 @@
       "quota": "GLM-4.7-Flash、GLM-4.5-Flash、GLM-4.6V-Flash 的输入、输出与缓存标为免费；账户速率以控制台为准。",
       "conditions": "需要 Z.ai 账户及 API key；全球 Z.ai 与中国大陆 BigModel 为不同服务，不能互套型号退役和价格规则。",
       "expiry": "价格页未列结束日期。",
+      "caution": "",
       "sources": [
         "https://docs.z.ai/guides/overview/pricing"
       ]
@@ -3644,7 +3812,7 @@
         }
       ],
       "quota": "所列文本模型各为 30 RPM、1,000 RPD、8,000 TPM、200,000 TPD；组织共享，以先达到的上限为准。账户可能有个别限额，日重置时区未公布，可读取响应头。",
-      "conditions": "需要 Groq 账户及 API key，具体账户额度见控制台。",
+      "conditions": "需要 Groq 账户及 API key；免费档的精确额度以组织控制台为准，升级 Developer 才要求支付方式。地区限制在限速页未公布。",
       "expiry": "官方未公布结束日期。",
       "privacy": "",
       "caution": "",
@@ -3679,10 +3847,14 @@
       "kind": "recurring_free_api",
       "kindLabel": "周期性免费 API",
       "status": "official_verified",
-      "models": [],
+      "models": [
+        "@cf/zai-org/glm-4.7-flash",
+        "@cf/openai/gpt-oss-120b",
+        "@cf/openai/gpt-oss-20b"
+      ],
       "other_models": [],
       "quota": "每日共用 10,000 Neurons，不是 10,000 tokens；北京时间每日 08:00 重置。Free 用尽后请求失败，付费计划超额收费。",
-      "conditions": "需要 Cloudflare 账户。Kimi K2.6/K2.7 Code、GLM 5.2/5.3/5.3 Flash 及价格页指定的 DeepSeek V4/V4.1 型号要求 Workers Paid 或 AI Gateway 预付额度。",
+      "conditions": "需要 Cloudflare 账户。Kimi K2.6/K2.7 Code、GLM 5.2/5.3/5.3 Flash 及价格页指定的 DeepSeek V4/V4.1 型号要求 Workers Paid 或 AI Gateway 预付额度，不属于免充值免费层。地区及免费层绑卡要求未在该页公布。",
       "expiry": "官方未公布结束日期。",
       "privacy": "",
       "caution": "",
@@ -3736,7 +3908,7 @@
       "models": [],
       "other_models": [],
       "quota": "每月 2,000 次代码补全及一定数量 AI Credits，AI Credits 的固定数量未公布；每月 1 日按 UTC 00:00 重置，不结转。",
-      "conditions": "需要 GitHub 账户，通过支持的 Copilot 界面使用；Free 只支持 Auto 选模，不是通用 API 赠金。",
+      "conditions": "需要 GitHub 账户，通过支持的 Copilot 界面使用；Free 只支持 Auto 选模，不是通用 API 赠金。地区及绑卡要求方案页未公布。",
       "expiry": "官方未公布结束日期。",
       "privacy": "",
       "caution": "",
@@ -3762,8 +3934,9 @@
       "privacy": "",
       "caution": "",
       "sources": [
-        "https://openrouter.ai/collections/free-models",
-        "https://openrouter.ai/docs/api_reference/limits"
+        "https://openrouter.ai/collections/free-models/",
+        "https://openrouter.ai/docs/api_reference/limits",
+        "https://openrouter.ai/pricing"
       ]
     },
     {
@@ -3789,6 +3962,7 @@
       "conditions": "免费聊天模型限 OpenCode 客户端，需要账户并选择相应型号，不等于任意客户端的通用免费 API。Crouton 不支持欧盟、阿富汗、白俄罗斯、中国（含香港和澳门）、柬埔寨、古巴、厄立特里亚、埃塞俄比亚、海地、伊朗、伊拉克、利比亚、缅甸、尼加拉瓜、朝鲜、巴基斯坦、俄罗斯、索马里、叙利亚、委内瑞拉、西撒哈拉，以及部分受支持国家内的特定地区。Pulse 不支持欧盟、冰岛、列支敦士登、挪威、古巴、伊朗、朝鲜、俄罗斯、乌克兰和委内瑞拉。Beam 不支持安哥拉、白俄罗斯、柬埔寨、中国（含香港和澳门）、古巴、刚果民主共和国、赤道几内亚、伊朗、伊拉克、老挝、利比亚、尼日利亚、朝鲜、俄罗斯、叙利亚、土库曼斯坦、乌兹别克斯坦、委内瑞拉，以及乌克兰的克里米亚、顿涅茨克和卢甘斯克地区。",
       "expiry": "各项免费活动结束日期未公布。",
       "privacy": "GLM 和 DeepSeek 免费项声明零保留、不训练。Crouton 的收集数据保留 30 天，不用于模型训练；Beam 为安全目的保留 30 天，不用于训练。Pulse 免费期数据可保留并用于改进模型；Flint 保留 30 天。NVIDIA Nemotron 3 Ultra、3.5 Lightning、3.5 Super VL 免费端点仅供试用，禁止提交个人或机密数据，使用记录用于安全及改进 NVIDIA 产品和服务。",
+      "caution": "",
       "sources": [
         "https://opencode.ai/v2/docs/console/models/"
       ]
@@ -3802,12 +3976,12 @@
         "Qwen3.8-Flash"
       ],
       "other_models": [],
-      "quota": "Qwen3.8-Flash 在每日免费次数内为 0.0×，Free 和零余额个人账户可用；付费用户每日免费次数更多，未公布具体次数及重置时刻。用完后可按原倍率消耗 Credits，次日恢复免费次数。桌面 App 可每日手动领取 100 Credits，每轮北京时间 10:00 重置，领取后 30 天有效。",
-      "conditions": "国际版个人账户，含 Free、Pro Trial 及付费个人，不含 Teams/Enterprise。指定模型免费次数自动生效；每日积分须桌面手动领取，漏领不补。通过 Qoder 官方客户端及相关产品使用，不是通用 API 免费额度；其他模型调用仍按其价格计费。",
-      "expiry": "Qwen3.8-Flash 免费期已延长，结束日待公布；每日 100 Credits 活动结束日待公布。",
+      "quota": "Qwen3.8-Flash 每日免费次数内为 0.0×，最大思考强度也不扣 Credits；Free 与零余额个人账户可用。付费用户次数更多，具体次数及重置时刻未公布；次日恢复，超额可按原倍率使用 Credits。",
+      "conditions": "Qoder International 新旧个人账户均可，包括 Free、Trial、Lite、Pro、Pro+、Ultra；不含 Teams/Enterprise。选模型自动生效，无需领取；其他模型调用不在本优惠内。绑卡条件未单列公布。",
+      "expiry": "9 月 18 日开始，原 9 月 30 日截止已延期；新截止日未公布，官方称提前公告。",
+      "caution": "Qoder DeepSeek-Flash 活动官方只延长到 10 月 31 日 24:00（UTC+8），已过期，不计入当前福利。",
       "sources": [
-        "https://docs.qoder.com/events/flashoffer",
-        "https://docs.qoder.com/events/100credits"
+        "https://docs.qoder.com/events/flashoffer"
       ]
     },
     {
@@ -3826,6 +4000,7 @@
       "conditions": "需要 Kilo 免费账户，无需信用卡或付费余额。IDE、CLI 和云任务支持免费模型；其他付费模型和服务仍按其价格计费。",
       "expiry": "可用免费模型随供应商变化，未列结束日期。",
       "privacy": "路由可能使用记录提示词和输出、用于改进服务的供应商；NVIDIA 免费端点仅供试用，不输入个人或机密信息。",
+      "caution": "",
       "sources": [
         "https://kilo.ai/docs/getting-started/rate-limits-and-costs",
         "https://kilo.ai/landing/free-models",
@@ -3839,7 +4014,7 @@
       "status": "official_verified",
       "models": [],
       "other_models": [],
-      "quota": "新用户 X Subscription Free 包含有限 Chat 与 Agent 使用，未公布统一请求数、token 数或固定模型。",
+      "quota": "Free 包含有限 Chat、Agent、Imagine 和 Build 使用；AI 用量池由 Cursor 与 Grok 共享，每周刷新。未公布统一请求数、token 数或固定模型。",
       "conditions": "免费方案不含第三方模型；Hobby 为旧用户方案。通过 Cursor 产品使用，不包含通用 Grok API 赠金。",
       "expiry": "官方未公布结束日期。",
       "privacy": "",
@@ -3861,6 +4036,7 @@
       "quota": "内容审核 API 价格为免费；具体账户速率与用量上限以 Studio 为准，公开模型页未列统一重置周期。",
       "conditions": "需 Mistral Studio 账户及 API key。128k 上下文，用于内容审核与越狱检测，不是对话生成模型；账户、地区及绑卡条件未在该模型页列明。",
       "expiry": "官方价格页未列结束日期。",
+      "caution": "",
       "sources": [
         "https://docs.mistral.ai/inference/pricing",
         "https://docs.mistral.ai/models/mistral-moderation-26-03"
@@ -3876,6 +4052,7 @@
       "quota": "Free 每月 100 积分，当月有效不结转；新用户首次登录另获 250 积分，14 天有效。限时日活活动中 Free 每日 30 积分、Pro 每日 50 积分，通常次日自动发放。",
       "conditions": "日活须在 WorkBuddy 或 CodeBuddy 客户端完成至少一次有效 AI 对话或任务，网页不计，同用户/账号每日最多一次，Team 不参加。活动日边界及奖励有效期以后台为准。基础 Free 支持 Auto、每月 5,000 次补全及 3 个自动任务；全模型可选、无限补全、99 个自动任务属于限时提升。",
       "expiry": "日活与套餐提升活动结束日期另行通知；Free 月度积分不结转。",
+      "caution": "",
       "sources": [
         "https://www.workbuddy.ai/docs/zh/workbuddy/pricing",
         "https://www.workbuddy.ai/docs/zh/workbuddy/Subscription"
@@ -3893,6 +4070,7 @@
       "quota": "Pro 100／200／500 每月分别附带 100／200／500 美元 API 额度；Business 按付费 Standard 每席 20 美元、Premium 每席 100 美元合并，每工作区月度上限 500 美元。首期按剩余付费周期比例；年付 Business 一次发全年额度，上限 6,000 美元。",
       "conditions": "付费满 7 天且进入支持地区和开放批次；Plus、免费试用不适用。ChatGPT 与 API 同邮箱，激活人须为订阅／工作区和 API 组织的 owner，且有账单权限；一对一绑定，需手动激活。无需额外 API 付款方式。支持计入所绑定组织的普通 API、Playground、工具与存储收费，不覆盖 API key 调用 Codex，也不增加 ChatGPT 或已登录 Codex 额度；用完后若有购买余额会继续扣除，否则请求失败。",
       "expiry": "月度额度随当前订阅账期结束过期，不滚存；年付 Business 随年度账期过期。首次激活后，资格及活动持续时续期自动发放；未公布统一活动结束日。",
+      "caution": "",
       "sources": [
         "https://help.openai.com/en/articles/20001626-api-credits-benefit-for-eligible-chatgpt-subscriptions",
         "https://developers.openai.com/api/docs/guides/chatgpt-api-credits"
@@ -3932,9 +4110,9 @@
       "quota": "Pro 及更高自助付费套餐在 Devin Desktop 和 Devin CLI 中限时免费使用 SWE-2；未列本活动固定请求数或 Token 上限。",
       "conditions": "适用于支持该模型的自助套餐及 Devin Desktop、CLI；不适用于 Devin Cloud 会话。付费套餐本身费用照常。",
       "expiry": "免费至 2026 年 11 月 30 日，未明确截止时区；之后按每百万 token 输入 3 美元、输出 15 美元、缓存输入 0.30 美元计费。",
+      "caution": "不要与 SWE-2 Flash 的免费范围及截止日期混淆。",
       "sources": [
-        "https://docs.devin.ai/desktop/models",
-        "https://devin.ai/pricing"
+        "https://docs.devin.ai/desktop/models"
       ]
     },
     {
@@ -3947,6 +4125,7 @@
       "quota": "仅免 Kilo Enterprise 订阅费，不赠送 AI 推理额度；模型调用另行计费。席位按现有 Cursor Enterprise 合约席位 1:1 对应。",
       "conditions": "面向持有效付费 Cursor Enterprise 合约的组织，须提交签署声明及仅含客户名称、档位、席位数和到期日的脱敏证明；由 Kilo 审核确认生效日期。优惠可调整或撤回，不取消或报销 Cursor 合约。",
       "expiry": "申请截止 2026 年 11 月 30 日，获批优惠覆盖 Cursor 合约剩余期，最长 12 个月；未明确截止时区。",
+      "caution": "",
       "sources": [
         "https://kilo.ai/cursor-exodus"
       ]
@@ -4073,17 +4252,19 @@
       "kindLabel": "免费编程应用",
       "status": "official_verified",
       "models": [
-        "GPT-5.6 Luna（ChatGPT Free）"
+        "GPT-6 Luna（ChatGPT Free）",
+        "GPT-5.6 Terra（桌面 Work/Codex 有限访问）"
       ],
       "other_models": [],
-      "quota": "ChatGPT Free 的日常文本使用不限量，受反滥用规则限制；文件、图像和语音有独立限额，重置见产品提示。Codex 包含 Free/Go，额度按计划分配。",
-      "conditions": "需要账户。Free/Go 不包含 Codex Cloud；聊天和编程权益不等于 API 赠金。",
+      "quota": "ChatGPT Free 使用 GPT-6 Luna，日常文本不限量且受反滥用规则限制；上传、图像、语音等工具另有限额，重置见产品提示。定价页同时列出有限 Codex 与桌面 Work 权益。",
+      "conditions": "需要账户并处于官方支持地区；聊天和编程权益不等于 API 赠金。具体编程限额以账户显示为准，公开定价页未列绑卡条件。",
       "expiry": "官方未公布结束日期。",
       "privacy": "",
-      "caution": "",
+      "caution": "免费型号及工具可用性以官方当前方案和账户界面为准。",
       "sources": [
+        "https://chatgpt.com/pricing/",
         "https://help.openai.com/en/articles/9275245-chatgpt-free-tier-faq",
-        "https://help.openai.com/en/articles/11369540-using-codex-with-your-chatgpt-plan"
+        "https://help.openai.com/en/articles/7947663-chatgpt-supported-countries"
       ]
     },
     {
@@ -4097,7 +4278,7 @@
       ],
       "other_models": [],
       "quota": "存在五小时及每周使用限额，官方不公布统一固定次数。",
-      "conditions": "需账户，具体模型版本由套餐矩阵和产品界面决定；不包含 Claude Code 或 API 额度。",
+      "conditions": "需账户，免费方案提供 Sonnet 与 Haiku，具体版本未在方案矩阵公布；不含 Opus、Fable、Claude Code 或 API 额度。地区及绑卡条件方案页未公布。",
       "expiry": "官方未公布结束日期。",
       "privacy": "",
       "caution": "",
@@ -4132,6 +4313,7 @@
       "quota": "每月 5,000 次补全、2 个并行云任务，AI 用量有限且未公布固定数字。",
       "conditions": "当前国际站 Free 仅支持 Auto；不沿用其他地域或旧套餐额度。",
       "expiry": "官方未公布免费档结束日期。",
+      "caution": "",
       "sources": [
         "https://www.trae.ai/pricing"
       ]
@@ -4148,8 +4330,9 @@
       "quota": "WorkBuddy 和 CodeBuddy 内提供 Hy4 限免权益，未公布统一免费请求数、token 总额或重置规则。",
       "conditions": "通过对应产品账户使用；不是 TokenHub API 免费。TokenHub API 为刊例价五折活动，持续至 12 月 31 日。",
       "expiry": "11 月 4 日至 11 月 15 日，官方未注明统一截止时区。",
+      "caution": "官方只承诺一定额度，不是无限使用；地区、绑卡要求未公布。",
       "sources": [
-        "https://www.tencent.com/tencent-launches-hy4-joining-the-ranks-of-the-worlds-leading-open-source-ai-models/"
+        "https://www.tencent.com/zh-cn/tencent-launches-hy4-joining-the-ranks-of-the-worlds-leading-open-source-ai-models/"
       ]
     },
     {
@@ -4158,16 +4341,181 @@
       "kindLabel": "官方免费计划，详见条件",
       "status": "official_verified",
       "models": [
-        "SWE-2 Flash"
+        "SWE-2 Flash Medium",
+        "SWE-2 Flash High",
+        "SWE-2 Flash Max"
       ],
       "other_models": [],
-      "quota": "官方宣布免费至 11 月 30 日，未公布统一促销请求数、token 总额或重置规则。",
-      "conditions": "在 Devin Desktop 和 CLI 中使用，需要具有该模型访问资格的 Devin 账户；适用套餐按产品说明，不属于通用公开 API 赠金。 所选套餐本身费用不因此免除。",
-      "expiry": "至 11 月 30 日，公告未注明统一截止时区。",
+      "quota": "当前模型文档明确限时免费，未公布统一促销请求数、token 总额或重置规则；Free 方案可选择 Medium，High 与 Max 需要付费方案。",
+      "conditions": "仅 Devin Desktop 和 Devin CLI，不适用于 Devin Cloud；需要具有模型权限的 Devin 账户。地区及绑卡条件未公布。付费方案自身订阅费不因此免除，不属于通用 API 赠金。",
+      "expiry": "免费至 12 月 5 日 02:00（北京时间）。之后按官方模型表计费。",
+      "caution": "SWE-2 Flash 与 SWE-2 的免费范围和截止日不同，以所选模型为准。",
       "sources": [
-        "https://cognition.com/blog/swe-2-flash",
-        "https://docs.devin.ai/desktop/models",
-        "https://devin.ai/pricing"
+        "https://docs.devin.ai/desktop/models"
+      ]
+    },
+    {
+      "provider": "Qoder 每日积分活动",
+      "kind": "limited_time_free_coding_app",
+      "kindLabel": "官方免费计划，详见条件",
+      "status": "official_verified",
+      "models": [],
+      "other_models": [],
+      "quota": "桌面 App 每日手动领取 100 Credits，每轮北京时间 10:00 重置，领取后 30 天有效。",
+      "conditions": "国际版个人账户；须桌面手动领取，漏领不补，Teams/Enterprise 不参加。",
+      "expiry": "活动结束日期未公布。",
+      "privacy": "",
+      "caution": "",
+      "sources": [
+        "https://docs.qoder.com/events/100credits"
+      ]
+    },
+    {
+      "provider": "Fish Audio S2.1 Pro Free",
+      "kind": "limited_time_free_api",
+      "kindLabel": "官方免费计划，详见条件",
+      "status": "official_verified",
+      "models": [
+        "s2.1-pro-free"
+      ],
+      "other_models": [],
+      "quota": "无硬性字符上限，受公平使用政策约束；没有公布独立的日/月总额度或重置安排。",
+      "conditions": "注册 Fish Audio 获取 API key，官方明确免绑卡；必须使用 s2.1-pro-free，s2.1-pro 为收费型号。地区限制未公布；超过 100 万美元 ARR 的产品须先联系厂商。",
+      "expiry": "免费至 2026 年 11 月 30 日，具体时刻及时区未公布。",
+      "privacy": "请求可能用于改进模型。",
+      "caution": "无 SLA 或延迟保证；不是无限并发，不保证所有商业场景适用。",
+      "sources": [
+        "https://fish.audio/blog/s2-1-pro-free-api/",
+        "https://docs.fish.audio/developer-guide/models-pricing/pricing-and-rate-limits"
+      ]
+    },
+    {
+      "provider": "AutoClaw 万圣节奖励",
+      "kind": "limited_time_free_coding_app",
+      "kindLabel": "官方免费计划，详见条件",
+      "status": "official_verified",
+      "models": [],
+      "other_models": [],
+      "quota": "每账号一次领取 4,000 credits，官方折合 4,000 万 tokens；不是每日领取。适用模型未在本活动正文明确。",
+      "conditions": "活动期登录 AutoClaw 领取；地区和绑卡条件未公布。",
+      "expiry": "领取及使用均截至北京时间 2026 年 11 月 8 日 23:59（UTC 15:59）。",
+      "privacy": "",
+      "caution": "活动 10 月 31 日已开始。额外 1 亿 tokens 奖励在北京时间 11 月 5 日 07:00 已结束，不能继续领取；标题最高 8,000 万还包含上一周奖励，不作当前可领额度。",
+      "sources": [
+        "https://autoclaw.z.ai/blog/news/M11W1/"
+      ]
+    },
+    {
+      "provider": "ZCode 新用户五天试用",
+      "kind": "new_user_trial",
+      "kindLabel": "新用户试用，注意超额计费",
+      "status": "official_verified",
+      "models": [
+        "GLM-5.3",
+        "GLM-5.3-Flash"
+      ],
+      "other_models": [],
+      "quota": "仅前 5 天每日合计 800 万 tokens：GLM-5.3 为 300 万/日，GLM-5.3-Flash 为 500 万/日；每日刷新，精确重置时刻未公布。",
+      "conditions": "新用户在 ZCode 连接 BigModel 账户后自动获得试用，无需付款；中国用户用 BigModel，海外用 Z.ai（文档称同类试用）。绑卡要求未单独公布。",
+      "expiry": "连接后前 5 天，之后到期；不是持续每日免费额度。",
+      "privacy": "",
+      "caution": "不采用第三方“每天 3 亿 tokens”的说法；可用型号和余额仍以账户页为准。",
+      "sources": [
+        "https://zcode.z.ai/en/docs/configuration"
+      ]
+    },
+    {
+      "provider": "IteraCompute Qwen3.8-27B",
+      "kind": "limited_time_free_api",
+      "kindLabel": "官方免费计划，详见条件",
+      "status": "official_verified",
+      "models": [
+        "qwen/qwen3.8-27b"
+      ],
+      "other_models": [],
+      "quota": "每月 3,000 万 tokens，160,000 TPM，128K 总上下文；输入输出及推理共计，单次输出上限 8,192。每月 1 日 UTC 00:00 重置，不结转、无日额度；用尽返回 429，不自动收费。",
+      "conditions": "邮箱验证或 Google 登录；免信用卡、免充值。地区限制未公布；免费共享容量可能排队且无 SLA，部署精度可能调整。",
+      "expiry": "2026 年 11 月 24 日 00:00 Pacific Time，即 UTC 08:00、北京时间 16:00。",
+      "privacy": "",
+      "caution": "免费模型由 IteraCompute 托管；非阿里云官方赠额，",
+      "sources": [
+        "https://iteracompute.com/free/"
+      ]
+    },
+    {
+      "provider": "Zed 学生一年计划",
+      "kind": "student_offer",
+      "kindLabel": "官方免费计划，详见条件",
+      "status": "official_verified",
+      "models": [
+        "Zed 托管模型（有排除项）"
+      ],
+      "other_models": [],
+      "quota": "一年 Pro、每月 10 美元 AI token credits、无限 edit predictions；精确月度重置时刻未公布。",
+      "conditions": "全球认可大学在读且年满 18 岁；GitHub 账号超过 30 天及有效大学邮箱验证。排除 Claude Fable、Claude Opus、GPT-6 Astra、GPT-5.5 pro、GPT-5.4 pro；绑卡条件未公布。",
+      "expiry": "获批后一年。",
+      "privacy": "",
+      "caution": "",
+      "sources": [
+        "https://zed.dev/education",
+        "https://zed.dev/docs/account/plans-and-pricing"
+      ]
+    },
+    {
+      "provider": "Gemini CLI 免费个人档",
+      "kind": "recurring_free_coding_app",
+      "kindLabel": "免费编程应用",
+      "status": "official_verified",
+      "models": [
+        "Gemini 家族（由 CLI 决定具体模型）"
+      ],
+      "other_models": [],
+      "quota": "Google 账户 / Code Assist Individual 每人每日最多 1,000 模型请求；一次任务可能发多次模型请求。免费 API key 登录路径另为 250 请求/日。",
+      "conditions": "Google 账户身份认证；受容量及每分钟限流影响，精确每分钟数和日重置时刻本页未公布；地区和绑卡条件未在该页列明。不是通用 API 赠金。",
+      "expiry": "官方未公布结束日期。",
+      "privacy": "",
+      "caution": "",
+      "sources": [
+        "https://geminicli.com/docs/resources/quota-and-pricing/"
+      ]
+    },
+    {
+      "provider": "NVIDIA Build 免费推理",
+      "kind": "recurring_free_api",
+      "kindLabel": "周期性免费 API",
+      "status": "official_verified",
+      "models": [
+        "Nemotron 3.5 Super VL 120B",
+        "Nemotron 3.5 Lightning 30B",
+        "Nemotron 3 Ultra 550B",
+        "DeepSeek V4.1 Flash"
+      ],
+      "other_models": [],
+      "quota": "官方入口列为 Free inference；未在主页公布统一 tokens 总额度、重置安排或限速数字。",
+      "conditions": "需要 NVIDIA 账户及相应模型访问权限；账户、地区和绑卡条件以服务规则为准，主页未公布。不要把论坛 40 RPM 当成全部模型的官方保证。",
+      "expiry": "官方主页未公布结束日期。",
+      "privacy": "",
+      "caution": "仅确认官方免费推理入口，不保证某型号永远保留或有生产 SLA。",
+      "sources": [
+        "https://build.nvidia.com/"
+      ]
+    },
+    {
+      "provider": "Amazon Q Developer Free",
+      "kind": "recurring_free_coding_app",
+      "kindLabel": "免费编程应用",
+      "status": "official_verified",
+      "models": [
+        "最新 Claude 模型（官方未固定版本）"
+      ],
+      "other_models": [],
+      "quota": "每月 50 次 agentic requests；Java 升级转换每月 1,000 行代码。精确月重置时刻未公布。",
+      "conditions": "IDE 免费额度要求 AWS Builder ID；IAM 用户另按账户计额度。通过 IDE/CLI 等产品使用，不是 Claude API 赠金。地区及绑卡条件该页未公布。",
+      "expiry": "官方列为长期 Free Tier，未公告结束日。",
+      "privacy": "",
+      "caution": "",
+      "sources": [
+        "https://aws.amazon.com/q/developer/pricing/"
       ]
     }
   ]
