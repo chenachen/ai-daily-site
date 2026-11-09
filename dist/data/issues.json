@@ -1,10 +1,284 @@
 {
   "issues": [
     {
+      "digest_id": "2026-11-09",
+      "focus_event_id": "openrouter-auto-code-router-20261106",
+      "items": [
+        {
+          "event_id": "openrouter-auto-code-router-20261106",
+          "title": "OpenRouter 重建 Auto Router，并发布编程专用 Auto Code",
+          "summary": "OpenRouter 公布新一代 Auto Router 与编程专用 Auto Code，API 标识分别为 openrouter/auto 和 openrouter/auto-code。两者综合 11 项请求特征、实时价格、服务商健康和缓存状态选择模型及推理强度，并遵守零数据保留、模型名单、服务商限制和自带密钥等设置。聊天界面和 API 可提供路由决策信息；路由本身不额外收费，按最终使用模型的标准价格计费。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-09",
+          "event_at": "2026-11-06T16:19:50Z",
+          "urls": [
+            "https://x.com/OpenRouter/status/2118740149106573670",
+            "https://openrouter.ai/blog/announcements/auto-and-auto-code-routers/"
+          ],
+          "limitation": "",
+          "rank": 1
+        },
+        {
+          "event_id": "openai-codex-0-167",
+          "title": "Codex 0.167 增加代理指挥中心、跨后端会话切换与图片预览",
+          "summary": "Codex 0.167 可通过 codex agents --no-daemon 打开代理指挥中心，会话选择器标记未读结果。终端内可切换已连接后端并保留草稿，在受支持终端中预览本地图片附件。版本还修复切换模型提供商后已保存聊天不可见的问题；无法续接的聊天仍可阅读，并可生成可编辑提示词在新会话继续。",
+          "category": "news",
+          "group": "openai",
+          "groupLabel": "OpenAI",
+          "digest_id": "2026-11-09",
+          "event_at": "2026-11-06T01:40:00Z",
+          "urls": [
+            "https://github.com/openai/codex/releases/tag/rust-v0.167.0"
+          ],
+          "limitation": "",
+          "rank": 2
+        },
+        {
+          "event_id": "copilotkit-1-85-angular-generative-ui",
+          "title": "CopilotKit 1.85 为 Angular 增加原生生成式 UI",
+          "summary": "CopilotKit 1.85 新增 Angular 原生 Generative UI 支持，并将 analytics context 转发给 Intelligence 运行。此次发布还修复 Intelligence 运行停止及 A2UI 渲染相关的可靠性问题。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-09",
+          "event_at": "2026-11-06T15:47:49Z",
+          "urls": [
+            "https://github.com/CopilotKit/CopilotKit/releases/tag/v1.85.0"
+          ],
+          "limitation": "",
+          "rank": 3
+        },
+        {
+          "event_id": "claude-code-2-1-319-mcp-tasks",
+          "title": "Claude Code 2.1.319 支持后台 MCP Tasks 与直接拒绝权限等待",
+          "summary": "Claude Code 2.1.319 在终端中支持 MCP Tasks：服务端以任务形式执行工具时立即转入后台，完成后再通知模型，可通过环境变量关闭这一后台行为。新增 permissions.denyInsteadOfPrompting，让原本等待权限提示的工具调用直接被拒绝并继续当前轮次。/claude-api latency-optimize 可分析API代码延迟，并对照评测尝试较快设置。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-09",
+          "event_at": "2026-11-06T17:04:01Z",
+          "urls": [
+            "https://github.com/anthropics/claude-code/releases/tag/v2.1.319"
+          ],
+          "limitation": "",
+          "rank": 4
+        },
+        {
+          "event_id": "vercel-ai-sdk-7-0-165-telemetry-privacy",
+          "title": "AI SDK 7.0.165 清理遥测 URL 中的凭据并收紧输出记录",
+          "summary": "AI SDK 7.0.165 在文本生成结果进入遥测集成和追踪订阅前清理提供商请求 URL，防止端点凭据被暴露。recordOutputs=false 时不再记录转录词级时间。6.0.325 和5.0.286 同时在该设置关闭时隐藏提供商元数据；5.0.286 还修复未提供SDK工具时 toolChoice:none 未被保留的问题。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-09",
+          "event_at": "2026-11-07T19:27:48Z",
+          "urls": [
+            "https://github.com/vercel/ai/releases/tag/ai%407.0.165",
+            "https://github.com/vercel/ai/releases/tag/ai%406.0.325",
+            "https://github.com/vercel/ai/releases/tag/ai%405.0.286"
+          ],
+          "limitation": "",
+          "rank": 5
+        },
+        {
+          "event_id": "parallel-decisions-openrouter-free-launch",
+          "title": "Parallel Decisions 接入 OpenRouter，提供七天免费活动",
+          "summary": "Parallel Decisions 接入 OpenRouter，现有 OpenRouter API key 可直接使用，无需额外 Parallel 账户。Decisions Fast 提供32K上下文，每次请求最多100个问题，返回结构化 decisions；不支持 EU in-region routing。官方推出七天免费活动，当前模型页输入和输出价格均为免费，未公布活动精确终止时刻或专属总额度。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-09",
+          "event_at": "2026-11-06T21:32:28.000Z",
+          "urls": [
+            "https://x.com/OpenRouter/status/2118818826859225525",
+            "https://parallel.ai/blog/decisions-openrouter",
+            "https://openrouter.ai/parallel/decisions-fast:free"
+          ],
+          "limitation": "",
+          "rank": 6
+        },
+        {
+          "event_id": "qwen-code-0-27-multi-question-skills",
+          "title": "Qwen Code 0.27 支持并行子任务问题与 GitHub 仓库过滤",
+          "summary": "Qwen Code 0.27 的托管代理会话支持同时保留多个子任务问题，按任意顺序回答，并分开保存各子任务的草稿与错误。Web Shell 增加任务问答热力图和 Ask for details 侧任务，用于解释待选问题而不代为作答；GitHub 频道编辑器加入仓库允许与阻止列表。窗口内0.26.9版本还加入Skill ZIP上传、安装回执查询及一次激活1–100个Skill的接口。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-09",
+          "event_at": "2026-11-07T20:45:25Z",
+          "urls": [
+            "https://github.com/QwenLM/qwen-code/releases/tag/v0.27.0",
+            "https://github.com/QwenLM/qwen-code/releases/tag/v0.26.9"
+          ],
+          "limitation": "",
+          "rank": 7
+        },
+        {
+          "event_id": "opencode-2-2-6-mcp-pooling-worktrees",
+          "title": "OpenCode 2.2.6 增加 MCP 连接池与脚本工作树运行",
+          "summary": "OpenCode 2.2.6 增加可选 MCP 连接共享，通过 pool:true 让相同配置的多个项目共享一个连接。opencode run -w 可在新Git工作树中运行，不能与 --continue 或 --session 同用；--archived 可把脚本和CI会话直接归档。GUI插件可提供颜色主题、代码块动作及原生设置组件。非交互运行会等待其启动的后台任务结束，持续运行的开发服务器也会使该运行保持打开。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-09",
+          "event_at": "2026-11-06T23:37:20Z",
+          "urls": [
+            "https://github.com/anomalyco/opencode/releases/tag/v2.2.6"
+          ],
+          "limitation": "",
+          "rank": 8
+        },
+        {
+          "event_id": "assistant-ui-0-15-33-approval-generative-forms",
+          "title": "assistant-ui 修复审批后工具结果续流并增加生成式表单约束",
+          "summary": "assistant-ui React 0.15.33及core 0.3.33 修复AI SDK工具审批后续流：原有工具调用可以接收后续结果，不再追加重复调用，最终结果会替换提供给模型的临时进度内容。generative-ui 0.0.9 增加跨词汇表渲染器和平台转换器的声明式表单约束，组件渲染抛错时保持兄弟元素挂载，并过滤生成式UI序列化中的无效JSX标签和属性名。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-09",
+          "event_at": "2026-11-08T04:12:49Z",
+          "urls": [
+            "https://github.com/assistant-ui/assistant-ui/releases/tag/%40assistant-ui/react%400.15.33",
+            "https://github.com/assistant-ui/assistant-ui/releases/tag/%40assistant-ui/core%400.3.33",
+            "https://github.com/assistant-ui/assistant-ui/releases/tag/%40assistant-ui/generative-ui%400.0.9"
+          ],
+          "limitation": "",
+          "rank": 9
+        },
+        {
+          "event_id": "copilot-cli-1-0-107-session-dashboard",
+          "title": "Copilot CLI 1.0.107 将会话与设置功能转正式，预览版修复 MCP 路径",
+          "summary": "Copilot CLI 1.0.107 正式版纳入此前预览的 /code 命令在 VS Code 打开当前会话，/settings 改为统一面板并支持跨设置与本地资源搜索。正式版同时包含可选会话管理工具、本地会话提及和沙箱内运行扩展的设置；符合账户可用条件时，模型列表增加GPT-6.1 Terra。1.0.108-1预览版修复切换目录后本地MCP服务未重启、仍沿用旧目录拒绝路径的问题。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-09",
+          "event_at": "2026-11-06T20:37:19Z",
+          "urls": [
+            "https://github.com/github/copilot-cli/releases/tag/v1.0.107",
+            "https://github.com/github/copilot-cli/releases/tag/v1.0.108-1"
+          ],
+          "limitation": "",
+          "rank": 10
+        },
+        {
+          "event_id": "langchain-js-1-6-3-retry-replay-binary",
+          "title": "LangChain JS 1.6.3 修复重试异常匹配与二进制多模态编码",
+          "summary": "LangChain 1.6.3 的 modelRetryMiddleware 会重试 retryOn 所列异常类的子类，并保留穿过中间件的原始模型错误。OpenAI适配器1.8.2 将图片、音频和文件中的Uint8Array编码为Base64，而不是逗号分隔的字节数值；Anthropic适配器1.6.1 修复回放时丢失流式 server_tool_use 输入的问题。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-09",
+          "event_at": "2026-11-07T04:25:26Z",
+          "urls": [
+            "https://github.com/langchain-ai/langchainjs/releases/tag/langchain%401.6.3",
+            "https://github.com/langchain-ai/langchainjs/releases/tag/%40langchain/openai%401.8.2",
+            "https://github.com/langchain-ai/langchainjs/releases/tag/%40langchain/anthropic%401.6.1"
+          ],
+          "limitation": "",
+          "rank": 11
+        },
+        {
+          "event_id": "langchain-quickjs-0-3-12-timeout-schema",
+          "title": "LangChain QuickJS 0.3.12 支持关闭单次超时并修复嵌套 schema",
+          "summary": "LangChain QuickJS 0.3.12 增加关闭单次调用timeout的选项，修复CodeInterpreterMiddleware析构时阻塞解释器关闭的问题，并修复PTC签名中嵌套schema的$ref解析。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-09",
+          "event_at": "2026-11-07T05:00:13Z",
+          "urls": [
+            "https://github.com/langchain-ai/deepagents/releases/tag/langchain-quickjs%3D%3D0.3.12"
+          ],
+          "limitation": "",
+          "rank": 12
+        },
+        {
+          "event_id": "qoder-qoduck-availability",
+          "title": "Qoder 上线匿名模型 Qoduck，向个人用户提供每日免费额度",
+          "summary": "Qoder 宣布上线匿名模型 Qoduck，尚未公布模型来源。国际版 Free、Pro Trial、Lite、Pro、Pro+、Ultra 个人用户可获得每日免费额度，次日重置；额度内包括最高思考强度按 0.0 倍积分计费，用尽后恢复 0.5 倍积分。官方未公布具体次数及结束日期，Teams、Enterprise，以及 Qoder IDE、JetBrains 插件和 CLI 不参加该活动。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-09",
+          "event_at": "2026-11-07T02:11:24Z",
+          "urls": [
+            "https://x.com/qoder_ai_ide/status/2118889023339208755",
+            "https://docs.qoder.com/events/qoduck-free"
+          ],
+          "limitation": "",
+          "rank": 13
+        },
+        {
+          "event_id": "nous-arete-27b-release",
+          "title": "Nous 发布 Arete-27B，公开权重、训练数据与评测",
+          "summary": "Nous Research 发布基于 Qwen3.8-27B 后训练的 Arete-27B，并公开模型权重、训练数据及含 803 道题目的评测。项目围绕模型对政治与价值观相关问题的回答进行监督微调，使用约 5280 万 token，没有采用强化学习、偏好优化或架构修改。训练更新语言模型权重，冻结视觉编码器。",
+          "category": "news",
+          "group": "models",
+          "groupLabel": "模型与 API",
+          "digest_id": "2026-11-09",
+          "event_at": "2026-11-06T15:00:00Z",
+          "urls": [
+            "https://nousresearch.com/arete/"
+          ],
+          "limitation": "",
+          "rank": 14
+        },
+        {
+          "event_id": "openai-biobasicsbench-release",
+          "title": "OpenAI 与 Ligo 发布 BioBasicsBench，评测实验数据分析能力",
+          "summary": "OpenAI 与酶设计公司 Ligo 发布 BioBasicsBench，以 100 项真实实验任务评测 AI 智能体的日常实验数据分析能力。任务要求处理原始数据、发现实验错误，并识别现有证据不足以支持结论的情形。",
+          "category": "news",
+          "group": "openai",
+          "groupLabel": "OpenAI",
+          "digest_id": "2026-11-09",
+          "event_at": "2026-11-06T19:08:57Z",
+          "urls": [
+            "https://x.com/OpenAI/status/2118782708767965238",
+            "https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science/"
+          ],
+          "limitation": "",
+          "rank": 15
+        },
+        {
+          "event_id": "github-tool-anthropics-skills",
+          "title": "工具选荐｜Anthropic Skills：前端设计、Web 测试与 MCP 开发技能集",
+          "summary": "Anthropic Skills 以独立目录组织指令、脚本和资源，包含前端视觉设计、Web应用测试、MCP服务生成及文档处理技能。frontend-design覆盖配色、字体、布局与设计审校；仓库提供SKILL.md模板，可通过Claude Code插件市场安装示例或文档技能。仓库说明这些实现用于演示和教育，实际Claude产品中的行为可能不同。",
+          "category": "github",
+          "group": "other",
+          "groupLabel": "其他",
+          "digest_id": "2026-11-09",
+          "event_at": null,
+          "urls": [
+            "https://github.com/anthropics/skills",
+            "https://github.com/anthropics/skills/blob/main/skills/frontend-design/SKILL.md",
+            "https://github.com/trending"
+          ],
+          "limitation": "",
+          "rank": 16
+        },
+        {
+          "event_id": "freebie-roundup-2026-11-09",
+          "title": "免费资源：Devin SWE-2 Flash限免与Qoder每日积分",
+          "summary": "Devin Desktop 与 CLI 的 SWE-2 Flash 限免至 12 月 5 日 02:00（北京时间）。Free 可选 Medium，High 与 Max 需付费方案；不适用于 Cloud。\n\nQoder 国际版个人账户可在桌面 App 每日手动领取 100 Credits，每轮北京时间 10:00 更新，领取后 30 天有效。",
+          "category": "freebie",
+          "group": "other",
+          "groupLabel": "其他",
+          "digest_id": "2026-11-09",
+          "event_at": null,
+          "urls": [
+            "https://docs.devin.ai/desktop/models",
+            "https://docs.qoder.com/events/100credits"
+          ],
+          "limitation": "免费模型和积分适用范围以各产品条款为准；上述权益均不提供通用API赠金。",
+          "rank": 17
+        }
+      ]
+    },
+    {
       "digest_id": "2026-11-06",
-      "source_sha256": "88abe8b450f5f3a481f5d9d2579743515f84f4b5f46b4f950e40c57c1a9b0f0a",
-      "raw_source_sha256": "2f1c6de35077037669a614f9014b940e2150df88364be78137b518a0e550f49c",
-      "has_editorial": true,
       "focus_event_id": "google-gemini-omni-1-2-flash",
       "items": [
         {
@@ -169,9 +443,6 @@
     },
     {
       "digest_id": "2026-11-05",
-      "source_sha256": "63bad345264f83cdc4c2c7d9bf75b0121f633405da8e26c0f3d51914a9e7ecdf",
-      "raw_source_sha256": "a8f011d3a61dbbd22e1aaef77dacba6b49cf7f82241a98de15e4a4d0f714dc8d",
-      "has_editorial": true,
       "focus_event_id": "tencent-hy4-launch",
       "items": [
         {
@@ -327,9 +598,6 @@
     },
     {
       "digest_id": "2026-11-04",
-      "source_sha256": "8a78ae96dcac531ff50b80e319be740e51b863659b7202a6a6768a71cefd9d5a",
-      "raw_source_sha256": "8d2981b646d083f6dff60ac504248105c019121bac0413e0ff7a7d99d0503a49",
-      "has_editorial": true,
       "focus_event_id": "openai-agents-native-preview-js-python",
       "items": [
         {
@@ -531,9 +799,6 @@
     },
     {
       "digest_id": "2026-11-03",
-      "source_sha256": "211308dda881487e1285ed8e33554332b78ee69ed99afc7d6cbc4bbf09ec33a5",
-      "raw_source_sha256": "a5e8931a694db0f6f11a8bd4029a9d438428b67f14823aa7be9043fdc588a8db",
-      "has_editorial": true,
       "focus_event_id": "hume-audio-decision-api-announcement",
       "items": [
         {
@@ -763,9 +1028,6 @@
     },
     {
       "digest_id": "2026-11-02",
-      "source_sha256": "9d97f7cf080d834e6e725f2622fa642406d9aa795b18d5def8f2a95da45de857",
-      "raw_source_sha256": "1650cf8ed76e75da45b5d4afd7bc675a99a2d84636690ab17c4ad56405c81417",
-      "has_editorial": true,
       "focus_event_id": "vercel-ai-sdk-7-0-158-159-mcp-sandbox",
       "items": [
         {
@@ -1012,9 +1274,6 @@
     },
     {
       "digest_id": "2026-10-30",
-      "source_sha256": "88055e901c1113292ccc0e12d1b1dc44316853945d7aaf64b9386c4126907a06",
-      "raw_source_sha256": "a878a5f787b84a1cd488a3032c3e929de74b07565c33929887b6bc7b9244d1f1",
-      "has_editorial": true,
       "focus_event_id": "anomalyco/opencode:v2.2.2",
       "items": [
         {
@@ -1253,9 +1512,6 @@
     },
     {
       "digest_id": "2026-10-29",
-      "source_sha256": "d3092d093e958104ca80b2c758ad03b1d9b372da493adcfcf73b19e8b4d023f3",
-      "raw_source_sha256": "f6fa5247e55f9a9fb6bcc7430e6f743982e469809063203d8d020e417118a3ec",
-      "has_editorial": true,
       "focus_event_id": "google-gemini-4-carbon-launch-20261028",
       "items": [
         {
@@ -1499,9 +1755,6 @@
     },
     {
       "digest_id": "2026-10-28",
-      "source_sha256": "9ed0c438a6cd00bb4d5c52e94a0be75421a544b8e28677ceaef226202a5d0e68",
-      "raw_source_sha256": "c5ac2541b47f2c646fa8e88c32cbb9cceb0d5541e267aedc7824e9c739544fb4",
-      "has_editorial": true,
       "focus_event_id": "google-genie-4-preview",
       "items": [
         {
@@ -1757,9 +2010,6 @@
     },
     {
       "digest_id": "2026-10-27",
-      "source_sha256": "249448710b8331629c080ae3fabaf21140d14c4457c32cae549b257d672fb434",
-      "raw_source_sha256": "674f2b772c09e96f93a4b090fa2e923daf71e13b88b7884a76696ab437729e3c",
-      "has_editorial": true,
       "focus_event_id": "openai-gpt-6.1-terra-20261026",
       "items": [
         {
@@ -1994,9 +2244,6 @@
     },
     {
       "digest_id": "2026-10-26",
-      "source_sha256": "7bde911214f0ffbde325bf0fd9c7756d68589e6886ce264b6fdb2becdaed0034",
-      "raw_source_sha256": "dc45eea5bdf04365f98838b590d88dc40e19ece22490a82de2019903d2258d49",
-      "has_editorial": true,
       "focus_event_id": "kimi-k3-1-pro-launch-20261023",
       "items": [
         {
@@ -2192,9 +2439,6 @@
     },
     {
       "digest_id": "2026-10-23",
-      "source_sha256": "02f94d7e983ea30908d01c3ac705df81127c72aa2938d387efb7aa39f7220f52",
-      "raw_source_sha256": "e2530de16ed30eb8dd2ade530beaf3dfb1de2a9b8691762e3223013f10006c7e",
-      "has_editorial": true,
       "focus_event_id": "openai-decisions-api-ga-20261022",
       "items": [
         {
@@ -2425,9 +2669,6 @@
     },
     {
       "digest_id": "2026-10-22",
-      "source_sha256": "a24141eff97cb2b985f11330f753c06c9da2c372492c21c876e6048e4174c6a2",
-      "raw_source_sha256": "65784fae6fb0b3a72e5e8e1e46365df029fffd9f0160f9146262f56870bf876d",
-      "has_editorial": true,
       "focus_event_id": "recursive-flint-initial-release-20261021",
       "items": [
         {
@@ -2681,9 +2922,6 @@
     },
     {
       "digest_id": "2026-10-21",
-      "source_sha256": "516bcb846dc93a687a73e9effb8b4d1244a5b7e5ce38d0beff73908f971d59ee",
-      "raw_source_sha256": "44273a26678bcb66377a1d12ba3dba3bf505562245f96801ac2862cf829dd721",
-      "has_editorial": true,
       "focus_event_id": "openai-api-12hour-prompt-cache-20261020",
       "items": [
         {
@@ -2916,9 +3154,6 @@
     },
     {
       "digest_id": "2026-10-20",
-      "source_sha256": "c197e30465f0f9c462c63c56664f0cdecae8ec7bb67ab45b3d703894e0b88ba7",
-      "raw_source_sha256": "0d8e50a3a0c5c50b7dc796833fabb2302853cd1e330304fa3488f4c259157d56",
-      "has_editorial": true,
       "focus_event_id": "minimax-m31-flash-20261019",
       "items": [
         {
@@ -3157,9 +3392,6 @@
     },
     {
       "digest_id": "2026-10-19",
-      "source_sha256": "b16acf6efb71617742e7d7c262092194bc288ae81fc9d95a3dc2b5f6241d4790",
-      "raw_source_sha256": "7c7da0e8ce645efe04f58443f7f5145b57701eb9d791937ebc8e7e7a147b3a29",
-      "has_editorial": false,
       "focus_event_id": "openai-gpt-live-prompt-to-voice-20261016",
       "items": [
         {
@@ -3469,9 +3701,6 @@
     },
     {
       "digest_id": "2026-10-16",
-      "source_sha256": "391bf19ad117adb1b600c3ded5ab88db98dc7713908ee8612a9ce8f05f41e96e",
-      "raw_source_sha256": "3221dcef1c3aefbd86cb83465e486e03d074a76f9aad3a1d25871ccb31eb194c",
-      "has_editorial": false,
       "focus_event_id": "openai-gpt-live-1.1-release-20261015",
       "items": [
         {
@@ -3947,7 +4176,6 @@
       "models": [
         "Big Pickle",
         "Crouton Alpha Free",
-        "Pulse Alpha Free",
         "GLM-5.3-Flash Free",
         "DeepSeek V4.1 Flash Free",
         "Beam Free",
@@ -3955,33 +4183,19 @@
         "MiMo-V2.6-Flash Free",
         "Nemotron 3 Ultra Free",
         "Nemotron 3.5 Lightning Free",
-        "Nemotron 3.5 Super VL Free"
+        "Nemotron 3.5 Super VL Free",
+        "Iceman Free",
+        "Inkling 2 Small Free",
+        "Jev 1.13 Free"
       ],
       "other_models": [],
       "quota": "所列免费聊天模型限 OpenCode 客户端使用；未公布统一请求额度、重置周期或截止日。",
-      "conditions": "免费聊天模型限 OpenCode 客户端，需要账户并选择相应型号，不等于任意客户端的通用免费 API。Crouton 不支持欧盟、阿富汗、白俄罗斯、中国（含香港和澳门）、柬埔寨、古巴、厄立特里亚、埃塞俄比亚、海地、伊朗、伊拉克、利比亚、缅甸、尼加拉瓜、朝鲜、巴基斯坦、俄罗斯、索马里、叙利亚、委内瑞拉、西撒哈拉，以及部分受支持国家内的特定地区。Pulse 不支持欧盟、冰岛、列支敦士登、挪威、古巴、伊朗、朝鲜、俄罗斯、乌克兰和委内瑞拉。Beam 不支持安哥拉、白俄罗斯、柬埔寨、中国（含香港和澳门）、古巴、刚果民主共和国、赤道几内亚、伊朗、伊拉克、老挝、利比亚、尼日利亚、朝鲜、俄罗斯、叙利亚、土库曼斯坦、乌兹别克斯坦、委内瑞拉，以及乌克兰的克里米亚、顿涅茨克和卢甘斯克地区。",
+      "conditions": "免费聊天模型限 OpenCode 客户端，需要账户并选择相应型号，不等于任意客户端的通用免费 API。Crouton 不支持欧盟、阿富汗、白俄罗斯、中国（含香港和澳门）、柬埔寨、古巴、厄立特里亚、埃塞俄比亚、海地、伊朗、伊拉克、利比亚、缅甸、尼加拉瓜、朝鲜、巴基斯坦、俄罗斯、索马里、叙利亚、委内瑞拉、西撒哈拉，以及部分受支持国家内的特定地区。Inkling 2 Small 不支持欧盟、冰岛、列支敦士登、挪威、古巴、伊朗、朝鲜、俄罗斯、乌克兰和委内瑞拉。Beam 不支持安哥拉、白俄罗斯、柬埔寨、中国（含香港和澳门）、古巴、刚果民主共和国、赤道几内亚、伊朗、伊拉克、老挝、利比亚、尼日利亚、朝鲜、俄罗斯、叙利亚、土库曼斯坦、乌兹别克斯坦、委内瑞拉，以及乌克兰的克里米亚、顿涅茨克和卢甘斯克地区。",
       "expiry": "各项免费活动结束日期未公布。",
-      "privacy": "GLM 和 DeepSeek 免费项声明零保留、不训练。Crouton 的收集数据保留 30 天，不用于模型训练；Beam 为安全目的保留 30 天，不用于训练。Pulse 免费期数据可保留并用于改进模型；Flint 保留 30 天。NVIDIA Nemotron 3 Ultra、3.5 Lightning、3.5 Super VL 免费端点仅供试用，禁止提交个人或机密数据，使用记录用于安全及改进 NVIDIA 产品和服务。",
+      "privacy": "GLM 和 DeepSeek 免费项声明零保留、不训练。Crouton 的收集数据保留 30 天，不用于模型训练；Beam 为安全目的保留 30 天，不用于训练。Iceman 免费期数据保留并用于改进模型；Inkling 2 Small 免费期数据保留并可用于模型训练；Flint 保留 30 天。NVIDIA Nemotron 3 Ultra、3.5 Lightning、3.5 Super VL 免费端点仅供试用，禁止提交个人或机密数据，使用记录用于安全及改进 NVIDIA 产品和服务。",
       "caution": "",
       "sources": [
-        "https://opencode.ai/v2/docs/console/models/"
-      ]
-    },
-    {
-      "provider": "Qoder International",
-      "kind": "free_coding_app_plus_limited_promotion",
-      "kindLabel": "免费应用 + 限时活动",
-      "status": "official_promotion_verified",
-      "models": [
-        "Qwen3.8-Flash"
-      ],
-      "other_models": [],
-      "quota": "Qwen3.8-Flash 每日免费次数内为 0.0×，最大思考强度也不扣 Credits；Free 与零余额个人账户可用。付费用户次数更多，具体次数及重置时刻未公布；次日恢复，超额可按原倍率使用 Credits。",
-      "conditions": "Qoder International 新旧个人账户均可，包括 Free、Trial、Lite、Pro、Pro+、Ultra；不含 Teams/Enterprise。选模型自动生效，无需领取；其他模型调用不在本优惠内。绑卡条件未单列公布。",
-      "expiry": "9 月 18 日开始，原 9 月 30 日截止已延期；新截止日未公布，官方称提前公告。",
-      "caution": "Qoder DeepSeek-Flash 活动官方只延长到 10 月 31 日 24:00（UTC+8），已过期，不计入当前福利。",
-      "sources": [
-        "https://docs.qoder.com/events/flashoffer"
+        "https://opencode.ai/docs/console/models/"
       ]
     },
     {
@@ -4128,28 +4342,6 @@
       "caution": "",
       "sources": [
         "https://kilo.ai/cursor-exodus"
-      ]
-    },
-    {
-      "provider": "StepFun StepAudio 3",
-      "kind": "limited_time_free_api",
-      "kindLabel": "官方免费计划，详见条件",
-      "status": "official_verified",
-      "models": [
-        "stepaudio-3-realtime",
-        "stepaudio-3-tts",
-        "stepaudio-3-gen",
-        "stepaudio-3-music",
-        "stepaudio-3-asr-max"
-      ],
-      "other_models": [],
-      "quota": "适用限时免费政策的 StepAudio 3 型号在 11 月 8 日结束前维持限免；已收费的模型与服务继续按现有标准收费。11 月 9 日起按官网新价格计费，活动未列统一免费调用总额。",
-      "conditions": "需要中国站开放平台账户与 API key；各端点限流和实名认证要求按平台规则。音色复刻、音色设计等服务不能据模型限免推定全部免费。",
-      "expiry": "北京时间 11 月 8 日结束前；11 月 9 日 00:00 起按新价格计费。",
-      "privacy": "",
-      "caution": "",
-      "sources": [
-        "https://platform.stepfun.com/docs/zh/guides/pricing/details"
       ]
     },
     {
@@ -4390,22 +4582,6 @@
       ]
     },
     {
-      "provider": "AutoClaw 万圣节奖励",
-      "kind": "limited_time_free_coding_app",
-      "kindLabel": "官方免费计划，详见条件",
-      "status": "official_verified",
-      "models": [],
-      "other_models": [],
-      "quota": "每账号一次领取 4,000 credits，官方折合 4,000 万 tokens；不是每日领取。适用模型未在本活动正文明确。",
-      "conditions": "活动期登录 AutoClaw 领取；地区和绑卡条件未公布。",
-      "expiry": "领取及使用均截至北京时间 2026 年 11 月 8 日 23:59（UTC 15:59）。",
-      "privacy": "",
-      "caution": "活动 10 月 31 日已开始。额外 1 亿 tokens 奖励在北京时间 11 月 5 日 07:00 已结束，不能继续领取；标题最高 8,000 万还包含上一周奖励，不作当前可领额度。",
-      "sources": [
-        "https://autoclaw.z.ai/blog/news/M11W1/"
-      ]
-    },
-    {
       "provider": "ZCode 新用户五天试用",
       "kind": "new_user_trial",
       "kindLabel": "新用户试用，注意超额计费",
@@ -4516,6 +4692,44 @@
       "caution": "",
       "sources": [
         "https://aws.amazon.com/q/developer/pricing/"
+      ]
+    },
+    {
+      "provider": "Qoder Qoduck 限免",
+      "kind": "limited_time_free_coding_app",
+      "kindLabel": "官方免费计划，详见条件",
+      "status": "official_verified",
+      "models": [
+        "Qoduck（身份未披露）"
+      ],
+      "other_models": [],
+      "quota": "每天提供免费使用次数，具体数目和重置时刻未公布；付费个人用户次数更多。额度内0 Credits，耗尽后按0.5×倍率收费或次日恢复免费额度。",
+      "conditions": "仅Qoder International个人账户，包括Free和零余额账户；需要最新版Qoder并选择Qoduck，无须领取。Qoder IDE、JetBrains插件、CLI及其他产品当前不适用，Teams/Enterprise不适用。地区及绑卡条件未列明。",
+      "expiry": "2026年11月7日开始，结束日期待官方提前公告。",
+      "privacy": "官方活动正文未列数据保留规则。",
+      "caution": "",
+      "sources": [
+        "https://docs.qoder.com/events/qoduck-free"
+      ]
+    },
+    {
+      "provider": "Parallel Decisions OpenRouter 七天限免",
+      "kind": "limited_time_free_api",
+      "kindLabel": "官方免费计划，详见条件",
+      "status": "official_verified",
+      "models": [
+        "parallel/decisions-fast:free"
+      ],
+      "other_models": [],
+      "quota": "限免期间输入和输出价格均为零；适用 OpenRouter 免费端点限流，活动未单列独立请求总额。免费模型日计数按 UTC 日更新，即北京时间每日 08:00。",
+      "conditions": "使用 OpenRouter 账户及 API key，无需另注册 Parallel。通过 Decisions API 使用，返回结构化判断而非聊天文本；目前不支持 EU in-region routing。活动页未单列绑卡要求或其他地区限制。",
+      "expiry": "11 月 6 日公告提供七天限免，未明确精确结束时刻及时区。",
+      "privacy": "活动公告未单列数据保留条款。",
+      "caution": "",
+      "sources": [
+        "https://parallel.ai/blog/decisions-openrouter",
+        "https://openrouter.ai/parallel/decisions-fast:free",
+        "https://openrouter.ai/docs/api/reference/limits"
       ]
     }
   ]
