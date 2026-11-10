@@ -1,90 +1,95 @@
 {
   "schema_version": 1,
-  "latest": "2026-11-09",
+  "latest": "2026-11-10",
   "digests": {
+    "2026-11-10": {
+      "path": "daily/2026-11-10/",
+      "content_sha256": "0141fbb40a3f401821bc6f088703da425546260d09ffe76b5aaba4dbeb2523a7",
+      "source_sha256": "5fc051cc1027908732d44f3e7ac810c60d2e3d5742aaa39223f8c77b953ea530"
+    },
     "2026-11-09": {
       "path": "daily/2026-11-09/",
-      "content_sha256": "07fde641f39386d1eaca3efedfaf7f6184c41bad300c34cef10195473d7b7bce",
+      "content_sha256": "5de9f7475abf1d776ba40804910f8fd290ace36eae89bb8c83edd9f2171bb5d5",
       "source_sha256": "0122fab6a5e41f775b08001334c3ae0a716fc288c5c88826ba87c251d1d44e17"
     },
     "2026-11-06": {
       "path": "daily/2026-11-06/",
-      "content_sha256": "f665b54cb3808bceb3cf66d0ac346ed62eb21279e8c547c589e0da5cca1b9f9b",
+      "content_sha256": "c83a06f6b9136298438af2de240ff30988ce648dc8130c6445ee493176d65432",
       "source_sha256": "88abe8b450f5f3a481f5d9d2579743515f84f4b5f46b4f950e40c57c1a9b0f0a"
     },
     "2026-11-05": {
       "path": "daily/2026-11-05/",
-      "content_sha256": "f40ca8883f889a66554b5cfb4e37da8a162eea8fd6b44f004e6085acc312baf7",
+      "content_sha256": "18ab1356352e97595b1fdc19858772120495e2ceea81f3a59a864c4abc2e07f5",
       "source_sha256": "63bad345264f83cdc4c2c7d9bf75b0121f633405da8e26c0f3d51914a9e7ecdf"
     },
     "2026-11-04": {
       "path": "daily/2026-11-04/",
-      "content_sha256": "248d9299eec5891bd2f4d5273cf2084751a75b2cf32579dbd4a1b0ef3cf223ac",
+      "content_sha256": "87c394e4adc6601d74d03675f0c9d13f0f51120fa6f3f54615dbda3505b45b1f",
       "source_sha256": "8a78ae96dcac531ff50b80e319be740e51b863659b7202a6a6768a71cefd9d5a"
     },
     "2026-11-03": {
       "path": "daily/2026-11-03/",
-      "content_sha256": "da1102a38631b9a654b583358e0fef02b0320dab64207d0d7eab0d302ac15f84",
+      "content_sha256": "fbb58e7c97a3e4d88e8ef5a525bc7d16952022dbe0be8f0eaa4b4f049111e324",
       "source_sha256": "211308dda881487e1285ed8e33554332b78ee69ed99afc7d6cbc4bbf09ec33a5"
     },
     "2026-11-02": {
       "path": "daily/2026-11-02/",
-      "content_sha256": "01899dacd7b16774602223349cce4b00c9faa46a6fb002c75957d2c9df4b513e",
+      "content_sha256": "513500cd353648b30faa8103d162b47ad4f8a6f19995985aacac9a3fd859d970",
       "source_sha256": "9d97f7cf080d834e6e725f2622fa642406d9aa795b18d5def8f2a95da45de857"
     },
     "2026-10-30": {
       "path": "daily/2026-10-30/",
-      "content_sha256": "fbec616b500ec9ee4da2edb4bf9da269ed103047c7891b573b7dde896a3ba72a",
+      "content_sha256": "bc2b0acdd86b21a563debb3a08a4df64a2d3faed0252c6312aa8b248b7bbb607",
       "source_sha256": "88055e901c1113292ccc0e12d1b1dc44316853945d7aaf64b9386c4126907a06"
     },
     "2026-10-29": {
       "path": "daily/2026-10-29/",
-      "content_sha256": "f0bae8429f026e316ad6970a48b1f1ff1abfa536e8ef44df804326d92fa0e85e",
+      "content_sha256": "22433fd0976bdf9f920b51054473c63d54e3388b7ca9e869570fdaa37bc0e4f6",
       "source_sha256": "d3092d093e958104ca80b2c758ad03b1d9b372da493adcfcf73b19e8b4d023f3"
     },
     "2026-10-28": {
       "path": "daily/2026-10-28/",
-      "content_sha256": "5a0f4156755b515232d0b6b1b2e28391f6cbb4c4c3dec3c750105ce988941de1",
+      "content_sha256": "69d98a33f10efaf18ee263f33b89056547aec1c2902369fd629e167baf46f568",
       "source_sha256": "9ed0c438a6cd00bb4d5c52e94a0be75421a544b8e28677ceaef226202a5d0e68"
     },
     "2026-10-27": {
       "path": "daily/2026-10-27/",
-      "content_sha256": "5cda0f8bd3c38d778046ff7513ce4a92d06f9f6edbac5ff7ab4193d8abf23fc3",
+      "content_sha256": "6ea12a63ae54e1c4eccdec441c37398879955c4778b161078d2ac79271c66ae0",
       "source_sha256": "249448710b8331629c080ae3fabaf21140d14c4457c32cae549b257d672fb434"
     },
     "2026-10-26": {
       "path": "daily/2026-10-26/",
-      "content_sha256": "655e54793cc37902ec3edbff01fc021a677c345795dc2a57d539d0e7e43b4b48",
+      "content_sha256": "15e6dade508c073455bb70f66ce180a0bf62dd0d319eae5941ba5ad1986b341e",
       "source_sha256": "7bde911214f0ffbde325bf0fd9c7756d68589e6886ce264b6fdb2becdaed0034"
     },
     "2026-10-23": {
       "path": "daily/2026-10-23/",
-      "content_sha256": "3cfb059afe59c51df4dfb5a11b7ca9d3951ee634ae82c2fe5a1d56b94c3b0fea",
+      "content_sha256": "96ece81a23aeca4a6c624c74c39ded608ffd4de82d185f0ebdcc96d020d39267",
       "source_sha256": "02f94d7e983ea30908d01c3ac705df81127c72aa2938d387efb7aa39f7220f52"
     },
     "2026-10-22": {
       "path": "daily/2026-10-22/",
-      "content_sha256": "1050656b27049b6343fe14201dfad8ac12b8c7fc168a3186f462f57cd8108886",
+      "content_sha256": "8c9c71d66bc84ba7e082dc37ede8d3136a122271118a3a6385cc10a8e71806f2",
       "source_sha256": "a24141eff97cb2b985f11330f753c06c9da2c372492c21c876e6048e4174c6a2"
     },
     "2026-10-21": {
       "path": "daily/2026-10-21/",
-      "content_sha256": "684aa4889ffd247005e0255c4113225fee0a4b07adca2a472e3534093d3a1c3b",
+      "content_sha256": "4adbba6bfbc7369bd93c01c94a07548e14ef31cbe1ca917f773d2fab3e07deb9",
       "source_sha256": "516bcb846dc93a687a73e9effb8b4d1244a5b7e5ce38d0beff73908f971d59ee"
     },
     "2026-10-20": {
       "path": "daily/2026-10-20/",
-      "content_sha256": "26979d9f348acd0835f1fce375c02e6d48fbd0890f428688ced4f7536960ff22",
+      "content_sha256": "204d2a70087a01a7435b60b0b61fa140498193c045b40cfa32971a64ac170f58",
       "source_sha256": "c197e30465f0f9c462c63c56664f0cdecae8ec7bb67ab45b3d703894e0b88ba7"
     },
     "2026-10-19": {
       "path": "daily/2026-10-19/",
-      "content_sha256": "bcec5f7dc338c85a35ba6fe9472972f14fa099c89479ed780b22fa720f961cc7",
+      "content_sha256": "47cb67d93f48de06eb1468482708dde58ca3bd8542df3e720cd56be4c7f9346a",
       "source_sha256": "b16acf6efb71617742e7d7c262092194bc288ae81fc9d95a3dc2b5f6241d4790"
     },
     "2026-10-16": {
       "path": "daily/2026-10-16/",
-      "content_sha256": "73116167d3575fd1ecd4c65190635f2abb44505625d504e129e26ef6f3fd9e0e",
+      "content_sha256": "0ade8d26bbf7dbec161e749d2e90f79722e4e9aad16495d0a4698541a37ca4b3",
       "source_sha256": "391bf19ad117adb1b600c3ded5ab88db98dc7713908ee8612a9ce8f05f41e96e"
     }
   }

@@ -1,6 +1,249 @@
 {
   "issues": [
     {
+      "digest_id": "2026-11-10",
+      "focus_event_id": "anthropic-fable-mythos-5-2-launch",
+      "items": [
+        {
+          "event_id": "anthropic-fable-mythos-5-2-launch",
+          "title": "Anthropic 发布 Claude Fable 5.2 与 Mythos 5.2，降价并增加快速模式",
+          "summary": "Anthropic 发布 Claude Fable 5.2 与 Claude Mythos 5.2，两者共用底层模型，提升编程、推理与视觉能力；Fable 采用更强的网络安全及生物安全限制，Mythos 面向通过验证的相关研究组织。常规模式每百万输入/输出 token 为 8/40 美元，官方称输出速度较 5.1 最高提高 30%；可选快速模式价格为 16/80 美元，token 生成速度最高提高至 2.5 倍。Fable 5.2 已在 Claude Platform 等平台提供，API 标识为 claude-fable-5-2。",
+          "category": "news",
+          "group": "models",
+          "groupLabel": "模型与 API",
+          "digest_id": "2026-11-10",
+          "event_at": "2026-11-09T18:57:59.000Z",
+          "urls": [
+            "https://x.com/claudeai/status/2119867114450268322",
+            "https://x.com/AnthropicAI/status/2119867707546071125",
+            "https://www.anthropic.com/claude-fable-and-mythos-5-2"
+          ],
+          "limitation": "Mythos 5.2 需通过 Cyber Verification 或 Life Sciences Verification Program 申请；其快速模式仅向验证计划内组织开放。",
+          "rank": 1
+        },
+        {
+          "event_id": "meta-muse-ember-launch",
+          "title": "Meta 发布 Muse Ember：百万 token 上下文与多模态输入，支持 Responses API",
+          "summary": "Meta 发布面向工具调用、编程子任务、路由、提取和长文档处理的 Muse Ember。模型支持文本、图像、音频及视频输入，具有 100 万 token 上下文窗口，最多输出 51.2 万 token，并支持 Responses API。模型以 muse-ember-1.0 在 Muse Code 和 Meta Model API 上提供，每百万输入 token 0.10 美元、缓存输入 0.004 美元、输出 0.50 美元。",
+          "category": "news",
+          "group": "models",
+          "groupLabel": "模型与 API",
+          "digest_id": "2026-11-10",
+          "event_at": "2026-11-09T18:04:15.000Z",
+          "urls": [
+            "https://x.com/AIatMeta/status/2119853591703998787",
+            "https://research.meta.ai/blog/muse-ember"
+          ],
+          "limitation": "",
+          "rank": 2
+        },
+        {
+          "event_id": "google-maps-ai-studio-integration",
+          "title": "Google AI Studio 集成 Maps Platform，支持免绑卡原型预览",
+          "summary": "Google Maps Platform 现可直接在 Google AI Studio 中使用。开发者描述应用后，AI Studio 负责配置并连接地图 API key，在预览区域加载实时交互地图，也可自动识别并关联已有 Google Cloud 项目。原型体验无需信用卡，在每日限额内免费，额度每 24 小时重置；生产环境仍需付费 Cloud 结算账户。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-10",
+          "event_at": "2026-11-09T17:00:00+00:00",
+          "urls": [
+            "https://blog.google/innovation-and-ai/technology/developers-tools/build-google-maps-platform-ai-studio/"
+          ],
+          "limitation": "",
+          "rank": 3
+        },
+        {
+          "event_id": "openai-sdk-agent-stream-rosalind",
+          "title": "OpenAI SDK 增加代理会话流选项与 Rosalind 模型标识",
+          "summary": "OpenAI Python SDK 3.48.0 增加 agent sessions 的 stream options，并与 Node SDK 7.54.0 一起把 gpt-6-rosalind 加入 beta Responses 可识别模型列表。",
+          "category": "news",
+          "group": "openai",
+          "groupLabel": "OpenAI",
+          "digest_id": "2026-11-10",
+          "event_at": "2026-11-09T16:12:58Z",
+          "urls": [
+            "https://github.com/openai/openai-python/releases/tag/v3.48.0",
+            "https://github.com/openai/openai-node/releases/tag/v7.54.0"
+          ],
+          "limitation": "",
+          "rank": 4
+        },
+        {
+          "event_id": "claude-code-2-1-321-permissions-remote",
+          "title": "Claude Code 2.1.321 修复 MCP OAuth 重定向与 Bash 权限检查",
+          "summary": "Claude Code 2.1.321 修复 MCP OAuth 请求跟随重定向时向另一主机发送刷新令牌等秘密的情况，并修复只读 Bash 在未提示情况下离开沙箱、文件写入按错误目录判断权限，以及 cp/mv 写入目标遗漏拒绝规则的问题。claude remote-control 新增 --settings <file>，作用于其启动的每个会话；文件变化后需重启 Remote Control 才能启动新会话。新版还接入 Fable 5.2。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-10",
+          "event_at": "2026-11-09T19:22:30Z",
+          "urls": [
+            "https://github.com/anthropics/claude-code/releases/tag/v2.1.321"
+          ],
+          "limitation": "",
+          "rank": 5
+        },
+        {
+          "event_id": "browser-use-1-0-rc-python-repl",
+          "title": "Browser Use 1.0 候选版改用持续 Python REPL 与 Pydantic AI",
+          "summary": "Browser Use 1.0 候选版由代理在持续 Python REPL 中编写代码，调用 browser-harness 与原始 CDP，并基于 Pydantic AI 运行。保留 Agent、Browser、Tools、run 和 final_result 等常用入口。Browser() 默认创建 Browser Use Cloud 浏览器，本地 Chromium 需显式指定 Browser(\"chromium\")；默认模型为网关的 bu-fast，最大步骤从 500 调整为 100。新增类型化结果、上传下载、域名限制及 CLI MCP 工具。rc4 是首个可用 PyPI 候选版本，rc5 后续修复流式响应、重试与浏览器稳定性。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-10",
+          "event_at": "2026-11-09T20:55:10Z",
+          "urls": [
+            "https://github.com/browser-use/browser-use/releases/tag/1.0.0rc4",
+            "https://github.com/browser-use/browser-use/releases/tag/1.0.0rc5"
+          ],
+          "limitation": "候选版本需显式安装，普通 pip install 仍安装 0.13.14；需要 Python 3.11+。依赖精确锁定可能与现有项目版本冲突；云浏览器暂不支持视口模拟。",
+          "rank": 6
+        },
+        {
+          "event_id": "playwright-mcp-0-0-85-background-visible",
+          "title": "Playwright MCP 0.0.85 支持后台浏览与仅定位可见元素",
+          "summary": "Playwright MCP 0.0.85 新增 --background，让扩展连接的标签和新标签留在后台；--no-tab-group 可不把受控标签移动到 Playwright 分组。browser.contextOptions.locateOnlyVisible 可把定位器限制为可见元素，默认关闭。快照保留容器与表头名称，元素工具支持通过 label 查找表单关联自定义元素；browser_evaluate 可返回 BigInt、NaN、undefined 与循环对象的可读表示。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-10",
+          "event_at": "2026-11-09T18:28:53Z",
+          "urls": [
+            "https://github.com/microsoft/playwright-mcp/releases/tag/v0.0.85"
+          ],
+          "limitation": "后台模式与不分组要求扩展 0.5.0+；令连接页也在后台打开需 Chrome 158.0.8127.2+、已有浏览器进程和扩展令牌。Chrome 会节流后台标签定时器与动画。",
+          "rank": 7
+        },
+        {
+          "event_id": "qwen-code-0-27-1-memory-lsp",
+          "title": "Qwen Code 0.27.1 增加个人记忆、LSP 开关与 MCP 自助安装",
+          "summary": "Qwen Code 0.27.1 为托管代理提供选择启用的 Mem0 个人记忆、会话归档和 MCP 自助安装，并持久保存模型统计、请求上下文与执行诊断。CLI 可通过用户级设置和环境变量开启 LSP，代理默认后台执行可配置。Web Shell 新增工作区折叠、拖拽排序、侧栏多选与批量置顶/归档，定时任务可显示渠道投递目标。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-10",
+          "event_at": "2026-11-09T13:30:44Z",
+          "urls": [
+            "https://github.com/QwenLM/qwen-code/releases/tag/v0.27.1"
+          ],
+          "limitation": "Mem0 个人记忆为选择启用；绑定 PR 状态观察相关能力仍在默认关闭的开关后。",
+          "rank": 8
+        },
+        {
+          "event_id": "claude-agent-sdk-0-3-321-hooks-resume",
+          "title": "Claude Agent SDK 修复 hook 丢失、预热恢复和 MCP 同名冲突",
+          "summary": "Claude Agent TypeScript SDK 0.3.321 修复 hooks 某事件为 undefined 时所有 hook 被丢弃、PreToolUse ask/defer 竞争导致询问丢失，以及 WarmQuery 在恢复会话后发送字符串提示挂起。SpareProcess.claim 绑定会话中，setMcpServers 不再因进程内服务重名而关闭项目或本地作用域服务。自动模式把同时排队的子代理报告合并进一次模型调用，每条仍保留独立消息和结果，除最后一条外 result 的 num_turns 为 0。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-10",
+          "event_at": "2026-11-09T19:22:16Z",
+          "urls": [
+            "https://github.com/anthropics/claude-agent-sdk-typescript/releases/tag/v0.3.321"
+          ],
+          "limitation": "",
+          "rank": 9
+        },
+        {
+          "event_id": "langchain-js-1-3-6-stream-google-credentials",
+          "title": "LangChain JS 修复流取消、Google 凭据路由与 token 统计",
+          "summary": "LangChain Core 1.3.6 修复 streamEvents v2 中止时挂起或未处理 rejection，以及消费者提前结束流时误抛 AbortError。Google 集成 2.3.6 在显式传入 apiKey、authOptions、credentials 或 googleAuthOptions 时直接请求 Google，仅在没有凭据时走 LangSmith 网关。Anthropic 1.6.2 使用 message_delta 的累计 usage 统计服务器工具调用的输入与缓存 token，避免输出 token 重复计算，并新增 Fable 5.2/Mythos 5.2 配置。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-10",
+          "event_at": "2026-11-09T23:53:54Z",
+          "urls": [
+            "https://github.com/langchain-ai/langchainjs/releases/tag/%40langchain%2Fcore%401.3.6",
+            "https://github.com/langchain-ai/langchainjs/releases/tag/%40langchain%2Fgoogle-common%402.3.6",
+            "https://github.com/langchain-ai/langchainjs/releases/tag/%40langchain%2Fanthropic%401.6.2"
+          ],
+          "limitation": "",
+          "rank": 10
+        },
+        {
+          "event_id": "langfuse-4-77-tokenization-bedrock",
+          "title": "Langfuse 4.77 停止自动推算 token，并扩展 AI Gateway",
+          "summary": "Langfuse 4.77.0 移除自动 tokenization，不再根据观测内容推算 token 用量，并在 UI 提示提交缺失的实际用量。AI Gateway 新增 Amazon Bedrock 上游的 API key 认证，OpenAI 与 Anthropic 连接支持自定义 base URL 和额外请求头。外部媒体存储成为企业功能，S3 媒体桶和导出增加 IAM role 认证；Topics 任务新增成本跟踪与独立队列。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-10",
+          "event_at": "2026-11-09T12:21:23Z",
+          "urls": [
+            "https://github.com/langfuse/langfuse/releases/tag/v4.77.0"
+          ],
+          "limitation": "缺失 token 用量不再自动估算；外部媒体存储要求企业功能。",
+          "rank": 11
+        },
+        {
+          "event_id": "copilot-cli-1-0-109-0-permissions-mcp",
+          "title": "Copilot CLI 预览版收紧符号链接写入并修复 MCP 结果",
+          "summary": "Copilot CLI 1.0.109-0 预览版在 /share 或 /export 保存文件需要跟随符号链接时要求确认；URL 权限提示支持一次批准当前会话的全部子域名。只读脚本减少询问，但修改 Git 引用或通过隐藏路径读文件的脚本始终接受检查。MCP 返回 text/plain 或 application/json 等 MIME 的 base64 blob 资源时，文本结果会正常传给模型。新增自定义代理可在会话中发现，拒绝路径和终端控制字符处理也有修复。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-10",
+          "event_at": "2026-11-09T21:34:50Z",
+          "urls": [
+            "https://github.com/github/copilot-cli/releases/tag/v1.0.109-0"
+          ],
+          "limitation": "预发布版本。",
+          "rank": 12
+        },
+        {
+          "event_id": "litellm-1-108-4-routing-reasoning",
+          "title": "LiteLLM 1.108.4 修复推理回传、团队路由与无输出计费",
+          "summary": "LiteLLM 1.108.4 LTS 修复 /v1/messages 上 chatgpt/ 模型跨轮丢失加密推理，以及向 OpenAI 错误发送 background:true 导致完整运行计费却返回空结果。团队密钥不再被全局通配路由取代自身 BYOK 部署。基础安装中工具调用因缺少 mcp 包失败的问题得到修复，Bedrock GLM、GPT-6 Luna 与 Nova 2 接收 Claude 签名思考时的 400 错误也得到修复。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-10",
+          "event_at": "2026-11-09T23:00:51Z",
+          "urls": [
+            "https://github.com/BerriAI/litellm/releases/tag/v1.108.4"
+          ],
+          "limitation": "",
+          "rank": 13
+        },
+        {
+          "event_id": "github-tool-meta-astryx",
+          "title": "工具选荐｜Astryx：面向开发者与 Agent 的 React 设计系统",
+          "summary": "Astryx 是 Meta 开源的 React 设计系统，提供 150 余个组件、主题、字体及项目模板。CLI 支持为开发者和编码 Agent 查询文档、创建项目、浏览组件属性与示例，并导出组件源码。项目处于 Beta，要求 React 19 及以上。",
+          "category": "github",
+          "group": "other",
+          "groupLabel": "其他",
+          "digest_id": "2026-11-10",
+          "event_at": null,
+          "urls": [
+            "https://github.com/meta/astryx",
+            "https://github.com/trending",
+            "https://github.com/meta/astryx/commit/438a0ff888559025758099a73cac695810eebdbb"
+          ],
+          "limitation": "",
+          "rank": 14
+        },
+        {
+          "event_id": "freebie-roundup-2026-11-10",
+          "title": "免费资源：OpenCode LongCat 2.5 每日100次与 Cohere 评估 API",
+          "summary": "OpenCode Console 的 LongCat 2.5 Free 仅在 OpenCode 客户端提供，每日 100 次请求，精确重置时刻与活动结束日期未公布。模型在中国托管，官方声明零数据保留、不用于训练。\n\nCohere Command A+（command-a-plus-05-2026）提供免费评估 API：试用 key 每月合计 1,000 次调用，该模型每分钟 20 请求。需要 Cohere 账户及 API key，仅限非商业评估；生产部署需使用 Model Vault 等正式渠道。",
+          "category": "freebie",
+          "group": "other",
+          "groupLabel": "其他",
+          "digest_id": "2026-11-10",
+          "event_at": null,
+          "urls": [
+            "https://opencode.ai/docs/console/models/",
+            "https://docs.cohere.com/docs/command-a-plus",
+            "https://docs.cohere.com/docs/rate-limits",
+            "https://cohere.com/pricing"
+          ],
+          "limitation": "",
+          "rank": 15
+        }
+      ]
+    },
+    {
       "digest_id": "2026-11-09",
       "focus_event_id": "openrouter-auto-code-router-20261106",
       "items": [
@@ -4175,7 +4418,6 @@
       "status": "official_verified",
       "models": [
         "Big Pickle",
-        "Crouton Alpha Free",
         "GLM-5.3-Flash Free",
         "DeepSeek V4.1 Flash Free",
         "Beam Free",
@@ -4186,13 +4428,14 @@
         "Nemotron 3.5 Super VL Free",
         "Iceman Free",
         "Inkling 2 Small Free",
-        "Jev 1.13 Free"
+        "Jev 1.13 Free",
+        "LongCat 2.5 Free"
       ],
       "other_models": [],
-      "quota": "所列免费聊天模型限 OpenCode 客户端使用；未公布统一请求额度、重置周期或截止日。",
-      "conditions": "免费聊天模型限 OpenCode 客户端，需要账户并选择相应型号，不等于任意客户端的通用免费 API。Crouton 不支持欧盟、阿富汗、白俄罗斯、中国（含香港和澳门）、柬埔寨、古巴、厄立特里亚、埃塞俄比亚、海地、伊朗、伊拉克、利比亚、缅甸、尼加拉瓜、朝鲜、巴基斯坦、俄罗斯、索马里、叙利亚、委内瑞拉、西撒哈拉，以及部分受支持国家内的特定地区。Inkling 2 Small 不支持欧盟、冰岛、列支敦士登、挪威、古巴、伊朗、朝鲜、俄罗斯、乌克兰和委内瑞拉。Beam 不支持安哥拉、白俄罗斯、柬埔寨、中国（含香港和澳门）、古巴、刚果民主共和国、赤道几内亚、伊朗、伊拉克、老挝、利比亚、尼日利亚、朝鲜、俄罗斯、叙利亚、土库曼斯坦、乌兹别克斯坦、委内瑞拉，以及乌克兰的克里米亚、顿涅茨克和卢甘斯克地区。",
+      "quota": "免费聊天模型限 OpenCode 客户端使用。LongCat 2.5 Free 每日 100 请求，精确重置时刻未公布；其余所列模型未公布统一请求额度、重置周期或截止日。",
+      "conditions": "免费聊天模型限 OpenCode 客户端，需要账户并选择相应型号，不等于任意客户端的通用免费 API。Inkling 2 Small 不支持欧盟、冰岛、列支敦士登、挪威、古巴、伊朗、朝鲜、俄罗斯、乌克兰和委内瑞拉。Beam 不支持安哥拉、白俄罗斯、柬埔寨、中国（含香港和澳门）、古巴、刚果民主共和国、赤道几内亚、伊朗、伊拉克、老挝、利比亚、尼日利亚、朝鲜、俄罗斯、叙利亚、土库曼斯坦、乌兹别克斯坦、委内瑞拉，以及乌克兰的克里米亚、顿涅茨克和卢甘斯克地区。",
       "expiry": "各项免费活动结束日期未公布。",
-      "privacy": "GLM 和 DeepSeek 免费项声明零保留、不训练。Crouton 的收集数据保留 30 天，不用于模型训练；Beam 为安全目的保留 30 天，不用于训练。Iceman 免费期数据保留并用于改进模型；Inkling 2 Small 免费期数据保留并可用于模型训练；Flint 保留 30 天。NVIDIA Nemotron 3 Ultra、3.5 Lightning、3.5 Super VL 免费端点仅供试用，禁止提交个人或机密数据，使用记录用于安全及改进 NVIDIA 产品和服务。",
+      "privacy": "GLM 和 DeepSeek 免费项声明零保留、不训练。Beam 为安全目的保留 30 天，不用于训练。Iceman 免费期数据保留并用于改进模型；Inkling 2 Small 免费期数据保留并可用于模型训练；Flint 保留 30 天。NVIDIA Nemotron 3 Ultra、3.5 Lightning、3.5 Super VL 免费端点仅供试用，禁止提交个人或机密数据，使用记录用于安全及改进 NVIDIA 产品和服务。 LongCat 2.5 Free 在中国托管，零保留、不用于模型训练。Big Pickle 与 MiMo-V2.6-Flash 免费期收集数据可能用于改进模型。",
       "caution": "",
       "sources": [
         "https://opencode.ai/docs/console/models/"
@@ -4228,8 +4471,8 @@
       "status": "official_verified",
       "models": [],
       "other_models": [],
-      "quota": "Free 包含有限 Chat、Agent、Imagine 和 Build 使用；AI 用量池由 Cursor 与 Grok 共享，每周刷新。未公布统一请求数、token 数或固定模型。",
-      "conditions": "免费方案不含第三方模型；Hobby 为旧用户方案。通过 Cursor 产品使用，不包含通用 Grok API 赠金。",
+      "quota": "Free 提供有限 Agent 与 Chat 使用，公开方案未公布统一请求数、token 数、固定模型或免费额度重置时刻。",
+      "conditions": "免费方案不含第三方模型；通过 Cursor 产品使用，不包含通用 Grok API 赠金。付费方案的共享周用量池不等于 Free 权益。",
       "expiry": "官方未公布结束日期。",
       "privacy": "",
       "caution": "",
@@ -4297,7 +4540,7 @@
       "status": "official_verified",
       "models": [
         "Claude Sonnet 4.5",
-        "开放权重模型"
+        "open-weight models"
       ],
       "other_models": [],
       "quota": "每月 50 credits，按模型倍率消耗，按账期更新，不等于 50 次问答。",
@@ -4613,7 +4856,7 @@
       "conditions": "邮箱验证或 Google 登录；免信用卡、免充值。地区限制未公布；免费共享容量可能排队且无 SLA，部署精度可能调整。",
       "expiry": "2026 年 11 月 24 日 00:00 Pacific Time，即 UTC 08:00、北京时间 16:00。",
       "privacy": "",
-      "caution": "免费模型由 IteraCompute 托管；非阿里云官方赠额，",
+      "caution": "免费模型由 IteraCompute 托管，不是阿里云官方赠额。",
       "sources": [
         "https://iteracompute.com/free/"
       ]
@@ -4627,7 +4870,7 @@
         "Zed 托管模型（有排除项）"
       ],
       "other_models": [],
-      "quota": "一年 Pro、每月 10 美元 AI token credits、无限 edit predictions；精确月度重置时刻未公布。",
+      "quota": "一年 Pro、每月 10 美元 AI token credits、无限 edit predictions；月度 token credits 按账户月度账单日期重置，学生计划用量封顶于所含 10 美元。",
       "conditions": "全球认可大学在读且年满 18 岁；GitHub 账号超过 30 天及有效大学邮箱验证。排除 Claude Fable、Claude Opus、GPT-6 Astra、GPT-5.5 pro、GPT-5.4 pro；绑卡条件未公布。",
       "expiry": "获批后一年。",
       "privacy": "",
@@ -4661,10 +4904,10 @@
       "kindLabel": "周期性免费 API",
       "status": "official_verified",
       "models": [
-        "Nemotron 3.5 Super VL 120B",
-        "Nemotron 3.5 Lightning 30B",
-        "Nemotron 3 Ultra 550B",
-        "DeepSeek V4.1 Flash"
+        "nvidia/nemotron-3.5-super-vl-120b-a12b",
+        "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "deepseek-ai/deepseek-v4.1-flash",
+        "nvidia/nemotron-3-ultra-550b-a55b"
       ],
       "other_models": [],
       "quota": "官方入口列为 Free inference；未在主页公布统一 tokens 总额度、重置安排或限速数字。",
@@ -4730,6 +4973,25 @@
         "https://parallel.ai/blog/decisions-openrouter",
         "https://openrouter.ai/parallel/decisions-fast:free",
         "https://openrouter.ai/docs/api/reference/limits"
+      ]
+    },
+    {
+      "provider": "Cohere Command A+ 免费评估",
+      "kind": "recurring_free_api",
+      "kindLabel": "周期性免费 API",
+      "status": "official_verified",
+      "models": [
+        "command-a-plus-05-2026"
+      ],
+      "other_models": [],
+      "quota": "试用 key 每月合计 1,000 次 API 调用；Command A+ 每分钟 20 请求。精确月重置时刻未公布。",
+      "conditions": "需要 Cohere 账户及 API key。试用 key 仅供评估，不允许生产或商业使用；Command A+ 的生产 key 也受免费评估限制，正式生产部署须联系厂商或使用 Model Vault。地区和绑卡条件未在所引页面公布。",
+      "expiry": "官方未公布统一结束日期。",
+      "caution": "",
+      "sources": [
+        "https://docs.cohere.com/docs/command-a-plus",
+        "https://docs.cohere.com/docs/rate-limits",
+        "https://cohere.com/pricing"
       ]
     }
   ]
