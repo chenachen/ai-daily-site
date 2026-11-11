@@ -1,7 +1,12 @@
 {
   "schema_version": 1,
-  "latest": "2026-11-10",
+  "latest": "2026-11-11",
   "digests": {
+    "2026-11-11": {
+      "path": "daily/2026-11-11/",
+      "content_sha256": "8ae5dba124810404a459d95a0b30927f5597ffe399a0c169b20eb41c448024a6",
+      "source_sha256": "77b5d2eec54398d68aaecf3a8aba89a57f023fb9d6889036d09037aaed83d40a"
+    },
     "2026-11-10": {
       "path": "daily/2026-11-10/",
       "content_sha256": "2913b94b000b0269951a39088a16e5a1fdfe7ac281851610bbba10943b6f06f8",
@@ -94,7 +99,7 @@
     }
   },
   "artifacts": {
-    "archive/index.html": "afe0657891cb01a35e99609994712ef293d9505b002fdb959c1f8c46eadb08bb",
+    "archive/index.html": "36cd1cf32bdace4628e6d9ebfda3b7ae6c246a6710d61976446b7567b60c8160",
     "assets/client.mjs": "6861560ce69479cd8e1e8cb6d98fd12116f4731e947117d96c3f746034272127",
     "assets/production.css": "76b7a5b887299c226fcf0567ad300261e9ad287a6c8b43427b21004c19b87e15",
     "assets/render.mjs": "9c9ac7e828368539cb91e666526fc212547ddc63a8fcd061c98fe736bdf7074a",
@@ -103,8 +108,8 @@
     "assets/theme-b.css": "e9b047c32c1a0a34bd62564325c158fa12b41007931fa16fbc14b2f60c9ad72e",
     "assets/theme-c.css": "3c42f384a5c95297ce1627d8551fc5d2fd0c0bcbdd111e75af9b9c886c7cb032",
     "assets/theme-init.js": "384cc9db53617dc23fccfe8f198deeb12ed45057f09e47876d168ebd0557a2be",
-    "data/issues.json": "69961a69e0e97b9d96122f7a3383c0820cf6c6123fe3c1dd5e64c3f2bc6505be",
-    "index.html": "1c867059347d9b5a347d3d293c2b1fc322e118fea1177c4779e398f99c2f7d55",
-    "offers/index.html": "a11d5a9d22e069f7aedf2449d3aba8181b769b59a6b9247e6b3d087d15efc1d6"
+    "data/issues.json": "80ae576072473b0bb478908408d6c3f0dedb275e41289211a47095baa3fae91c",
+    "index.html": "c44853d1d12452860e8feda0255b0aea9bcdea97fd738677e76f5aeb29bbc8d5",
+    "offers/index.html": "f5d4d504e2d196efd7c588744e7ce9ece659fc82f4e4353d7ddb240f9c046c4c"
   }
 }
