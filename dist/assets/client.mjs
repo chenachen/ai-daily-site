@@ -1,4 +1,4 @@
-import {esc,itemHTML,offerHTML,matches} from './render.mjs?v=9c9ac7e828368539';
+import {esc,itemHTML,offerHTML,matches} from './render.mjs?v=a7b118c33468f83e';
 const data=JSON.parse(document.querySelector('#site-data').textContent),current=data.issue;
 let filter='all',shared=null,sharedState='loading';
 const search=document.querySelector('#search'),scope=document.querySelector('#scope');
