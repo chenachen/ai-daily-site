@@ -1,6 +1,189 @@
 {
   "issues": [
     {
+      "digest_id": "2026-11-17",
+      "focus_event_id": "qwen4-max-general-release",
+      "items": [
+        {
+          "event_id": "qwen4-max-general-release",
+          "title": "Qwen4-Max 正式发布：原生视觉、百万 token 上下文与按量 API 上线",
+          "summary": "Qwen 团队正式发布 Qwen4-Max，采用 2.4 万亿主干参数的稀疏 MoE 架构，每个 token 激活 710 亿参数，另含 3280 亿 N-gram Embedding 参数；支持原生视觉与 100 万 token 上下文。注意力结构以三层 Gated DeltaNet 配一层 Qwen Sparse Attention，后者按微块选取相关上下文；Gated Residual 使用四条并行残差分支。官方 Work360 测试中，High 推理档的 token 用量相对 Qwen3.8-Max 减少约 35%，平均任务费用由 4.43 美元降至 1.67 美元，这些是厂商指定评测的结果。模型现通过 QwenCloud 的 API 与 Token Plan 提供，也可在 QwenWork、Qoder、QwenStudio 使用。Live Delivery 机制先交付可用版本，再按执行结果与用户反馈持续迭代，配套 Qwen-Live-Delivery-Plugin 开源。较小 Qwen4 模型的开放权重仍属后续计划。",
+          "category": "news",
+          "group": "models",
+          "groupLabel": "模型与 API",
+          "digest_id": "2026-11-17",
+          "event_at": "2026-11-16T10:00:00+08:00",
+          "urls": [
+            "https://qwen.ai/blog?id=qwen4-max"
+          ],
+          "limitation": "Qwen4-Max 本次为服务发布；较小型号开放权重尚未发布。",
+          "rank": 1
+        },
+        {
+          "event_id": "openai-python-3-52-agent-stream-schedule",
+          "title": "OpenAI Python SDK 3.52 新增计划暂停原因与 Agents 流式错误事件",
+          "summary": "OpenAI Python SDK 3.52.0 新增 schedule pause reasons 类型，为自动化计划的暂停原因提供类型定义。beta Agents 会话流同时调整错误交付方式，session errors 现在通过 stream events 交付；发布说明分别关联 #4278 与 #4281。",
+          "category": "news",
+          "group": "openai",
+          "groupLabel": "OpenAI",
+          "digest_id": "2026-11-17",
+          "event_at": "2026-11-16T22:40:22Z",
+          "urls": [
+            "https://github.com/openai/openai-python/releases/tag/v3.52.0"
+          ],
+          "limitation": "",
+          "rank": 2
+        },
+        {
+          "event_id": "claude-code-2-1-326-code-mode-teams",
+          "title": "Claude Code 2.1.326 支持 Agent Teams 与 Code Mode 同时启用",
+          "summary": "Claude Code 2.1.326 允许在启用 Agent Teams 时打开 Code Mode；此前已开启 Code Mode 的会话也会按这一设置启动。该版本修复两份较长 MCP 结果在同一毫秒到达时可能被混读的问题，以及崩溃、空回复和内存不足后恢复会话丢失历史的情况。权限与沙箱检查进一步收紧，部分原先可运行的命令会要求确认或被拒绝；Remote Control 的回复改为边生成边流式显示。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-17",
+          "event_at": "2026-11-16T22:11:05Z",
+          "urls": [
+            "https://github.com/anthropics/claude-code/releases/tag/v2.1.326"
+          ],
+          "limitation": "",
+          "rank": 3
+        },
+        {
+          "event_id": "claude-agent-sdk-0-3-326-mcp-initialize",
+          "title": "Claude Agent SDK 0.3.326 新增初始化请求传递 MCP 配置",
+          "summary": "TypeScript SDK 0.3.326 新增 mcpServersDelivery: 'initialize'，把 mcpServers 放入初始化请求，而不是 Claude Code 命令行；该方式需要随包附带或更高版本的 Claude Code。当前 argv 默认方式被弃用，未来版本会切换默认值。/core 入口新增 getSessionInfo()；正在执行的工具调用若对应服务器已被 setMcpServers() 移除，会被拒绝而不再重新连接。SDK MCP 请求的 JSON-RPC id 从数字改为字符串，同时修复长工具调用与服务器重连重叠时结果丢失或串到其他调用的问题。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-17",
+          "event_at": "2026-11-16T22:11:14Z",
+          "urls": [
+            "https://github.com/anthropics/claude-agent-sdk-typescript/releases/tag/v0.3.326"
+          ],
+          "limitation": "",
+          "rank": 4
+        },
+        {
+          "event_id": "google-genai-sdk-3-4-tool-search-files",
+          "title": "Google GenAI SDK 3.4 增加工具搜索类型与文件处理选项",
+          "summary": "Google GenAI JavaScript 与 Python SDK 3.4.0 为 Interactions 增加工具搜索类型，并公开静态文件处理选项；Gemini Enterprise API 的嵌入模型新增批量输入与用量元数据支持。Python 版本还调整异步 HTTPX 客户端，让每个事件循环维护一个连接池，并修复 JSON 字符串内大括号干扰流缓冲、SSE 行分隔及异步上传重试等待问题。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-17",
+          "event_at": "2026-11-16T20:43:05Z",
+          "urls": [
+            "https://github.com/googleapis/js-genai/releases/tag/v3.4.0",
+            "https://github.com/googleapis/python-genai/releases/tag/v3.4.0"
+          ],
+          "limitation": "",
+          "rank": 5
+        },
+        {
+          "event_id": "langfuse-4-81-vertex-gemini-evals",
+          "title": "Langfuse 4.81 接入 Vertex AI 网关并扩展 Gemini 决策模型评测",
+          "summary": "Langfuse 4.81.0 在 AI Gateway 中加入 Google Vertex AI 提供方，决策模型评测器增加 Gemini decision models 支持。数据集项目支持按状态筛选，事件表可按数值型 metadata 过滤，会话自定义视图可保存。原生 OpenTelemetry 事件处理新增模型定价与信息补充、提供方身份和 observation 字段归一化，以及输入输出载荷重建。版本还修复 trace 翻页时总数变化、评分保存失败后标注队列离开当前项目等问题。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-17",
+          "event_at": "2026-11-16T16:26:13Z",
+          "urls": [
+            "https://github.com/langfuse/langfuse/releases/tag/v4.81.0"
+          ],
+          "limitation": "",
+          "rank": 15
+        },
+        {
+          "event_id": "deepagents-0-7-39-async-stream-upload",
+          "title": "DeepAgents 0.7.39 修复异步子 Agent 流与二进制上传",
+          "summary": "DeepAgents 0.7.39 修复应用加入异步子 Agent 运行时的流式输出问题。包含 NUL 字节的上传内容改为以 base64 保存到 StoreBackend，避免二进制数据存储错误；可编辑安装扫描范围收窄到 deepagents 记录。同期 DeepAgents Code 0.2.9 跟进该 SDK，更新稳定模型推荐并采用同样的扫描优化。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-17",
+          "event_at": "2026-11-16T15:55:22Z",
+          "urls": [
+            "https://github.com/langchain-ai/deepagents/releases/tag/deepagents%3D%3D0.7.39",
+            "https://github.com/langchain-ai/deepagents/releases/tag/deepagents-code%3D%3D0.2.9"
+          ],
+          "limitation": "",
+          "rank": 16
+        },
+        {
+          "event_id": "qwen-code-nightly-20261116-shared-loop",
+          "title": "Qwen Code nightly 预览将 CLI 与子 Agent 切至共享运行循环",
+          "summary": "Qwen Code v0.27.4-nightly.20261116.eb3a599ef3 是 nightly 预览版。相对上一份 nightly，新变更包括让无头会话、Ink TUI 和子 Agent 默认使用共享 agent loop；Web Shell 增加逐轮 hook 统计。生成式 UI 卡片视图状态开始保存在会话记录中，create_sub_session 支持在另一工作区启动子会话，并修复命令确认界面未保留完整命令的问题。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-17",
+          "event_at": "2026-11-16T22:32:52Z",
+          "urls": [
+            "https://github.com/QwenLM/qwen-code/releases/tag/v0.27.4-nightly.20261116.eb3a599ef3"
+          ],
+          "limitation": "",
+          "rank": 17
+        },
+        {
+          "event_id": "litellm-1-108-10-lts-pdf-cost",
+          "title": "LiteLLM 1.108.10 LTS 修复 PDF 流阻塞与通配模型费用记录",
+          "summary": "LiteLLM 1.108.10 将多项修复回移到 1.108 LTS 分支：异步 OpenAI 兼容聊天不再重复转换消息，PDF URL 使用异步客户端下载后再执行一次同步转换，修复 Codestral file 输入报错与并行 PDF 流等待。版本化 Vertex Claude 在未传 max_tokens 时按模型映射获取输出上限，而不是统一落到 4096。配置了无价格 base_model 的通配部署也会优先使用响应模型的有效定价，修复 spend 被记为零。此 LTS 分支只提前下载用户消息中的 PDF URL，工具消息中的 PDF URL 仍直接交给上游。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-17",
+          "event_at": "2026-11-16T21:57:41Z",
+          "urls": [
+            "https://github.com/BerriAI/litellm/releases/tag/v1.108.10",
+            "https://github.com/BerriAI/litellm/pull/51860",
+            "https://github.com/BerriAI/litellm/pull/51863",
+            "https://github.com/BerriAI/litellm/pull/51412"
+          ],
+          "limitation": "",
+          "rank": 18
+        },
+        {
+          "event_id": "github-tool-microsoft-playwright-cli",
+          "title": "GitHub 工具｜Playwright CLI：用命令、录制与网络模拟完成前端测试",
+          "summary": "微软 Playwright CLI 通过命令及配套 Skills 向编程代理提供浏览器交互能力。页面快照保存成文件，代理可以按需读取、限定深度或查找节点，再通过元素引用、CSS 或 Playwright 定位器执行操作。项目提供网络请求模拟、控制台和请求检查、trace 录制、截图与视频记录；操作录制结束后输出 Playwright 代码，配套参考指南涵盖测试生成、调试和状态管理。命名会话支持不同项目的浏览器实例，独立上下文可隔离同一任务中的用户状态。默认无头运行，cookie 和存储在会话内保留，关闭浏览器后丢失；persistent 模式才将配置写入磁盘。要求 Node.js 20 或更新版本，采用 Apache-2.0 许可。",
+          "category": "github",
+          "group": "quality",
+          "groupLabel": "前端质量与效率",
+          "digest_id": "2026-11-17",
+          "event_at": null,
+          "urls": [
+            "https://github.com/microsoft/playwright-cli",
+            "https://github.com/microsoft/playwright-cli/blob/main/README.md"
+          ],
+          "limitation": "",
+          "rank": 19
+        },
+        {
+          "event_id": "freebie-roundup-2026-11-17",
+          "title": "免费资源｜OpenRouter、OpenCode、Groq 与 Workers AI 的现行免费额度",
+          "summary": "OpenRouter 免费集合列出 Nemotron 3 Ultra、Nemotron 3.5 Super VL、ERNIE-5.5-Flash-Preview 等输入和输出均为零价的模型。:free 变体通常限制每分钟20次、每日50次；累计购买10美元额度对应每日1,000次档位，官方说明为吸收手续费，实际从9美元开始给予较高日限额，日计数按 UTC 日。OpenCode 当前免费聊天模型要求在 OpenCode 中使用，其他客户端须使用付费模型或 Go；GLM-5.3-Flash、DeepSeek V4.1 Flash、MiniMax M3.1 Flash 等 Free 型号为限时免费，未给统一截止日期。Groq 免费档的 gpt-oss-120b、gpt-oss-20b 与 qwen3.8-27b 表列每分钟30请求、每日1,000请求、每分钟8,000 token、每日200,000 token，额度在组织层共享。Cloudflare Workers AI 免费配额为每天10,000 Neurons，UTC 00:00 重置；超过后 Free 账户调用失败，部分前沿模型必须采用付费方案或预付 AI Gateway credits。WorkBuddy 国际个人 Free 计划提供每月100 credits，新用户首次注册登录250 credits有效14天；限时每日活跃奖励为30 credits，要求通过 WorkBuddy 或 CodeBuddy 客户端发起有效会话或任务，网页活动不计，通常次日到账，截止日另行公告。",
+          "category": "freebie",
+          "group": "other",
+          "groupLabel": "其他",
+          "digest_id": "2026-11-17",
+          "event_at": null,
+          "urls": [
+            "https://openrouter.ai/collections/free-models",
+            "https://opencode.ai/docs/console/models/",
+            "https://console.groq.com/docs/rate-limits",
+            "https://developers.cloudflare.com/workers-ai/platform/pricing/",
+            "https://www.workbuddy.ai/docs/workbuddy/pricing",
+            "https://www.workbuddy.ai/docs/workbuddy/Subscription",
+            "https://openrouter.ai/docs/api_reference/limits"
+          ],
+          "limitation": "",
+          "rank": 20
+        }
+      ]
+    },
+    {
       "digest_id": "2026-11-16",
       "focus_event_id": "vercel-ai-sdk-7-172-173-workflow-approval-timeout",
       "items": [
@@ -5452,21 +5635,20 @@
       "models": [
         "nvidia/nemotron-3-ultra-550b-a55b:free",
         "nvidia/nemotron-3.5-super-vl:free",
-        "nvidia/nemotron-3.5-lightning:free"
+        "baidu/ernie-5.5-flash-preview:free"
       ],
       "other_models": [],
       "quota": "免费变体共用每分钟 20 请求、每日 50 请求；失败尝试也计入日额度。累计购买 10 美元额度后提升至每日 1,000 请求，官方容差门槛为 9 美元。按 UTC 日统计，即北京时间每日 08:00 重置。",
       "conditions": "需账户及 API key。所列 :free 变体不要求购买额度；更高日额度要求累计购买。定价为零但没有 :free 后缀的型号可能要求已充值账户。",
       "expiry": "免费模型目录会调整，不保证某一型号长期保留。",
-      "privacy": "",
+      "privacy": "Nemotron 3 Ultra 与 Nemotron 3.5 Super VL 的 NVIDIA 免费端点适用试用条款，不可上传个人或机密信息；记录使用数据用于安全及改进 NVIDIA 产品和服务。ERNIE 由 Baidu Qianfan 提供，不适用上述 NVIDIA 条款；其模型页未列独立数据保留期限。",
       "caution": "",
       "sources": [
-        "https://openrouter.ai/collections/free-models/",
+        "https://openrouter.ai/collections/free-models",
         "https://openrouter.ai/docs/api_reference/limits",
-        "https://openrouter.ai/pricing",
         "https://openrouter.ai/nvidia/nemotron-3-ultra-550b-a55b:free",
         "https://openrouter.ai/nvidia/nemotron-3.5-super-vl:free",
-        "https://openrouter.ai/nvidia/nemotron-3.5-lightning:free"
+        "https://openrouter.ai/baidu/ernie-5.5-flash-preview:free"
       ]
     },
     {
@@ -5488,13 +5670,14 @@
         "Inkling 2 Small Free",
         "Jev 1.13 Free",
         "LongCat 2.5 Free",
-        "MiniMax M3.1 Flash Free"
+        "MiniMax M3.1 Flash Free",
+        "Hy4 flash Free"
       ],
       "other_models": [],
       "quota": "免费聊天模型限 OpenCode 客户端使用。LongCat 2.5 Free 每日 100 请求，精确重置时刻未公布；其余所列模型未公布统一请求额度、重置周期或截止日。",
       "conditions": "免费聊天模型限 OpenCode 客户端，需要账户并选择相应型号，不等于任意客户端的通用免费 API。Inkling 2 Small 不支持欧盟、冰岛、列支敦士登、挪威、古巴、伊朗、朝鲜、俄罗斯、乌克兰和委内瑞拉。Beam 不支持安哥拉、白俄罗斯、柬埔寨、中国（含香港和澳门）、古巴、刚果民主共和国、赤道几内亚、伊朗、伊拉克、老挝、利比亚、尼日利亚、朝鲜、俄罗斯、叙利亚、土库曼斯坦、乌兹别克斯坦、委内瑞拉，以及乌克兰的克里米亚、顿涅茨克和卢甘斯克地区。",
       "expiry": "各项免费活动结束日期未公布。",
-      "privacy": "GLM 和 DeepSeek 免费项声明零保留、不训练。Beam 为安全目的保留 30 天，不用于训练。Iceman 免费期数据保留并用于改进模型；Inkling 2 Small 免费期数据保留并可用于模型训练；Flint 保留 30 天。NVIDIA Nemotron 3 Ultra、3.5 Lightning、3.5 Super VL 免费端点仅供试用，禁止提交个人或机密数据，使用记录用于安全及改进 NVIDIA 产品和服务。 LongCat 2.5 Free 在中国托管，零保留、不用于模型训练。Big Pickle 与 MiMo-V2.6-Flash 免费期收集数据可能用于改进模型。 MiniMax M3.1 Flash Free为零保留、不用于训练。",
+      "privacy": "GLM 和 DeepSeek 免费项声明零保留、不训练。Beam 为安全目的保留 30 天，不用于训练。Iceman 免费期数据保留并用于改进模型；Inkling 2 Small 免费期数据保留并可用于模型训练；Flint 保留 30 天。NVIDIA Nemotron 3 Ultra、3.5 Lightning、3.5 Super VL 免费端点仅供试用，禁止提交个人或机密数据，使用记录用于安全及改进 NVIDIA 产品和服务。 LongCat 2.5 Free 在中国托管，零保留、不用于模型训练。Big Pickle 与 MiMo-V2.6-Flash 免费期收集数据可能用于改进模型。 MiniMax M3.1 Flash Free为零保留、不用于训练。 Hy4 flash Free 为零保留、不用于模型训练。",
       "caution": "",
       "sources": [
         "https://opencode.ai/docs/console/models/"
@@ -5566,13 +5749,13 @@
       "models": [],
       "other_models": [],
       "quota": "Free 每月 100 积分，当月有效不结转；新用户首次登录另获 250 积分，14 天有效。限时日活活动中 Free 每日 30 积分、Pro 每日 50 积分，通常次日自动发放。",
-      "conditions": "日活须在 WorkBuddy 或 CodeBuddy 客户端完成至少一次有效 AI 对话或任务，网页不计，同用户/账号每日最多一次，Team 不参加。活动日边界及奖励有效期以后台为准。基础 Free 支持 Auto、每月 5,000 次补全及 3 个自动任务；全模型可选、无限补全、99 个自动任务属于限时提升。",
+      "conditions": "日活须在 WorkBuddy 或 CodeBuddy 客户端完成至少一次有效 AI 对话或任务，网页不计，同用户/账号每日最多一次，Team 不参加。活动日边界及奖励有效期以后台为准。基础 Free 支持 Auto、每月 5,000 次补全及 3 个自动任务；定价页所列全部模型可用、无限补全、99 个自动任务属于限时提升。",
       "expiry": "日活与套餐提升活动结束日期另行通知；Free 月度积分不结转。",
       "privacy": "活动资格与奖励核算会处理必要的账号、订阅、活跃及任务/对话提交、奖励记录，用于资格判断、结算、风控与合规留存。",
       "caution": "",
       "sources": [
-        "https://www.workbuddy.ai/docs/zh/workbuddy/pricing",
-        "https://www.workbuddy.ai/docs/zh/workbuddy/Subscription"
+        "https://www.workbuddy.ai/docs/workbuddy/pricing",
+        "https://www.workbuddy.ai/docs/workbuddy/Subscription"
       ]
     },
     {
