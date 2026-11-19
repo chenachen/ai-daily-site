@@ -1,6 +1,302 @@
 {
   "issues": [
     {
+      "digest_id": "2026-11-19",
+      "focus_event_id": "google-gemini-4-neon-launch",
+      "items": [
+        {
+          "event_id": "google-gemini-4-neon-launch",
+          "title": "Google 发布 Gemini 4 Neon：百万 token 上下文，输入/输出每百万 3/15 美元",
+          "summary": "Gemini 4 Neon 支持在同一百万 token 上下文中处理表格、PDF、图表、音频和视频，提供四档思考深度；每百万输入、缓存输入、输出 token 分别为3、0.15、15美元。在 Antigravity 中可作为主代理协调并行 Hydrogen 子代理，处理跨文件调试与重构。Google 发布文引用的评测中，Neon 在 xhigh 档取得 Artificial Analysis Intelligence Index 61分，默认 high 档 FrontierCode 2.0 为46.2%。模型开始向 Gemini API 付费档、Gemini for business，以及 Gemini app 和 Antigravity 的 Pro/Ultra 用户推出；网络安全版本将于随后数日向 Fairwind 合资格成员开放。",
+          "category": "news",
+          "group": "models",
+          "groupLabel": "模型与 API",
+          "digest_id": "2026-11-19",
+          "event_at": "2026-11-18T21:00:00+00:00",
+          "urls": [
+            "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/"
+          ],
+          "limitation": "",
+          "rank": 1
+        },
+        {
+          "event_id": "google-genie-4-project-genie-availability",
+          "title": "Genie 4 开始向 Ultra 用户开放，支持实时改写世界与原生音频",
+          "summary": "Google 将此前公布的 Genie 4 接入新版 Project Genie，开始向合资格 Google AI Ultra 用户开放，Pro 用户可加入等候名单。用户可在探索途中通过文字改变天气、添加角色或调整情节，并获得随场景变化的实时原生音频。同期 Genie 3 单次生成探索时间由60秒延长至3分钟，增加世界串联、360度全景图引导及实时提示事件。新版创作代理可对话搭建世界、配乐并给出场景相关建议；社区画廊支持发布、探索和再创作。Google仍将其定位为研究中的世界模型，指出镜头延迟、复杂物理交互、音频精度及长期场景保持尚有限制。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-19",
+          "event_at": "2026-11-18T18:00:00+00:00",
+          "urls": [
+            "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/genie-4-now-available-project-genie/"
+          ],
+          "limitation": "",
+          "rank": 2
+        },
+        {
+          "event_id": "openai-inside-codex-sandbox-engineering",
+          "title": "OpenAI 详解 Codex 沙箱：权限配置、网络代理与跨平台隔离实现",
+          "summary": "OpenAI 发布 Codex 沙箱工程详解，说明如何用同一权限配置约束本机命令，而非迁移到独立容器。默认工作区配置允许仓库内写入、保护 .git 和 .codex、允许广泛读取并禁用网络；域名白名单由代理在 DNS 解析前检查。开发者可用 codex sandbox 在自己的工具中复用配置，也可显式包裹默认不受该沙箱约束的 stdio MCP 服务。macOS 使用 Seatbelt，Linux 使用 bubblewrap 与 seccomp，Windows 正转向兼容设备上的 MXC。文章同时说明，允许写入的本地依赖可能被外部工具执行，沙箱并非单独充分的安全边界。",
+          "category": "news",
+          "group": "openai",
+          "groupLabel": "OpenAI",
+          "digest_id": "2026-11-19",
+          "event_at": "2026-11-18T19:01:26.000Z",
+          "urls": [
+            "https://x.com/OpenAIDevs/status/2123129469447880885",
+            "https://openai.com/index/inside-the-codex-sandbox/"
+          ],
+          "limitation": "",
+          "rank": 3
+        },
+        {
+          "event_id": "vercel-ai-7-177-steering-interrupt",
+          "title": "AI SDK 7.0.177 允许 steering 中断尚未输出的模型调用",
+          "summary": "AI SDK 为 steering 增加 interrupt 选项，使一次 steer 可以取消尚未产生输出的模型调用，而不必等待该调用继续生成。配套 OpenTelemetry 集成会在流重试或 steering 中断启动新模型调用时结束旧 span。ai 包同时内置 skills/ai-sdk，供 pnpm agent skills 使用。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-19",
+          "event_at": "2026-11-18T19:01:44Z",
+          "urls": [
+            "https://github.com/vercel/ai/releases/tag/ai%407.0.177",
+            "https://github.com/vercel/ai/releases/tag/%40ai-sdk/otel%401.0.177"
+          ],
+          "limitation": "",
+          "rank": 4
+        },
+        {
+          "event_id": "assistant-ui-tool-ownership-build-isolation",
+          "title": "assistant-ui 修复工具重复执行、生成式组件隔离与参数校验",
+          "summary": "assistant-stream 0.3.58 给工具调用部件增加 providerExecuted 标记。工具调用追踪器、ToolExecutionStream 与 unstable_runPendingTools 会跳过由后端负责的调用，即使整个运行已经结束而后端结果尚未到达，也不会转交前端 execute。AI SDK适配层传递相同标记；动态工具仅在明确标记为true时跳过。LangChain适配在graph因interrupt暂停时保持调用等待。数据流解码器还向onData转发可选wire id，用于区分原位更新与新的数据部件。\n\nx-generative-compiler 0.0.22 移除只被剥离区域引用的模块绑定，包含createDb调用与new PrismaClient实例化，避免仅后端execute需要的初始化代码留在客户端构建。use generative指令不在首条语句时构建会失败，而不是把未编译内容直接交付；withAui对全部JS/TS扩展名运行loader，包括.mts与.cts。同日generative-frame 0.0.11在表达式解析后检查props和action参数，并排除__proto__、constructor与prototype键。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-19",
+          "event_at": "2026-11-18T07:52:25Z",
+          "urls": [
+            "https://github.com/assistant-ui/assistant-ui/releases/tag/assistant-stream%400.3.58",
+            "https://github.com/assistant-ui/assistant-ui/releases/tag/%40assistant-ui/x-generative-compiler%400.0.22",
+            "https://github.com/assistant-ui/assistant-ui/releases/tag/generative-frame%400.0.11"
+          ],
+          "limitation": "",
+          "rank": 5
+        },
+        {
+          "event_id": "google-genai-3-5-3-6-live-interactions",
+          "title": "Google GenAI SDK 加入实验性 Live Interactions 与自托管环境模式",
+          "summary": "JavaScript与Python GenAI SDK 3.5.0 加入实验性Live Interactions支持，覆盖WebSocket和WebRTC，并生成相关类型与auth-token客户端。Environments新增自托管BYOS模式及system_instruction、custom_config和environment_key字段。同日3.6.0进一步公开工具检索与函数结果schema。JavaScript的批量内联响应改为GenerateContentResponse实例；Python支持在自动函数调用中解析日期、时间、时长和UUID字符串参数。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-19",
+          "event_at": "2026-11-18T02:50:26Z",
+          "urls": [
+            "https://github.com/googleapis/js-genai/releases/tag/v3.5.0",
+            "https://github.com/googleapis/js-genai/releases/tag/v3.6.0",
+            "https://github.com/googleapis/python-genai/releases/tag/v3.5.0",
+            "https://github.com/googleapis/python-genai/releases/tag/v3.6.0"
+          ],
+          "limitation": "",
+          "rank": 6
+        },
+        {
+          "event_id": "playwright-mcp-0-0-86-client-tab-groups",
+          "title": "Playwright MCP 0.0.86 支持恢复标签组并明确多客户端控制边界",
+          "summary": "新版浏览器扩展连接页支持一次选择整组或多个标签，断线后组保留并变灰，下次可恢复。Manage clients页面列出客户端与标签，可断开连接或轮换令牌；每个标签只有一个拥有者，拖入另一客户端组会转移控制。扩展模式拒绝设置或清除cookies、授权等浏览器全局修改，但仍能读取全局cookie数据。会话可设置名称和颜色，需更新Playwright扩展。版本还避免同名下载覆盖，把无响应页面的CDP附着等待限制为10秒，并把最低Node.js要求明确为20。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-19",
+          "event_at": "2026-11-18T18:50:38Z",
+          "urls": [
+            "https://github.com/microsoft/playwright-mcp/releases/tag/v0.0.86"
+          ],
+          "limitation": "",
+          "rank": 7
+        },
+        {
+          "event_id": "mastra-1-84-storage-recovery",
+          "title": "Mastra 1.84 加入增量运行存储与工作流崩溃恢复循环",
+          "summary": "Agent与evented workflow可选择实验性storageVersion:2，以运行header和逐步记录保存状态，步骤消息仅携前一步结果和状态增量；result.steps()在该模式下是异步函数。startWorkers()会启动默认引擎工作流恢复循环，多个实例通过存储租约选举leader，默认约每60秒扫描。使用Redis/Valkey Streams或Google Cloud Pub/Sub的evented运行改由broker重投未确认步骤，避免每个新实例重复重启全部运行。恢复循环不处理evented运行；已丢失睡眠定时器或被broker丢弃消息的运行仍需显式restart。Knowledge新增movePage和可续批次reembed接口。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-19",
+          "event_at": "2026-11-18T10:36:18Z",
+          "urls": [
+            "https://github.com/mastra-ai/mastra/releases/tag/%40mastra/core%401.84.0"
+          ],
+          "limitation": "",
+          "rank": 8
+        },
+        {
+          "event_id": "opencode-2-3-2-gpt62-prompt-cache",
+          "title": "OpenCode 2.3.2 修复 GPT-6.2 系统提示词每步重复按未缓存输入计费",
+          "summary": "OpenCode 2.3.2 将GPT-6.2系统提示词从Responses instructions字段改为前置developer消息，覆盖OpenAI API key、ChatGPT登录、GitHub Copilot、Zen、Azure和OpenRouter路由。官方发布说明称该前缀从第二步开始可被缓存，/responses/compact也读取同一缓存前缀；其Copilot gpt-6.2-sol案例中每步未缓存输入约从14,000 token降至3 token。webfetch结构化输出同时移除与调用参数重复的url和format。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-19",
+          "event_at": "2026-11-18T01:35:12Z",
+          "urls": [
+            "https://github.com/anomalyco/opencode/releases/tag/v2.3.2"
+          ],
+          "limitation": "",
+          "rank": 9
+        },
+        {
+          "event_id": "langchain-js-google-decisions-0-2-16",
+          "title": "LangChain JS 接入 Gemini Decisions，并收紧运行时模型切换",
+          "summary": "@langchain/google 0.2.16 增加实验性GoogleClassifier与BaseGoogleClassifier，在AI Studio上接入Gemini Decisions API，支持文本、JSON、消息对话与多模态内容中的多类分类与评分问题，含安全拒绝转换。Google Cloud/Vertex接口已添加，但最终可用性仍待平台实现。同日langchain 1.6.7让未显式设置configurableFields的模型不可在invoke时被configurable.model/modelProvider替换；显式列出字段后仍可切换。人工介入中间件生成的reject/respond工具消息附带决策来源元数据。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-19",
+          "event_at": "2026-11-18T22:26:21Z",
+          "urls": [
+            "https://github.com/langchain-ai/langchainjs/releases/tag/%40langchain/google%400.2.16",
+            "https://github.com/langchain-ai/langchainjs/releases/tag/langchain%401.6.7"
+          ],
+          "limitation": "",
+          "rank": 10
+        },
+        {
+          "event_id": "deepagents-0-7-40-code-0-2-11-shell-approval",
+          "title": "DeepAgents 保留超时命令输出，并修复 MCP hook 审批",
+          "summary": "DeepAgents 0.7.40 在shell命令超时后保留已产生的输出，并清理被取消的命令；插件profile发现合并为一次entry-point扫描，同时避免warn_deprecated中的warning-filter竞态。配套DeepAgents Code 0.2.11 修复MCP hook审批策略未得到遵守的问题，关闭时等待后台worker清理完成，并将SDK依赖更新到0.7.40。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-19",
+          "event_at": "2026-11-18T18:27:53Z",
+          "urls": [
+            "https://github.com/langchain-ai/deepagents/releases/tag/deepagents%3D%3D0.7.40",
+            "https://github.com/langchain-ai/deepagents/releases/tag/deepagents-code%3D%3D0.2.11"
+          ],
+          "limitation": "",
+          "rank": 11
+        },
+        {
+          "event_id": "zed-1-30-preview-commit-model-gpu",
+          "title": "Zed 1.30 预览版新增提交消息模型选择并优化渲染与大项目扫描",
+          "summary": "Zed 1.30.0预览版在Git提交编辑器中增加模型选择器，选择保存到agent.commit_message_model；加入GPT-6.1 Terra和Gemini4 Hydrogen的Extra High档支持。渲染减少路径、阴影及被遮挡内容的GPU工作，spinner动画不再重新渲染整个所属视图，并优化大项目扫描、文件大量变动和多文件buffer。它还修复edit_file/write_file的always_confirm规则对项目内文件不询问，以及另一Agent线程发送排队消息抢走输入焦点的问题。同日1.30.1预览补充Linux官方Snap包。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-19",
+          "event_at": "2026-11-18T17:26:01Z",
+          "urls": [
+            "https://github.com/zed-industries/zed/releases/tag/v1.30.0-pre",
+            "https://github.com/zed-industries/zed/releases/tag/v1.30.1-pre"
+          ],
+          "limitation": "",
+          "rank": 12
+        },
+        {
+          "event_id": "gemini-cli-0-70-preview-policy-mcp",
+          "title": "Gemini CLI 0.70 预览版加强 MCP 命令权限与策略匹配",
+          "summary": "Gemini CLI 0.70.0-preview.0 跳过命令权限不安全的系统MCP服务器，策略argsPattern改用re2js进行线性时间匹配；遇到无法解析的shell展开时保留ASK_USER，并让commandPrefix/commandRegex对顶层command参数匹配。IDE发现改用按用户隔离的目录并原子写入port文件。该预览版还保留认证重启前选中的worktree、修复会话预览的Unicode提示词和ANSI片段处理，并在请求超时超过300秒时相应延长undici bodyTimeout。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-19",
+          "event_at": "2026-11-19T00:09:03Z",
+          "urls": [
+            "https://github.com/google-gemini/gemini-cli/releases/tag/v0.70.0-preview.0"
+          ],
+          "limitation": "",
+          "rank": 13
+        },
+        {
+          "event_id": "qwen-nightly-20261118-acp-mods-managed-wecom",
+          "title": "Qwen Code nightly 将 Mods 扩展到 ACP，并新增托管企微智能机器人通道",
+          "summary": "11月18日nightly让开启experimental.mods的ACP会话加载工作区Mods，适用于Web Shell daemon、Zed和VS Code companion。每个会话拥有独立Mod运行环境，可接收session与turn事件；目前不触发tool.call、tool.check、ui.render等事件。另新增实验性托管企业微信智能机器人适配，通过鉴权WebSocket将私聊输入路由至绑定Managed Agent Session并返回带回执回复。它不同于此前send-only群webhook；入站无法持久保存时因上游不重投而丢失并记日志，发送结果不确定时记为unknown。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-19",
+          "event_at": "2026-11-18T22:29:34Z",
+          "urls": [
+            "https://github.com/QwenLM/qwen-code/releases/tag/v0.28.0-nightly.20261118.d9ac287c9f",
+            "https://github.com/QwenLM/qwen-code/pull/17693",
+            "https://github.com/QwenLM/qwen-code/pull/17441"
+          ],
+          "limitation": "",
+          "rank": 14
+        },
+        {
+          "event_id": "openai-research-acceleration-jagged-frontier",
+          "title": "OpenAI 内部报告：代理独立完成46%的两至四小时研究任务",
+          "summary": "OpenAI 公布内部研究工作数据：从3月至10月，预计需人类2至4小时的任务，代理零人工干预成功率由23%升至46%；4至8小时任务由13%升至35%。监控训练运行成功率79%，编写推理和服务栈代码仅25%，不同任务差异明显。10月研究人员每日代理使用量中位数按API标价折算约2,400美元，90分位为23,000美元，并非实际内部支出。研究人员仍负责提出重要方向、审阅输出及监督实验；报告指出任务选择和工作方式变化也影响成功率。",
+          "category": "news",
+          "group": "openai",
+          "groupLabel": "OpenAI",
+          "digest_id": "2026-11-19",
+          "event_at": "2026-11-18T23:07:23.000Z",
+          "urls": [
+            "https://x.com/OpenAI/status/2123191365983248653",
+            "https://openai.com/index/research-acceleration-jagged-frontier/"
+          ],
+          "limitation": "",
+          "rank": 15
+        },
+        {
+          "event_id": "github-tool-mem0ai-mem0",
+          "title": "GitHub 工具｜Mem0：给 AI 应用接入跨会话记忆",
+          "summary": "Mem0 为 AI 助手提供用户、会话及 Agent 层记忆。示例流程先按 user_id 检索相关记忆，将结果加入当前上下文，再把完成的对话写入记忆，用于跨会话偏好与工作状态。项目提供 Python、npm 库、CLI、自托管服务与托管平台；可选 NLP 依赖增强 BM25 和实体检索。README 的默认 LLM 为 gpt-5-mini、嵌入模型为 text-embedding-3-small，均可另行配置，外部模型调用费用由所选提供方计收。自托管服务默认开启鉴权。README 明确研究榜单成绩来自含专有优化的托管平台，开源 SDK 不含这些专有优化。仓库采用 Apache-2.0。",
+          "category": "github",
+          "group": "other",
+          "groupLabel": "其他",
+          "digest_id": "2026-11-19",
+          "event_at": null,
+          "urls": [
+            "https://github.com/mem0ai/mem0"
+          ],
+          "limitation": "",
+          "rank": 16
+        },
+        {
+          "event_id": "quality-vitest-5-1-guide-20261102",
+          "title": "前端质量与效率｜Vitest 5.1：增量重测与失败定位",
+          "summary": "Vitest 团队 11 月 2 日文章介绍实验性 --since-last-run：首次运行全部测试并记录依赖，此后依据文件修改时间选择受影响测试，失败测试会继续重跑，不依赖 Git。Watch 模式按 i 可逐项接受或拒绝快照，支持内联、文件及 ARIA 快照。Browser Trace View 已稳定，默认只保留失败轨迹；Node 的等待时间线仍是实验功能。--last-failed 可跨进程重跑缓存中的失败测试。浏览器 mock 改用 import map，保留 HTTP 缓存；该能力仍属实验功能，受浏览器版本、isolate 和模块加载顺序限制，可关闭并回退到请求拦截。文章同时介绍逐次尝试结果 API、Node 内置计时器模拟和覆盖率性能改进。",
+          "category": "quality",
+          "group": "quality",
+          "groupLabel": "前端质量与效率",
+          "digest_id": "2026-11-19",
+          "event_at": "2026-11-02",
+          "author": "Vitest 团队",
+          "urls": [
+            "https://vitest.dev/blog/vitest-5-1"
+          ],
+          "limitation": "",
+          "rank": 17
+        },
+        {
+          "event_id": "freebie-roundup-2026-11-19",
+          "title": "免费资源｜Qoder 11 月 19 日 10 点调整领取资格，Cerebras 试用按型号限速",
+          "summary": "Qoder 国际版每日 100 通用 Credits 在北京时间 11 月 19 日 10:00 起仅向 Pro 试用及个人 Lite/Pro/Pro+/Ultra 付费账户开放，Free 不再能领；此前已领积分仍按各自原 30 天期限有效。桌面、Mobile、IDE 均可手动领取，每天 10 点换轮，漏领不补。Cerebras 是需验证付款方式的一次性 5 美元试用，30 天到期且不会自动转付费；gpt-oss-120b 为 5 RPM、30K 未缓存 TPM、90K 总 TPM、1M TPH/TPD，qwen-3.8-27b 为 300 RPM、150K 未缓存 TPM、临时 750K 总 TPM，无日 token 上限但仍消耗试用金额。Fish Audio s2.1-pro-free 免绑卡、按公平使用政策免费至 11 月 30 日，无 SLA，数据可能用于改进模型。长期免费选项仍有 Z.ai 的 GLM-4.7-Flash/4.5-Flash/4.6V-Flash、Groq 的 GPT-OSS/Qwen 3.8 27B 限额 API，以及 Cloudflare 每日共用 10,000 Neurons；后者并非 10,000 tokens，指定前沿型号需付费计费方式。",
+          "category": "freebie",
+          "group": "other",
+          "groupLabel": "其他",
+          "digest_id": "2026-11-19",
+          "event_at": null,
+          "urls": [
+            "https://docs.qoder.com/events/100credits",
+            "https://inference-docs.cerebras.ai/support/rate-limits",
+            "https://www.cerebras.ai/pricing",
+            "https://fish.audio/blog/s2-1-pro-free-api/",
+            "https://console.groq.com/docs/rate-limits",
+            "https://docs.z.ai/guides/overview/pricing",
+            "https://developers.cloudflare.com/workers-ai/platform/pricing/"
+          ],
+          "limitation": "",
+          "rank": 18
+        }
+      ]
+    },
+    {
       "digest_id": "2026-11-18",
       "focus_event_id": "openai-gpt-6-2-astra-sol-release",
       "items": [
@@ -5873,11 +6169,11 @@
         "qwen-3.8-27b"
       ],
       "other_models": [],
-      "quota": "新账号一次性 5 美元试用额度，验证付款方式后激活，30 天到期。5 RPM、未缓存 30K TPM、总计 90K TPM、1M TPH、1M TPD；token bucket 连续补充，不是固定每日时点重置。",
-      "conditions": "需要有效付款方式，未验证时 Playground 和 API 均不激活。没有永久免费层；试用到期或用完后暂停，除非另行购买 PayGo。",
+      "quota": "一次性 5 美元试用额度，验证有效付款方式激活，30 天到期。gpt-oss-120b：5 RPM、未缓存 30K TPM、总计 90K TPM、1M TPH/TPD。qwen-3.8-27b：300 RPM、未缓存 150K TPM、总计临时 750K TPM，无小时/日 token 上限；仍消耗试用余额。额度按 token bucket 连续补充，不是固定每日重置。",
+      "conditions": "需有效付款方式；不自动扣费或转付费。试用到期或用尽后 API/Playground 暂停，除非另购 PayGo。Qwen 图像请求最多 2 张、合计 10 MiB；组织额度可能有例外，以控制台为准。",
       "expiry": "激活后 30 天。",
       "privacy": "",
-      "caution": "",
+      "caution": "不同型号限速不同；Qwen 无日 token 上限不等于无限免费金额。",
       "sources": [
         "https://inference-docs.cerebras.ai/support/rate-limits",
         "https://www.cerebras.ai/pricing"
@@ -6309,11 +6605,11 @@
       "status": "official_verified",
       "models": [],
       "other_models": [],
-      "quota": "桌面 App 每日手动领取 100 Credits，每轮北京时间 10:00 重置，领取后 30 天有效。",
-      "conditions": "国际版个人账户；须桌面手动领取，漏领不补，Teams/Enterprise 不参加。",
+      "quota": "每日每账户手动领取 100 通用 Credits，每轮北京时间 10:00 起至次日 10:00 前；每笔领取后 30 天有效，漏领不补。可在桌面 App、Mobile、IDE 领取。",
+      "conditions": "国际版个人账户：北京时间 2026 年 11 月 19 日 10:00 起，仅 Pro 试用或 Lite、Pro、Pro+、Ultra 个人付费订阅可领取，Free 用户不再可领；Teams/Enterprise 不参加。资格按领取时订阅状态确定，原先已领积分保留原 30 天有效期。",
       "expiry": "活动结束日期未公布。",
       "privacy": "",
-      "caution": "",
+      "caution": "资格变更于北京时间 2026 年 11 月 19 日 10:00 生效；免费账户此前领取的积分不受追溯影响。",
       "sources": [
         "https://docs.qoder.com/events/100credits"
       ]

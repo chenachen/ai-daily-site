@@ -1,7 +1,12 @@
 {
   "schema_version": 1,
-  "latest": "2026-11-18",
+  "latest": "2026-11-19",
   "digests": {
+    "2026-11-19": {
+      "path": "daily/2026-11-19/",
+      "content_sha256": "86f3ce9858b86380c844c6c29e7df47c510551a80bed35231367f30a0fa9ee59",
+      "source_sha256": "827fd841025dafaa7ec5b51711f2b289d0d9d70e2eca59f7d19d69815aa98fe6"
+    },
     "2026-11-18": {
       "path": "daily/2026-11-18/",
       "content_sha256": "42a24433307a3db8d55df99f5580906bcfbcf6c570ec7ea1c7beda472e68a13d",
@@ -124,7 +129,7 @@
     }
   },
   "artifacts": {
-    "archive/index.html": "987d7aa7ce3b56e446e8b2d22cf78e13f0e057925afcd9254f99f7e1838428f0",
+    "archive/index.html": "e637c93115e35e56a2c1861ed1ea8ef0bc86f37c1bf01ef267e2a8d777ba274a",
     "assets/client.mjs": "a3baef1cbf9b0ebd397239d5cf36423c2d864b021ce028c09d3599d8bc5698c7",
     "assets/production.css": "76b7a5b887299c226fcf0567ad300261e9ad287a6c8b43427b21004c19b87e15",
     "assets/render.mjs": "a7b118c33468f83e58d65edc13b91caebaa8414b82c516e23c17838b6f8b5c94",
@@ -133,8 +138,8 @@
     "assets/theme-b.css": "e9b047c32c1a0a34bd62564325c158fa12b41007931fa16fbc14b2f60c9ad72e",
     "assets/theme-c.css": "3c42f384a5c95297ce1627d8551fc5d2fd0c0bcbdd111e75af9b9c886c7cb032",
     "assets/theme-init.js": "384cc9db53617dc23fccfe8f198deeb12ed45057f09e47876d168ebd0557a2be",
-    "data/issues.json": "c22d10c7feda29658db8b32302de465c62b96847bc90a765425e4159d2f4aa27",
-    "index.html": "e05cd43adeaf2bfdccda546cecafd27e6bf029f6f55570c1861edcf691b18242",
-    "offers/index.html": "d6b4bbcab93a40b3cc7c06e9a946f77bed9e080efe1767156eaee35a16e0b982"
+    "data/issues.json": "04225099cc2ce8fe92534dea3d5afa45510914e548d5e821dea9c23e70cae932",
+    "index.html": "376145638936ae67f944c4b7016186dfe32034e5dffbb2ca0a22bacb3e393d5c",
+    "offers/index.html": "a0449dae133058ea8e242f14f5fc94edb8a2bc1aabb21f7ba1eea9b67cfb735c"
   }
 }
