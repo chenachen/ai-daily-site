@@ -1,6 +1,340 @@
 {
   "issues": [
     {
+      "digest_id": "2026-11-23",
+      "focus_event_id": "inkling-2-mini-open-weights",
+      "items": [
+        {
+          "event_id": "inkling-2-mini-open-weights",
+          "title": "Thinking Machines 发布 Inkling 2 Mini 开放权重：26.4B 循环架构可本地运行",
+          "summary": "Inkling 2 Mini 接收文本和图像、输出文本。MoE 共 264 亿参数，每 token 激活 34 亿不同参数；中间层循环三次，含重复计算共 54 亿权重激活。多数权重原生采用 NVFP4，末四层为 MXFP8，官方给出约 20GB 模型占用，并提供开放权重和 Tinker 微调入口。厂商报告 DeepSWE v1.1 为 48.2%、Vals Index v2.2 为 46.5%，各参测模型设置并不完全相同。",
+          "category": "news",
+          "group": "models",
+          "groupLabel": "模型与 API",
+          "digest_id": "2026-11-23",
+          "event_at": "2026-11-20T20:10:34Z",
+          "urls": [
+            "https://x.com/thinkymachines/status/2123871643797995872",
+            "https://thinkingmachines.ai/news/inkling-2-mini/",
+            "https://huggingface.co/thinkingmachines/Inkling-2-Mini"
+          ],
+          "limitation": "",
+          "rank": 1
+        },
+        {
+          "event_id": "tencent-hy4-open-weights-20261120",
+          "title": "腾讯混元发布 Hy4 开放权重，提供后训练、FP8 和基础版",
+          "summary": "腾讯混元放出此前已预告的 Hy4 权重；该 MoE 模型共 7700 亿参数、每 token 激活 490 亿，支持最长百万 token 上下文。官方仓库列出后训练版、FP8 量化权重和基础模型，并提供部署说明。权重使用腾讯 Hy 自定义许可。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-23",
+          "event_at": "2026-11-20T03:52:40Z",
+          "urls": [
+            "https://x.com/TencentHunyuan/status/2123625549147070538",
+            "https://github.com/Tencent-Hunyuan/Hy4",
+            "https://huggingface.co/tencent/Hy4"
+          ],
+          "limitation": "",
+          "rank": 2
+        },
+        {
+          "event_id": "kyutai-aura-streaming-avatar",
+          "title": "Kyutai 开放 AURA 实时语音驱动头像模型与代码",
+          "summary": "AURA 从音频驱动人像视频生成，公开 1.3B 和 5B 模型、代码及样本。项目方报告 1.3B 在单张 H100 生成 576p 视频达到 20.7 fps，5B 在 720p 达到 9.7 fps。代码、模型与样本适用各自许可。",
+          "category": "news",
+          "group": "models",
+          "groupLabel": "模型与 API",
+          "digest_id": "2026-11-23",
+          "event_at": "2026-11-20T15:06:46Z",
+          "urls": [
+            "https://x.com/kyutai_labs/status/2123795191417156022",
+            "https://github.com/kyutai-labs/aura"
+          ],
+          "limitation": "",
+          "rank": 3
+        },
+        {
+          "event_id": "openrouter-provider-zdr-changes-20261122",
+          "title": "OpenRouter 下架三家推理供应商，取消 125 个端点的零留存资格",
+          "summary": "OpenRouter 排查推理供应商的数据处理后下架三家，取消 125 个端点的零数据保留资格，其中部分为预防性措施，并通知可能受影响客户。调查未显示 OpenRouter 自身被攻破。Together 另披露其部分 6–7 月无服务器推理请求的提示样本泄露，并表示新账户默认零留存。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-23",
+          "event_at": "2026-11-22T01:32:38Z",
+          "urls": [
+            "https://x.com/OpenRouter/status/2124315081899200715",
+            "https://openrouter.ai/blog/announcements/data-processing-incidents-on-inference-providers/",
+            "https://www.together.ai/blog/security-event-prompt-leakage-for-requests-in-june-and-july-of-2026"
+          ],
+          "limitation": "",
+          "rank": 4
+        },
+        {
+          "event_id": "together-qwen3-tts-hosted-api",
+          "title": "Together 上线 Qwen3-TTS 托管 API，提供流式语音和九款预置音色",
+          "summary": "Together 将既有 Qwen3-TTS 接入无服务器 API 和专用端点，支持 HTTP 流式输出、WebSocket、10 种语言及九款预置音色。可用自然语言说明语音表达方式。无服务器定价每百万字符 20 美元，厂商示例报告首段音频最快 97ms。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-23",
+          "event_at": "2026-11-20T17:02:23Z",
+          "urls": [
+            "https://x.com/togethercompute/status/2123824286242586641",
+            "https://www.together.ai/blog/qwen3-tts"
+          ],
+          "limitation": "",
+          "rank": 5
+        },
+        {
+          "event_id": "chatgpt-space-plus-mobile-20261120",
+          "title": "ChatGPT Space 开始向成年 Plus 用户开放，并支持手机编辑",
+          "summary": "ChatGPT Space 开始分批向全球年满 18 岁的 Plus 用户开放，并支持在手机上编辑。用户可协作制作交互页面、演示和其他工作内容；获得授权的连接应用可作为自动更新的数据来源。 共享对象须登录已有 Space 权限的账户；目前不支持公开链接。",
+          "category": "news",
+          "group": "openai",
+          "groupLabel": "OpenAI",
+          "digest_id": "2026-11-23",
+          "event_at": "2026-11-20T18:48:11Z",
+          "urls": [
+            "https://x.com/ChatGPT/status/2123850912867471807",
+            "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+          ],
+          "limitation": "",
+          "rank": 6
+        },
+        {
+          "event_id": "vue-3-5-46-teleport-ssr",
+          "title": "Vue 3.5.46 修复嵌套 Teleport 水合锚点顺序及 SSR CSS 变量",
+          "summary": "同目标外层禁用的 Teleport 先认领 SSR 目标锚点，再水合嵌套内容，避免后续 Teleport 绑定错服务器 DOM。回归用例断言保留原节点身份并验证响应式更新。SSR 将 CSS 变量传入 KeepAlive、Teleport、根循环和片段；SFC 按 tsconfig 所在目录处理 include/exclude，并保留泛型参数作用域。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-23",
+          "event_at": "2026-11-20T08:18:41Z",
+          "urls": [
+            "https://github.com/vuejs/core/releases/tag/v3.5.46",
+            "https://github.com/vuejs/core/blob/v3.5.46/CHANGELOG.md#3546-2026-11-20",
+            "https://github.com/vuejs/core/pull/16333"
+          ],
+          "limitation": "",
+          "rank": 7
+        },
+        {
+          "event_id": "tanstack-ai-vercel-compat-0-1",
+          "title": "TanStack AI 发布 Vercel 兼容包，双向转换聊天流和工具审批",
+          "summary": "兼容包让一方的 useChat 与另一方服务器搭配，映射文本、带签名的推理、工具调用、审批和断线续接。子代理和共享状态仅在 TanStack 服务端到 AI SDK 客户端方向支持。TanStack useChat 对 AI SDK 路由也提供客户端工具、结构化输出和重连退避。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-23",
+          "event_at": "2026-11-20T10:04:48Z",
+          "urls": [
+            "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-vercel-compat%400.1.0"
+          ],
+          "limitation": "",
+          "rank": 8
+        },
+        {
+          "event_id": "cloudflare-agents-0-34-pi",
+          "title": "Cloudflare Agents 0.34 让长任务暂停等信号，并明确 MCP 重新授权状态",
+          "summary": "Pi 1.6 工具可暂停等信号、期限或子会话结束，Agent 在期间休眠，并可使用旧历史初始化。MCP 需重新授权时返回带链接的专用错误，失败态需显式重连；同时修复跨标签停止、清空与续接竞态。由 Pi 1.6 写入历史的会话不可回滚到 Pi 1.5。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-23",
+          "event_at": "2026-11-20T15:56:33Z",
+          "urls": [
+            "https://github.com/cloudflare/agents/releases/tag/agents%400.34.0"
+          ],
+          "limitation": "",
+          "rank": 9
+        },
+        {
+          "event_id": "vercel-ai-sdk-7-0-178-179-gpt-live",
+          "title": "Vercel AI SDK 7.0.179 接入 GPT Live 网关 WebSocket",
+          "summary": "Gateway Live WebSocket 接入 GPT Live 1 和 1.1，支持 PCM16 音频、追加上下文和关闭时返回最终用量；支持 client-secret-websocket 的模型可凭短期令牌直连。同期 7.0.178 区分预览和最终工具结果，修复审批步骤串用消息数组。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-23",
+          "event_at": "2026-11-20T23:17:40Z",
+          "urls": [
+            "https://github.com/vercel/ai/releases/tag/ai%407.0.179",
+            "https://github.com/vercel/ai/releases/tag/ai%407.0.178"
+          ],
+          "limitation": "",
+          "rank": 10
+        },
+        {
+          "event_id": "cline-sdk-021-cli-3075-extension",
+          "title": "Cline 更新 SDK 与 CLI，新增云任务恢复并调整单次运行默认模式",
+          "summary": "SDK 支持从 Hub 恢复会话、从 Git 快照创建云任务并生成结构化 UX 核验报告。read_files 不再向模型额外截断至 8K，仍受文件工具限制。CLI 单次运行默认改为 yolo；显式模式、关闭自动审批、已保存计划模式及 /team 例外。CLI 不再读取启动目录的 .env 或 bunfig.toml。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-23",
+          "event_at": "2026-11-21T05:19:22Z",
+          "urls": [
+            "https://github.com/cline/cline/releases/tag/sdk/sdk/v0.2.1",
+            "https://github.com/cline/cline/releases/tag/cli-v3.0.75",
+            "https://github.com/cline/cline/releases/tag/v4.1.27"
+          ],
+          "limitation": "",
+          "rank": 11
+        },
+        {
+          "event_id": "assistant-ui-0-3-59-tool-execution",
+          "title": "assistant-ui 阻止禁用工具实际执行，并改进跨标签会话恢复",
+          "summary": "已禁用的前端和 Frame 工具会在执行阶段返回错误，不调用执行函数。流解码仅跟踪待处理块，同一部件顺序不变。AG-UI 0.1.12 将离开长期运行会话记录为连接中断而非用户取消，另一标签可接管，并保留子代理的中断 ID。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-23",
+          "event_at": "2026-11-22T18:56:53Z",
+          "urls": [
+            "https://github.com/assistant-ui/assistant-ui/releases/tag/assistant-stream%400.3.59",
+            "https://github.com/assistant-ui/assistant-ui/releases/tag/%40assistant-ui/react-ag-ui%400.1.12"
+          ],
+          "limitation": "",
+          "rank": 12
+        },
+        {
+          "event_id": "qwen-code-0-28-4-artifacts",
+          "title": "Qwen Code 0.28.4 加入跨会话产物库，生成式 UI 卡片可保留视图状态",
+          "summary": "Web Shell 本地服务新增工作区产物库，经 SSE 渐进扫描活跃、冷却和归档会话，并标记未完成或局部失败。聊天界面显示中断会话的继续入口。0.28.3 为新生成的 UI 卡片保存独立视图状态，跨刷新、重开和 fork 有效，每卡 JSON 上限 16 KiB，旧卡及静态记录不适用。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-23",
+          "event_at": "2026-11-22T12:04:21Z",
+          "urls": [
+            "https://github.com/QwenLM/qwen-code/releases/tag/v0.28.4",
+            "https://github.com/QwenLM/qwen-code/releases/tag/v0.28.3",
+            "https://github.com/QwenLM/qwen-code/pull/17522"
+          ],
+          "limitation": "",
+          "rank": 13
+        },
+        {
+          "event_id": "browser-use-107-108-cached-judge",
+          "title": "Browser Use 1.0.7–1.0.8 将长 MCP 调用转后台，并复用评判上下文",
+          "summary": "长 browser_exec 在 50 秒先返回已有输出、在后台继续，后续调用可读取剩余输出。任务评判转为同一运行的追加轮次，可复用提供方缓存；输出格式不符或出错时回退独立评判。项目方在每组 200 个任务、同用 GPT-6.1 Terra Medium 的对照中，每任务评判成本由 0.042 降至 0.0095 美元；新版组带另外三项修复，分数变化未达显著。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-23",
+          "event_at": "2026-11-20T20:01:20Z",
+          "urls": [
+            "https://github.com/browser-use/browser-use/releases/tag/1.0.7",
+            "https://github.com/browser-use/browser-use/releases/tag/1.0.8",
+            "https://github.com/browser-use/browser-use/pull/6457"
+          ],
+          "limitation": "",
+          "rank": 14
+        },
+        {
+          "event_id": "claude-code-2-1-330-enterprise-settings",
+          "title": "Claude Code 2.1.330 扩展企业设置，Agent SDK 新增配置未生效提示",
+          "summary": "Enterprise Admin Console 管理的组织登录后使用组织设置及云提供商或网关。符合条件的 macOS/Linux 用户可使用内置 Easel 图表。CLI 修复退出时误删其他实例在用的 worktree、超长历史压缩后的卡顿及并发设置保存。SDK 增加 settings_not_in_effect 通知，并修复交叠的 MCP 重连调用响应错配。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-23",
+          "event_at": "2026-11-20T22:32:56Z",
+          "urls": [
+            "https://github.com/anthropics/claude-code/releases/tag/v2.1.330",
+            "https://github.com/anthropics/claude-agent-sdk-typescript/releases/tag/v0.3.330"
+          ],
+          "limitation": "",
+          "rank": 15
+        },
+        {
+          "event_id": "deepagents-code-0212-0213-acp",
+          "title": "DeepAgents Code 跨线程共享提示词缓存键，并修复 ACP 启动",
+          "summary": "同一本地 profile 的线程共享 OpenAI prompt_cache_key。代码式工具发现直接从已暴露工具读取；项目 MCP 信任提示显示源文件，可区分未批准或禁用。ACP 调整协议库版本范围，修复命令启动崩溃。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-23",
+          "event_at": "2026-11-20T04:19:28Z",
+          "urls": [
+            "https://github.com/langchain-ai/deepagents/releases/tag/deepagents-code%3D%3D0.2.12",
+            "https://github.com/langchain-ai/deepagents/releases/tag/deepagents-code%3D%3D0.2.13",
+            "https://github.com/langchain-ai/deepagents/releases/tag/deepagents-acp%3D%3D0.1.0"
+          ],
+          "limitation": "",
+          "rank": 16
+        },
+        {
+          "event_id": "litellm-1-108-13-15-lts",
+          "title": "LiteLLM LTS 补齐 GPT‑6.2 缓存路径，修复 Responses 多轮工具搜索",
+          "summary": "1.108.13 补齐未设置 store:false 的 GPT‑6.2 缓存路径，并修复 Claude Code 计费头轮换影响其他模型的前缀缓存。1.108.14 修复 Responses 多轮中丢失 Claude 工具搜索并增加 Decisions 的 input_json。1.108.15 修复 Cohere v2 流式工具调用、选择及结构化参数。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-23",
+          "event_at": "2026-11-20T04:00:54Z",
+          "urls": [
+            "https://github.com/BerriAI/litellm/releases/tag/v1.108.13",
+            "https://github.com/BerriAI/litellm/releases/tag/v1.108.14",
+            "https://github.com/BerriAI/litellm/releases/tag/v1.108.15"
+          ],
+          "limitation": "",
+          "rank": 17
+        },
+        {
+          "event_id": "github-tool-chroma-core-chroma",
+          "title": "GitHub 工具｜Chroma：用本地或云端集合做向量检索",
+          "summary": "Chroma 提供 Python 和 JavaScript 客户端，Python 可在内存中运行或把数据持久化；也可连接独立服务。集合保存文档、ID、元数据和自动或自行生成的向量，支持相似性查询及元数据过滤。托管 Chroma Cloud 另提供向量、混合及全文检索。",
+          "category": "github",
+          "group": "other",
+          "groupLabel": "其他",
+          "digest_id": "2026-11-23",
+          "event_at": null,
+          "urls": [
+            "https://github.com/chroma-core/chroma"
+          ],
+          "limitation": "",
+          "rank": 18
+        },
+        {
+          "event_id": "quality-currents-playwright-flake-quarantine-20261119",
+          "title": "前端质量与效率｜Playwright 偶发失败隔离：保留主 CI 执行，按错误特征判定",
+          "summary": "Walter Galvão 展示如何将疑似偶发失败单独重复运行，再和所在 spec 一起复测。隔离用例继续在主 CI 执行，并记录负责人、问题单、到期日和已知错误特征。自定义报告器仅对匹配已知错误且重试成功的隔离用例不追加失败；错误不匹配、各次均失败、未隔离用例偶发失败、记录缺失或过期仍会失败。分片分别判断用例，合并报告后再核对隔离数量上限。文章给出四个模拟验证用例，以及每夜运行 20 次、连续 7 夜无失败才解除隔离的示例。",
+          "category": "quality",
+          "group": "quality",
+          "groupLabel": "前端质量与效率",
+          "digest_id": "2026-11-23",
+          "event_at": "2026-11-19",
+          "author": "Walter Galvão",
+          "urls": [
+            "https://currents.dev/posts/quarantine-flaky-playwright-tests-without-hiding-failures"
+          ],
+          "limitation": "",
+          "rank": 19
+        },
+        {
+          "event_id": "freebie-roundup-2026-11-23",
+          "title": "免费资源｜OpenCode 更新限免型号，Muse Ember 黑客松为入选者提供 API 额度",
+          "summary": "OpenCode Console 现行免费目录列有 Tidepool Alpha Free，提供方保留数据并用于改进模型。Inkling 2 Small Free 已列入弃用表；现行目录未列 LongCat 2.5 Free。免费聊天模型限 OpenCode 客户端使用。Muse Ember 黑客松向入选者各提供 10 美元 Meta Model API 额度，面向年满 18 岁的美国参与者、需单人提交，最多录取 1,000 人；报名至北京时间 11 月 26 日 01:00 或满额提前截止，提交至 12 月 3 日 10:00。",
+          "category": "freebie",
+          "group": "other",
+          "groupLabel": "其他",
+          "digest_id": "2026-11-23",
+          "event_at": null,
+          "urls": [
+            "https://opencode.ai/docs/console/models/",
+            "https://opencode.ai/inference/v1/models",
+            "https://opencode.ai/docs/console/api/inference/#authentication",
+            "https://events.cerebralvalley.ai/e/muse-ember-hackathon"
+          ],
+          "limitation": "",
+          "rank": 20
+        }
+      ]
+    },
+    {
       "digest_id": "2026-11-20",
       "focus_event_id": "gpt-live-1-1-api-standby",
       "items": [
@@ -6559,27 +6893,27 @@
       "status": "official_verified",
       "models": [
         "Big Pickle",
+        "Tidepool Alpha Free",
+        "Iceman Free",
         "DeepSeek V4.1 Flash Free",
         "Beam Free",
         "Flint 40B Free",
+        "Hy4 flash Free",
         "MiMo-V2.6-Flash Free",
         "Nemotron 3.5 Lightning Free",
         "Nemotron 3.5 Super VL Free",
-        "Iceman Free",
-        "Inkling 2 Small Free",
-        "Jev 1.13 Free",
-        "LongCat 2.5 Free",
-        "Hy4 flash Free"
+        "Jev 1.13 Free"
       ],
       "other_models": [],
-      "quota": "免费聊天模型限 OpenCode 客户端使用。LongCat 2.5 Free 每日 100 请求，精确重置时刻未公布；其余所列模型未公布统一请求额度、重置周期或截止日。",
-      "conditions": "免费聊天模型限 OpenCode 客户端，需要账户并选择相应型号，其他客户端即使持 API key 也会收到 HTTP 403。Inkling 2 Small 不支持欧盟、冰岛、列支敦士登、挪威、古巴、伊朗、朝鲜、俄罗斯、乌克兰和委内瑞拉。Beam 不支持安哥拉、白俄罗斯、柬埔寨、中国（含香港和澳门）、古巴、刚果民主共和国、赤道几内亚、伊朗、伊拉克、老挝、利比亚、尼日利亚、朝鲜、俄罗斯、叙利亚、土库曼斯坦、乌兹别克斯坦、委内瑞拉，以及乌克兰的克里米亚、顿涅茨克和卢甘斯克地区。",
-      "expiry": "各项免费活动结束日期未公布。",
-      "privacy": "DeepSeek V4.1 Flash、Hy4 flash Free 的提供方声明零保留、不用于训练。Big Pickle 免费期数据可能用于改进模型；Iceman 保留并用于改进；Inkling 2 Small 保留且可能用于训练；Flint 保留30天且可能用于改进。Beam 为安全目的保留30天、不训练。NVIDIA Nemotron 3.5 Lightning 和3.5 Super VL 免费端点仅供试用，不提交个人或机密数据，记录用于安全及改进。LongCat 2.5 Free 在中国托管、零保留、不训练。",
-      "caution": "GLM 5.3 Flash 当前非 Free 型号收费；已退役的免费版本不在本条现行型号内。",
+      "quota": "官方未公布上述限免聊天模型的统一请求数或重置周期。",
+      "conditions": "免费聊天模型限 OpenCode 客户端，需要账户并选择相应型号，其他客户端即使持 API key 也会收到 HTTP 403。Beam 不支持安哥拉、白俄罗斯、柬埔寨、中国（含香港和澳门）、古巴、刚果民主共和国、赤道几内亚、伊朗、伊拉克、老挝、利比亚、尼日利亚、朝鲜、俄罗斯、叙利亚、土库曼斯坦、乌兹别克斯坦、委内瑞拉，以及乌克兰的克里米亚、顿涅茨克和卢甘斯克地区。",
+      "expiry": "所列免费型号均为限时，统一结束日期未公布。",
+      "privacy": "DeepSeek V4.1 Flash、Hy4 flash Free 的提供方声明零保留、不用于训练。Big Pickle 免费期数据可能用于改进模型；Iceman 保留并用于改进；Flint 保留30天且可能用于改进。Beam 为安全目的保留30天、不训练。NVIDIA Nemotron 3.5 Lightning 和3.5 Super VL 免费端点仅供试用，不提交个人或机密数据，记录用于安全及改进。Tidepool Alpha Free 保留数据并用于改进模型。",
+      "caution": "GLM 5.3 Flash 不带 Free 后缀的型号收费。",
       "sources": [
         "https://opencode.ai/docs/console/models/",
-        "https://opencode.ai/docs/console/api/inference/#authentication"
+        "https://opencode.ai/docs/console/api/inference/#authentication",
+        "https://opencode.ai/inference/v1/models"
       ]
     },
     {

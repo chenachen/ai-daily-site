@@ -1,7 +1,12 @@
 {
   "schema_version": 1,
-  "latest": "2026-11-20",
+  "latest": "2026-11-23",
   "digests": {
+    "2026-11-23": {
+      "path": "daily/2026-11-23/",
+      "content_sha256": "878ced798005707448ec053323ee8c93b8d67c4af7de96214ac2e46ee7a2a52e",
+      "source_sha256": "8008d0b50f9ac860953ec31e191ac1423a8fb0ce861d8173499bbbd24b26792d"
+    },
     "2026-11-20": {
       "path": "daily/2026-11-20/",
       "content_sha256": "539a5be5c10eb9732dca8df11c2c577b5ade6a946d394e509c6a15f0d758e925",
@@ -134,7 +139,7 @@
     }
   },
   "artifacts": {
-    "archive/index.html": "b0e314c263f6f3d6714b8ad4e5ed02284a38664f9155c9a86dda1a34310fb81d",
+    "archive/index.html": "51dfded8fc1c557fa931d7694c2e5a24fa5c9758df72aa3c40fd16cf0b27aa91",
     "assets/client.mjs": "a3baef1cbf9b0ebd397239d5cf36423c2d864b021ce028c09d3599d8bc5698c7",
     "assets/production.css": "76b7a5b887299c226fcf0567ad300261e9ad287a6c8b43427b21004c19b87e15",
     "assets/render.mjs": "a7b118c33468f83e58d65edc13b91caebaa8414b82c516e23c17838b6f8b5c94",
@@ -143,8 +148,8 @@
     "assets/theme-b.css": "e9b047c32c1a0a34bd62564325c158fa12b41007931fa16fbc14b2f60c9ad72e",
     "assets/theme-c.css": "3c42f384a5c95297ce1627d8551fc5d2fd0c0bcbdd111e75af9b9c886c7cb032",
     "assets/theme-init.js": "384cc9db53617dc23fccfe8f198deeb12ed45057f09e47876d168ebd0557a2be",
-    "data/issues.json": "29459107d98eaa12458d38810dbe1264c0aa93dbdcf924c34e7a8cb49634b55a",
-    "index.html": "6c47d94b39514a7cd8a3fcfae32a3013d53cc93e06af1ebdb67ba2da85a353f7",
-    "offers/index.html": "33ac7f6b44b2f39fe5fbd8f2a8904f4366438f65639be88c47c0e09ad0e4617e"
+    "data/issues.json": "f1455da3a33cefa39b235e6851fa1ff3119fade2f2600eb8e7f2cad6c952ced3",
+    "index.html": "77f25072c99e9bd9a7d4e89c412e5b952c6b5a4f25327b2df99d23ad396f2153",
+    "offers/index.html": "63a1ce2751df3a3f280d60948cecb7cbffb8b63bd7e114fa1c4d61bec7d4bc67"
   }
 }
