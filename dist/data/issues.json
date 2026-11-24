@@ -1,6 +1,312 @@
 {
   "issues": [
     {
+      "digest_id": "2026-11-24",
+      "focus_event_id": "glm-5-4-loop-transformer-coding-plan",
+      "items": [
+        {
+          "event_id": "glm-5-4-loop-transformer-coding-plan",
+          "title": "智谱 GLM-5.4 向 Coding Plan 开放，新增视觉与 100 万 token 上下文",
+          "summary": "智谱首个采用 Loop Transformer 的旗舰模型 GLM-5.4 在 GLM-5 基座上继续训练，复用一组层进行多轮计算。模型支持视觉输入和 100 万 token 上下文；首批覆盖 GLM Coding Plan、ZCode 和智谱聊天入口。\n\nLite、Pro、Max 和团队套餐可用。在同样套餐额度下，现行个人及团队订阅使用 GLM-5.4 可消耗 GLM-5.3 的 1.5 倍 token。旧 V1 也可使用 5.4，但保持原权益；之前的 ZCode 专属额外 1.5 倍已结束。通用按量 API 待安全评估，模型权重尚未开放。",
+          "category": "news",
+          "group": "models",
+          "groupLabel": "模型与 API",
+          "digest_id": "2026-11-24",
+          "event_at": "2026-11-23T04:18:45.398Z",
+          "urls": [
+            "https://x.com/ZixuanLi_/status/2124719275864670681",
+            "https://x.com/Zai_org/status/2124811995912286352",
+            "https://z.ai/blog/glm-5.4",
+            "https://zcode.z.ai/cn/docs/qa"
+          ],
+          "limitation": "",
+          "rank": 1
+        },
+        {
+          "event_id": "inclusionai-ling-3-2-air-open-weights",
+          "title": "蚂蚁开放 Ling-3.2-air 权重，支持多模态与文档工作流",
+          "summary": "蚂蚁 inclusionAI 以 MIT 许可开放 Ling-3.2-air 权重。模型从 Ling-3.0-flash-VL 延续原生多模态架构，总参数 124B，每 token 激活 5.5B，面向文档理解和工作流自动化。官方报告 AutomationBench-AA 从基线的 15.7% 提升至 61%，并提供 SGLang、vLLM 部署支持。",
+          "category": "news",
+          "group": "models",
+          "groupLabel": "模型与 API",
+          "digest_id": "2026-11-24",
+          "event_at": "2026-11-23T15:42:00.932Z",
+          "urls": [
+            "https://x.com/AntLingAGI/status/2124891223597240338",
+            "https://huggingface.co/inclusionAI/Ling-3.2-air"
+          ],
+          "limitation": "",
+          "rank": 2
+        },
+        {
+          "event_id": "claude-ship-github-beta",
+          "title": "Anthropic 推出 Claude Ship 测试版，按团队策略评审、修复和批准 PR",
+          "summary": "Claude Ship 将原已正式开放的 Code Review 与两个新测试功能组合：PR Steward 处理评审反馈、失败检查与合并冲突；Claude Approvals 读取仓库策略，批准允许的常规改动，其他改动仍可要求指定人员签字。\n\nGitHub 整仓能力面向 Team、Enterprise，管理员逐仓启用。个人开发者另有 Claude Code 命令行和桌面端的 /ship 入口。现有权限、分支保护和必需检查继续决定哪些改动可合并。整仓用量按 token 计费；零数据保留、HIPAA 或客户自管密钥配置的组织不支持。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-24",
+          "event_at": "2026-11-23T20:13:04.189Z",
+          "urls": [
+            "https://x.com/ClaudeDevs/status/2124959436640858475",
+            "https://claude.com/resources/articles/introducing-claude-ship",
+            "https://claude.com/product/claude-ship",
+            "https://x.com/bcherny/status/2124961488691740941"
+          ],
+          "limitation": "",
+          "rank": 3
+        },
+        {
+          "event_id": "openai-gpt-6-2-sol-everyday-chat-rollout",
+          "title": "GPT-6.2 Sol 日常聊天版开始在 ChatGPT 分批开放",
+          "summary": "OpenAI 将针对日常聊天调整的 GPT-6.2 Sol 向 Plus、Pro、Business、Enterprise 分批推送；企业账户受管理员配置影响。本次仅改变 Chat，不改变 Work/Codex。OpenAI 自测相较 GPT-6，图像理解为 71.7% 对 47.4%，复杂指令遵循为 78.1% 对 62.5%；Extra High 档 BrowseComp 为 64.5% 对 54.4%。",
+          "category": "news",
+          "group": "openai",
+          "groupLabel": "OpenAI",
+          "digest_id": "2026-11-24",
+          "event_at": "2026-11-23T19:04:31.417Z",
+          "urls": [
+            "https://x.com/ChatGPT/status/2124942186425069836",
+            "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+          ],
+          "limitation": "",
+          "rank": 4
+        },
+        {
+          "event_id": "opencode-2-4-persistent-browser-automation",
+          "title": "OpenCode 2.4 加入持久浏览器和会话自动化",
+          "summary": "OpenCode 2.4.0 桌面内置浏览器跨重启保留标签与登录态，支持导入浏览器数据、扩展与旁栏内开链接。/automation 管理定时、cron 和 MCP 事件触发，可在配置关闭。有相应模型时可在后台生成视频并写入工作区。开放版本范围的插件可自动检查更新，固定版本不自动更新；Copilot 不再读取 GITHUB_TOKEN。2.4.1 修复 macOS 12 消息保存以及 Ollama 等仅配置提供方的模型显示。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-24",
+          "event_at": "2026-11-23T09:22:21Z",
+          "urls": [
+            "https://github.com/anomalyco/opencode/releases/tag/v2.4.0",
+            "https://github.com/anomalyco/opencode/releases/tag/v2.4.1"
+          ],
+          "limitation": "",
+          "rank": 5
+        },
+        {
+          "event_id": "copilotkit-1-90-1-mcp-apps-fullscreen",
+          "title": "CopilotKit 1.90.1 支持 MCP Apps 内嵌与全屏切换",
+          "summary": "React 和 Vue 的 MCP Apps 小组件可在内嵌与全屏间切换；须宿主和组件都支持且用户真实操作才授予全屏。切换时原组件保持挂载，退出后恢复内嵌高度，暂不支持画中画。运行时保留客户端省略的内存线程历史，重连回放含消息快照；生产调试事件流须显式开启。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-24",
+          "event_at": "2026-11-23T21:00:19Z",
+          "urls": [
+            "https://github.com/CopilotKit/CopilotKit/releases/tag/v1.90.1",
+            "https://github.com/CopilotKit/CopilotKit/blob/v1.90.1/CHANGELOG.md"
+          ],
+          "limitation": "",
+          "rank": 6
+        },
+        {
+          "event_id": "vercel-ai-sdk-7-0-181-stoppedby-approval-input",
+          "title": "Vercel AI SDK 7.0.181 暴露停止条件，TUI 审批展示工具参数",
+          "summary": "generateText、streamText 的结果、onEnd 和结束片段新增 stoppedBy，区分工具循环由哪个条件结束；每次调用的 onWarning 也收到提示转换警告。迟到的 steering 可收到运行结束原因。TUI 1.0.182 审批展示对应工具调用的原始参数，滚动至输入末尾后才可批准。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-24",
+          "event_at": "2026-11-23T21:09:00Z",
+          "urls": [
+            "https://github.com/vercel/ai/releases/tag/ai%407.0.181",
+            "https://github.com/vercel/ai/releases/tag/%40ai-sdk/tui%401.0.182"
+          ],
+          "limitation": "",
+          "rank": 7
+        },
+        {
+          "event_id": "pydantic-ai-2-72-nested-approvals",
+          "title": "Pydantic AI 2.72 可将多层子代理审批转交主流程",
+          "summary": "框架可选择转发嵌套子代理的待审批工具调用或追问，保留 agent_path，接到答复后继续而不重跑已完成工作。子代理历史留在服务端，暂停状态一次性消费，默认内存存储不跨进程。GPT-Live 可追加语音指令或传自定义 voice；不支持的统一模型设置会被丢弃，可能改变依赖 400 响应的回退行为。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-24",
+          "event_at": "2026-11-24T00:38:11Z",
+          "urls": [
+            "https://github.com/pydantic/pydantic-ai/releases/tag/v2.72.0",
+            "https://github.com/pydantic/pydantic-ai/pull/14115"
+          ],
+          "limitation": "",
+          "rank": 8
+        },
+        {
+          "event_id": "quality-storybook-changed-story-testing",
+          "title": "前端质量与效率｜Storybook 11 测试版按改动选故事，空选集可零测试通过",
+          "summary": "Storybook 11 beta.4 的 storybook tools test run 可传故事文件，也可用 --changed 按改动及依赖关系选故事。不带 Git ref 只检查本地未提交改动；带目标分支 ref 会覆盖分叉后的已提交改动和未提交改动。没有受影响故事时命令退出码为 0，但没有运行测试；结果分别显示选中范围及执行状态，选中后全部跳过也可能成功。\n\nbeta.4 移除旧 @storybook/test-runner 支持，并修正 Vue 3 挂载异常显示。beta.5 在启动时提示 Storybook 与 Vitest addon 版本不匹配。两版均为预发行。",
+          "category": "quality",
+          "group": "quality",
+          "groupLabel": "前端质量与效率",
+          "digest_id": "2026-11-24",
+          "event_at": "2026-11-23T12:32:01Z",
+          "urls": [
+            "https://github.com/storybookjs/storybook",
+            "https://github.com/storybookjs/storybook/releases/tag/v11.0.0-beta.4",
+            "https://github.com/storybookjs/storybook/releases/tag/v11.0.0-beta.5",
+            "https://github.com/storybookjs/storybook/pull/37411"
+          ],
+          "limitation": "",
+          "rank": 9
+        },
+        {
+          "event_id": "tibo-business-new-workspace-double-weekly-20261123",
+          "title": "Tibo：新建 ChatGPT Business 工作区的 Work 和 Codex 周用量限时翻倍",
+          "summary": "11 月 23–30 日新建的 ChatGPT Business 工作区，合格 Standard、Premium 席位的 Work 和 Codex 每周内含用量翻倍至 12 月 31 日，期间给这些新空间新增的合格席位也适用。Standard 的五小时上限保持不变。既有或重新激活工作区增席或续订仍按常规额度；Tibo 提到既有用户另有活动，未公布规则。",
+          "category": "news",
+          "group": "tibo",
+          "groupLabel": "Tibo",
+          "digest_id": "2026-11-24",
+          "event_at": "2026-11-23T17:45:33.228Z",
+          "urls": [
+            "https://x.com/thsottiaux/status/2124922313019953319",
+            "https://help.openai.com/en/articles/12003714-chatgpt-business-models-and-limits",
+            "https://help.openai.com/en/articles/8980713-sign-up-for-chatgpt-business"
+          ],
+          "limitation": "",
+          "rank": 10
+        },
+        {
+          "event_id": "zcode-4-0-0-glm54-config",
+          "title": "ZCode 4.0.0 预配 GLM-5.4，修复切换模型偶发丢失上下文",
+          "summary": "ZCode 4.0.0 内置 Coding Plan 的 GLM-5.4 配置，并按登录地区展示插件。修复会话启动卡住、切换模型或提供商偶发丢失上下文等问题。发布页提供 macOS 与 Windows 的 arm64、x64 安装包和 SHA‑256 校验文件。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-24",
+          "event_at": "2026-11-23T08:14:37Z",
+          "urls": [
+            "https://github.com/zai-org/ZCode/releases/tag/v4.0.0",
+            "https://zcode.z.ai/en/changelog"
+          ],
+          "limitation": "",
+          "rank": 11
+        },
+        {
+          "event_id": "langfuse-4-84-org-budget",
+          "title": "Langfuse 4.84 增加组织共享预算和阈值通知",
+          "summary": "网关在已有 API key 和用户预算上增加全组织共享上限，任何一级先耗尽都会拦截请求。预算管理页不再限预览或暂存环境，可设 85%、95% 和 100% 邮件通知阈值。MCP 还支持批量加入标注队列，Vertex AI 支持 US/EU 多区域。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-24",
+          "event_at": "2026-11-23T12:22:31Z",
+          "urls": [
+            "https://github.com/langfuse/langfuse/releases/tag/v4.84.0",
+            "https://github.com/langfuse/langfuse/pull/20460",
+            "https://github.com/langfuse/langfuse/pull/20605"
+          ],
+          "limitation": "",
+          "rank": 12
+        },
+        {
+          "event_id": "claude-code-desktop-side-panel-tabs",
+          "title": "Claude Code 桌面端改用侧栏标签组织文件、改动和终端",
+          "summary": "Claude Code 桌面端将文件、改动、终端和其他工具放到会话旁的多个标签页。标签可以移动，也可以弹出成为独立窗口。此次先向 Mac 分批推出，Windows 和 Linux 计划随后上线。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-24",
+          "event_at": "2026-11-23T21:30:01.252Z",
+          "urls": [
+            "https://x.com/ClaudeDevs/status/2124978802006851961"
+          ],
+          "limitation": "",
+          "rank": 13
+        },
+        {
+          "event_id": "nextjs-16-5-canary62-css-hmr",
+          "title": "Next.js 16.5 canary.62 修复懒加载 CSS 顺序，更新 Turbopack HMR",
+          "summary": "Webpack App Router 固定懒加载 CSS 的首帧相对注入顺序，修复全局布局样式覆盖组件的问题。Turbopack 开发服务器用 Rust 维护已加载共享模块状态并按模块推送差分，新路由取得最新代码。这是预览版，HMR 改动不涉及生产构建。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-24",
+          "event_at": "2026-11-23T23:47:20Z",
+          "urls": [
+            "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.62",
+            "https://github.com/vercel/next.js/pull/102027",
+            "https://github.com/vercel/next.js/pull/102016"
+          ],
+          "limitation": "",
+          "rank": 14
+        },
+        {
+          "event_id": "gemini-cli-0-72-preview-a2a-validation",
+          "title": "Gemini CLI 0.72 预览加强 A2A 服务校验与会话恢复",
+          "summary": "Gemini CLI 0.72.0-preview.0 为 A2A 服务加入必须配置的 bearer token 和回环 Host、Origin 校验；信任判定由服务端负责，checkpoint 恢复限制在工作目录内。恢复列表按最近活跃排序，修复嵌套 gitignore 否定规则与 Windows 波浪线路径。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-24",
+          "event_at": "2026-11-24T00:34:15Z",
+          "urls": [
+            "https://github.com/google-gemini/gemini-cli/releases/tag/v0.72.0-preview.0",
+            "https://github.com/google-gemini/gemini-cli/pull/30420"
+          ],
+          "limitation": "",
+          "rank": 15
+        },
+        {
+          "event_id": "litellm-1-108-16-lts-video-orchestrator",
+          "title": "LiteLLM LTS 1.108.16 接入 Perplexity Orchestrator 并修复视频转发",
+          "summary": "Perplexity Orchestrator 覆盖 Chat Completions、Responses 和 Messages，按实际回复模型记录成本。Gemini/Vertex 不再静默丢弃 video_url，受支持视频引用会转发至供应商。MCP OAuth 网关的自动客户端注册改为主动开启，既有配置或保存的客户端不受影响。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-24",
+          "event_at": "2026-11-23T22:12:26Z",
+          "urls": [
+            "https://github.com/BerriAI/litellm/releases/tag/v1.108.16",
+            "https://github.com/BerriAI/litellm/pull/53585",
+            "https://github.com/BerriAI/litellm/pull/53420",
+            "https://github.com/BerriAI/litellm/pull/53180"
+          ],
+          "limitation": "",
+          "rank": 16
+        },
+        {
+          "event_id": "github-tool-modelcontextprotocol-ext-apps",
+          "title": "GitHub 工具｜MCP Apps SDK 展示交互组件并复用宿主工具权限",
+          "summary": "MCP Apps SDK 让工具声明 ui:// HTML 资源，支持扩展的宿主在沙箱 iframe 中展示图表、表单或画布。宿主可将工具结果交给界面，界面经桥接向宿主请求调用工具；仓库提供 App Bridge、React hooks 和例子。v2.1.0 要求 Node.js 20+ 与 MCP TypeScript SDK 2.x。",
+          "category": "github",
+          "group": "other",
+          "groupLabel": "其他",
+          "digest_id": "2026-11-24",
+          "event_at": null,
+          "urls": [
+            "https://github.com/modelcontextprotocol/ext-apps",
+            "https://github.com/modelcontextprotocol/ext-apps/releases/tag/v2.1.0"
+          ],
+          "limitation": "",
+          "rank": 17
+        },
+        {
+          "event_id": "freebie-roundup-2026-11-24",
+          "title": "免费资源｜ZCode 五日试用新增 GLM-5.4，AutoClaw 周活动区分地区",
+          "summary": "ZCode 新用户 Start Plan 在官方客户端领取，前 5 天每天含 GLM-5.4 300 万、GLM-5.3-Flash 500 万 token，新模型替换旧的 GLM-5.3 试用额度。AutoClaw 11 月 23–29 日登录活动每账户领取一次：中国站发 10,000 积分（1 亿 token 口径），国际站发 5,000 积分（5,000 万 token 口径）；积分于 11 月 29 日 23:59（北京时间）失效。这些额度均是客户端权益。",
+          "category": "freebie",
+          "group": "other",
+          "groupLabel": "其他",
+          "digest_id": "2026-11-24",
+          "event_at": null,
+          "urls": [
+            "https://zcode.z.ai/en/docs/configuration",
+            "https://zcode.z.ai/cn/docs/qa",
+            "https://autoclaw.z.ai/cn/blog/news/M11W4/",
+            "https://autoclaw.z.ai/en/blog/news/M11W4/"
+          ],
+          "limitation": "",
+          "rank": 18
+        }
+      ]
+    },
+    {
       "digest_id": "2026-11-23",
       "focus_event_id": "inkling-2-mini-open-weights",
       "items": [
@@ -7286,17 +7592,18 @@
       "kindLabel": "新用户试用，注意超额计费",
       "status": "official_verified",
       "models": [
-        "GLM-5.3",
+        "GLM-5.4",
         "GLM-5.3-Flash"
       ],
       "other_models": [],
-      "quota": "仅前 5 天每日合计 800 万 tokens：GLM-5.3 为 300 万/日，GLM-5.3-Flash 为 500 万/日；每日刷新，精确重置时刻未公布。",
-      "conditions": "新用户在 ZCode 连接 BigModel 账户后自动获得试用，无需付款；中国用户用 BigModel，海外用 Z.ai（文档称同类试用）。绑卡要求未单独公布。",
-      "expiry": "连接后前 5 天，之后到期；不是持续每日免费额度。",
+      "quota": "仅前 5 天每日合计 800 万 tokens：GLM-5.4 为 300 万/日，GLM-5.3-Flash 为 500 万/日；每日刷新，精确重置时刻未公布。",
+      "conditions": "新用户登录官方 ZCode 客户端，在 Start Plan 领取；中国与全球 Z.ai 账号区域按官方登录入口。额度仅限官方客户端，不可转接其他工具；公开文档未列绑卡条件。",
+      "expiry": "领取后 5 天；不是长期免费额度。",
       "privacy": "",
-      "caution": "不采用第三方“每天 3 亿 tokens”的说法；可用型号和余额仍以账户页为准。",
+      "caution": "具体型号和余额以账户 Start Plan 页面为准。",
       "sources": [
-        "https://zcode.z.ai/en/docs/configuration"
+        "https://zcode.z.ai/en/docs/configuration",
+        "https://zcode.z.ai/cn/docs/qa"
       ]
     },
     {
@@ -7483,6 +7790,36 @@
       "caution": "通用积分用于 TRAE 内 AI 对话与任务；具体模型消耗按产品计费规则。",
       "sources": [
         "https://docs.trae.cn/ide_invite-new-users-to-earn-credits-for-traecode"
+      ]
+    },
+    {
+      "provider": "AutoClaw 中国站 11 月登录活动",
+      "kind": "limited_time_free_coding_app",
+      "kindLabel": "官方免费计划，详见条件",
+      "status": "official_verified",
+      "models": [],
+      "other_models": [],
+      "quota": "活动内每账号登录领取一次 10,000 积分（宣传口径为 1 亿 token）；不是每日刷新，未公布单一模型实际可用 token。",
+      "conditions": "使用相应地区的 AutoClaw 客户端登录领取。不同模型按积分计费；活动页未列统一绑卡条件。",
+      "expiry": "北京时间 11 月 23 日 00:00 至 11 月 29 日 23:59；奖励同在 11 月 29 日 23:59 失效。",
+      "caution": "不是通用 API 额度。",
+      "sources": [
+        "https://autoclaw.z.ai/cn/blog/news/M11W4/"
+      ]
+    },
+    {
+      "provider": "AutoClaw 国际站 11 月登录活动",
+      "kind": "limited_time_free_coding_app",
+      "kindLabel": "官方免费计划，详见条件",
+      "status": "official_verified",
+      "models": [],
+      "other_models": [],
+      "quota": "活动内每账号登录领取一次 5,000 积分（宣传口径为 5,000 万 token）；不是每日刷新，未公布单一模型实际可用 token。",
+      "conditions": "使用相应地区的 AutoClaw 客户端登录领取。不同模型按积分计费；活动页未列统一绑卡条件。",
+      "expiry": "北京时间 11 月 23 日 00:00 至 11 月 29 日 23:59；奖励同在 11 月 29 日 23:59 失效。",
+      "caution": "不是通用 API 额度。",
+      "sources": [
+        "https://autoclaw.z.ai/en/blog/news/M11W4/"
       ]
     }
   ]
