@@ -1,6 +1,262 @@
 {
   "issues": [
     {
+      "digest_id": "2026-11-26",
+      "focus_event_id": "jetbrains-mellum21-instruct-open-weights",
+      "items": [
+        {
+          "event_id": "jetbrains-mellum21-instruct-open-weights",
+          "title": "JetBrains 宣布推出开放权重编程模型 Mellum2.1 Instruct",
+          "summary": "JetBrains 发布用于编程代理的 Mellum2.1 Instruct，MoE 共 120 亿参数、每次激活 25 亿，采用 Apache 2.0。与同系列 Thinking 版不同，它直接生成答案；提供 GGUF 和多 token 预测适配。",
+          "category": "news",
+          "group": "models",
+          "groupLabel": "模型与 API",
+          "digest_id": "2026-11-26",
+          "event_at": "2026-11-25T11:00:00Z",
+          "urls": [
+            "https://blog.jetbrains.com/ai/2026/11/mellum2-1-instruct-is-out-bringing-faster-answers-for-coding-agents/",
+            "https://huggingface.co/JetBrains/Mellum2.1-12B-A2.5B-Instruct"
+          ],
+          "limitation": "",
+          "rank": 1
+        },
+        {
+          "event_id": "vscode-1-148-agent-host-prevent-sleep",
+          "title": "VS Code 1.148 增加代理防睡眠预览并支持编辑区全屏显示 MCP Apps",
+          "summary": "代理运行时可防止电脑因空闲睡眠，预览默认仅外接电源时启用；MCP Apps 可在编辑区或侧栏全屏显示。远端宿主增加 worktree 清理及沙箱配置实验项。VS Code 报告 Agent Host 新对话启动平均较上一稳定版快约 30%。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-26",
+          "event_at": "2026-11-25T09:44:02Z",
+          "urls": [
+            "https://github.com/microsoft/vscode/releases/tag/1.148.0",
+            "https://code.visualstudio.com/updates/v1_148"
+          ],
+          "limitation": "",
+          "rank": 2
+        },
+        {
+          "event_id": "claude-code-2-1-332-mcp-skills-inline-hook",
+          "title": "Claude Code 2.1.332 支持 MCP 提供技能，并新增内嵌命令拦截钩子",
+          "summary": "MCP 服务提供的技能在斜杠菜单以 server:skill 形式出现，当前为测试功能。PreSkillShellCommand 可在加载技能或斜杠命令时，对已通过权限规则的内嵌 shell 命令再次拦截；它与稍后的工具调用钩子是不同路径。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-26",
+          "event_at": "2026-11-25T01:32:14Z",
+          "urls": [
+            "https://github.com/anthropics/claude-code/releases/tag/v2.1.332",
+            "https://code.claude.com/docs/en/hooks#preskillshellcommand"
+          ],
+          "limitation": "",
+          "rank": 3
+        },
+        {
+          "event_id": "codex-cli-0-174-alpha-6-provider-quota-status",
+          "title": "Codex CLI 0.174 alpha.6 显示当前线程供应商额度和套餐",
+          "summary": "终端切换线程时按当前供应商显示限额及提醒，/status 增加额度套餐名称。未启用方括号粘贴模式的终端也可保留多行粘贴的换行和缩进。该版本为预发行，显示变化不改动实际账户额度。",
+          "category": "news",
+          "group": "openai",
+          "groupLabel": "OpenAI",
+          "digest_id": "2026-11-26",
+          "event_at": "2026-11-25T19:35:37Z",
+          "urls": [
+            "https://github.com/openai/codex/releases/tag/rust-v0.174.0-alpha.6",
+            "https://github.com/openai/codex/pull/63838",
+            "https://github.com/openai/codex/pull/63877",
+            "https://github.com/openai/codex/pull/63785"
+          ],
+          "limitation": "",
+          "rank": 4
+        },
+        {
+          "event_id": "vite-8-4-beta-2-plugin-diagnostics",
+          "title": "Vite 8.4 beta.2 为插件钩子报错补充插件名",
+          "summary": "解析、加载等插件钩子抛出错误时，诊断补充插件归属并保留原错误文本。禁用 CSS 代码分割时去除共享 chunk 的重复 CSS，依赖扫描修复未使用顶层 tsconfig 的问题；此版仍是测试版。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-26",
+          "event_at": "2026-11-25T05:13:48Z",
+          "urls": [
+            "https://github.com/vitejs/vite/releases/tag/v8.4.0-beta.2",
+            "https://github.com/vitejs/vite/pull/24151",
+            "https://github.com/vitejs/vite/pull/24148"
+          ],
+          "limitation": "",
+          "rank": 5
+        },
+        {
+          "event_id": "zed-1-31-pre-thread-model-overrides",
+          "title": "Zed 1.31 预览支持按线程覆盖代理模型与思考强度",
+          "summary": "可只为当前线程修改模型、配置档与思考强度，不影响默认设置。远端 SSH、WSL 和开发容器可加载远端全局技能；ACP 可显示 Markdown 计划及子代理。Ultrafast 仅适用于受支持的模型和账户权限。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-26",
+          "event_at": "2026-11-25T18:02:11Z",
+          "urls": [
+            "https://github.com/zed-industries/zed/releases/tag/v1.31.0-pre"
+          ],
+          "limitation": "",
+          "rank": 6
+        },
+        {
+          "event_id": "vitest-5-1-2-browser-screenshot-coverage",
+          "title": "Vitest 5.1.2 按浏览器实例保存失败截图，并修复覆盖计数",
+          "summary": "全局 setup 出错时不再误报未找到测试。浏览器模式的失败截图按实例保存，并支持 mock 资源和计算式动态 import；覆盖率修复 source map 结束列导致的重复计数，外部源映射每次运行只读一次。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-26",
+          "event_at": "2026-11-25T11:42:58Z",
+          "urls": [
+            "https://github.com/vitest-dev/vitest/releases/tag/v5.1.2"
+          ],
+          "limitation": "",
+          "rank": 7
+        },
+        {
+          "event_id": "mastra-core-1-86-durable-dataset-experiments",
+          "title": "Mastra Core 1.86 将数据集评测加入持久事件工作流",
+          "summary": "数据集实验可持久执行；支持重投的队列如 Redis Streams 中，其他 worker 可接手未确认的样本，每样本只记录一个结果。Agent 可选 default 或 evented 持久引擎并保留流式输出。原预览配置 durable 改名为 default。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-26",
+          "event_at": "2026-11-25T10:00:05Z",
+          "urls": [
+            "https://github.com/mastra-ai/mastra/releases/tag/%40mastra/core%401.86.0"
+          ],
+          "limitation": "",
+          "rank": 8
+        },
+        {
+          "event_id": "pydantic-ai-2-75-instruction-trust-durable-review",
+          "title": "Pydantic AI 2.75 区分低权限资料与系统指令",
+          "summary": "低权限工作区文件不再被提为 RepoContext、Skills 或 Memory 的系统指令；低权限 capability 与 MCP 服务器说明以带边界的数据进入。Temporal 外部事件等待支持持久问询或审批。持久运行记录格式改变，在途运行需要按所用引擎的版本机制处理。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-26",
+          "event_at": "2026-11-25T18:21:00Z",
+          "urls": [
+            "https://github.com/pydantic/pydantic-ai/releases/tag/v2.75.0"
+          ],
+          "limitation": "",
+          "rank": 9
+        },
+        {
+          "event_id": "vercel-ai-sdk-7-0-182-realtime-audio-truncate",
+          "title": "Vercel AI SDK 7.0.182 按实际播放位置截断实时音频",
+          "summary": "用户打断 WebSocket 实时语音时，SDK 用当前正在播放的音频条目及该条目内偏移发送截断，不再把最近收到的音频当作正在播放；覆盖声音先到但仍排队或播放中断等情况。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-26",
+          "event_at": "2026-11-25T21:19:49Z",
+          "urls": [
+            "https://github.com/vercel/ai/releases/tag/ai%407.0.182"
+          ],
+          "limitation": "",
+          "rank": 10
+        },
+        {
+          "event_id": "nestjs-12-6-2-decorator-stream-fixes",
+          "title": "NestJS 12.6.2 修复组合装饰器类型及流式响应",
+          "summary": "applyDecorators 恢复可用于类、方法和属性，并补充参数装饰器类型。Node 平台 res.send 现在流式传送 Readable 数据而不是序列化其字段；无正文状态码不会读取对应的 StreamableFile。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-26",
+          "event_at": "2026-11-25T14:05:56Z",
+          "urls": [
+            "https://github.com/nestjs/nest/releases/tag/v12.6.2",
+            "https://github.com/nestjs/nest/pull/18710"
+          ],
+          "limitation": "",
+          "rank": 11
+        },
+        {
+          "event_id": "cloudflare-agents-0-34-1-typed-suspend",
+          "title": "Cloudflare Agents 0.34.1 更改暂停信号结构并细化流式重试",
+          "summary": "Pi 暂停工具和信号使用带 kind 的结构；旧暂停返回值可通过类型检查但结果为空。流式错误及 OpenRouter 空失败响应可按重试策略处理，停止原因保留供应商原值，大型 SSE 事件改为线性解析。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-26",
+          "event_at": "2026-11-25T20:07:38Z",
+          "urls": [
+            "https://github.com/cloudflare/agents/releases/tag/agents%400.34.1"
+          ],
+          "limitation": "",
+          "rank": 12
+        },
+        {
+          "event_id": "github-copilot-cli-1-0-116-acp-context-approvals",
+          "title": "GitHub Copilot CLI 1.0.116 新增 ACP 上下文选择并明确 shell 授权对象",
+          "summary": "ACP 可临时选择上下文长度而不改默认；shell 审批提示显示实际授权的命令，不再只显示描述。扩展清单加入构建期 JSON Schema，子代理事件日志记录事件实际发生的时间。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-26",
+          "event_at": "2026-11-25T17:03:13Z",
+          "urls": [
+            "https://github.com/github/copilot-cli/releases/tag/v1.0.116"
+          ],
+          "limitation": "",
+          "rank": 13
+        },
+        {
+          "event_id": "quality-dify-chromium-snippet-tests-46455",
+          "title": "前端质量与效率｜Dify 用真实浏览器验证草稿、列表刷新与文件下载",
+          "summary": "Dify 的 hyoban 在 Chromium 组件测试中保留真实业务 hooks、弹窗和下载路径，替换部分 API 与路由边界。测试核对导航前等待草稿保存、更新后列表重新取数，以及下载文件内容、类型和名称。作者报告 21 个用例通过，能抓出 5 种刻意引入的错误。",
+          "category": "quality",
+          "group": "quality",
+          "groupLabel": "前端质量与效率",
+          "digest_id": "2026-11-26",
+          "event_at": "2026-11-15T14:35:24Z",
+          "author": "hyoban",
+          "urls": [
+            "https://github.com/langgenius/dify/pull/46455"
+          ],
+          "limitation": "Chromium 组件测试，后端和 Next 路由部分替换，不是全链路或跨浏览器验证。",
+          "rank": 14
+        },
+        {
+          "event_id": "github-tool-ag-ui-protocol-ag-ui",
+          "title": "GitHub 工具｜AG-UI 定义代理向界面推送的类型化事件",
+          "summary": "AG-UI 提供代理与界面的交互协议及 SDK：前端提交 RunAgentInput，后端通过流发送文本、工具调用、共享状态和人工交互事件。1.0 定义包含 JSON Schema 及 TypeScript、Python、.NET SDK。仓库采用 MIT 许可。",
+          "category": "github",
+          "group": "other",
+          "groupLabel": "其他",
+          "digest_id": "2026-11-26",
+          "event_at": null,
+          "urls": [
+            "https://github.com/ag-ui-protocol/ag-ui"
+          ],
+          "limitation": "",
+          "rank": 15
+        },
+        {
+          "event_id": "freebie-roundup-2026-11-26-telnyx",
+          "title": "免费资源｜Telnyx Pretrial 提供 25 美元一次性 AI 额度",
+          "summary": "注册 Telnyx Pretrial 无需信用卡或付款设置，即可获 25 美元一次性余额，用于支持的 Telnyx Inference、AI Assistants 等 AI 产品。不能充值，余额用完或 Portal 显示的试用窗口截止后停止；升级会用普通试用额度替换原余额。",
+          "category": "freebie",
+          "group": "other",
+          "groupLabel": "其他",
+          "digest_id": "2026-11-26",
+          "event_at": null,
+          "urls": [
+            "https://support-v2.telnyx.com/en/articles/14327893-telnyx-pretrial-accounts"
+          ],
+          "limitation": "不是全产品通用余额；公开条款未给统一期限、模型白名单或地区清单。",
+          "rank": 16
+        }
+      ]
+    },
+    {
       "digest_id": "2026-11-25",
       "focus_event_id": "tencent-hy-mt3-translation-open-weights",
       "items": [
@@ -7310,6 +7566,22 @@
     }
   ],
   "offers": [
+    {
+      "provider": "Telnyx Pretrial",
+      "kind": "new_user_trial",
+      "kindLabel": "新用户试用，注意超额计费",
+      "status": "official_verified",
+      "models": [],
+      "other_models": [],
+      "quota": "一次性 25 美元 AI 试用余额，注册自动生效，无充值和周期刷新。",
+      "conditions": "用邮箱注册后通过 Magic Link 登录，无需绑卡或付款设置。适用于 Telnyx Inference、AI Assistants 等 AI 套件；非其他 Telnyx 产品通用余额。附一个美国本地号码，公开条款未列统一地区要求。",
+      "expiry": "耗尽即停；有效天数以 Telnyx Portal 显示为准。",
+      "privacy": "",
+      "caution": "升级标准试用后余额替换为 5 美元通用额度，非叠加；官方未列具体模型白名单。",
+      "sources": [
+        "https://support-v2.telnyx.com/en/articles/14327893-telnyx-pretrial-accounts"
+      ]
+    },
     {
       "provider": "Qoder HungerG 限免",
       "kind": "limited_time_free_coding_app",
