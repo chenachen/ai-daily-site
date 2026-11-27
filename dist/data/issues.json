@@ -1,6 +1,346 @@
 {
   "issues": [
     {
+      "digest_id": "2026-11-27",
+      "focus_event_id": "ming-image-0-2-design-official-announcement",
+      "items": [
+        {
+          "event_id": "ming-image-0-2-design-official-announcement",
+          "title": "蚂蚁百灵发布 Ming-Image-0.2-Design，开放设计文生图权重",
+          "summary": "蚂蚁百灵正式公布面向设计的 60 亿参数文生图模型，已提供 MIT 权重。模型支持自然语言提示及结构化构图描述，官方示例包括网页稿、电商主图和空间设计。0.2 系列的配套可编辑分层版本是预告。",
+          "category": "news",
+          "group": "models",
+          "groupLabel": "模型与 API",
+          "digest_id": "2026-11-27",
+          "event_at": "2026-11-26T11:37:47.453Z",
+          "urls": [
+            "https://x.com/AntLingAGI/status/2125916926048358827",
+            "https://github.com/inclusionAI/Ming-Image",
+            "https://huggingface.co/inclusionAI/Ming-Image-0.2-Design"
+          ],
+          "limitation": "",
+          "rank": 1
+        },
+        {
+          "event_id": "sber-gigachat-4-open-weights-announcement",
+          "title": "Sber 公布 GigaChat 4，提供 708B 与 37B 两档权重",
+          "summary": "Sber 公布 GigaChat 4 的 708B 和 37B 模型，权重与运行说明公开。旗舰版采用混合专家架构，每个 token 激活约 41B 参数，原生上下文约 100 万 token；两个版本均设即时和推理模式。",
+          "category": "news",
+          "group": "models",
+          "groupLabel": "模型与 API",
+          "digest_id": "2026-11-27",
+          "event_at": "2026-11-26T10:15:00Z",
+          "urls": [
+            "https://max.ru/sber/AaIXWfmtEGg",
+            "https://t.me/sberbank/6636",
+            "https://giga.chat/blog/en/posts/gigachat-4",
+            "https://giga.chat/blog/en/posts/gigachat-4-tech-report",
+            "https://huggingface.co/collections/ai-sage/gigachat-4"
+          ],
+          "limitation": "",
+          "rank": 2
+        },
+        {
+          "event_id": "tencent-dfly2-sparse-draft-weights-code",
+          "title": "腾讯混元开放 DFly2 投机解码草稿模型和训练代码",
+          "summary": "腾讯公开 DFly2 技术报告、训练代码及草稿权重，覆盖 Hy4 flash、DeepSeek-V4.1-Flash、GLM-5.3-Flash；草稿模型供主模型验证候选 token，复用主模型缓存。腾讯在特定解码测试报告最高 4.2 倍，适用配置依目标模型。",
+          "category": "news",
+          "group": "models",
+          "groupLabel": "模型与 API",
+          "digest_id": "2026-11-27",
+          "event_at": "2026-11-26T12:22:22.525Z",
+          "urls": [
+            "https://x.com/TencentHunyuan/status/2125928146113585468",
+            "https://github.com/Tencent/AngelSpec"
+          ],
+          "limitation": "",
+          "rank": 3
+        },
+        {
+          "event_id": "tibo-gpt62-compensation-banked-reset-online-20261126",
+          "title": "Tibo 确认 Codex 补偿性预存重置已上线，覆盖 Go、Plus、Pro、Business",
+          "summary": "Tibo 确认修正 GPT-6.2 Astra、Sol 初期用量低估后，向 Go、Plus、Pro、Business 的用户提供一次预存重置，不自动刷新额度。他称同类工作比上周更快触及使用上限，Astra 快 40%、Sol 快 25%；其他模型不受影响，此前用量不补扣。未披露活动到期时间。",
+          "category": "news",
+          "group": "tibo",
+          "groupLabel": "Tibo",
+          "digest_id": "2026-11-27",
+          "event_at": "2026-11-26T07:26:16.082Z",
+          "urls": [
+            "https://x.com/thsottiaux/status/2125853628250599730",
+            "https://x.com/thsottiaux/status/2125784147889393806",
+            "https://help.openai.com/en/articles/20001498-how-resets-work-in-codex"
+          ],
+          "limitation": "",
+          "rank": 4
+        },
+        {
+          "event_id": "openai-node-7-65-spend-alert-session-vaults",
+          "title": "OpenAI 更新 Node 与 Python SDK，新增支出提醒和会话 vault 管理",
+          "summary": "OpenAI Node 7.65 与 Python 3.60 允许组织及项目设置硬支出上限提醒，包括收件人和主题前缀。Responses 压缩支持安全标识；更新 Managed Agents 会话可替换或清空 vault 引用，省略则保留。",
+          "category": "news",
+          "group": "openai",
+          "groupLabel": "OpenAI",
+          "digest_id": "2026-11-27",
+          "event_at": "2026-11-26T07:09:43Z",
+          "urls": [
+            "https://github.com/openai/openai-node/releases/tag/v7.65.0",
+            "https://github.com/openai/openai-python/releases/tag/v3.60.0",
+            "https://github.com/openai/openai-node/pull/3196",
+            "https://github.com/openai/openai-node/pull/3194"
+          ],
+          "limitation": "",
+          "rank": 5
+        },
+        {
+          "event_id": "nvidia-nemotron-35-parse-document-training-datasets",
+          "title": "NVIDIA 公布 Nemotron 3.5 Parse 的三套合成文档数据及微调流程",
+          "summary": "NVIDIA 为现有文档解析模型公布合成图表、表格和多语言 OCR 数据，并说明监督微调与强化学习流程。三套数据分别提供图表值、表结构或文字识别标注。可下载数据各有对应数据卡与来源条款，披露不是重新发布模型。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-27",
+          "event_at": "2026-11-26T05:05:36.737Z",
+          "urls": [
+            "https://huggingface.co/blog/nvidia/building-on-nemotron-35-parse-open-data-fine-tunin",
+            "https://huggingface.co/datasets/nvidia/Synthetic-Charts-V1",
+            "https://huggingface.co/datasets/nvidia/Synthetic-Tables-V1",
+            "https://huggingface.co/datasets/nvidia/OCR-Synthetic-Multilingual-v2"
+          ],
+          "limitation": "",
+          "rank": 6
+        },
+        {
+          "event_id": "llama-cpp-1-1-0-llama-chat-audio",
+          "title": "llama.cpp 1.1 支持更多本地模型，Llama Chat 增加语音消息和代理轨迹",
+          "summary": "稳定版加入 Inkling 2、Hy4 flash 等模型及音频/TTS 支持。更新后的 Llama Chat 可发语音消息并显示代理轨迹。C API 的旧 llama_batch 被标记弃用，项目给出 llama_batch_ext 和 llama_process。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-27",
+          "event_at": "2026-11-26T09:16:47Z",
+          "urls": [
+            "https://github.com/ggml-org/llama.cpp/releases/tag/v1.1.0"
+          ],
+          "limitation": "",
+          "rank": 7
+        },
+        {
+          "event_id": "codex-cli-0-174-alpha-7-8-sidebar-and-mcp-forms",
+          "title": "Codex CLI 0.174 alpha.7–8 增加终端行范围定位与 MCP 数字表单",
+          "summary": "alpha.8 识别文件引用里的连续行范围，并可在受支持的本地后端保存滚动区侧聊并恢复；此前本期 alpha.7 加入 MCP 整数与数字输入，也能在后台命令跨轮完成时把结果写回原记录。两版均为预发行。",
+          "category": "news",
+          "group": "openai",
+          "groupLabel": "OpenAI",
+          "digest_id": "2026-11-27",
+          "event_at": "2026-11-26T21:56:07Z",
+          "urls": [
+            "https://github.com/openai/codex/releases/tag/rust-v0.174.0-alpha.8",
+            "https://github.com/openai/codex/releases/tag/rust-v0.174.0-alpha.7",
+            "https://github.com/openai/codex/pull/64211",
+            "https://github.com/openai/codex/pull/64207",
+            "https://github.com/openai/codex/pull/64023",
+            "https://github.com/openai/codex/pull/64015"
+          ],
+          "limitation": "",
+          "rank": 8
+        },
+        {
+          "event_id": "qwen-code-0-28-6-7-managed-session-recovery",
+          "title": "Qwen Code 0.28.6–0.28.7 支持托管会话挂起及恢复",
+          "summary": "受支持的托管会话会保存待审批、提问及部分工具等待状态，运行时重启后恢复原等待，而不是自动审批。新版本支持释放空闲写入权后由其他控制面接管，并把 Web Terminal 单次票据放入 SQL，使任一控制面能接入。交互 CLI 也可按模型记住推理强度和上下文窗口；新 Harness CLI 软件包默认不发送用量统计。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-27",
+          "event_at": "2026-11-26T05:51:04Z",
+          "urls": [
+            "https://github.com/QwenLM/qwen-code/releases/tag/v0.28.6",
+            "https://github.com/QwenLM/qwen-code/releases/tag/v0.28.7",
+            "https://github.com/QwenLM/qwen-code/pull/18115"
+          ],
+          "limitation": "",
+          "rank": 9
+        },
+        {
+          "event_id": "opencode-2-4-2-gpt62-prompt-next-automation",
+          "title": "OpenCode 2.4.2 增加 GPT-6.2 专用提示，改进定时任务失败处理",
+          "summary": "GPT-6.2 Sol、Astra 及对应别名使用专用系统提示。一次自动化实际执行失败后保留记录并等下次计划，不立即重跑；会话或目录消失、配置失效仍会暂停。新保存的 webfetch 永久允许规则仅覆盖当前站点。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-27",
+          "event_at": "2026-11-26T00:59:05Z",
+          "urls": [
+            "https://github.com/anomalyco/opencode/releases/tag/v2.4.2",
+            "https://github.com/anomalyco/opencode/pull/66297",
+            "https://github.com/anomalyco/opencode/pull/66422"
+          ],
+          "limitation": "",
+          "rank": 10
+        },
+        {
+          "event_id": "vercel-openai-provider-4-0-125-responses-terminal-parse",
+          "title": "Vercel OpenAI provider 修复多图流显示后无法完成的问题",
+          "summary": "Responses 的最后一个事件可能重复包含已经发送的图片。OpenAI provider 将该路径的单事件解析上限从 64 MiB 提至 512 MiB；回归断言收到完成状态和用量且无错误，通用流保留默认限制。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-27",
+          "event_at": "2026-11-26T04:36:29Z",
+          "urls": [
+            "https://github.com/vercel/ai/releases/tag/%40ai-sdk%2Fopenai%404.0.125",
+            "https://github.com/vercel/ai/commit/9e7f32b"
+          ],
+          "limitation": "",
+          "rank": 11
+        },
+        {
+          "event_id": "storybook-11-rc1-vitest-selected-file-tests",
+          "title": "Storybook 11 RC.1 修正选中故事文件后漏跑测试",
+          "summary": "按文件或 --changed 命中故事文件时，Vitest addon 运行该文件的所有测试；按故事 ID 明确选择时仍可运行单项。Angular 支持 host directive 暴露的输入输出，CLI 默认开启 Next.js 到 Vite 的自动迁移选项。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-27",
+          "event_at": "2026-11-26T16:36:44Z",
+          "urls": [
+            "https://github.com/storybookjs/storybook/releases/tag/v11.0.0-rc.1",
+            "https://github.com/storybookjs/storybook/pull/37777"
+          ],
+          "limitation": "",
+          "rank": 12
+        },
+        {
+          "event_id": "pnpm-12-24-audit-deprecated-engines",
+          "title": "pnpm 12.24 新增弃用依赖与运行环境审计",
+          "summary": "audit deprecations 与 audit engines 可以定位引入弃用包或不支持当前 Node/平台的依赖链，查到问题时退出码为 1。安装结束汇总 peer、生命周期脚本及供应链检查结果。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-27",
+          "event_at": "2026-11-26T14:31:19Z",
+          "urls": [
+            "https://github.com/pnpm/pnpm/releases/tag/v12.24.0"
+          ],
+          "limitation": "",
+          "rank": 13
+        },
+        {
+          "event_id": "pydantic-ai-2-76-ui-visibility-realtime-tools",
+          "title": "Pydantic AI 2.76 增加工具结果可见性及实时会话工具更新",
+          "summary": "工具可声明 redacted 或 private，分别限制界面看到的结果或调用；模型和服务端历史仍保留数据。实时模型声明支持时可在会话中途增补工具，Google Interactions 增加无状态调用。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-27",
+          "event_at": "2026-11-26T23:49:06Z",
+          "urls": [
+            "https://github.com/pydantic/pydantic-ai/releases/tag/v2.76.0"
+          ],
+          "limitation": "",
+          "rank": 14
+        },
+        {
+          "event_id": "cline-4-1-28-provider-picker",
+          "title": "Cline 4.1.28 更新模型目录并接入两家供应商",
+          "summary": "扩展与桌面端加入 Concentrate 和 Prima Labs 供应商，模型选择器移除已弃用 ID。变动作用于 Cline 的模型目录，不是模型供应商发布新的退役公告。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-27",
+          "event_at": "2026-11-26T09:57:49Z",
+          "urls": [
+            "https://github.com/cline/cline/releases/tag/v4.1.28"
+          ],
+          "limitation": "",
+          "rank": 15
+        },
+        {
+          "event_id": "langfuse-4-87-4-88-trace-share-controls",
+          "title": "Langfuse 4.87–4.88 增加公开追踪分享控制和 MCP 记录",
+          "summary": "支持在合格组织或自托管授权实例禁用公开 trace 和 session 分享，不会改写既有公开标记。MCP spans 新增客户端能力及扩展信息。网关 regex 和 AWS Bedrock 护栏可遮盖内容，但仍限开发、预览或预发布环境。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-27",
+          "event_at": "2026-11-26T11:22:05Z",
+          "urls": [
+            "https://github.com/langfuse/langfuse/releases/tag/v4.87.0",
+            "https://github.com/langfuse/langfuse/releases/tag/v4.88.0",
+            "https://github.com/langfuse/langfuse/pull/20463",
+            "https://github.com/langfuse/langfuse/pull/20848"
+          ],
+          "limitation": "",
+          "rank": 16
+        },
+        {
+          "event_id": "litellm-1-108-18-19-stream-fallback-ark",
+          "title": "LiteLLM LTS 更新转录、生图接口并修复断流回退",
+          "summary": "LTS 增加 ElevenLabs Scribe v2 Realtime 转录及火山方舟 Seedream 生成和编辑。上游中途断流不再被误标成正常停止而错过后备；另修复 Claude Code 通过非 Anthropic 后端时工具 ID 被改写。",
+          "category": "news",
+          "group": "tools",
+          "groupLabel": "开发工具",
+          "digest_id": "2026-11-27",
+          "event_at": "2026-11-26T17:06:13Z",
+          "urls": [
+            "https://github.com/BerriAI/litellm/releases/tag/v1.108.18",
+            "https://github.com/BerriAI/litellm/releases/tag/v1.108.19"
+          ],
+          "limitation": "",
+          "rank": 17
+        },
+        {
+          "event_id": "quality-vue-production-transition-hydration-16428",
+          "title": "前端质量与效率｜Vue 用生产构建覆盖 Transition 静态内容挂载",
+          "summary": "ValentinYoushkevich 报告，Nuxt 静态生成成功，但生产页面直开或刷新后，Transition appear 的静态子项仍困在服务器输出的模板里，开发构建和条件渲染对照则可见。Vue 回归测试关闭开发模式，核对模板拆包、进入样式及节点复用，也覆盖真正的原生模板。",
+          "category": "quality",
+          "group": "quality",
+          "groupLabel": "前端质量与效率",
+          "digest_id": "2026-11-27",
+          "event_at": "2026-11-24T09:42:36Z",
+          "author": "ValentinYoushkevich",
+          "urls": [
+            "https://github.com/vuejs/core/pull/16428",
+            "https://github.com/vuejs/core/issues/16427"
+          ],
+          "limitation": "该补丁已合入主分支，未纳入已核对的稳定版；本案例不是所有 SSR 静态节点问题。",
+          "rank": 18
+        },
+        {
+          "event_id": "github-tool-shadcn-ui-ui",
+          "title": "GitHub 工具｜shadcn/ui MCP 连接组件注册表与编码助手",
+          "summary": "shadcn/ui 可按项目 components.json 读取公共或私有注册表。支持 MCP 的编码助手可经 shadcn CLI 查询组件、查看源码或安装到项目；私有源需要配置认证。仓库采用 MIT 许可，获得的项目组件源码可以修改。",
+          "category": "github",
+          "group": "other",
+          "groupLabel": "其他",
+          "digest_id": "2026-11-27",
+          "event_at": null,
+          "urls": [
+            "https://github.com/shadcn-ui/ui",
+            "https://ui.shadcn.com/docs/mcp"
+          ],
+          "limitation": "",
+          "rank": 19
+        },
+        {
+          "event_id": "freebie-roundup-2026-11-27-qiniu-conatus",
+          "title": "免费资源｜七牛云 Conatus 实名账户每天 1 亿免费 Token",
+          "summary": "七牛云 qiniu/conatus-free 支持 OpenAI 兼容 API，实名合格账户每天 1 亿 Token，不需充值。账号下所有 API key 共用余额，输入、缓存输入和输出均计，按北京时间 00:00 重置。单笔到账充值严格超过 100 元可提高到每日 10 亿 Token，分笔不合计；用完拒绝请求，不自动付费。",
+          "category": "freebie",
+          "group": "other",
+          "groupLabel": "其他",
+          "digest_id": "2026-11-27",
+          "event_at": null,
+          "urls": [
+            "https://www.qiniu.com/ai/free-models/conatus-2026",
+            "https://www.qiniu.com/ai"
+          ],
+          "limitation": "活动规则顶部与结束条款为 11 月 30 日 23:59，北京时间；同页 FAQ 写 12 月 31 日，官方页面口径不一，暂不视为延期。",
+          "rank": 20
+        }
+      ]
+    },
+    {
       "digest_id": "2026-11-26",
       "focus_event_id": "jetbrains-mellum21-instruct-open-weights",
       "items": [
@@ -7566,6 +7906,24 @@
     }
   ],
   "offers": [
+    {
+      "provider": "七牛云 Conatus Free",
+      "kind": "limited_time_free_api_and_coding",
+      "kindLabel": "限时免费 API / 编程",
+      "status": "official_verified",
+      "models": [
+        "qiniu/conatus-free"
+      ],
+      "other_models": [],
+      "quota": "合格实名账户每日 1 亿 Token，无需充值；单笔已到账充值超过 100 元可提高到 10 亿，分笔不累计。输入、缓存输入和输出均计，账号全部密钥共用额度，按北京时间 00:00 重置不结转。",
+      "conditions": "通过七牛云 API，基础地址 https://api.qnaigc.com/v1，支持 Completions 与 Messages；需要登录、完成实名认证且账户不触发风控。不是按具体后端模型发放。",
+      "expiry": "活动页顶部及结束规则列北京时间 2026 年 11 月 30 日 23:59；同页 FAQ 列 12 月 31 日，官方口径不一致。",
+      "privacy": "",
+      "caution": "用尽或活动结束时拒绝请求，不自动付费或切换模型。",
+      "sources": [
+        "https://www.qiniu.com/ai/free-models/conatus-2026"
+      ]
+    },
     {
       "provider": "Telnyx Pretrial",
       "kind": "new_user_trial",
